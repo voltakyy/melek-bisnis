@@ -202,13 +202,21 @@
     if (tocLinks.length === 0) return;
 
     if (CSS.supports('scroll-target-group: auto')) {
+      let ticking = false;
       const syncAria = () => {
+        ticking = false;
         const current = document.querySelector('.toc-nav a:target-current');
         tocLinks.forEach((link) => {
           link.setAttribute('aria-current', link === current ? 'true' : 'false');
         });
       };
       syncAria();
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(syncAria);
+        }
+      }, { passive: true });
       document.addEventListener('scrollend', syncAria);
       return;
     }
@@ -478,6 +486,22 @@
         const net = gross - fixed;
         const marginPct = rev > 0 ? (net / rev) * 100 : 0;
         const contribPerUnit = price - hpp;
+        const unitSegHpp = document.getElementById('f2-seg-hpp');
+        const unitSegOpex = document.getElementById('f2-seg-opex');
+        const unitSegNet = document.getElementById('f2-seg-net');
+        const unitSplitLeg = document.getElementById('f2-split-legend');
+
+        if (unitSegHpp && unitSegOpex && unitSegNet && rev > 0) {
+          const pctHpp = Math.min(100, Math.max(0, (totalCogs / rev) * 100));
+          const pctOpex = Math.min(100 - pctHpp, Math.max(0, (fixed / rev) * 100));
+          const pctNet = Math.max(0, 100 - pctHpp - pctOpex);
+          unitSegHpp.style.inlineSize = `${pctHpp.toFixed(1)}%`;
+          unitSegOpex.style.inlineSize = `${pctOpex.toFixed(1)}%`;
+          unitSegNet.style.inlineSize = `${pctNet.toFixed(1)}%`;
+          if (unitSplitLeg) {
+            unitSplitLeg.textContent = `HPP ${pctHpp.toFixed(0)}% | OPEX/Tetap ${((fixed / rev) * 100).toFixed(0)}% | Sisa Laba ${marginPct.toFixed(0)}%`;
+          }
+        }
 
         outRev.textContent = formatIDR(rev);
         outCogs.textContent = formatIDR(totalCogs);
@@ -608,6 +632,17 @@
         outHalf.textContent = formatIDR(halfResult);
         outLate.textContent = formatIDR(lastFiveGain);
         const latePct = fullResult > 0 ? (lastFiveGain / fullResult) * 100 : 0;
+        const earlyBar = document.getElementById('f3-seg-early');
+        const lateBar = document.getElementById('f3-seg-late');
+        const compLeg = document.getElementById('f3-split-legend');
+        if (earlyBar && lateBar) {
+          const clampedLate = Math.min(100, Math.max(0, latePct));
+          lateBar.style.inlineSize = `${clampedLate.toFixed(1)}%`;
+          earlyBar.style.inlineSize = `${(100 - clampedLate).toFixed(1)}%`;
+          if (compLeg) {
+            compLeg.textContent = `${(100 - clampedLate).toFixed(0)}% tahun-tahun awal | ${clampedLate.toFixed(0)}% dari 5 tahun terakhir`;
+          }
+        }
         outBar.className = 'status-banner is-positive';
         outBar.textContent = `Sebesar ${latePct.toFixed(1)}% dari hasil akhir muncul hanya dalam 5 tahun terakhir! Itulah mengapa Warren Buffett meraih $81,5 miliar dari $84,5 miliar kekayaannya setelah usia 65 tahun (Bab 4, hal. 55).`;
       };
@@ -707,6 +742,23 @@
       const cr = sDebt > 0 ? currentAssets / sDebt : Infinity;
       const der = equity > 0 ? totalLiab / equity : Infinity;
       const roe = equity > 0 ? (netInc / equity) * 100 : 0;
+
+      const eqSeg = document.getElementById('f4-seg-eq');
+      const debtSeg = document.getElementById('f4-seg-debt');
+      const balLeg = document.getElementById('f4-split-legend');
+      if (eqSeg && debtSeg) {
+        const safeEq = Math.max(0, equity);
+        const total = safeEq + totalLiab;
+        const debtPct = total > 0 ? (totalLiab / total) * 100 : 100;
+        const eqPct = 100 - debtPct;
+        eqSeg.style.inlineSize = `${eqPct.toFixed(1)}%`;
+        debtSeg.style.inlineSize = `${debtPct.toFixed(1)}%`;
+        if (balLeg) {
+          balLeg.textContent = equity <= 0
+            ? 'Ekuitas <= 0 (Seluruh aset tertutup oleh utang!)'
+            : `Ekuitas ${eqPct.toFixed(0)}% vs Utang ${debtPct.toFixed(0)}% terhadap total pendanaan`;
+        }
+      }
 
       outCR.textContent = Number.isFinite(cr) ? `${cr.toFixed(2)}x` : 'Tanpa utang pendek';
       outDER.textContent = equity > 0 ? `${der.toFixed(2)}x` : 'Ekuitas <= 0 (Defisit)';

@@ -1,123 +1,103 @@
 {
   "schemaVersion": 2,
-  "name": "Melek Bisnis: Titanium Editorial Design System",
+  "name": "Melek Bisnis: Studio Paper & Hybrid Diagrams",
   "generatedFrom": "scan",
-  "direction": "Apple Pro Max minimalist editorial reader and financial workbench",
+  "direction": "Pemvis Studio Paper aesthetic with interactive financial workbenches and HTML+CSS Hybrid Diagrams",
   "narrative": {
-    "thesis": "Treat foundational business literacy and Morgan Housel's behavioral finance as a calm, precision-engineered curriculum with interactive workbenches rather than a noisy marketing funnel.",
+    "thesis": "Render foundational business literacy and Morgan Housel's behavioral finance on warm Studio Paper surfaces with crisp ink ledger geometry and responsive HTML+CSS diagrams so text never overflows SVG containers.",
     "densityProfile": {
-      "energy": 1,
+      "energy": 2,
       "rhythm": 2,
       "motion": 1
     },
     "fonts": {
-      "sans": "-apple-system, BlinkMacSystemFont, \"SF Pro Display\", \"SF Pro Text\", \"Segoe UI\", system-ui, sans-serif",
-      "serif": "\"New York\", \"Iowan Old Style\", Georgia, serif",
-      "mono": "ui-monospace, \"SF Mono\", Consolas, monospace"
+      "sans": "\"Segoe UI\", system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+      "display": "\"Segoe UI\", system-ui, -apple-system, sans-serif",
+      "serif": "Georgia, \"Iowan Old Style\", Cambria, serif",
+      "mono": "ui-monospace, \"Cascadia Code\", Consolas, monospace"
     }
   },
   "tokens": {
     "ramps": {
       "light": {
-        "ground": "#F5F5F7",
-        "surface": "#FFFFFF",
-        "subtle": "#E8E8ED",
-        "borderSubtle": "#D2D2D7",
-        "borderControl": "#76767B",
-        "textPrimary": "#1D1D1F",
-        "textSecondary": "#515154",
-        "textMuted": "#5E5E63",
-        "titanium": "#755936",
-        "titaniumTint": "#F3EDE4",
-        "accent": "#0066CC",
-        "accentHover": "#004FA3",
-        "accentInk": "#FFFFFF",
-        "accentSoft": "#E5F0FB",
-        "positive": "#186F38",
-        "positiveSoft": "#E8F5ED",
-        "negative": "#B8251E",
-        "negativeSoft": "#FCECEB"
+        "ground": "#F6F0E4",
+        "surface": "#FFFDF7",
+        "subtle": "#EFE5D1",
+        "borderSubtle": "#D4C8B4",
+        "borderControl": "#24221F",
+        "textPrimary": "#24221F",
+        "textSecondary": "#575148",
+        "textMuted": "#575148",
+        "titanium": "#7A540E",
+        "titaniumTint": "#FDF2D4",
+        "mustard": "#F2B544",
+        "accent": "#1B6356",
+        "accentHover": "#134A40",
+        "accentInk": "#FFFDF7",
+        "accentSoft": "#E5F2EE",
+        "positive": "#1B6356",
+        "positiveSoft": "#E5F2EE",
+        "negative": "#B43A1C",
+        "negativeSoft": "#FBE8E1",
+        "info": "#1A567A",
+        "infoSoft": "#E8F1F5"
       },
       "dark": {
-        "ground": "#0A0A0C",
-        "surface": "#141416",
-        "subtle": "#1D1D20",
-        "borderSubtle": "#2C2C32",
-        "borderControl": "#7A7A82",
-        "textPrimary": "#F5F5F7",
-        "textSecondary": "#B8B8C0",
-        "textMuted": "#A1A1AA",
-        "titanium": "#D4B48C",
-        "titaniumTint": "#1E1B16",
-        "accent": "#4DA3FF",
-        "accentHover": "#74B8FF",
-        "accentInk": "#0A0A0C",
-        "accentSoft": "#13253A",
-        "positive": "#4CD97B",
-        "positiveSoft": "#11291B",
-        "negative": "#FF7A72",
-        "negativeSoft": "#2D1413"
+        "ground": "#161412",
+        "surface": "#211E1A",
+        "subtle": "#2B2621",
+        "borderSubtle": "#423C34",
+        "borderControl": "#9E9484",
+        "textPrimary": "#F4EDE0",
+        "textSecondary": "#C5BEB2",
+        "textMuted": "#C5BEB2",
+        "titanium": "#F2C464",
+        "titaniumTint": "#2C2517",
+        "mustard": "#F2C464",
+        "accent": "#5ED0BA",
+        "accentHover": "#7EE0CD",
+        "accentInk": "#161412",
+        "accentSoft": "#182D29",
+        "positive": "#5ED0BA",
+        "positiveSoft": "#182D29",
+        "negative": "#FF8A6B",
+        "negativeSoft": "#2E1A15",
+        "info": "#7DC2E8",
+        "infoSoft": "#172834"
       }
     },
     "typography": {
       "measure": "68ch",
-      "containerMax": "76rem",
-      "scale": {
-        "h1": "clamp(2rem, 1.4rem + 2.4vw, 3.25rem)",
-        "h2": "clamp(1.5rem, 1.2rem + 1.1vw, 2.05rem)",
-        "h3": "clamp(1.1875rem, 1.08rem + 0.45vw, 1.4rem)",
-        "body": "clamp(1rem, 0.96rem + 0.18vw, 1.0625rem)"
-      },
+      "containerMax": "74rem",
       "tabularNumericSelectors": [".num", "output", "table"]
     },
     "radii": {
-      "sm": "0.5rem",
-      "md": "0.875rem",
-      "lg": "1.25rem",
+      "sm": "0.55rem",
+      "md": "0.9rem",
+      "lg": "1.2rem",
       "pill": "999px"
     },
     "shadows": {
       "light": {
-        "panel": "0 1px 2px rgba(0, 0, 0, 0.04)",
-        "elevated": "0 12px 32px rgba(0, 0, 0, 0.14)"
+        "btn": "2px 2px 0 rgba(36, 34, 31, 0.92)",
+        "panel": "3px 3px 0 rgba(36, 34, 31, 0.92)",
+        "elevated": "3px 3px 0 rgba(36, 34, 31, 0.92)"
       },
       "dark": {
-        "panel": "0 1px 2px rgba(0, 0, 0, 0.35)",
-        "elevated": "0 16px 40px rgba(0, 0, 0, 0.55)"
+        "btn": "2px 2px 0 rgba(0, 0, 0, 0.72)",
+        "panel": "3px 3px 0 rgba(0, 0, 0, 0.72)",
+        "elevated": "3px 3px 0 rgba(0, 0, 0, 0.72)"
       }
     },
     "breakpoints": {
-      "searchGrid": "44rem",
+      "schemaTwoCol": "42rem",
       "syllabusLedger": "48rem",
       "workbenchGrid": "50rem",
       "splitReading": "54rem",
+      "heroSplit": "56rem",
       "docRail": "66rem",
+      "desktopNav": "68rem",
       "tableContainer": "580px"
-    },
-    "motion": {
-      "scrollProgress": "animation-timeline: scroll(root block)",
-      "accordionChevron": "transform 0.2s ease",
-      "reducedMotionPolicy": "prefers-reduced-motion: reduce forces auto scroll and disables scroll animation"
     }
-  },
-  "components": [
-    {
-      "id": "ds-workbench",
-      "name": "Interactive Financial Workbench",
-      "html": "<div class=\"ds-workbench\"><div class=\"ds-workbench-head\"><strong>Simulasi Hitung Unit Usaha</strong><span>IDR</span></div><div class=\"ds-metric\"><span>Titik Impas (BEP)</span><strong>34 unit</strong></div><div class=\"ds-banner\">Usaha untung bersih Rp600.000</div></div>",
-      "css": ".ds-workbench{background:#fff;border:1px solid #76767B;border-radius:20px;padding:20px;font-family:system-ui,sans-serif;color:#1D1D1F}.ds-workbench-head{display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid #D2D2D7;margin-bottom:14px}.ds-metric{display:flex;justify-content:space-between;padding:8px 0;font-variant-numeric:tabular-nums}.ds-banner{margin-top:12px;padding:10px 12px;border-radius:8px;background:#E8F5ED;color:#186F38;border:1px solid #186F38;font-weight:600}"
-    },
-    {
-      "id": "ds-pdf-callout",
-      "name": "Desert Titanium PDF Editorial Callout",
-      "html": "<aside class=\"ds-callout\"><p class=\"ds-callout-title\">RUJUKAN PDF BAB 13 (HAL. 139)</p><p class=\"ds-callout-body\">Bill Gates menyimpan kas di bank agar cukup membayar gaji 1 tahun penuh meski pemasukan nol.</p></aside>",
-      "css": ".ds-callout{background:#F3EDE4;border:1px solid #D2D2D7;border-radius:14px;padding:16px 18px;font-family:system-ui,sans-serif}.ds-callout-title{margin:0 0 6px;font-size:13px;font-weight:700;color:#755936}.ds-callout-body{margin:0;font-size:15px;line-height:1.55;color:#1D1D1F}"
-    },
-    {
-      "id": "ds-tab-strip",
-      "name": "Scrollable ARIA Tab Strip",
-      "html": "<div class=\"ds-tabs\"><button class=\"ds-tab is-active\" type=\"button\">Kamus Istilah</button><button class=\"ds-tab\" type=\"button\">Indeks 20 Bab PDF</button></div>",
-      "css": ".ds-tabs{display:flex;gap:4px;border-bottom:1px solid #D2D2D7;font-family:system-ui,sans-serif}.ds-tab{min-height:44px;padding:8px 16px;border:0;background:transparent;color:#515154;font-weight:600;cursor:pointer;position:relative}.ds-tab.is-active{color:#0066CC;border-bottom:3px solid #0066CC}"
-    }
-  ]
+  }
 }

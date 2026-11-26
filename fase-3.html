@@ -136,50 +136,19 @@
           </div>
 
           <figure class="diagram-plate">
-            <svg viewBox="0 0 860 270" width="860" height="270" role="img" aria-labelledby="diag-f3-mvp-t diag-f3-mvp-d">
-              <title id="diag-f3-mvp-t">Skema Perbandingan Jalur Stok Besar vs Jalur Validasi Pre-Order (MVP)</title>
-              <desc id="diag-f3-mvp-d">Dua jalur alur kerja membandingkan risiko produksi besar sebelum ada pembeli dengan validasi DP Pre-Order yang dibiayai pelanggan.</desc>
-              <rect x="8" y="8" width="844" height="254" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
-              <text x="32" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">PERBANDINGAN JALUR EKSEKUSI: STOK DULUAN VS VALIDASI PRE-ORDER</text>
-
-              <!-- Track 1: Stok Duluan (Risky) -->
-              <rect x="28" y="58" width="184" height="74" rx="10" fill="var(--bg-surface)" stroke="var(--neg)"/>
-              <text x="44" y="86" fill="var(--neg)" font-size="11.5" font-weight="700">1. KELUAR MODAL BESAR</text>
-              <text x="44" y="110" fill="var(--text-primary)" font-size="13">Cetak 200 unit dulu</text>
-
-              <path d="M218 95 H264" stroke="var(--neg)" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M258 89 L268 95 L258 101" fill="none" stroke="var(--neg)" stroke-width="2.5"/>
-
-              <rect x="274" y="58" width="194" height="74" rx="10" fill="var(--bg-surface)" stroke="var(--neg)"/>
-              <text x="290" y="86" fill="var(--neg)" font-size="11.5" font-weight="700">2. BARU CARI PEMBELI</text>
-              <text x="290" y="110" fill="var(--text-primary)" font-size="13">Pasar ternyata sepi minat</text>
-
-              <path d="M474 95 H520" stroke="var(--neg)" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M514 89 L524 95 L514 101" fill="none" stroke="var(--neg)" stroke-width="2.5"/>
-
-              <rect x="530" y="58" width="302" height="74" rx="10" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.5"/>
-              <text x="546" y="86" fill="var(--neg)" font-size="12" font-weight="700">HASIL: STOK MATI &amp; UANG TERTAHAN</text>
-              <text x="546" y="110" fill="var(--text-primary)" font-size="13">Modal tabungan habis, kapok bisnis</text>
-
-              <!-- Track 2: Pre-Order MVP (Safe) -->
-              <rect x="28" y="158" width="184" height="74" rx="10" fill="var(--bg-surface)" stroke="var(--pos)"/>
-              <text x="44" y="186" fill="var(--pos)" font-size="11.5" font-weight="700">1. UJI CONTOH / KONTEN</text>
-              <text x="44" y="210" fill="var(--text-primary)" font-size="13">Tawarkan konsep &amp; buka PO</text>
-
-              <path d="M218 195 H264" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M258 189 L268 195 L258 201" fill="none" stroke="var(--pos)" stroke-width="2.5"/>
-
-              <rect x="274" y="158" width="194" height="74" rx="10" fill="var(--bg-surface)" stroke="var(--pos)"/>
-              <text x="290" y="186" fill="var(--pos)" font-size="11.5" font-weight="700">2. TERIMA DP PEMBELI</text>
-              <text x="290" y="210" fill="var(--text-primary)" font-size="13">Produksi pakai uang DP</text>
-
-              <path d="M474 195 H520" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M514 189 L524 195 L514 201" fill="none" stroke="var(--pos)" stroke-width="2.5"/>
-
-              <rect x="530" y="158" width="302" height="74" rx="10" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
-              <text x="546" y="186" fill="var(--pos)" font-size="12" font-weight="700">HASIL: RISIKO NOL &amp; TERVALIDASI</text>
-              <text x="546" y="210" fill="var(--text-primary)" font-size="13">Jika ditolak, ubah ide tanpa rugi</text>
-            </svg>
+            <p class="diagram-plate-kicker">PERBANDINGAN JALUR EKSEKUSI | STOK DULUAN VS VALIDASI PRE-ORDER</p>
+            <div class="hybrid-flow cols-2">
+              <div class="hybrid-node tone-neg">
+                <span class="hybrid-node-tag">JALUR BERISIKO · PRODUK DULUAN</span>
+                <p class="hybrid-node-title">1. Keluar Modal Besar -&gt; 2. Cari Pembeli -&gt; 3. Stok Mati</p>
+                <p>Mencetak 200 unit stok sebelum ada pembeli nyata. Saat pasar ternyata sepi, uang tabungan tertahan di barang tak laku dan kapok berbisnis.</p>
+              </div>
+              <div class="hybrid-node tone-pos">
+                <span class="hybrid-node-tag">JALUR AMAN · PRE-ORDER MVP</span>
+                <p class="hybrid-node-title">1. Uji Konsep/PO -&gt; 2. Terima DP -&gt; 3. Beli Bahan</p>
+                <p>Menawarkan produk ke pasar sempit terlebih dahulu. Produksi dibiayai oleh uang DP pembeli sehingga risiko stok tertahan nyaris nol.</p>
+              </div>
+            </div>
             <figcaption>
               Gambar 4B. Jangan memproduksi ratusan barang berdasarkan angan-angan. Jalur MVP dan Pre-Order memastikan uang pembeli masuk lebih dulu sebelum uang bahan keluar.
             </figcaption>
@@ -198,37 +167,40 @@
           </div>
 
           <figure class="diagram-plate">
-            <svg viewBox="0 0 860 320" width="860" height="320" role="img" aria-labelledby="svg-f3-funnel-title svg-f3-funnel-desc">
-              <title id="svg-f3-funnel-title">Diagram Corong Penjualan, CAC, dan Rasio LTV terhadap CAC</title>
-              <desc id="svg-f3-funnel-desc">Visualisasi empat tahap funnel dari 1.000 orang melihat konten hingga 20 pembeli, dengan perhitungan CAC Rp25.000 dan LTV Rp150.000.</desc>
-              <rect x="0" y="0" width="860" height="320" rx="14" fill="var(--bg-page)"/>
+            <p class="diagram-plate-kicker">ALUR CORONG PENJUALAN | CONTOH ANGGARAN PROMOSI RP500.000</p>
+            <div class="funnel-grid">
+              <div class="funnel-stack" role="list" aria-label="Tahapan corong penjualan">
+                <div class="funnel-tier" role="listitem">
+                  <strong>1. Kesadaran (Lihat Story/Iklan)</strong>
+                  <span class="num">1.000 orang (100%)</span>
+                </div>
+                <div class="funnel-tier w-90" role="listitem">
+                  <strong>2. Minat (Klik Tautan / Chat)</strong>
+                  <span class="num">120 orang (12%)</span>
+                </div>
+                <div class="funnel-tier w-80" role="listitem">
+                  <strong>3. Beli Pertama Kali</strong>
+                  <span class="num">20 pelanggan (2%)</span>
+                </div>
+                <div class="funnel-tier w-70" role="listitem">
+                  <strong>4. Beli Ulang (Repeat Order)</strong>
+                  <span class="num">10 pelanggan loyal</span>
+                </div>
+              </div>
 
-              <text x="28" y="34" fill="var(--text-primary)" font-size="14" font-weight="700">ALUR CORONG PENJUALAN (CONTOH: ANGGARAN PROMOSI Rp500.000)</text>
-
-              <!-- Funnel Steps Left -->
-              <rect x="28" y="54" width="440" height="46" rx="8" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
-              <text x="46" y="82" fill="var(--text-primary)" font-size="13.5" font-weight="700">1. Kesadaran (Lihat Story/Iklan): 1.000 orang (100%)</text>
-
-              <rect x="58" y="114" width="380" height="46" rx="8" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
-              <text x="76" y="142" fill="var(--text-primary)" font-size="13.5" font-weight="700">2. Minat (Klik Tautan / Chat): 120 orang (12%)</text>
-
-              <rect x="88" y="174" width="320" height="46" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
-              <text x="106" y="202" fill="var(--accent)" font-size="13.5" font-weight="700">3. Beli Pertama Kali: 20 pelanggan (2%)</text>
-
-              <rect x="118" y="234" width="260" height="46" rx="8" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
-              <text x="136" y="262" fill="var(--pos)" font-size="13.5" font-weight="700">4. Beli Ulang (Repeat): 10 pelanggan loyal</text>
-
-              <!-- Metrics Right -->
-              <rect x="504" y="54" width="328" height="106" rx="12" fill="var(--bg-surface)" stroke="var(--titanium)" stroke-width="1.5"/>
-              <text x="524" y="82" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">CAC (BIAYA AKUISISI 1 PELANGGAN)</text>
-              <text x="524" y="112" fill="var(--text-primary)" font-size="16" font-weight="700">Rp500.000 / 20 pembeli = Rp25.000</text>
-              <text x="524" y="138" fill="var(--text-secondary)" font-size="12.5">Kamu membayar Rp25.000 untuk dapat 1 pembeli baru.</text>
-
-              <rect x="504" y="174" width="328" height="106" rx="12" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
-              <text x="524" y="202" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">LTV (NILAI SEUMUR HIDUP PELANGGAN)</text>
-              <text x="524" y="232" fill="var(--text-primary)" font-size="16" font-weight="700">Laba Rp30.000 x 5 kali order = Rp150.000</text>
-              <text x="524" y="258" fill="var(--pos)" font-size="12.5" font-weight="700">Rasio LTV : CAC = 6 : 1 (Bisnis Sehat)</text>
-            </svg>
+              <div class="hybrid-flow">
+                <div class="hybrid-node tone-mustard">
+                  <span class="hybrid-node-tag">CAC · BIAYA AKUISISI 1 PELANGGAN</span>
+                  <p class="hybrid-node-title">Rp500.000 / 20 pembeli = Rp25.000</p>
+                  <p>Kamu membayar Rp25.000 biaya promosi untuk memperoleh satu pembeli baru.</p>
+                </div>
+                <div class="hybrid-node tone-pos">
+                  <span class="hybrid-node-tag">LTV · NILAI SEUMUR HIDUP PELANGGAN</span>
+                  <p class="hybrid-node-title">Laba Rp30.000 x 5 order = Rp150.000</p>
+                  <p><strong>Rasio LTV : CAC = 6 : 1 (Bisnis Sehat)</strong></p>
+                </div>
+              </div>
+            </div>
             <figcaption>
               Gambar 5. Alasan mengapa bisnis bangkrut meski produknya laris: jika biaya mendatangkan satu pelanggan baru (CAC) adalah Rp25.000 sementara untung bersih per transaksi cuma Rp15.000 dan pelanggan tidak pernah membeli ulang, kamu rugi Rp10.000 per orang. Profit sejati baru lahir saat terjadi <span lang="en">Repeat Order</span> sehingga LTV minimal 3 kali lebih besar daripada CAC.
             </figcaption>
@@ -320,45 +292,45 @@
           </div>
 
           <figure class="diagram-plate">
-            <svg viewBox="0 0 860 320" width="860" height="320" role="img" aria-labelledby="diag-f3-comp-t diag-f3-comp-d">
+            <p class="diagram-plate-kicker">KURVA WAKTU VS IMBAL HASIL | WARREN BUFFETT VS JIM SIMONS (BAB 4 PDF)</p>
+            <svg viewBox="0 0 860 260" width="860" height="260" role="img" aria-labelledby="diag-f3-comp-t diag-f3-comp-d">
               <title id="diag-f3-comp-t">Kurva Eksponensial Warren Buffett vs Jim Simons (Bab 4 PDF)</title>
               <desc id="diag-f3-comp-d">Grafik menunjukkan kurva kekayaan Buffett tumbuh pelan sejak usia 10 hingga 50 tahun, lalu meledak setelah usia 65 hingga 84,5 miliar dolar dibandingkan Jim Simons yang mulai usia 50 tahun.</desc>
-              <rect x="8" y="8" width="844" height="304" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
-              <text x="32" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">KURVA WAKTU VS IMBAL HASIL: BUFFETT (MULAI USIA 10) VS SIMONS (USIA 50)</text>
+              <rect width="860" height="260" fill="var(--bg-page)"/>
+              <line x1="80" y1="36" x2="80" y2="210" stroke="var(--border-control)" stroke-width="2"/>
+              <line x1="80" y1="210" x2="780" y2="210" stroke="var(--border-control)" stroke-width="2"/>
 
-              <!-- Axes: origin (90, 250), X max (780, 250) = Age 10 to 85 -->
-              <line x1="90" y1="60" x2="90" y2="250" stroke="var(--border-control)" stroke-width="1.5"/>
-              <line x1="90" y1="250" x2="790" y2="250" stroke="var(--border-control)" stroke-width="1.5"/>
+              <rect x="540" y="36" width="220" height="174" fill="var(--pos-soft)" opacity="0.65"/>
+              <line x1="540" y1="36" x2="540" y2="210" stroke="var(--pos)" stroke-dasharray="5 4" stroke-width="1.5"/>
 
-              <!-- Age 65 shaded zone (x=550 to 760) -->
-              <rect x="550" y="60" width="210" height="190" fill="var(--pos-soft)" opacity="0.65"/>
-              <line x1="550" y1="60" x2="550" y2="250" stroke="var(--pos)" stroke-dasharray="4 3" stroke-width="1.5"/>
+              <path d="M80 208 C 280 206, 450 198, 540 180 C 625 160, 700 104, 760 44" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="540" cy="180" r="6" fill="var(--titanium)"/>
+              <circle cx="760" cy="44" r="7" fill="var(--accent)" stroke="var(--bg-surface)" stroke-width="2"/>
+              <text x="742" y="34" text-anchor="end" fill="var(--accent)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">$84,5M</text>
 
-              <!-- Exponential curve: Buffett (10 -> 85) -->
-              <path d="M90 248 C 280 246, 460 236, 550 218 C 635 198, 705 140, 760 66" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round"/>
-              <circle cx="550" cy="218" r="6" fill="var(--titanium)"/>
-              <circle cx="760" cy="66" r="7" fill="var(--accent)" stroke="var(--bg-surface)" stroke-width="2"/>
+              <path d="M420 209 C 510 206, 615 186, 760 162" fill="none" stroke="var(--titanium)" stroke-width="3" stroke-dasharray="6 4"/>
+              <circle cx="420" cy="209" r="5" fill="var(--titanium)"/>
+              <circle cx="760" cy="162" r="6" fill="var(--titanium)"/>
+              <text x="742" y="148" text-anchor="end" fill="var(--titanium)" font-size="12.5" font-weight="700" font-family="ui-monospace, monospace">~$21M</text>
 
-              <!-- Jim Simons curve (starts at Age 50 x=430 -> ends around y=195 = $21B) -->
-              <path d="M430 249 C 520 246, 620 226, 760 198" fill="none" stroke="var(--titanium)" stroke-width="2.75" stroke-dasharray="6 4"/>
-              <circle cx="430" cy="249" r="5" fill="var(--titanium)"/>
-              <circle cx="760" cy="198" r="6" fill="var(--titanium)"/>
-
-              <!-- Annotations -->
-              <rect x="570" y="72" width="176" height="58" rx="8" fill="var(--bg-surface)" stroke="var(--accent)"/>
-              <text x="582" y="96" fill="var(--accent)" font-size="12" font-weight="700">Buffett: $84,5 Miliar</text>
-              <text x="582" y="116" fill="var(--pos)" font-size="11.5" font-weight="700">$81,5M lahir pasca 65 thn</text>
-
-              <rect x="506" y="144" width="234" height="44" rx="8" fill="var(--bg-surface)" stroke="var(--titanium)"/>
-              <text x="520" y="164" fill="var(--titanium)" font-size="11.5" font-weight="700">Jim Simons (66%/thn): ~$21M</text>
-              <text x="520" y="180" fill="var(--text-secondary)" font-size="11">Kalah waktu (baru mulai usia 50)</text>
-
-              <text x="90" y="274" text-anchor="middle" fill="var(--text-secondary)" font-size="11.5">Usia 10</text>
-              <text x="275" y="274" text-anchor="middle" fill="var(--text-secondary)" font-size="11.5">Usia 30 ($1jt)</text>
-              <text x="430" y="274" text-anchor="middle" fill="var(--titanium)" font-size="11.5" font-weight="700">Usia 50</text>
-              <text x="550" y="274" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700">Usia 65</text>
-              <text x="760" y="274" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">Usia 85+</text>
+              <text x="80" y="236" text-anchor="middle" fill="var(--text-secondary)" font-size="12">Usia 10</text>
+              <text x="260" y="236" text-anchor="middle" fill="var(--text-secondary)" font-size="12">Usia 30</text>
+              <text x="420" y="236" text-anchor="middle" fill="var(--titanium)" font-size="12" font-weight="700">Usia 50</text>
+              <text x="540" y="236" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700">Usia 65</text>
+              <text x="760" y="236" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">Usia 85+</text>
             </svg>
+            <div class="hybrid-flow cols-2" style="margin-block-start: 1rem;">
+              <div class="hybrid-node tone-pos">
+                <span class="hybrid-node-tag">WARREN BUFFETT · 22% / TAHUN (MULAI USIA 10)</span>
+                <p class="hybrid-node-title">$81,5 Miliar dari $84,5 Miliar Lahir Pasca Usia 65</p>
+                <p>Punya durasi waktu terpanjang. Pada usia 30 sudah punya $1 juta; kekuatan utamanya adalah kesabaran berpuluh tahun.</p>
+              </div>
+              <div class="hybrid-node tone-mustard">
+                <span class="hybrid-node-tag">JIM SIMONS · 66% / TAHUN (MULAI USIA 50)</span>
+                <p class="hybrid-node-title">Imbal Hasil 3x Lebih Tinggi, Total Kekayaan 75% Lebih Kecil</p>
+                <p>Meski persentase tahunannya jauh mengalahkan Buffett, ia kehilangan 40 tahun masa penggabungan di awal karier.</p>
+              </div>
+            </div>
             <figcaption>
               Gambar 5B. Otak manusia terbiasa berpikir secara garis lurus, bukan eksponensial. Di paruh pertama usia kerja, peracikan terlihat lamban; kunci sebenarnya adalah tetap bertahan selama puluhan tahun agar lonjakan akhir sempat terjadi.
             </figcaption>
@@ -424,6 +396,14 @@
                     <dd id="f3-out-late" class="num">Rp166.467.330</dd>
                   </div>
                 </dl>
+                <div class="live-split-wrap">
+                  <span class="live-split-label">PORSI LONJAKAN 5 TAHUN TERAKHIR VS TAHUN AWAL</span>
+                  <div class="live-split-track" aria-hidden="true">
+                    <div id="f3-seg-early" class="split-seg-mid" style="inline-size: 49.7%;"></div>
+                    <div id="f3-seg-late" class="split-seg-pos" style="inline-size: 50.3%;"></div>
+                  </div>
+                  <span id="f3-split-legend" class="live-split-legend">50% tahun-tahun awal | 50% dari 5 tahun terakhir</span>
+                </div>
                 <div id="f3-out-note" class="status-banner is-positive"></div>
               </div>
             </div>
