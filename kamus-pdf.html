@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      var t = localStorage.getItem("color-scheme");
+      if (t === "light" || t === "dark") {
+        document.querySelector('meta[name="color-scheme"]').content = t;
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    } catch (e) {}
+  </script>
+  <title>Kamus Istilah Bisnis, Indeks 20 Bab PDF &amp; Peta 4 Buku | Melek Bisnis</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Langsung ke kamus dan indeks PDF</a>
+  <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M7 16V11M12 16V7M17 16V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Melek Bisnis</span>
+      </a>
+
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="Navigasi kurikulum">
+          <button class="menu-button" type="button" popovertarget="site-menu" popovertargetaction="toggle" aria-controls="site-menu" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <ul id="site-menu" class="site-menu" popover="auto">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="fase-1.html">Fase 1: Pola Pikir</a></li>
+            <li><a href="fase-2.html">Fase 2: Cash Flow</a></li>
+            <li><a href="fase-3.html">Fase 3: Validasi</a></li>
+            <li><a href="fase-4.html">Fase 4: Laporan</a></li>
+            <li><a href="fase-5.html">Fase 5: Investasi</a></li>
+            <li><a href="kamus-pdf.html" aria-current="page">Kamus &amp; 20 Bab</a></li>
+          </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ubah tema tampilan">
+          <svg class="theme-icon icon-to-dark" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <path d="M12.9 10.6A5.5 5.5 0 0 1 5.4 3.1a5.5 5.5 0 1 0 7.5 7.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          <svg class="theme-icon icon-to-light" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <circle cx="8" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M12.6 3.4l-1.1 1.1M4.5 11.5l-1.1 1.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span data-theme-label>Sistem</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell" tabindex="-1">
+    <header class="hero-frame">
+      <h1>Kamus Istilah Bisnis dari Nol, Indeks Lengkap 20 Bab PDF, dan Peta 4 Buku Keuangan</h1>
+      <p class="hero-lead">
+        Gunakan halaman referensi ini kapan pun kamu menemukan kata asing saat berbisnis atau membaca PDF <em>The Psychology of Money</em> terjemahan Bahasa Indonesia (M. Raflie Pratama). Ketik kata kunci apa saja, misalnya "HPP", "Cash Flow", "Buffett", atau nomor halaman bab, untuk menyaring secara langsung.
+      </p>
+    </header>
+
+    <section aria-labelledby="search-heading">
+      <h2 id="search-heading" class="visually-hidden">Pencarian Kamus dan Bab PDF</h2>
+      <search>
+        <div class="search-bar">
+          <div class="field-wrap">
+            <label for="glossary-search">Cari Istilah Bisnis, Nama Tokoh, atau Bab PDF</label>
+            <input id="glossary-search" class="text-input" type="search" placeholder="Contoh: Cash Flow, HPP, BEP, Stalingrad, Graham, atau hal. 55...">
+          </div>
+
+          <div class="field-wrap">
+            <label for="glossary-category">Saring Kelompok Materi</label>
+            <select id="glossary-category" class="select-input">
+              <option value="all">Semua Kelompok (Istilah + 20 Bab PDF)</option>
+              <option value="keuangan">Keuangan Dasar &amp; Arus Kas</option>
+              <option value="pemasaran">Validasi Pasar &amp; Unit Ekonomi</option>
+              <option value="laporan">Tiga Laporan &amp; Rasio Neraca</option>
+              <option value="investasi">Nilai, Moat &amp; Investasi</option>
+              <option value="bab-pdf">Indeks 20 Bab + Postscript PDF</option>
+            </select>
+          </div>
+
+          <button id="glossary-reset" class="btn btn-secondary" type="button">Reset Filter</button>
+        </div>
+      </search>
+      <p id="glossary-count" class="muted" aria-live="polite"></p>
+      <div id="glossary-tab-notice" class="status-banner is-neutral" hidden aria-live="polite"></div>
+
+      <div id="glossary-empty" class="empty-state" hidden>
+        <p><strong>Tidak ada entri yang cocok dengan kata kunci tersebut.</strong></p>
+        <p class="muted">Coba kata kunci yang lebih pendek (misal: "laba", "modal", "risiko", "utang", "buffett") atau reset penyaring kategori.</p>
+        <div class="hero-actions">
+          <button id="glossary-empty-reset" class="btn btn-primary" type="button">Tampilkan Semua Entri</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="tablist-scroll" role="tablist" aria-label="Pilih bagian referensi">
+      <button type="button" role="tab" id="tab-kamus" aria-selected="true" tabindex="0">1. Kamus Istilah Bisnis (A sampai Z)</button>
+      <button type="button" role="tab" id="tab-pdf" aria-selected="false" tabindex="-1">2. Indeks Lengkap 20 Bab + Postscript PDF</button>
+      <button type="button" role="tab" id="tab-buku" aria-selected="false" tabindex="-1">3. Peta 4 Buku &amp; Terjemahan Unik PDF</button>
+    </div>
+
+    <div id="panel-kamus" role="tabpanel" aria-labelledby="tab-kamus">
+      <div class="tab-panel-inner">
+        <div class="term-list">
+          <article class="term-entry" data-filter-item data-category="laporan">
+            <div class="term-entry-head">
+              <h3>Aset (<span lang="en">Assets</span>)</h3>
+              <span class="term-tag">Fase 4 | Laporan &amp; Neraca</span>
+            </div>
+            <p>Segala harta bernilai ekonomi yang dimiliki usaha atau individu, mulai dari uang tunai, piutang pembeli, stok barang, hingga mesin kopi atau ruko. Aset dibedakan menjadi Aset Lancar (&lt; 1 tahun jadi kas) dan Aset Tetap (dipakai jangka panjang).</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>BEP (<span lang="en">Break-Even Point</span> / Titik Impas)</h3>
+              <span class="term-tag">Fase 2 | Keuangan Dasar</span>
+            </div>
+            <p>Jumlah minimal unit yang wajib terjual agar total pemasukan pas menutup total biaya modal bahan dan biaya tetap operasional (laba = Rp0). Rumus: <code>BEP Unit = Biaya Tetap / (Harga Jual - HPP per Unit)</code>.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>Biaya Tetap (<span lang="en">Fixed Cost</span>) &amp; Biaya Variabel (<span lang="en">Variable Cost</span>)</h3>
+              <span class="term-tag">Fase 2 | Keuangan Dasar</span>
+            </div>
+            <p>Biaya Tetap selalu wajib dibayar berapapun jumlah jualanmu (contoh: sewa lapak, gaji tetap, kuota Wi-Fi). Biaya Variabel naik atau turun persis mengikuti banyaknya unit terjual (contoh: biji kopi, cup plastik, kemasan).</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="pemasaran">
+            <div class="term-entry-head">
+              <h3>CAC (<span lang="en">Customer Acquisition Cost</span>)</h3>
+              <span class="term-tag">Fase 3 | Pemasaran</span>
+            </div>
+            <p>Rata-rata biaya promosi dan pemasaran yang dikeluarkan untuk mendapatkan satu pelanggan baru yang benar-benar membayar. Rumus: <code>Total Biaya Promosi / Jumlah Pelanggan Baru</code>.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>Cash Flow (Arus Kas)</h3>
+              <span class="term-tag">Fase 2 &amp; Fase 4 | Inti Bisnis</span>
+            </div>
+            <p>Pergerakan uang tunai sungguhan yang benar-benar masuk ke rekening (<span lang="en">Cash In</span>) dan keluar dari rekening (<span lang="en">Cash Out</span>) dalam periode tertentu. Dibagi menjadi tiga: Arus Kas Operasi (dari jualan utama), Investasi (beli/jual alat), dan Pendanaan (utang atau modal).</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="investasi">
+            <div class="term-entry-head">
+              <h3>Compounding (Penggabungan / Bunga Majemuk)</h3>
+              <span class="term-tag">Fase 3 | PDF Bab 4</span>
+            </div>
+            <p>Proses keuntungan tahun ini ikut menghasilkan keuntungan lebih besar di tahun-tahun berikutnya secara eksponensial. Kekayaan Warren Buffett membuktikan hampir seluruh lonjakan hasilnya muncul di tahun-tahun akhir karena kesabaran waktu.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="laporan">
+            <div class="term-entry-head">
+              <h3>Current Ratio (Rasio Lancar)</h3>
+              <span class="term-tag">Fase 4 | Rasio Neraca</span>
+            </div>
+            <p>Ukuran kesanggupan usaha membayar utang yang segera jatuh tempo dalam waktu kurang dari setahun. Rumus: <code>Aset Lancar / Utang Jangka Pendek</code>. Patokan sehat minimal 1,5x; di bawah 1,0x berarti rawan gagal bayar.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="laporan">
+            <div class="term-entry-head">
+              <h3>DER (<span lang="en">Debt to Equity Ratio</span>)</h3>
+              <span class="term-tag">Fase 4 | Rasio Neraca</span>
+            </div>
+            <p>Perbandingan antara total seluruh utang perusahaan dengan modal bersih pemilik (Ekuitas). Makin tinggi angkanya (misal di atas 1,5x atau 2,0x), makin besar beban cicilan jika omzet mendadak turun.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="investasi">
+            <div class="term-entry-head">
+              <h3>Economic Moat (Parit Ekonomi)</h3>
+              <span class="term-tag">Fase 5 | Investasi Nilai</span>
+            </div>
+            <p>Keunggulan struktural sebuah bisnis yang membuatnya sulit ditiru pesaing dalam jangka panjang, misalnya kekuatan merek, biaya produksi termurah karena skala raksasa, atau tingginya biaya pindah pelanggan.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="laporan">
+            <div class="term-entry-head">
+              <h3>Ekuitas (<span lang="en">Equity</span> / Kekayaan Bersih Pemilik)</h3>
+              <span class="term-tag">Fase 4 | Neraca</span>
+            </div>
+            <p>Sisa hak milik sah pemilik usaha setelah seluruh aset dikurangi seluruh utang (<code>Ekuitas = Total Aset - Total Liabilitas</code>). Di dalamnya termasuk modal setor awal plus laba bersih tahunan yang ditahan di perusahaan.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="pemasaran">
+            <div class="term-entry-head">
+              <h3>Funnel Penjualan (<span lang="en">Sales Funnel</span>) &amp; Konversi</h3>
+              <span class="term-tag">Fase 3 | Pemasaran</span>
+            </div>
+            <p>Corong penyaringan perjalanan calon pembeli dari tahap sekadar tahu, tertarik bertanya, hingga membayar. Tingkat Konversi adalah persentase orang yang lanjut dari satu tahap ke tahap berikutnya.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>HPP (<span lang="en">COGS / Cost of Goods Sold</span>)</h3>
+              <span class="term-tag">Fase 2 | Keuangan Dasar</span>
+            </div>
+            <p>Harga Pokok Penjualan, yaitu modal langsung yang menempel pada produk atau jasa yang laku terjual (biji kopi, susu, gelas untuk setiap cup terjual). Tidak termasuk gaji admin atau sewa tempat bulanan.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>Laba Kotor (<span lang="en">Gross Profit</span>) vs. Laba Bersih (<span lang="en">Net Profit</span>)</h3>
+              <span class="term-tag">Fase 2 | Keuangan Dasar</span>
+            </div>
+            <p>Laba Kotor = <code>Omzet - HPP</code> (untung dagang kasar sebelum biaya toko/admin). Laba Bersih = <code>Laba Kotor - OPEX - Pajak</code> (untung nyata milik usaha).</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="laporan">
+            <div class="term-entry-head">
+              <h3>Laporan Laba Rugi (<span lang="en">Income Statement</span>)</h3>
+              <span class="term-tag">Fase 4 | Tiga Laporan</span>
+            </div>
+            <p>Rekaman kinerja pendapatan, biaya, dan laba atau rugi sebuah bisnis selama satu rentang waktu tertentu (sebulan, per kuartal, atau setahun penuh).</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="laporan">
+            <div class="term-entry-head">
+              <h3>Liabilitas (<span lang="en">Liabilities</span> / Kewajiban Utang)</h3>
+              <span class="term-tag">Fase 4 | Neraca</span>
+            </div>
+            <p>Segala kewajiban keuangan usaha yang harus dibayar ke pihak luar di masa depan, meliputi utang ke supplier, gaji tertunggak, cicilan bank pendek, maupun kredit jangka panjang.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="pemasaran">
+            <div class="term-entry-head">
+              <h3>LTV (<span lang="en">Customer Lifetime Value</span>)</h3>
+              <span class="term-tag">Fase 3 | Pemasaran</span>
+            </div>
+            <p>Total estimasi laba kotor yang dihasilkan satu pelanggan sepanjang durasi ia berlangganan dan membeli ulang dari bisnismu. Bisnis baru sehat jika <code>LTV &gt;= 3 x CAC</code>.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>Margin (<span lang="en">Profit Margin</span>)</h3>
+              <span class="term-tag">Fase 2 | Keuangan Dasar</span>
+            </div>
+            <p>Persentase keuntungan yang tersisa dari setiap Rupiah omzet penjualan. Rumus Margin Laba Bersih = <code>(Laba Bersih / Omzet) x 100%</code>.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="investasi">
+            <div class="term-entry-head">
+              <h3>Margin of Safety &amp; Ruang untuk Kesalahan</h3>
+              <span class="term-tag">Fase 4 &amp; 5 | PDF Bab 13 &amp; Graham</span>
+            </div>
+            <p>Jarak pengaman antara perkiraan optimis dengan kenyataan terburuk. Dalam investasi saham berarti membeli aset jauh di bawah nilai wajarnya; dalam bisnis berarti menyimpan cadangan kas agar tidak hancur ketika proyeksi meleset.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="pemasaran">
+            <div class="term-entry-head">
+              <h3>MVP (<span lang="en">Minimum Viable Product</span>)</h3>
+              <span class="term-tag">Fase 3 | Validasi Pasar</span>
+            </div>
+            <p>Versi paling sederhana dan termurah dari produkmu yang sudah cukup untuk menyelesaikan masalah pelanggan dan menguji kesediaan mereka membayar nyata sebelum memproduksi besar-besaran.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="laporan">
+            <div class="term-entry-head">
+              <h3>Neraca (<span lang="en">Balance Sheet</span>)</h3>
+              <span class="term-tag">Fase 4 | Tiga Laporan</span>
+            </div>
+            <p>Foto posisi keuangan bisnis pada satu tanggal spesifik yang menunjukkan keseimbangan <code>Total Aset = Total Liabilitas + Ekuitas</code>.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="investasi">
+            <div class="term-entry-head">
+              <h3>Nilai Intrinsik (<span lang="en">Intrinsic Value</span>) vs. Harga Pasar</h3>
+              <span class="term-tag">Fase 5 | Investasi Nilai</span>
+            </div>
+            <p>Harga Pasar adalah banderol yang diminta penjual/bursa detik ini, sedangkan Nilai Intrinsik adalah nilai bisnis sesungguhnya berdasarkan kemampuan menghasilkan arus kas jangka panjang.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>Omzet (<span lang="en">Revenue / Gross Sales</span>)</h3>
+              <span class="term-tag">Fase 2 | Keuangan Dasar</span>
+            </div>
+            <p>Total uang kotor hasil perkalian jumlah unit terjual dengan harga jual sebelum dikurangi satu rupiah pun biaya bahan atau sewa. Omzet besar belum tentu untung.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>OPEX (<span lang="en">Operating Expenses</span>)</h3>
+              <span class="term-tag">Fase 2 | Keuangan Dasar</span>
+            </div>
+            <p>Biaya operasional rutin untuk menjaga roda usaha tetap jalan di luar modal bahan pokok, misalnya sewa tempat, listrik, internet, gaji admin, dan iklan.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="keuangan">
+            <div class="term-entry-head">
+              <h3>Piutang (<span lang="en">Accounts Receivable</span>) &amp; Utang (<span lang="en">Payable</span>)</h3>
+              <span class="term-tag">Fase 2 &amp; 4 | Arus Kas</span>
+            </div>
+            <p>Piutang adalah uang hak kita yang masih berada di tangan pembeli (pelanggan kasbon/bayar tempo), sehingga termasuk aset tetapi belum masuk kas. Utang Usaha adalah kebalikannya: tagihan yang wajib kita bayar ke pemasok.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="laporan">
+            <div class="term-entry-head">
+              <h3>ROE (<span lang="en">Return on Equity</span>)</h3>
+              <span class="term-tag">Fase 4 | Rasio Neraca</span>
+            </div>
+            <p>Mengukur seberapa efisien modal bersih pemilik mencetak laba dalam setahun (<code>Laba Bersih / Ekuitas x 100%</code>). ROE 20% artinya tiap Rp100 juta modal bersih menghasilkan Rp20 juta laba bersih.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="investasi">
+            <div class="term-entry-head">
+              <h3>Sunk Cost (Biaya Hangus)</h3>
+              <span class="term-tag">Fase 4 | PDF Bab 14</span>
+            </div>
+            <p>Uang, waktu, atau tenaga yang sudah telanjur keluar di masa lalu dan tidak bisa ditarik kembali. Menurut Bab 14 PDF, keputusan masa depan harus diambil berdasarkan prospek ke depan, bukan demi membalas ego biaya masa lalu.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="investasi">
+            <div class="term-entry-head">
+              <h3>Tail Events (Kejadian Ekor Panjang)</h3>
+              <span class="term-tag">Fase 3 | PDF Bab 6</span>
+            </div>
+            <p>Sejumlah kecil proyek, produk, atau saham pemenang ekstrem yang menyumbang nyaris seluruh keuntungan besar, menutupi kegagalan puluhan eksperimen biasa lainnya.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-pdf" role="tabpanel" aria-labelledby="tab-pdf" hidden="until-found">
+      <div class="tab-panel-inner">
+        <div class="term-list">
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Pendahuluan: Pertunjukan Terhebat di Bumi</h3>
+              <span class="term-tag">PDF Hal. 11 sampai 23 | Dibahas di Fase 1</span>
+            </div>
+            <p>Kisah kontras Ronald Read (petugas kebersihan, di PDF diterjemahkan "Baca", yang wafat mewariskan $8 juta termasuk $6 juta untuk rumah sakit &amp; perpustakaan) melawan eksekutif lulusan Harvard Richard Fuscone yang bangkrut 2008. Pelajaran inti: hasil keuangan lebih ditentukan perilaku (keterampilan lunak) dibanding kecerdasan teknik semata.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 1: Tidak Ada yang Gila</h3>
+              <span class="term-tag">PDF Hal. 24 sampai 35 | Dibahas di Fase 1</span>
+            </div>
+            <p>Riset Malmendier &amp; Nagel: generasi yang tumbuh di masa resesi/inflasi 1970-an punya selera risiko berbeda dari yang tumbuh saat pasar naik 1990-an. Sejarah finansial pribadi seseorang (~0,00000001% sejarah dunia) membentuk 80% cara pandangnya terhadap uang. Menyorot pula sejarah Jamsostek (Social Security) 1935 dan akun pensiun 401(k) 1978.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 2: Keberuntungan &amp; Risiko</h3>
+              <span class="term-tag">PDF Hal. 36 sampai 45 | Dibahas di Fase 1</span>
+            </div>
+            <p>Bill Gates di SMA Lakeside (1 dari 300 juta remaja tahun 1968 dengan akses komputer) vs Kent Evans yang tewas kecelakaan gunung. Kisah Cornelius Vanderbilt membangun jalur kereta api melawan aturan hukum abad ke-19 &amp; John D. Rockefeller menyiasati hakim. Nasihat Scott Galloway: jangan pernah menilai kesuksesan seseorang 100% hasil usaha sendiri atau kegagalan 100% akibat malas.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 3: Tidak Pernah Cukup</h3>
+              <span class="term-tag">PDF Hal. 46 sampai 51 | Dibahas di Fase 1</span>
+            </div>
+            <p>Rajat Gupta (yatim Kolkata sampai CEO McKinsey &amp; dewan direksi Goldman Sachs, kekayaan ~$100 juta) dan Bernie Madoff terjerumus penjara karena tidak memiliki batas "cukup". Perbandingan sosial adalah medan tempur tanpa garis finis; jangan pertaruhkan apa yang kamu punya dan butuhkan (reputasi, kebebasan, keluarga) demi mengejar sesuatu yang sebenarnya tidak kamu butuhkan.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 4: Menggabungkan yang Membingungkan (Compounding)</h3>
+              <span class="term-tag">PDF Hal. 52 sampai 59 | Dibahas di Fase 3</span>
+            </div>
+            <p>Misteri Zaman Es (Milankovitch, Köppen, Gwen Schultz) dan rahasia Warren Buffett: $81,5 miliar dari $84,5 miliar kekayaannya terkumpul setelah usia 65 tahun! Perbandingan Buffett (22%/thn sejak usia 10 tahun) vs Jim Simons (66%/thn tetapi baru mulai serius usia 50 tahun, kekayaan 75% lebih rendah) dan pertumbuhan kapasitas hard drive IBM dari 3,5 MB menjadi 100 juta MB.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 5: Menjadi Kaya vs. Tetap Kaya</h3>
+              <span class="term-tag">PDF Hal. 60 sampai 72 | Dibahas di Fase 2</span>
+            </div>
+            <p>Kontras 29 Oktober 1929: Abraham Germansky bangkrut seketika dan Jesse Livermore meraih $3 miliar dalam sehari lalu bangkrut bunuh diri pada 1933. Ditambah kisah Rick Guerin yang tertinggal jauh dari Warren Buffett dan Charlie Munger gara-gara terburu-buru memakai utang margin. Tetap kaya butuh kombinasi berhemat, kas di tangan, dan paranoia sehat jangka pendek.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 6: Ekor, Anda Menang (Tails, You Win)</h3>
+              <span class="term-tag">PDF Hal. 73 sampai 85 | Dibahas di Fase 3</span>
+            </div>
+            <p>Kolektor seni Heinz Berggruen (99% koleksi biasa, 1% Picasso jadi raksasa), Walt Disney (studio bangkrut, 400 kartun rugi sebelum Putri Salju $8 juta di 1938), riset VC Correlation Ventures &amp; J.P. Morgan Russell 3000, gagalnya Fire Phone ("Telepon Api") Amazon tertolong Prime &amp; AWS, pengujian klub kecil Chris Rock, serta Peter Lynch ("benar 6 dari 10 cukup untuk hebat").</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 7: Kebebasan</h3>
+              <span class="term-tag">PDF Hal. 86 sampai 94 | Dibahas di Fase 5</span>
+            </div>
+            <p>Dividen tertinggi yang diberikan uang adalah kendali penuh atas waktumu (riset Angus Campbell 1981). Pengalaman pahit Morgan saat magang investment banking 4 bulan, gaya hidup hemat Derek Sivers ($1.000/bulan dari gaji $1.800 hingga merdeka usia 22 tahun), data stres Gallup 2019 (55% AS stres meski gaji dua kali lipat 1955), dan wawancara 1.000 lansia Karl Pillemer.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 8: Paradoks Manusia dalam Mobil</h3>
+              <span class="term-tag">PDF Hal. 95 sampai 97 | Dibahas di Fase 5</span>
+            </div>
+            <p>Ketika kamu mengendarai mobil sport mewah, orang di jalan sebenarnya tidak mengagumimu, melainkan membayangkan diri mereka sendiri menyetir mobil itu. Kekaguman dan rasa hormat sejati lahir dari kerendahan hati, kebaikan hati, dan empati, jauh lebih besar daripada kekayaan pamer.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 9: Kekayaan adalah Apa yang Tidak Anda Lihat</h3>
+              <span class="term-tag">PDF Hal. 98 sampai 102 | Dibahas di Fase 2</span>
+            </div>
+            <p>Kisah Roger si pemilik Porsche di valet parkir Los Angeles yang mobilnya ditarik leasing. Kekayaan (Wealth) adalah uang yang TIDAK dibelanjakan untuk barang pamer, seperti analogi Bill Bryson bahwa belanja berlebihan usai mendapat laba sama dengan makan dua kali lipat setelah berlari.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 10: Hemat Uang</h3>
+              <span class="term-tag">PDF Hal. 103 sampai 111 | Dibahas di Fase 2</span>
+            </div>
+            <p>Membangun kekayaan lebih tergantung pada tingkat tabungan ketimbang besarnya gaji atau imbal hasil, sama seperti dunia mengatasi krisis minyak 1970-an lewat efisiensi energi (hemat 60% per dolar PDB dibanding 1950). Tabungan tanpa label tujuan spesifik memberimu opsi, kesabaran menunggu peluang bagus, dan kendali waktu.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 11: Wajar &gt; Rasional</h3>
+              <span class="term-tag">PDF Hal. 112 sampai 120 | Dibahas di Fase 4</span>
+            </div>
+            <p>Terapi demam malaria Julius Wagner-Jauregg (Nobel 1927) vs Tylenol wajar; strategi pensiun 50/50 Harry Markowitz demi menghindari penyesalan; bahaya strategi leverage 2:1 Yale 2008 yang rasional di spreadsheet tetapi musnah saat pasar jatuh 50%. Plus bukti peluang untung pasar saham AS meningkat dari 50/50 harian menjadi 100% di horizon 20 tahun.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 12: Kejutan!</h3>
+              <span class="term-tag">PDF Hal. 121 sampai 134 | Dibahas di Fase 5</span>
+            </div>
+            <p>Mengutip Richard Feynman dan Daniel Kahneman tentang jebakan "sejarawan sebagai nabi": perubahan besar datang dari 7 tokoh dan 8 peristiwa paling tidak terduga (seperti rantai 9/11 ke $1,6T pinjaman mahasiswa). Benjamin Graham sendiri terus merevisi dan membuang rumus bukunya di 5 edisi <em>The Intelligent Investor</em> &amp; <em>Analisis Keamanan</em> sebelum wafat pada 1976.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 13: Ruang untuk Kesalahan</h3>
+              <span class="term-tag">PDF Hal. 135 sampai 145 | Dibahas di Fase 4</span>
+            </div>
+            <p>Penghitung kartu blackjack Kevin Lewis (2% keunggulan tetap butuh 100 unit cadangan); aturan kas Bill Gates untuk Microsoft (bayar gaji 1 tahun penuh meski pemasukan nol); kehancuran unit tank Jerman ke-22 di Stalingrad akhir 1942 (&lt; 20 dari 104 tank hidup gara-gara tikus lapangan makan kabel listrik); dan perlunya menghindari <em>single point of failure</em> serta leverage.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 14: Anda Akan Berubah</h3>
+              <span class="term-tag">PDF Hal. 146 sampai 152 | Dibahas di Fase 4</span>
+            </div>
+            <p>Hanya 27% lulusan bekerja di jurusan kuliahnya. Penelitian Harvard Daniel Gilbert tentang <em>The End of History Illusion</em> membuktikan kita meremehkan perubahan besar preferensi diri sendiri tiap 10 tahun. Hindari target finansial ekstrem di usia muda dan buang <em>sunk cost</em> (biaya hangus masa lalu) seperti nasihat Daniel Kahneman.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 15: Tidak Ada yang Gratis</h3>
+              <span class="term-tag">PDF Hal. 153 sampai 161 | Dibahas di Fase 5</span>
+            </div>
+            <p>Kejatuhan GE di bawah Jack Welch/Jeff Immelt yang memoles laba kuartalan ($40 ke $7). Sebaliknya S&amp;P 500 (119x dalam 50 tahun), Netflix (&gt;35.000%), dan Monster Beverage (319.000%) tetap mengalami 94% sampai 95% hari di bawah harga puncaknya. Anggap volatilitas itu <em>Biaya Masuk</em> (tiket Disneyland $100), bukan denda; riset Morningstar membuktikan hanya 9 dari 112 dana taktis mengalahkan 60/40.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 16: Kamu &amp; Aku</h3>
+              <span class="term-tag">PDF Hal. 162 sampai 170 | Dibahas di Fase 5</span>
+            </div>
+            <p>Penyebab gelembung dot-com (-$6,2T) dan perumahan (-$8T): orang meniru pemain yang punya jangka waktu berbeda (Google &amp; Cisco 1999 bagi investor 30 tahun vs spekulan harian / "Sirip" rumah). Berisi pernyataan misi investasi pasif 30 tahun Morgan Housel di hal. 170.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 17: Rayuan Pesimisme</h3>
+              <span class="term-tag">PDF Hal. 171 sampai 183 | Dibahas di Fase 3</span>
+            </div>
+            <p>Mengapa prediksi kiamat (Profesor Igor Panarin 2008, kelangkaan minyak 2008 vs revolusi fracking AS ke 13 juta barel/hari, cemoohan pers terhadap Wright Bersaudara 1903 sampai 1908) terdengar lebih meyakinkan dibanding optimisme, padahal kematian penyakit jantung turun &gt; 70% sejak 1965 dan Jepang pasca-1946 tumbuh ~15x.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 18: Ketika Anda Akan Percaya Apapun</h3>
+              <span class="term-tag">PDF Hal. 184 sampai 197 | Dibahas di Fase 3</span>
+            </div>
+            <p>Alien di atas New York (2007 vs 2009: $16T lenyap meski pabrik sama, hanya narasi yang berubah); mengapa 85% dana aktif kalah dan Fed meleset di 2007; akurasi mekanis 99,99998% wahana NASA New Horizons vs ketakpastian ekonomi; dan <em>planning fallacy</em> Daniel Kahneman di kalangan pendiri startup.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 19: Semua Bersama Sekarang</h3>
+              <span class="term-tag">PDF Hal. 198 sampai 204 | Dibahas di Fase 5</span>
+            </div>
+            <p>Dokter Clarence Hughes (1931) dan Dr. Jay Katz menjelaskan cara meredakan kecemasan pasien, lalu 14 ringkasan praktis seluruh buku (termasuk hal. 204 dengan frasa terjemahan unik PDF "Ruang ibadah untuk kesalahan" untuk <em>Room for error</em>).</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Bab 20: Pengakuan (Cara Penulis Mengelola Uangnya)</h3>
+              <span class="term-tag">PDF Hal. 205 sampai 213 | Dibahas di Fase 5</span>
+            </div>
+            <p>Sandy Gottesman, fakta 50% manajer dana tak taruh uang di dananya sendiri, esai Ken Murray <em>How Doctors Die</em>, dan 4 keputusan nyata keluarga Morgan: hidup di bawah kemampuan untuk "dana kemerdekaan", melunasi KPR tanpa utang demi tidur nyenyak, menaruh ~20% aset non-properti di kas tunai, dan rutin berinvestasi di dana indeks Vanguard biaya rendah.</p>
+          </article>
+
+          <article class="term-entry" data-filter-item data-category="bab-pdf">
+            <div class="term-entry-head">
+              <h3>Postscript: Sejarah Singkat Mengapa Konsumen AS Berpikir Seperti Ini</h3>
+              <span class="term-tag">PDF Hal. 214 sampai 235 | Dibahas di Fase 5</span>
+            </div>
+            <p>Kronologi 1945 sampai 2020: 16 juta tentara pulang, suku bunga 0,38%, RUU GI, kartu kredit 1950, utang rumah tangga melonjak 1945 sampai 1965 ($29,4M ke $331,2M), pemerataan 1945 sampai 1980, melebarnya ketimpangan pasca-1980 (top 1% naik 86,1% vs 6,6%), perbandingan Joe $900k vs Peter $80k, hingga utang mencapai 130%+ pendapatan pada krisis 2008.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-buku" role="tabpanel" aria-labelledby="tab-buku" hidden="until-found">
+      <div class="tab-panel-inner">
+        <div class="prose">
+          <h2>Peta Hubungan 4 Buku Keuangan yang Kamu Sebutkan</h2>
+          <p>
+            Urutan belajar yang paling tepat untuk pemula kuliah persis seperti yang kamu rasakan di awal percakapan: mulai dari pola pikir aset, bangun mental menghadapi waktu dan risiko, latih cara kerja laporan bisnis, baru selami analisis nilai perusahaan.
+          </p>
+        </div>
+
+        <div class="table-wrapper responsive-table">
+          <table>
+            <caption>Perbandingan Fungsi Empat Buku Utama dari Pemula hingga Investor</caption>
+            <thead>
+              <tr>
+                <th scope="col">Judul Buku &amp; Penulis</th>
+                <th scope="col">Posisi dalam Alur Belajarmu</th>
+                <th scope="col">Fokus Utama yang Diajarkan</th>
+                <th scope="col">Hubungan dengan Kurikulum Ini</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1. Rich Dad Poor Dad (Robert Kiyosaki)</th>
+                <td data-label="Posisi">Gerbang Paling Awal</td>
+                <td data-label="Fokus">Membedakan barang konsumsi (liabilitas pribadi) dengan barang produktif (aset), plus pengenalan arus kas pribadi.</td>
+                <td data-label="Hubungan">Fase 1 dan Fase 2 (cara berpikir aset vs utang dan gaji vs arus kas usaha).</td>
+              </tr>
+              <tr>
+                <th scope="row">2. The Psychology of Money (Morgan Housel)</th>
+                <td data-label="Posisi">Pondasi Perilaku &amp; Manajemen Risiko</td>
+                <td data-label="Fokus">Mengapa orang pintar tetap bisa bangkrut: efek compounding, batas cukup, ruang kesalahan, tail events, dan horizon permainan.</td>
+                <td data-label="Hubungan">Tersebar lengkap di Fase 1 sampai Fase 5 (semua 20 Bab + Pendahuluan + Postscript di PDF-mu).</td>
+              </tr>
+              <tr>
+                <th scope="row">3. The Intelligent Investor (Benjamin Graham)</th>
+                <td data-label="Posisi">Manual Investor Defensif &amp; Enterprising</td>
+                <td data-label="Fokus">Konsep bisnis di balik saham, analogi emosi Tuan Pasar (Mr. Market), penyaringan rasio neraca, dan Margin of Safety.</td>
+                <td data-label="Hubungan">Fase 4 dan Fase 5 (membaca Neraca/Current Ratio/DER serta menghitung Margin of Safety).</td>
+              </tr>
+              <tr>
+                <th scope="row">4. Security Analysis (Graham &amp; Dodd)</th>
+                <td data-label="Posisi">Kitab Teknis Tingkat Lanjut</td>
+                <td data-label="Fokus">Bedah mendalam laporan akuntansi, obligasi, utang perusahaan, kualitas laba, dan valuasi nilai intrinsik secara ketat.</td>
+                <td data-label="Hubungan">Catatan Bab 12 PDF (hal. 133): kuasai prinsip kerangka berpikirnya dahulu, bukan menghafal buta rumus mekanis tahun 1934.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose">
+          <h2>Dekoder Istilah Terjemahan Unik di PDF Kamu (M. Raflie Pratama)</h2>
+          <p>
+            Karena PDF Bahasa Indonesia ini mengandung beberapa terjemahan kata per kata yang unik dari edisi Inggrisnya, tabel ini membantu agar kamu tidak bingung saat membaca PDF langsung.
+          </p>
+        </div>
+
+        <div class="table-wrapper responsive-table">
+          <table>
+            <caption>Daftar Frasa Terjemahan Harfiah di PDF dan Makna Aslinya</caption>
+            <thead>
+              <tr>
+                <th scope="col">Teks di PDF Kamu</th>
+                <th scope="col">Lokasi Halaman PDF</th>
+                <th scope="col">Istilah / Nama Asli Inggris</th>
+                <th scope="col">Maksud Sebenarnya dalam Konteks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">"Baca" (Ronald Baca / Tn. Baca)</th>
+                <td data-label="Halaman">Pendahuluan (hal. 12 sampai 14)</td>
+                <td data-label="Asli">Ronald Read</td>
+                <td data-label="Makna">Nama belakang Ronald Read (kata "Read" ikut diterjemahkan mesin menjadi "Baca").</td>
+              </tr>
+              <tr>
+                <th scope="row">"Jamsostek"</th>
+                <td data-label="Halaman">Bab 1 (hal. 29), Bab 14 (hal. 151)</td>
+                <td data-label="Asli">Social Security</td>
+                <td data-label="Makna">Program Jaminan Sosial Pensiun Pemerintah Federal Amerika Serikat tahun 1935.</td>
+              </tr>
+              <tr>
+                <th scope="row">"Mawar" (wawancara Mawar)</th>
+                <td data-label="Halaman">Bab 5 (hal. 64)</td>
+                <td data-label="Asli">Charlie Rose</td>
+                <td data-label="Makna">Pembawa acara televisi AS Charlie Rose (nama "Rose" diterjemahkan menjadi "Mawar").</td>
+              </tr>
+              <tr>
+                <th scope="row">"Ekor, Anda Menang"</th>
+                <td data-label="Halaman">Bab 6 (hal. 73 sampai 85)</td>
+                <td data-label="Asli">Tails, You Win</td>
+                <td data-label="Makna">Permainan kata koin (Kepala vs Ekor) sekaligus konsep statistik Tail Events (hasil pemenang ekor panjang).</td>
+              </tr>
+              <tr>
+                <th scope="row">"Telepon Api"</th>
+                <td data-label="Halaman">Bab 6 (hal. 82)</td>
+                <td data-label="Asli">Amazon Fire Phone</td>
+                <td data-label="Makna">Ponsel pintar produksi Amazon tahun 2014 yang gagal total secara komersial.</td>
+              </tr>
+              <tr>
+                <th scope="row">"Analisis Keamanan"</th>
+                <td data-label="Halaman">Bab 12 (hal. 133)</td>
+                <td data-label="Asli">Security Analysis</td>
+                <td data-label="Makna">Buku klasik investasi Security Analysis karya Benjamin Graham &amp; David Dodd ("security" = efek/saham/obligasi).</td>
+              </tr>
+              <tr>
+                <th scope="row">"Sirip" (rumah &amp; aset)</th>
+                <td data-label="Halaman">Bab 16 (hal. 167)</td>
+                <td data-label="Asli">Flippers</td>
+                <td data-label="Makna">Pedagang/spekulan jangka pendek yang membeli aset (misal rumah) lalu menjualnya kembali dengan cepat ("flipper" = sirip lumba-lumba/papan pinball).</td>
+              </tr>
+              <tr>
+                <th scope="row">"Ruang ibadah untuk kesalahan"</th>
+                <td data-label="Halaman">Bab 19 (hal. 204)</td>
+                <td data-label="Asli">Room for error</td>
+                <td data-label="Makna">Ruang aman / cadangan / batas toleransi apabila perkiraan kita meleset ("room" diterjemahkan sebagai ruangan ibadah di konteks tertentu).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-pager">
+      <div>
+        <p class="muted">Sudah siap meninjau ulang seluruh jalur belajar dari nol?</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-subtle" href="fase-5.html">Kembali ke Fase 5</a>
+        <a class="btn btn-primary" href="index.html">Kembali ke Beranda &amp; Ringkasan Progres</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Melek Bisnis dari Nol</strong></p>
+        <p class="muted">Kamus Istilah, Indeks Lengkap 20 Bab + Postscript PDF, dan Peta 4 Buku.</p>
+      </div>
+      <nav aria-label="Tautan fase footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="fase-1.html">Fase 1</a></li>
+          <li><a href="fase-2.html">Fase 2</a></li>
+          <li><a href="fase-3.html">Fase 3</a></li>
+          <li><a href="fase-4.html">Fase 4</a></li>
+          <li><a href="fase-5.html">Fase 5</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
