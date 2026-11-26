@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      var t = localStorage.getItem("color-scheme");
+      if (t === "light" || t === "dark") {
+        document.querySelector('meta[name="color-scheme"]').content = t;
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    } catch (e) {}
+  </script>
+  <title>Fase 3: Validasi Pasar, Funnel, CAC/LTV &amp; Hukum Compounding | Melek Bisnis</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-phase="fase-3">
+  <a href="#main-content" class="skip-link">Langsung ke materi Fase 3</a>
+  <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M7 16V11M12 16V7M17 16V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Melek Bisnis</span>
+      </a>
+
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="Navigasi kurikulum">
+          <button class="menu-button" type="button" popovertarget="site-menu" popovertargetaction="toggle" aria-controls="site-menu" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <ul id="site-menu" class="site-menu" popover="auto">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="fase-1.html">Fase 1: Pola Pikir</a></li>
+            <li><a href="fase-2.html">Fase 2: Cash Flow</a></li>
+            <li><a href="fase-3.html" aria-current="page">Fase 3: Validasi</a></li>
+            <li><a href="fase-4.html">Fase 4: Laporan</a></li>
+            <li><a href="fase-5.html">Fase 5: Investasi</a></li>
+            <li><a href="kamus-pdf.html">Kamus &amp; 20 Bab</a></li>
+          </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ubah tema tampilan">
+          <svg class="theme-icon icon-to-dark" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <path d="M12.9 10.6A5.5 5.5 0 0 1 5.4 3.1a5.5 5.5 0 1 0 7.5 7.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          <svg class="theme-icon icon-to-light" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <circle cx="8" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M12.6 3.4l-1.1 1.1M4.5 11.5l-1.1 1.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span data-theme-label>Sistem</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <div class="doc-layout">
+      <aside class="doc-rail" aria-label="Daftar isi Fase 3">
+        <p class="rail-title">ISI FASE 3</p>
+        <nav class="toc-nav" aria-label="Bagian dalam Fase 3">
+          <ul class="toc-list">
+            <li><a href="#validasi-pasar">1. Validasi Pasar &amp; MVP Tanpa Rugi</a></li>
+            <li><a href="#unit-marketing">2. Corong Penjualan, CAC &amp; LTV</a></li>
+            <li><a href="#pricing-bep">3. Psikologi Harga &amp; Strategi Pricing</a></li>
+            <li><a href="#pdf-compounding">4. Peracikan &amp; Pesimisme (Bab 4 &amp; 17)</a></li>
+            <li><a href="#simulator-compounding">5. Simulator Keajaiban Compounding</a></li>
+            <li><a href="#pdf-tails">6. Ekor Panjang &amp; Narasi (Bab 6 &amp; 18)</a></li>
+            <li><a href="#kuis-3">7. Uji Pemahaman Fase 3</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main id="main-content" class="doc-column" tabindex="-1">
+        <header class="hero-frame">
+          <h1>Fase 3: Validasi Pasar, Corong Penjualan, CAC/LTV, dan Hukum Compounding</h1>
+          <p class="hero-lead">
+            Banyak mahasiswa bersemangat membangun merek, mencetak kemasan bagus, lalu menyewa lapak sebelum pernah menjual satu produk pun. Fase ini membalik urutannya: buktikan ada pembeli sungguhan dengan modal nyaris nol lewat MVP dan Pre-Order, pahami biaya mencari pelanggan (CAC) dibanding nilai seumur hidup pelanggan (LTV), lalu pelajari mesin pertumbuhan paling dahsyat di dunia menurut PDF kamu: penggabungan waktu dan hasil ekor panjang.
+          </p>
+          <div class="phase-meta-bar">
+            <span class="phase-meta-item"><strong>Cakupan PDF:</strong> Bab 4 (hal. 52 sampai 59), Bab 6 (hal. 73 sampai 85), Bab 17 (hal. 171 sampai 183), Bab 18 (hal. 184 sampai 197)</span>
+            <span class="phase-meta-item"><strong>Istilah Inti:</strong> MVP, Validasi, Funnel, Konversi, CAC, LTV, Repeat Order, Compounding, Tail Events</span>
+          </div>
+        </header>
+
+        <section id="validasi-pasar" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>1. Validasi Pasar &amp; MVP: Menjual Sebelum Membuat Stok Besar</h2>
+            <p>
+              Kesalahan terbesar nomor satu pebisnis pemula di kampus adalah jatuh cinta pada produk buatan sendiri dan menghabiskan uang tabungan untuk memproduksi 200 unit stok sebelum menguji apakah ada orang asing yang mau membayarnya. Ketika ditanya, teman terdekat sering memberi pujian sopan seperti "Keren, pasti laku", tetapi saat produk diluncurkan, tidak ada satu pun yang membelinya.
+            </p>
+            <p>
+              Di dunia bisnis modern, hal ini dicegah dengan konsep <strong>MVP (<span lang="en">Minimum Viable Product</span>)</strong> dan <strong>Validasi Pasar</strong>. Artinya, kamu membuat versi paling sederhana dari produk atau jasamu yang sudah cukup untuk menyelesaikan masalah inti pelanggan, lalu mengukur kesediaan mereka mengeluarkan uang sungguhan.
+            </p>
+
+            <div class="split-reading">
+              <div>
+                <h3>Urutan Uji Validasi Berbiaya Minimal</h3>
+                <ol>
+                  <li><strong>Tentukan Target Pasar Spesifik (<span lang="en">Niche</span>):</strong> Jangan menulis "semua orang Indonesia". Mulailah dengan segmen sempit yang bisa kamu jangkau langsung minggu ini, misalnya "mahasiswa tingkat akhir kos putri dekat gerbang timur yang butuh makan siang cepat di bawah Rp18.000".</li>
+                  <li><strong>Uji Masalah dengan Bukti Dompet, Bukan Pujian:</strong> Pujian itu gratis. Validasi baru sah jika calon pembeli bersedia mentransfer DP (uang muka), masuk daftar <span lang="en">Pre-Order</span> (PO), atau mengisi jadwal layanan berbayar.</li>
+                  <li><strong>Gunakan Pola Pre-Order (PO) atau Makelar Jasa:</strong> Pada tahap 10 pembeli pertama, kumpulkan pesanan Senin sampai Rabu, terima uang muka, baru beli bahan dan produksi di Kamis. Dengan cara ini, modal kerjamu dibiayai pelanggan sendiri, hampir nol risiko barang menumpuk.</li>
+                </ol>
+              </div>
+
+              <aside class="pdf-callout" aria-label="Catatan perbandingan validasi dengan risiko">
+                <p class="pdf-callout-head">MENGAPA UJI KECIL SANGAT PENTING?</p>
+                <p>
+                  Ingat pelajaran Amazon di Bab 6 PDF (hal. 82): bahkan raksasa teknologi sekelas Amazon mengalami kegagalan besar saat meluncurkan produk <em>Fire Phone</em> (di PDF diterjemahkan secara harfiah sebagai <strong>"Telepon Api"</strong>). Produk itu tidak masalah bagi Amazon karena mereka punya proyek pemenang raksasa lain, tetapi bagi mahasiswa dengan modal Rp500.000, menguji secara kecil dan cepat menentukan apakah kamu bertahan untuk mencoba lagi atau langsung habis di percobaan pertama.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section id="unit-marketing" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>2. Corong Penjualan (Funnel), Konversi, CAC, dan LTV</h2>
+            <p>
+              Mengapa ada produk bagus yang sepi pembeli, sementara produk biasa saja bisa antre? Jawabannya terletak pada memahami jalur perjalanan seseorang dari tidak mengenalmu sampai menjadi pelanggan setia. Jalur penyaringan bertahap ini disebut <strong>Corong Penjualan (<span lang="en">Sales Funnel</span>)</strong>.
+            </p>
+            <p>
+              Di puncak corong ada ratusan orang yang sekadar melihat unggahan atau poster (Kesadaran / <span lang="en">Awareness</span>). Hanya sebagian kecil yang tertarik bertanya harga (Minat / <span lang="en">Interest</span>), dan lebih sedikit lagi yang akhirnya benar-benar membayar (Pembelian / <span lang="en">Conversion</span>).
+            </p>
+          </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 320" width="860" height="320" role="img" aria-labelledby="svg-f3-funnel-title svg-f3-funnel-desc">
+              <title id="svg-f3-funnel-title">Diagram Corong Penjualan, CAC, dan Rasio LTV terhadap CAC</title>
+              <desc id="svg-f3-funnel-desc">Visualisasi empat tahap funnel dari 1.000 orang melihat konten hingga 20 pembeli, dengan perhitungan CAC Rp25.000 dan LTV Rp150.000.</desc>
+              <rect x="0" y="0" width="860" height="320" rx="14" fill="var(--bg-page)"/>
+
+              <text x="28" y="34" fill="var(--text-primary)" font-size="14" font-weight="700">ALUR CORONG PENJUALAN (CONTOH: ANGGARAN PROMOSI Rp500.000)</text>
+
+              <!-- Funnel Steps Left -->
+              <rect x="28" y="54" width="440" height="46" rx="8" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
+              <text x="46" y="82" fill="var(--text-primary)" font-size="13.5" font-weight="700">1. Kesadaran (Lihat Story/Iklan): 1.000 orang (100%)</text>
+
+              <rect x="58" y="114" width="380" height="46" rx="8" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
+              <text x="76" y="142" fill="var(--text-primary)" font-size="13.5" font-weight="700">2. Minat (Klik Tautan / Chat): 120 orang (12%)</text>
+
+              <rect x="88" y="174" width="320" height="46" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="106" y="202" fill="var(--accent)" font-size="13.5" font-weight="700">3. Beli Pertama Kali: 20 pelanggan (2%)</text>
+
+              <rect x="118" y="234" width="260" height="46" rx="8" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
+              <text x="136" y="262" fill="var(--pos)" font-size="13.5" font-weight="700">4. Beli Ulang (Repeat): 10 pelanggan loyal</text>
+
+              <!-- Metrics Right -->
+              <rect x="504" y="54" width="328" height="106" rx="12" fill="var(--bg-surface)" stroke="var(--titanium)" stroke-width="1.5"/>
+              <text x="524" y="82" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">CAC (BIAYA AKUISISI 1 PELANGGAN)</text>
+              <text x="524" y="112" fill="var(--text-primary)" font-size="16" font-weight="700">Rp500.000 / 20 pembeli = Rp25.000</text>
+              <text x="524" y="138" fill="var(--text-secondary)" font-size="12.5">Kamu membayar Rp25.000 untuk dapat 1 pembeli baru.</text>
+
+              <rect x="504" y="174" width="328" height="106" rx="12" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
+              <text x="524" y="202" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">LTV (NILAI SEUMUR HIDUP PELANGGAN)</text>
+              <text x="524" y="232" fill="var(--text-primary)" font-size="16" font-weight="700">Laba Rp30.000 x 5 kali order = Rp150.000</text>
+              <text x="524" y="258" fill="var(--pos)" font-size="12.5" font-weight="700">Rasio LTV : CAC = 6 : 1 (Bisnis Sehat)</text>
+            </svg>
+            <figcaption>
+              Gambar 5. Alasan mengapa bisnis bangkrut meski produknya laris: jika biaya mendatangkan satu pelanggan baru (CAC) adalah Rp25.000 sementara untung bersih per transaksi cuma Rp15.000 dan pelanggan tidak pernah membeli ulang, kamu rugi Rp10.000 per orang. Profit sejati baru lahir saat terjadi <span lang="en">Repeat Order</span> sehingga LTV minimal 3 kali lebih besar daripada CAC.
+            </figcaption>
+          </figure>
+
+          <div class="formula-box">
+            <p class="formula-eq">CAC = Total Biaya Promosi &amp; Penjualan / Jumlah Pelanggan Baru</p>
+            <p class="formula-eq">LTV = Laba Kotor Rata-rata per Transaksi x Rata-rata Frekuensi Beli Ulang</p>
+            <p class="formula-note">
+              <strong>Patokan Emas Pemula:</strong> Usahakan nilai <strong>LTV minimal 3 kali lipat CAC (LTV &gt;= 3 x CAC)</strong>. Kalau jualanmu hanya mengandalkan pelanggan beli sekali seumur hidup, biaya promosi akan pelan-pelan memakan seluruh labamu.
+            </p>
+          </div>
+        </section>
+
+        <section id="pricing-bep" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>3. Psikologi Harga &amp; Tiga Kesalahan Menentukan Harga Pemula</h2>
+            <p>
+              Banyak pemula berpikir satu-satunya cara agar produk laku adalah memasang harga paling murah di pasaran. Padahal, perang harga murah adalah permainan paling berbahaya bagi usaha kecil karena pemain besar punya modal lebih tebal dan biaya bahan lebih rendah akibat pembelian grosir.
+            </p>
+          </div>
+
+          <div class="table-wrapper responsive-table">
+            <table>
+              <caption>Perbandingan Tiga Pendekatan Menentukan Harga Jual</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Strategi Harga</th>
+                  <th scope="col">Cara Hitung / Logika</th>
+                  <th scope="col">Contoh Nyata Mahasiswa</th>
+                  <th scope="col">Kapan Aman Dipakai</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Cost-Plus Pricing (Tambah Margin)</th>
+                  <td data-label="Cara Hitung">HPP bahan + persentase laba tetap (misal +100%).</td>
+                  <td data-label="Contoh">HPP jajanan Rp4.000, dijual Rp8.000.</td>
+                  <td data-label="Kapan Dipakai">Cocok sebagai batas bawah agar tidak pernah jual rugi di bawah modal.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Competitor-Based (Ikut Pesaing)</th>
+                  <td data-label="Cara Hitung">Menyamakan atau mematok sedikit di bawah harga rata-rata sekitar.</td>
+                  <td data-label="Contoh">Kopi susu sekitar kampus Rp15.000, kamu pasang Rp14.000.</td>
+                  <td data-label="Kapan Dipakai">Produk komoditas umum yang susah dibedakan secara visual, tetapi wajib cek BEP.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Value-Based Pricing (Berbasis Nilai)</th>
+                  <td data-label="Cara Hitung">Menghargai waktu yang dihemat atau masalah mendesak yang diselesaikan.</td>
+                  <td data-label="Contoh">Jasa rapikan slide presentasi kilat H-6 jam sidang dipatok Rp150.000 meski modal kuota hanya Rp5.000.</td>
+                  <td data-label="Kapan Dipakai">Pilihan terbaik untuk bisnis jasa, keahlian, produk kustom, atau kemudahan khusus.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="pdf-compounding" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>4. Kekuatan Penggabungan (Compounding) &amp; Pesimisme Jangka Pendek (Bab 4 &amp; Bab 17 PDF)</h2>
+            <p>
+              Sekarang kita masuk ke salah satu bab paling terkenal di PDF <em>The Psychology of Money</em>: <strong>Bab 4: Menggabungkan yang Membingungkan (hal. 52 sampai 59)</strong>. Mengapa Morgan Housel menghubungkan fisika Zaman Es bumi dengan kekayaan Warren Buffett?
+            </p>
+            <p>
+              Selama jutaan tahun bumi bolak-balik memasuki Zaman Es besar. Para ilmuwan sempat bingung karena perubahannya bukan disebabkan badai meteor atau gunung meletus raksasa, melainkan efek berantai dari kemiringan orbit yang membuat musim panas sedikit lebih sejuk sehingga salju tahun lalu tidak sepenuhnya mencair. Sedikit sisa salju memantulkan sinar matahari lebih banyak, membuat suhu makin dingin sedikit lagi, mengundang salju lebih banyak lagi. Pelajaran fisikanya (hal. 53): <strong>kamu tidak butuh gaya yang luar biasa besar untuk menghasilkan dampak luar biasa besar, jika hasil kecil itu terus berlipat di atas hasil sebelumnya</strong>.
+            </p>
+
+            <div class="split-reading">
+              <div>
+                <h3>Warren Buffett vs. Jim Simons (PDF Hal. 54 sampai 58)</h3>
+                <p>
+                  Lebih dari 2.000 buku ditulis tentang cara Warren Buffett memilih saham, tetapi hampir tidak ada yang menyoroti rahasia utamanya: <strong>durasi waktu</strong>. Kekayaan bersih Buffett tercatat $84,5 miliar. Angka mengejutkannya (hal. 55): <strong>$81,5 miliar di antaranya baru muncul setelah ia berusia 65 tahun</strong>, dan $84,2 miliar terkumpul setelah ia melewati ulang tahun ke-50!
+                </p>
+                <p>
+                  Buffett sudah berinvestasi secara serius sejak usia 10 tahun. Di usia 30 tahun, ia sudah mengantongi kekayaan sekitar $1 juta ($9,3 juta disesuaikan inflasi). Jika diandaikan Buffett hidup normal seperti kebanyakan orang, menghabiskan usia 20-an untuk mencari jati diri, baru mulai berinvestasi di usia 30 tahun dengan modal $25.000, tetap menghasilkan imbal hasil fantastis 22% per tahun, lalu pensiun di usia 60 tahun, total kekayaannya hanyalah <strong>$11,9 juta</strong>. Itu <strong>99,9% lebih kecil</strong> dari kekayaan aslinya!
+                </p>
+                <p>
+                  Bandingkan pula dengan <strong>Jim Simons</strong> dari Renaissance Technologies yang memiliki rekor imbal hasil rata-rata <strong>66% per tahun sejak 1988</strong>, jauh melampaui imbal hasil tahunan Buffett sebesar 22%. Namun kekayaan Jim Simons berkisar $21 miliar (atau sekitar 75% lebih rendah dari Buffett) semata-mata karena Jim baru menemukan ritme investasinya di usia 50 tahun, kalah lebih dari separuh masa hidup waktu penggabungan.
+                </p>
+              </div>
+
+              <aside class="pdf-callout" aria-label="Pesan Bab 17 tentang rayuan pesimisme">
+                <p class="pdf-callout-head">MENGAPA ORANG MUDAH MENYERAH? (BAB 17, HAL. 171 SAMPAI 183)</p>
+                <p>
+                  Penggabungan butuh kesabaran menahun, sedangkan otak kita secara evolusi dirancang lebih percaya pada berita pesimis. Di Bab 17 PDF, psikolog Daniel Kahneman menjelaskan <strong>keengganan kerugian (<span lang="en">loss aversion</span>)</strong>: rasa sakit kehilangan lebih dalam dibanding rasa senang mendapat keuntungan yang setara. Itulah mengapa ramalan kehancuran seperti ramalan Profesor Igor Panarin di <em>Wall Street Journal</em> Desember 2008 yang memprediksi Amerika akan pecah menjadi enam bagian pada 2010 terdengar lebih "cerdas" daripada kemajuan lambat seperti turunnya angka kematian akibat penyakit jantung lebih dari 70% sejak 1965 (hal. 173 &amp; 181). Kemajuan bekerja lambat seperti pertumbuhan pohon; kehancuran terjadi sekejap seperti badai.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section id="simulator-compounding" class="section-block" tabindex="-1">
+          <h2>5. Simulator Keajaiban Compounding (Pembuktian Bab 4 PDF)</h2>
+          <p class="prose">
+            Eksperimen langsung rumus bunga majemuk di bawah ini membuktikan mengapa di paruh awal waktu hasilnya tampak membosankan, tetapi pada 5 tahun terakhir lonjakannya tampak tidak masuk akal bagi otak manusia.
+          </p>
+
+          <form id="sim-compounding" class="workbench" novalidate>
+            <div class="workbench-header">
+              <h3>Kalkulator Efek Waktu &amp; Peracikan</h3>
+              <span class="muted">Mengikuti logika Bab 4 PDF</span>
+            </div>
+
+            <div class="workbench-grid">
+              <div>
+                <div class="field-wrap control-group">
+                  <label for="f3-cap">Modal Awal Disisihkan Sekali di Awal (Rp)</label>
+                  <input id="f3-cap" class="number-input num" type="number" min="100000" step="500000" value="5000000">
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="f3-rate">Rata-rata Pertumbuhan per Tahun (%)</label>
+                    <span id="f3-rate-val" class="control-value-readout num">15% / tahun</span>
+                  </div>
+                  <div class="slider-row">
+                    <button class="step-btn" type="button" data-step-target="f3-rate" data-step-delta="-1" aria-label="Kurangi pertumbuhan 1 persen">-</button>
+                    <input id="f3-rate" type="range" min="1" max="30" step="1" value="15">
+                    <button class="step-btn" type="button" data-step-target="f3-rate" data-step-delta="1" aria-label="Tambah pertumbuhan 1 persen">+</button>
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="f3-years">Durasi Waktu Berjalan (Tahun)</label>
+                    <span id="f3-years-val" class="control-value-readout num">30 tahun</span>
+                  </div>
+                  <div class="slider-row">
+                    <button class="step-btn" type="button" data-step-target="f3-years" data-step-delta="-5" aria-label="Kurangi durasi 5 tahun">-</button>
+                    <input id="f3-years" type="range" min="5" max="60" step="1" value="30">
+                    <button class="step-btn" type="button" data-step-target="f3-years" data-step-delta="5" aria-label="Tambah durasi 5 tahun">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="readout-panel" aria-live="polite">
+                <dl>
+                  <div class="metric-row">
+                    <dt>Nilai Akhir di Tahun Penuh</dt>
+                    <dd id="f3-out-final" class="num">Rp331.058.860</dd>
+                  </div>
+                  <div class="metric-row">
+                    <dt>Nilai Baru Jalan Separuh Waktu</dt>
+                    <dd id="f3-out-half" class="num">Rp40.685.308</dd>
+                  </div>
+                  <div class="metric-row">
+                    <dt>Tambahan Uang di 5 Tahun Terakhir Saja</dt>
+                    <dd id="f3-out-late" class="num">Rp166.467.330</dd>
+                  </div>
+                </dl>
+                <div id="f3-out-note" class="status-banner is-positive"></div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="pdf-tails" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>6. Ekor, Anda Menang &amp; Kekuatan Narasi (Bab 6 &amp; Bab 18 PDF)</h2>
+            <p>
+              Di PDF halaman 73 sampai 85 terdapat <strong>Bab 6: "Ekor, Anda Menang"</strong> (terjemahan langsung dari <em>Tails, You Win</em>). Inti bab ini melegakan siapa pun yang takut salah saat memulai bisnis atau berinvestasi: <strong>kamu bisa salah separuh dari waktu, bahkan lebih, dan tetap menang besar</strong> selama sebagian kecil pemenang memberikan hasil berkali-kali lipat (<span lang="en">tail events</span>).
+            </p>
+            <ul>
+              <li><strong>Kolektor Seni Heinz Berggruen (hal. 73 sampai 75):</strong> Berggruen mengoleksi ribuan lukisan Picasso, Braque, Klee, dan Matisse yang kelak dibeli pemerintah Jerman seharga lebih dari 100 juta euro (nilai pasar di atas $1 miliar). Analisis <em>Horizon Research</em> membuktikan investor seni sukses ternyata tidak punya indra keenam: 99% karya yang mereka beli biasa saja atau merugi, tetapi 1% karya seperti milik Picasso menutup seluruh biaya dan melahirkan kekayaan raksasa.</li>
+              <li><strong>Kebangkrutan Walt Disney sebelum Putri Salju (hal. 75 sampai 76):</strong> Studio pertama Walt Disney bangkrut. Ia membuat lebih dari 400 film kartun yang sebagian besar merugi, hingga akhirnya film panjang pertama <em>Putri Salju</em> (83 menit) menghasilkan $8 juta hanya di paruh pertama tahun 1938, langsung melunasi semua utang lama dan membeli studio baru di Burbank.</li>
+              <li><strong>Data Modal Ventura &amp; Saham Global (hal. 77 sampai 79):</strong> Studi <em>Correlation Ventures</em> atas 21.000 pembiayaan startup (2004 sampai 2014) menemukan 65% investasi mengalami kerugian uang, 2,5% naik 10x sampai 20x, dan hanya 0,5% (sekitar 100 perusahaan) menghasilkan kenaikan di atas 50 kali lipat yang menopang seluruh keuntungan industri. Begitu pula penelitian J.P. Morgan atas indeks Russell 3000 sejak 1980: 40% perusahaan kehilangan 70% nilainya secara permanen, sementara seluruh hasil positif indeks datang dari hanya 7% saham pemenang teratas.</li>
+              <li><strong>Pelajaran untuk Bisnis Sehari-hari (hal. 81 sampai 85):</strong> Komedian Chris Rock selalu menguji 40 sampai 50 pertunjukan kecil di klub lokal sebelum membawa materi ke panggung tur dunia. Amazon gagal total dengan <em>Fire Phone</em> (hal. 82), tetapi <em>Amazon Prime</em> dan <em>AWS</em> menanggung seluruh kerugian itu berkali lipat. Pelajaran dari CEO Netflix Reed Hastings (hal. 83) dan Peter Lynch (hal. 85): dalam bisnis, "jika Anda benar enam dari sepuluh kali, Anda akan menjadi investor hebat". Yang penting, saat bereksperimen, batasi modal yang dipertaruhkan di tiap percobaan agar kekalahan tidak pernah menghentikan permainanmu.</li>
+            </ul>
+
+            <aside class="pdf-callout" aria-label="Peringatan Bab 18 tentang ilusi kendali dan cerita">
+              <p class="pdf-callout-head">BAB 18 PDF (HAL. 184 SAMPAI 197): WASPADAI PLANNING FALLACY</p>
+              <p>
+                Di Bab 18 (<em>Ketika Anda Akan Percaya Apapun</em>), Daniel Kahneman menjelaskan <strong>kesalahan perencanaan (<span lang="en">planning fallacy</span>)</strong> saat pendiri startup diminta memperkirakan peluang suksesnya. Mayoritas mengaku hasil usahanya 80% lebih bergantung pada kerja keras timnya sendiri sambil mengabaikan faktor pasar, nasib, dan pesaing yang tidak bisa dikendalikan. Pesan praktis untukmu: rencanakan target penjualan dengan disiplin, tetapi selalu hormati peran keberuntungan dan ketidakpastian yang di luar kendalimu.
+              </p>
+            </aside>
+          </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 280" width="860" height="280" role="img" aria-labelledby="svg-f3-tail-title svg-f3-tail-desc">
+              <title id="svg-f3-tail-title">Diagram Hukum Peracikan dan Distribusi Ekor Panjang</title>
+              <desc id="svg-f3-tail-desc">Grafik skematik membandingkan hasil normal yang rata dengan dua lonjakan tail event besar yang menutup seluruh eksperimen gagal.</desc>
+              <rect x="0" y="0" width="860" height="280" rx="14" fill="var(--bg-page)"/>
+
+              <text x="28" y="34" fill="var(--text-primary)" font-size="14" font-weight="700">MENGAPA KAMU BISA GAGAL 7 KALI DAN TETAP UNTUNG BESAR (BAB 6)</text>
+
+              <!-- Baseline -->
+              <line x1="48" y1="210" x2="812" y2="210" stroke="var(--border-control)" stroke-width="1.5"/>
+
+              <!-- 10 Experiment bars -->
+              <rect x="64" y="210" width="50" height="30" rx="4" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="89" y="256" text-anchor="middle" fill="var(--neg)" font-size="11" font-weight="700">#1 Rugi</text>
+
+              <rect x="138" y="210" width="50" height="30" rx="4" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="163" y="256" text-anchor="middle" fill="var(--neg)" font-size="11" font-weight="700">#2 Rugi</text>
+
+              <rect x="212" y="210" width="50" height="30" rx="4" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="237" y="256" text-anchor="middle" fill="var(--neg)" font-size="11" font-weight="700">#3 Rugi</text>
+
+              <rect x="286" y="180" width="50" height="30" rx="4" fill="var(--titanium-tint)" stroke="var(--titanium)"/>
+              <text x="311" y="256" text-anchor="middle" fill="var(--titanium)" font-size="11" font-weight="700">#4 +1.5x</text>
+
+              <rect x="360" y="210" width="50" height="30" rx="4" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="385" y="256" text-anchor="middle" fill="var(--neg)" font-size="11" font-weight="700">#5 Rugi</text>
+
+              <rect x="434" y="210" width="50" height="30" rx="4" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="459" y="256" text-anchor="middle" fill="var(--neg)" font-size="11" font-weight="700">#6 Rugi</text>
+
+              <rect x="508" y="180" width="50" height="30" rx="4" fill="var(--titanium-tint)" stroke="var(--titanium)"/>
+              <text x="533" y="256" text-anchor="middle" fill="var(--titanium)" font-size="11" font-weight="700">#7 +1.5x</text>
+
+              <rect x="582" y="210" width="50" height="30" rx="4" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="607" y="256" text-anchor="middle" fill="var(--neg)" font-size="11" font-weight="700">#8 Rugi</text>
+
+              <rect x="656" y="64" width="56" height="146" rx="6" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="2"/>
+              <text x="684" y="54" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700">25x!</text>
+              <text x="684" y="256" text-anchor="middle" fill="var(--pos)" font-size="11" font-weight="700">#9 Juara</text>
+
+              <rect x="734" y="210" width="50" height="30" rx="4" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="759" y="256" text-anchor="middle" fill="var(--neg)" font-size="11" font-weight="700">#10 Rugi</text>
+            </svg>
+            <figcaption>
+              Gambar 6. Visualisasi konsep Ekor Panjang (<span lang="en">Tails, You Win</span>): kerugian pada 7 eksperimen kecil sifatnya terbatas pada modal tes kecilmu, sedangkan 1 produk pemenang tidak punya batas atas keuntungan.
+            </figcaption>
+          </figure>
+
+          <form class="workbench" novalidate>
+            <div class="workbench-header">
+              <h3>Simulasi 10 Eksperimen Ekor Panjang</h3>
+              <span class="muted">Uji pola gagal kecil vs menang besar</span>
+            </div>
+
+            <div class="workbench-grid">
+              <div>
+                <div class="field-wrap control-group">
+                  <label for="f3-tail-loss">Batas Modal per 1 Uji Coba Produk / Kampanye (Rp)</label>
+                  <input id="f3-tail-loss" class="number-input num" type="number" min="50000" step="50000" value="200000">
+                </div>
+
+                <div class="field-wrap control-group">
+                  <label for="f3-tail-mult">Kelipatan Hasil Produk Pemenang #9 (x modal)</label>
+                  <input id="f3-tail-mult" class="number-input num" type="number" min="2" max="100" step="1" value="25">
+                </div>
+
+                <div class="hero-actions">
+                  <button id="f3-tail-run" class="btn btn-primary" type="button">Hitung Ulang 10 Eksperimen</button>
+                </div>
+              </div>
+
+              <div class="readout-panel" aria-live="polite">
+                <div id="f3-tail-summary" class="status-banner is-positive"></div>
+                <ul id="f3-tail-list" class="muted"></ul>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="kuis-3" class="section-block" tabindex="-1">
+          <h2>7. Uji Pemahaman Fase 3</h2>
+          <div class="quiz-box" data-quiz>
+            <div class="quiz-item" data-answer="b" data-explain="Bisnis baru sehat jika LTV minimal 3x CAC (dalam contoh: LTV Rp150.000 dibanding CAC Rp50.000 = 3:1), atau pembeli melakukan repeat order.">
+              <p><strong>1. Kamu habis biaya iklan Rp50.000 untuk mendatangkan 1 pembeli baru (CAC = Rp50.000). Laba kotor produkmu sekali beli adalah Rp25.000. Kapan model ini aman?</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q3-1" value="a"> Aman langsung walau pembeli hanya beli 1 kali seumur hidup.</label>
+                <label class="quiz-option"><input type="radio" name="q3-1" value="b"> Aman hanya jika rata-rata pelanggan melakukan pembelian ulang berkali-kali sehingga LTV menembus minimal Rp150.000.</label>
+                <label class="quiz-option"><input type="radio" name="q3-1" value="c"> Aman jika kamu meminjam utang agar bisa menaikkan anggaran iklan.</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-item" data-answer="a" data-explain="Di Bab 4 PDF (hal. 55 sampai 58), Jim Simons meraih 66%/tahun dibanding Buffett 22%/tahun, tetapi kalah jauh dalam total kekayaan karena baru mulai serius di usia 50 tahun.">
+              <p><strong>2. Menurut Bab 4 PDF, mengapa total kekayaan Warren Buffett jauh mengalahkan Jim Simons meskipun imbal hasil tahunan Simons 3 kali lebih tinggi?</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q3-2" value="a"> Karena Buffett memulai sejak usia 10 tahun dan memberi waktu puluhan tahun lebih lama agar proses penggabungan (compounding) bekerja.</label>
+                <label class="quiz-option"><input type="radio" name="q3-2" value="b"> Karena Buffett sering berganti strategi dagang harian.</label>
+                <label class="quiz-option"><input type="radio" name="q3-2" value="c"> Karena Jim Simons tidak pernah mendapat untung di pasar saham.</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-item" data-answer="c" data-explain="Bab 6 PDF mengajarkan bahwa tingkat kegagalan tinggi tetap menghasilkan kekayaan asalkan kerugian tiap percobaan dibatasi dan pemenang ekor panjang dibiarkan bertumbuh.">
+              <p><strong>3. Apa inti pesan dari Bab 6 "Ekor, Anda Menang" untuk mahasiswa yang ingin menguji ide bisnis?</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q3-3" value="a"> Jangan pernah meluncurkan ide sebelum yakin 100% semuanya berhasil.</label>
+                <label class="quiz-option"><input type="radio" name="q3-3" value="b"> Pertaruhkan seluruh tabungan sekaligus pada satu proyek pertama.</label>
+                <label class="quiz-option"><input type="radio" name="q3-3" value="c"> Wajar jika banyak ide kecil tidak laku; batasi biaya uji tiap ide dengan MVP/PO agar kamu masih hidup saat bertemu produk pemenang utama.</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-quiz-check>Periksa Jawaban Fase 3</button>
+            </div>
+            <div class="status-banner is-neutral" data-quiz-summary hidden aria-live="polite"></div>
+          </div>
+
+          <div class="phase-pager">
+            <div>
+              <button id="phase-complete-btn" class="btn btn-secondary" type="button" aria-pressed="false">Tandai Fase Ini Selesai Dipelajari</button>
+              <p id="phase-complete-status" class="muted" aria-live="polite"></p>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-subtle" href="fase-2.html">Kembali ke Fase 2</a>
+              <a class="btn btn-primary" href="fase-4.html">Lanjut ke Fase 4: Membaca 3 Laporan</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Melek Bisnis dari Nol</strong></p>
+        <p class="muted">Fase 3: Validasi Pasar, Corong Penjualan, CAC/LTV, dan Compounding.</p>
+      </div>
+      <nav aria-label="Tautan fase footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="fase-1.html">Fase 1</a></li>
+          <li><a href="fase-2.html">Fase 2</a></li>
+          <li><a href="fase-4.html">Fase 4</a></li>
+          <li><a href="fase-5.html">Fase 5</a></li>
+          <li><a href="kamus-pdf.html">Kamus &amp; 20 Bab</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
