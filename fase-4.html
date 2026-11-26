@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      var t = localStorage.getItem("color-scheme");
+      if (t === "light" || t === "dark") {
+        document.querySelector('meta[name="color-scheme"]').content = t;
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    } catch (e) {}
+  </script>
+  <title>Fase 4: Tiga Laporan Keuangan &amp; Ruang untuk Kesalahan | Melek Bisnis</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-phase="fase-4">
+  <a href="#main-content" class="skip-link">Langsung ke materi Fase 4</a>
+  <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M7 16V11M12 16V7M17 16V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Melek Bisnis</span>
+      </a>
+
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="Navigasi kurikulum">
+          <button class="menu-button" type="button" popovertarget="site-menu" popovertargetaction="toggle" aria-controls="site-menu" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <ul id="site-menu" class="site-menu" popover="auto">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="fase-1.html">Fase 1: Pola Pikir</a></li>
+            <li><a href="fase-2.html">Fase 2: Cash Flow</a></li>
+            <li><a href="fase-3.html">Fase 3: Validasi</a></li>
+            <li><a href="fase-4.html" aria-current="page">Fase 4: Laporan</a></li>
+            <li><a href="fase-5.html">Fase 5: Investasi</a></li>
+            <li><a href="kamus-pdf.html">Kamus &amp; 20 Bab</a></li>
+          </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ubah tema tampilan">
+          <svg class="theme-icon icon-to-dark" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <path d="M12.9 10.6A5.5 5.5 0 0 1 5.4 3.1a5.5 5.5 0 1 0 7.5 7.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          <svg class="theme-icon icon-to-light" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <circle cx="8" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M12.6 3.4l-1.1 1.1M4.5 11.5l-1.1 1.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span data-theme-label>Sistem</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <div class="doc-layout">
+      <aside class="doc-rail" aria-label="Daftar isi Fase 4">
+        <p class="rail-title">ISI FASE 4</p>
+        <nav class="toc-nav" aria-label="Bagian dalam Fase 4">
+          <ul class="toc-list">
+            <li><a href="#tiga-laporan">1. Membaca 3 Laporan Keuangan Inti</a></li>
+            <li><a href="#keterkaitan-neraca">2. Keterkaitan 3 Laporan &amp; Rasio Sehat</a></li>
+            <li><a href="#simulator-neraca">3. Meja Audit Neraca &amp; Likuiditas</a></li>
+            <li><a href="#pdf-wajar">4. Wajar &gt; Rasional (Bab 11 &amp; 14)</a></li>
+            <li><a href="#pdf-ruang-kesalahan">5. Ruang untuk Kesalahan (Bab 13)</a></li>
+            <li><a href="#kuis-4">6. Uji Pemahaman Fase 4</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main id="main-content" class="doc-column" tabindex="-1">
+        <header class="hero-frame">
+          <h1>Fase 4: Membaca 3 Laporan Keuangan Utama dan Arsitektur Ruang untuk Kesalahan</h1>
+          <p class="hero-lead">
+            Untuk benar-benar siap masuk ke dunia bisnis serius maupun buku klasik <em>The Intelligent Investor</em> dan <em>Security Analysis</em>, kamu wajib mengerti bagaimana tiga laporan keuangan (Laba Rugi, Arus Kas, dan Neraca) saling tersambung. Setelah angka akuntansinya terang, kita membedah Bab 11, Bab 13, dan Bab 14 di PDF agar struktur keuanganmu sanggup menahan guncangan tak terduga.
+          </p>
+          <div class="phase-meta-bar">
+            <span class="phase-meta-item"><strong>Cakupan PDF:</strong> Bab 11 (hal. 112 sampai 120), Bab 13 (hal. 135 sampai 145), Bab 14 (hal. 146 sampai 152)</span>
+            <span class="phase-meta-item"><strong>Istilah Inti:</strong> Laba Rugi, Neraca, Aset, Liabilitas, Ekuitas, Current Ratio, DER, ROE, Margin of Safety</span>
+          </div>
+        </header>
+
+        <section id="tiga-laporan" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>1. Mengenal 3 Laporan Keuangan Utama Secara Sederhana</h2>
+            <p>
+              Jika sebuah perusahaan atau kedai kopi itu ibarat kendaraan yang melaju, kamu butuh tiga panel kaca depan untuk tahu apakah mobil itu sehat atau sebentar lagi mogok. Ketiga panel itu bernama <strong>Laporan Laba Rugi</strong>, <strong>Laporan Arus Kas</strong>, dan <strong>Neraca</strong>.
+            </p>
+          </div>
+
+          <div class="table-wrapper responsive-table">
+            <table>
+              <caption>Fungsi dan Pertanyaan Kunci di Balik Tiga Laporan Keuangan</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Nama Laporan</th>
+                  <th scope="col">Analogi Sederhana</th>
+                  <th scope="col">Komponen Utama di Dalamnya</th>
+                  <th scope="col">Pertanyaan yang Dijawab</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1. Laba Rugi (<span lang="en">Income Statement</span>)</th>
+                  <td data-label="Analogi">Video rekaman performa selama 1 bulan atau 1 tahun penuh.</td>
+                  <td data-label="Komponen">Omzet, HPP, Laba Kotor, Biaya Operasional (OPEX), Pajak, Laba Bersih.</td>
+                  <td data-label="Pertanyaan">Apakah model bisnisnya untung secara hitungan akuntansi?</td>
+                </tr>
+                <tr>
+                  <th scope="row">2. Arus Kas (<span lang="en">Cash Flow</span>)</th>
+                  <td data-label="Analogi">Mutasi rekening koran nyata yang merinci uang tunai masuk dan keluar.</td>
+                  <td data-label="Komponen">Kas dari Operasi (jualan), Kas Investasi (beli mesin/alat), Kas Pendanaan (utang/setoran modal).</td>
+                  <td data-label="Pertanyaan">Dari mana uang tunai datang dan apakah usahanya bisa bayar tagihan minggu depan?</td>
+                </tr>
+                <tr>
+                  <th scope="row">3. Neraca (<span lang="en">Balance Sheet</span>)</th>
+                  <td data-label="Analogi">Foto jepretan pada satu tanggal pasti (misal 31 Desember pukul 23:59).</td>
+                  <td data-label="Komponen">Aset (Harta Lancar &amp; Tetap), Liabilitas (Utang Pendek &amp; Panjang), dan Ekuitas (Modal Bersih Pemilik).</td>
+                  <td data-label="Pertanyaan">Seberapa kuat pondasi harta bersih vs tumpukan utang perusahaan saat ini?</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="prose">
+            <h3>Membedah Komponen Neraca: Aset = Liabilitas + Ekuitas</h3>
+            <p>
+              Mengapa disebut "Neraca" (<span lang="en">Balance Sheet</span>)? Karena sisi kiri dan kanannya wajib seimbang persis. Segala harta yang dimiliki bisnis (<span lang="en">Assets</span>) pastilah berasal dari dua sumber: dibeli dengan uang pinjaman (<strong>Liabilitas / Utang</strong>) atau dibeli dengan uang milik pemilik beserta laba yang ditahan di perusahaan (<strong>Ekuitas</strong>).
+            </p>
+            <ul>
+              <li><strong>Aset Lancar (<span lang="en">Current Assets</span>):</strong> Harta yang mudah berubah menjadi uang tunai dalam kurang dari 1 tahun, seperti uang kas di rekening, piutang pembeli yang belum cair, dan persediaan stok barang jadi.</li>
+              <li><strong>Aset Tetap (<span lang="en">Fixed Assets</span>):</strong> Barang modal berumur panjang untuk menjalankan usaha, misalnya mesin kopi espresso, laptop desain, kulkas, atau bangunan ruko.</li>
+              <li><strong>Liabilitas Lancar &amp; Jangka Panjang:</strong> Utang yang harus dilunasi dalam tempo kurang dari 1 tahun (tagihan supplier, gaji bulan ini, cicilan pendek) dan utang berjangka panjang (kredit usaha 3 sampai 5 tahun).</li>
+              <li><strong>Ekuitas (<span lang="en">Equity</span>):</strong> Nilai bersih milikmu sesungguhnya jika hari ini semua aset dijual dan seluruh utang dilunasi. Jika bisnismu meraih laba bersih dan tidak semuanya kamu tarik untuk jajan pribadi, bagian yang disisihkan masuk menjadi <strong>Laba Ditahan (<span lang="en">Retained Earnings</span>)</strong> yang memperbesar Ekuitas!</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="keterkaitan-neraca" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>2. Bagaimana Tiga Laporan Saling Tersambung + 3 Rasio Wajib</h2>
+            <p>
+              Siswa pemula sering mengira tiga laporan itu terpisah. Padahal, satu transaksi langsung menyentuh ketiganya. Ketika kamu menjual kopi secara kredit, Omzet naik di Laba Rugi, lalu angka Piutang membengkak di Neraca sementara Kas di Laporan Arus Kas belum bertambah. Saat akhirnya Laba Bersih selesai dihitung di akhir bulan, angka laba itu mengalir ke Neraca sebagai tambahan Ekuitas, dan perubahan Kas akhir di Arus Kas menjadi baris paling atas di Neraca periode berikutnya.
+            </p>
+          </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 300" width="860" height="300" role="img" aria-labelledby="svg-f4-link-title svg-f4-link-desc">
+              <title id="svg-f4-link-title">Peta Keterkaitan Tiga Laporan Keuangan</title>
+              <desc id="svg-f4-link-desc">Diagram menunjukkan aliran Laba Bersih dari Laba Rugi masuk ke Arus Kas Operasi dan Ekuitas Neraca, serta Saldo Kas Akhir Arus Kas masuk ke Kas di Neraca.</desc>
+              <rect x="0" y="0" width="860" height="300" rx="14" fill="var(--bg-page)"/>
+
+              <text x="28" y="34" fill="var(--text-primary)" font-size="14" font-weight="700">KABEL PENGHUBUNG ANTARA LABA RUGI, ARUS KAS, DAN NERACA</text>
+
+              <!-- Card 1: Laba Rugi -->
+              <rect x="28" y="60" width="236" height="190" rx="12" fill="var(--bg-surface)" stroke="var(--accent)" stroke-width="1.8"/>
+              <text x="46" y="88" fill="var(--accent)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">1. LABA RUGI</text>
+              <text x="46" y="118" fill="var(--text-primary)" font-size="14" font-weight="700">Omzet - HPP - OPEX</text>
+              <line x1="46" y1="136" x2="246" y2="136" stroke="var(--border-subtle)"/>
+              <rect x="46" y="152" width="200" height="44" rx="8" fill="var(--pos-soft)" stroke="var(--pos)"/>
+              <text x="58" y="179" fill="var(--pos)" font-size="13" font-weight="700">Laba Bersih (+)</text>
+              <text x="46" y="224" fill="var(--text-secondary)" font-size="12">Mengalir ke Ekuitas &amp; Arus Kas</text>
+
+              <!-- Arrow 1 to 2 -->
+              <line x1="264" y1="174" x2="306" y2="174" stroke="var(--accent)" stroke-width="2"/>
+              <polygon points="306,168 318,174 306,180" fill="var(--accent)"/>
+
+              <!-- Card 2: Arus Kas -->
+              <rect x="318" y="60" width="236" height="190" rx="12" fill="var(--bg-surface)" stroke="var(--titanium)" stroke-width="1.8"/>
+              <text x="336" y="88" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">2. ARUS KAS</text>
+              <text x="336" y="118" fill="var(--text-primary)" font-size="13.5" font-weight="700">Operasi + Investasi + Pendanaan</text>
+              <line x1="336" y1="136" x2="536" y2="136" stroke="var(--border-subtle)"/>
+              <rect x="336" y="152" width="200" height="44" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
+              <text x="348" y="179" fill="var(--accent)" font-size="13" font-weight="700">Saldo Kas Akhir</text>
+              <text x="336" y="224" fill="var(--text-secondary)" font-size="12">Harus cocok 100% dgn Kas di Neraca</text>
+
+              <!-- Arrow 2 to 3 -->
+              <line x1="554" y1="174" x2="594" y2="174" stroke="var(--accent)" stroke-width="2"/>
+              <polygon points="594,168 606,174 594,180" fill="var(--accent)"/>
+
+              <!-- Card 3: Neraca -->
+              <rect x="606" y="60" width="226" height="190" rx="12" fill="var(--bg-surface)" stroke="var(--pos)" stroke-width="1.8"/>
+              <text x="624" y="88" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">3. NERACA</text>
+              <text x="624" y="118" fill="var(--text-primary)" font-size="13.5" font-weight="700">Kas &amp; Aset Lainnya</text>
+              <text x="624" y="142" fill="var(--text-secondary)" font-size="13">=</text>
+              <text x="624" y="166" fill="var(--text-primary)" font-size="13.5" font-weight="700">Utang + Laba Ditahan</text>
+              <rect x="624" y="186" width="190" height="44" rx="8" fill="var(--titanium-tint)" stroke="var(--titanium)"/>
+              <text x="636" y="213" fill="var(--titanium)" font-size="12.5" font-weight="700">Aset = Liabilitas + Ekuitas</text>
+            </svg>
+            <figcaption>
+              Gambar 7. Dua titik kontrol saat memeriksa laporan keuangan bisnis atau saham terbuka: pastikan Saldo Kas di Arus Kas sama persis dengan Kas di Neraca, dan Laba Bersih positif tidak dimakan habis oleh pembengkakan Piutang atau Stok mati.
+            </figcaption>
+          </figure>
+
+          <div class="formula-box">
+            <p class="formula-eq">1. Current Ratio = Aset Lancar / Utang Jangka Pendek   (Aman bila &gt;= 1,5x)</p>
+            <p class="formula-eq">2. DER (Debt to Equity Ratio) = Total Utang / Total Ekuitas   (Waspada bila &gt; 1,5x)</p>
+            <p class="formula-eq">3. ROE (Return on Equity) = (Laba Bersih / Total Ekuitas) x 100%</p>
+            <p class="formula-note">
+              Ketiga rasio ini adalah alat pemeriksa kesehatan yang akan kamu pakai langsung di buku <em>The Intelligent Investor</em> untuk menyaring perusahaan tangguh vs perusahaan penuh utang rapuh.
+            </p>
+          </div>
+        </section>
+
+        <section id="simulator-neraca" class="section-block" tabindex="-1">
+          <h2>3. Meja Audit Neraca &amp; Uji Ketahanan Usaha</h2>
+          <p class="prose">
+            Pilih salah satu profil perusahaan di bawah atau ubah angkanya sendiri untuk melihat mengapa bisnis dengan laba besar di kertas tetap bisa berisiko gagal bayar akibat utang pendek atau aset yang beku.
+          </p>
+
+          <form id="sim-statements" class="workbench" novalidate>
+            <div class="workbench-header">
+              <h3>Simulasi Audit Neraca Mini</h3>
+              <span class="muted">Ubah angka untuk menguji rasio keuangan</span>
+            </div>
+
+            <div class="preset-row" aria-label="Pilih contoh kondisi neraca perusahaan">
+              <button class="btn btn-subtle" type="button" data-f4-preset data-cash="8000000" data-ar="1000000" data-inv="2000000" data-fixed="5000000" data-sdebt="2000000" data-ldebt="1000000" data-netinc="3000000">1. Kedai Sehat (Kas Tebal)</button>
+              <button class="btn btn-subtle" type="button" data-f4-preset data-cash="400000" data-ar="6000000" data-inv="5000000" data-fixed="6000000" data-sdebt="8000000" data-ldebt="6000000" data-netinc="2500000">2. Rawan Utang &amp; Macet</button>
+              <button class="btn btn-subtle" type="button" data-f4-preset data-cash="1000000" data-ar="2000000" data-inv="1000000" data-fixed="4000000" data-sdebt="5000000" data-ldebt="5000000" data-netinc="-1500000">3. Ekuitas Negatif (Kritis)</button>
+            </div>
+
+            <div class="workbench-grid">
+              <div>
+                <div class="field-wrap control-group">
+                  <label for="f4-cash">Uang Kas Tunai di Bank (Rp)</label>
+                  <input id="f4-cash" class="number-input num" type="number" min="0" step="500000" value="8000000">
+                </div>
+                <div class="field-wrap control-group">
+                  <label for="f4-ar">Piutang Pembeli Belum Dibayar (Rp)</label>
+                  <input id="f4-ar" class="number-input num" type="number" min="0" step="500000" value="1000000">
+                </div>
+                <div class="field-wrap control-group">
+                  <label for="f4-inv">Nilai Stok Persediaan Barang (Rp)</label>
+                  <input id="f4-inv" class="number-input num" type="number" min="0" step="500000" value="2000000">
+                </div>
+                <div class="field-wrap control-group">
+                  <label for="f4-fixed">Aset Tetap Mesin &amp; Alat (Rp)</label>
+                  <input id="f4-fixed" class="number-input num" type="number" min="0" step="500000" value="5000000">
+                </div>
+                <div class="field-wrap control-group">
+                  <label for="f4-sdebt">Utang Jangka Pendek &lt; 1 Tahun (Rp)</label>
+                  <input id="f4-sdebt" class="number-input num" type="number" min="0" step="500000" value="2000000">
+                </div>
+                <div class="field-wrap control-group">
+                  <label for="f4-ldebt">Utang Jangka Panjang &gt; 1 Tahun (Rp)</label>
+                  <input id="f4-ldebt" class="number-input num" type="number" min="0" step="500000" value="1000000">
+                </div>
+                <div class="field-wrap control-group">
+                  <label for="f4-netinc">Laba Bersih Tahun Ini dari Laba Rugi (Rp)</label>
+                  <input id="f4-netinc" class="number-input num" type="number" step="500000" value="3000000">
+                </div>
+              </div>
+
+              <div class="readout-panel" aria-live="polite">
+                <dl>
+                  <div class="metric-row">
+                    <dt>Total Aset</dt>
+                    <dd id="f4-out-assets" class="num">Rp16.000.000</dd>
+                  </div>
+                  <div class="metric-row">
+                    <dt>Total Liabilitas (Utang)</dt>
+                    <dd id="f4-out-liab" class="num">Rp3.000.000</dd>
+                  </div>
+                  <div class="metric-row">
+                    <dt>Total Ekuitas (Kekayaan Bersih)</dt>
+                    <dd id="f4-out-equity" class="num">Rp13.000.000</dd>
+                  </div>
+                  <div class="metric-row">
+                    <dt>Current Ratio (Aset Lancar / Utang Pendek)</dt>
+                    <dd id="f4-out-cr" class="num">5.50x</dd>
+                  </div>
+                  <div class="metric-row">
+                    <dt>DER (Total Utang / Ekuitas)</dt>
+                    <dd id="f4-out-der" class="num">0.23x</dd>
+                  </div>
+                  <div class="metric-row">
+                    <dt>ROE (Laba Bersih / Ekuitas)</dt>
+                    <dd id="f4-out-roe" class="num">23.1%</dd>
+                  </div>
+                </dl>
+                <div id="f4-out-diag" class="status-banner is-positive"></div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="pdf-wajar" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>4. Wajar Lebih Baik daripada Rasional Dingin (Bab 11 &amp; Bab 14 PDF)</h2>
+            <p>
+              Setelah memahami rumus neraca dan rasio keuangan, mahasiswa sering terjebak berpikir bahwa semua keputusan bisnis hanyalah soal mencari angka paling optimal di Microsoft Excel. <strong>Bab 11 PDF (hal. 112 sampai 120)</strong> mengingatkan fakta bahwa manusia bukanlah mesin penghitung, melainkan makhluk emosional.
+            </p>
+            <p>
+              Untuk menjelaskan perbedaan antara <strong>rasional</strong> dan <strong>wajar (<span lang="en">reasonable</span>)</strong>, Morgan Housel mengutip kisah ekstrem dokter Julius Wagner-Jauregg yang meraih Hadiah Nobel Kedokteran tahun 1927 karena mengobati sifilis saraf dengan menyuntikkan malaria agar pasien mengalami demam tinggi mematikan bakteri. Secara medis kuno, logikanya "rasional", tetapi berbahaya dan sulit dijalani. Kita di dunia nyata lebih butuh obat penurun demam seperti Tylenol: tidak sempurna secara teori ekstrem, tetapi wajar dan bisa kita patuhi sampai sembuh (hal. 112 sampai 113).
+            </p>
+            <p>
+              Contoh keuangannya muncul dari peraih Nobel Ekonomi sekaligus perancang teori portofolio modern, <strong>Harry Markowitz</strong> (hal. 114). Saat diminta mengelola uang pensiunnya sendiri, Markowitz tidak memakai rumus optimasi super rumit ciptaannya. Ia membagi portofolionya rata <strong>50% obligasi dan 50% ekuitas (saham)</strong> karena tujuan pribadinya sederhana: <em>meminimalkan penyesalan</em> di masa depan, baik saat pasar naik maupun saat pasar jatuh.
+            </p>
+            <p>
+              Bandingkan dengan penelitian para ekonom Yale tahun 2008 yang menyarankan anak muda meminjam uang (<span lang="en">leverage</span> 2:1) agar hasil investasinya maksimal (hal. 115). Di atas kertas spreadsheet, strategi itu 100% rasional karena pasar saham naik dalam jangka panjang. Tetapi di kehidupan nyata, jika pasar jatuh 50% saja seperti tahun 2008, akunmu hangus 100% dan nyaris tidak ada manusia yang sanggup memulainya kembali tanpa trauma. Karena itu, strategi keuangan dan bisnis yang bisa membuatmu <strong>tidur nyenyak di malam hari</strong> selalu mengalahkan strategi rumit yang hanya indah di atas kertas (hal. 117 sampai 120).
+            </p>
+
+            <aside class="pdf-callout" aria-label="Pelajaran Bab 14 tentang perubahan diri dan sunk cost">
+              <p class="pdf-callout-head">BAB 14 PDF (HAL. 146 SAMPAI 152): ILUSI AKHIR SEJARAH &amp; SUNK COST</p>
+              <p>
+                Di Bab 14 (<em>Anda Akan Berubah</em>), psikolog Harvard Daniel Gilbert memaparkan konsep <strong>The End of History Illusion</strong> (hal. 148): manusia amat sadar seberapa jauh dirinya berubah dalam 10 tahun terakhir, namun selalu gagal membayangkan bahwa selera, tujuan karier, dan kebutuhan keuangannya akan kembali berubah total 10 tahun mendatang. Ditambah nasihat Daniel Kahneman soal meninggalkan <strong>biaya hangus (<span lang="en">sunk cost</span>)</strong> di halaman 151: jangan pernah memaksakan bisnis atau rencana masa muda terus berjalan hanya demi membela keputusan ego masa lalu padahal prioritas hidupmu sudah bergeser.
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <section id="pdf-ruang-kesalahan" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>5. Ruang untuk Kesalahan: Pelajaran Tank Stalingrad &amp; Kas Microsoft (Bab 13 PDF, Hal. 135 sampai 145)</h2>
+            <p>
+              Judul asli Bab 13 adalah <strong>Room for Error</strong> (hal. 135 sampai 145; di salah satu bagian ringkasan Bab 19 hal. 204 terjemahan PDF kita muncul istilah jenaka <em>"Ruang ibadah untuk kesalahan"</em> akibat terjemahan otomatis kata <em>room</em>). Ini adalah salah satu jembatan terpenting menuju pemikiran Benjamin Graham di Fase 5.
+            </p>
+            <p>
+              Morgan membuka Bab 13 dengan kisah <strong>Kevin Lewis</strong>, anggota tim legendaris penghitung kartu <em>blackjack</em> dari MIT (hal. 135 sampai 136). Sekalipun punya keunggulan matematis 2% di atas kasino, kasino masih punya peluang 49% untuk menang di tiap giliran kartu. Tanpa cadangan uang 100 unit taruhan dasar sebagai ruang aman, kekalahan beruntun kebetulan akan langsung menghabisi modal sang penghitung kartu jenius sebelum keunggulannya sempat bekerja! Seperti kata Benjamin Graham (hal. 136): <em>"Tujuan dari margin of safety adalah untuk membuat ramalan tidak diperlukan."</em>
+            </p>
+
+            <ul>
+              <li><strong>Kebijakan Kas Muda Bill Gates (hal. 139):</strong> Saat Microsoft masih muda, Bill Gates menerapkan aturan sangat konservatif yang membuat pemodal risiko bingung: selalu menyimpan cukup uang kas di bank untuk membayar gaji seluruh karyawan selama <strong>satu tahun penuh bahkan jika tidak ada satu dolar pun pemasukan</strong>.</li>
+              <li><strong>Risiko Terhapus dari Papan Permainan (hal. 140 sampai 142):</strong> Ketika kamu hanya punya kas pas-pasan dan menumpuk utang usaha (<em>leverage</em> tinggi), penurunan omzet biasa berubah menjadi kebangkrutan fatal (seperti yang menimpa Lehman Brothers tahun 2008). Memakai utang ekstrem seperti bermain roulette Rusia: peluang bertahan hidup 5 dari 6 putaran memang besar, tetapi satu kekalahan membuatmu keluar dari permainan selamanya.</li>
+              <li><strong>Unit Tank Jerman di Pertempuran Stalingrad Akhir 1942 (hal. 143 sampai 144):</strong> Saat pasukan lapis baja Jerman bersembunyi di padang rumput bersalju menanti serangan balik besar melawan Soviet, hampir seluruh tank gagal menyala. Penyebabnya tidak ada di manual strategi perang: <strong>tikus-tikus lapangan</strong> masuk ke dalam bodi tank yang hangat dan memakan lapisan isolasi kabel listrik! Dari 104 tank di unit ke-22, kurang dari 20 buah yang bisa berjalan.</li>
+            </ul>
+          </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 270" width="860" height="270" role="img" aria-labelledby="svg-f4-mos-title svg-f4-mos-desc">
+              <title id="svg-f4-mos-title">Titik Kegagalan Tunggal vs Redundansi Cadangan Kas</title>
+              <desc id="svg-f4-mos-desc">Membandingkan bisnis rapuh berutang penuh yang runtuh saat satu masalah kecil muncul dengan sistem ber redundansi seperti pesawat jet dan aturan kas Bill Gates.</desc>
+              <rect x="0" y="0" width="860" height="270" rx="14" fill="var(--bg-page)"/>
+
+              <text x="28" y="34" fill="var(--text-primary)" font-size="14" font-weight="700">MENGHINDARI SINGLE POINT OF FAILURE (PELAJARAN BAB 13 PDF)</text>
+
+              <!-- Left: Rapuh -->
+              <rect x="28" y="56" width="386" height="186" rx="12" fill="var(--bg-surface)" stroke="var(--neg)" stroke-width="1.6"/>
+              <text x="48" y="84" fill="var(--neg)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">BISNIS TANPA RUANG KESALAHAN (RAPUH)</text>
+              <text x="48" y="114" fill="var(--text-primary)" font-size="14" font-weight="700">100% Uang Diputar + Cicilan Penuh</text>
+              <text x="48" y="142" fill="var(--text-secondary)" font-size="13">1 masalah tak terduga (laptop rusak / penjualan turun 30%)</text>
+              <rect x="48" y="166" width="346" height="54" rx="8" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="64" y="198" fill="var(--neg)" font-size="13.5" font-weight="700">Efek Domino: Gagal bayar, jual aset murah, tutup.</text>
+
+              <!-- Right: Tangguh -->
+              <rect x="446" y="56" width="386" height="186" rx="12" fill="var(--bg-surface)" stroke="var(--pos)" stroke-width="1.6"/>
+              <text x="466" y="84" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">STRUKTUR REDUNDAN (TAHAN BANTING)</text>
+              <text x="466" y="114" fill="var(--text-primary)" font-size="14" font-weight="700">Cadangan Kas + Utang Rendah + 2 Pemasok</text>
+              <text x="466" y="142" fill="var(--text-secondary)" font-size="13">Seperti pesawat komersial dengan 4 sistem listrik cadangan</text>
+              <rect x="466" y="166" width="346" height="54" rx="8" fill="var(--pos-soft)" stroke="var(--pos)"/>
+              <text x="482" y="198" fill="var(--pos)" font-size="13.5" font-weight="700">Masalah bisa ditanggung dan waktu tetap berlanjut.</text>
+            </svg>
+            <figcaption>
+              Gambar 8. Pesan arsitektural dari kasus tank Stalingrad hingga startup milik Morgan Housel yang mengalami pipa air pecah, anjing di dalam kantor, dan penipuan email CEO dalam setahun pertama (hal. 144): hal yang paling menghancurkan rencanamu sering kali adalah kejadian yang bahkan belum pernah terpikirkan sebelumnya.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="kuis-4" class="section-block" tabindex="-1">
+          <h2>6. Uji Pemahaman Fase 4</h2>
+          <div class="quiz-box" data-quiz>
+            <div class="quiz-item" data-answer="c" data-explain="Neraca (Balance Sheet) selalu memotret posisi Aset = Liabilitas + Ekuitas pada satu titik tanggal tertentu, bukan selama satu rentang periode.">
+              <p><strong>1. Laporan manakah yang berfungsi sebagai "foto jepretan" posisi harta (aset), utang (liabilitas), dan modal bersih pemilik (ekuitas) pada satu tanggal spesifik?</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q4-1" value="a"> Laporan Laba Rugi</label>
+                <label class="quiz-option"><input type="radio" name="q4-1" value="b"> Laporan Arus Kas</label>
+                <label class="quiz-option"><input type="radio" name="q4-1" value="c"> Neraca (<span lang="en">Balance Sheet</span>)</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-item" data-answer="b" data-explain="Current Ratio = Aset Lancar / Utang Jangka Pendek = Rp6.000.000 / Rp10.000.000 = 0.60x (< 1x), pertanda bahaya gagal bayar jangka pendek.">
+              <p><strong>2. Sebuah usaha punya Kas dan Stok (Aset Lancar) total Rp6.000.000, tetapi tagihan utang jatuh tempo bulan ini Rp10.000.000. Bagaimana diagnosanya?</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q4-2" value="a"> Sangat sehat karena stok barang pasti terjual mahal tahun depan.</label>
+                <label class="quiz-option"><input type="radio" name="q4-2" value="b"> Risiko gagal bayar jangka pendek karena Current Ratio hanya 0,60x (kurang dari 1,0x).</label>
+                <label class="quiz-option"><input type="radio" name="q4-2" value="c"> Return on Equity otomatis meningkat.</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-item" data-answer="a" data-explain="Bab 13 PDF menjelaskan kisah tank Jerman dan Microsoft muda untuk menunjukkan perlunya cadangan kas agar mampu selamat dari peristiwa yang mustahil diramalkan.">
+              <p><strong>3. Mengapa kisah tank Jerman di Stalingrad (hal. 143) dan aturan kas Bill Gates (hal. 139) diceritakan di Bab 13 PDF?</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q4-3" value="a"> Untuk membuktikan bahwa kamu membutuhkan ruang untuk kesalahan (cadangan/margin of safety) guna menghadapi kejadian aneh yang tidak bisa diprediksi.</label>
+                <label class="quiz-option"><input type="radio" name="q4-3" value="b"> Untuk menyarankan semua perusahaan berutang semaksimal mungkin.</label>
+                <label class="quiz-option"><input type="radio" name="q4-3" value="c"> Untuk membuktikan bahwa meramal masa depan 100% akurat adalah hal mudah.</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-quiz-check>Periksa Jawaban Fase 4</button>
+            </div>
+            <div class="status-banner is-neutral" data-quiz-summary hidden aria-live="polite"></div>
+          </div>
+
+          <div class="phase-pager">
+            <div>
+              <button id="phase-complete-btn" class="btn btn-secondary" type="button" aria-pressed="false">Tandai Fase Ini Selesai Dipelajari</button>
+              <p id="phase-complete-status" class="muted" aria-live="polite"></p>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-subtle" href="fase-3.html">Kembali ke Fase 3</a>
+              <a class="btn btn-primary" href="fase-5.html">Lanjut ke Fase 5: Nilai &amp; Investasi</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Melek Bisnis dari Nol</strong></p>
+        <p class="muted">Fase 4: Tiga Laporan Keuangan &amp; Ruang untuk Kesalahan.</p>
+      </div>
+      <nav aria-label="Tautan fase footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="fase-1.html">Fase 1</a></li>
+          <li><a href="fase-2.html">Fase 2</a></li>
+          <li><a href="fase-3.html">Fase 3</a></li>
+          <li><a href="fase-5.html">Fase 5</a></li>
+          <li><a href="kamus-pdf.html">Kamus &amp; 20 Bab</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
