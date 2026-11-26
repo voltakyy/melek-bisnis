@@ -161,53 +161,48 @@
           </div>
 
           <figure class="diagram-plate">
-            <svg viewBox="0 0 860 310" width="860" height="310" role="img" aria-labelledby="diag-f4-scale-t diag-f4-scale-d">
-              <title id="diag-f4-scale-t">Skema Timbangan Neraca dan Siklus Tiga Aktivitas Arus Kas</title>
-              <desc id="diag-f4-scale-d">Ilustrasi timbangan seimbang di kiri menunjukkan Aset sama dengan Liabilitas ditambah Ekuitas, dan di kanan siklus tiga arus kas Pendanaan, Investasi, serta Operasi.</desc>
-              <rect x="8" y="8" width="844" height="294" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+            <p class="diagram-plate-kicker">TIMBANGAN NERACA SEIMBANG &amp; SIKLUS TIGA AKTIVITAS ARUS KAS</p>
+            <div class="split-reading">
+              <svg viewBox="0 0 380 250" width="380" height="250" role="img" aria-labelledby="diag-f4-scale-t diag-f4-scale-d">
+                <title id="diag-f4-scale-t">Timbangan Keseimbangan Neraca: Aset sama dengan Liabilitas ditambah Ekuitas</title>
+                <desc id="diag-f4-scale-d">Timbangan seimbang dengan piringan kiri Total Aset dan piringan kanan Liabilitas serta Ekuitas.</desc>
+                <rect width="380" height="250" fill="var(--bg-page)"/>
+                <polygon points="172,226 208,226 190,174" fill="var(--titanium)" stroke="var(--border-control)" stroke-width="2"/>
+                <line x1="190" y1="48" x2="190" y2="178" stroke="var(--border-control)" stroke-width="3"/>
+                <line x1="58" y1="52" x2="322" y2="52" stroke="var(--border-control)" stroke-width="3.5" stroke-linecap="round"/>
 
-              <!-- Left: Balance Scale -->
-              <text x="32" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">TIMBANGAN NERACA (WAJIB SEIMBANG)</text>
-              <polygon points="205,264 245,264 225,214" fill="var(--titanium)"/>
-              <line x1="225" y1="88" x2="225" y2="218" stroke="var(--text-primary)" stroke-width="3"/>
-              <line x1="88" y1="92" x2="362" y2="92" stroke="var(--text-primary)" stroke-width="3" stroke-linecap="round"/>
+                <rect x="20" y="70" width="132" height="96" rx="10" fill="var(--info-soft)" stroke="var(--info)" stroke-width="2"/>
+                <text x="86" y="106" text-anchor="middle" fill="var(--info)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">TOTAL ASET</text>
+                <text x="86" y="130" text-anchor="middle" fill="var(--text-primary)" font-size="11.5">Kas + Piutang</text>
+                <text x="86" y="148" text-anchor="middle" fill="var(--text-primary)" font-size="11.5">+ Stok + Mesin</text>
 
-              <!-- Left Pan: Aset -->
-              <rect x="30" y="106" width="152" height="106" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
-              <text x="106" y="132" text-anchor="middle" fill="var(--accent)" font-size="12.5" font-weight="700">TOTAL ASET</text>
-              <text x="106" y="156" text-anchor="middle" fill="var(--text-primary)" font-size="12">Kas + Piutang</text>
-              <text x="106" y="176" text-anchor="middle" fill="var(--text-primary)" font-size="12">+ Stok Barang</text>
-              <text x="106" y="196" text-anchor="middle" fill="var(--text-primary)" font-size="12">+ Mesin &amp; Alat</text>
+                <rect x="228" y="70" width="132" height="44" rx="8" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="2"/>
+                <text x="294" y="97" text-anchor="middle" fill="var(--neg)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">LIABILITAS</text>
 
-              <!-- Right Pan: Liabilitas + Ekuitas stacked -->
-              <rect x="268" y="106" width="152" height="50" rx="8" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.5"/>
-              <text x="344" y="128" text-anchor="middle" fill="var(--neg)" font-size="12" font-weight="700">LIABILITAS (Utang)</text>
-              <text x="344" y="146" text-anchor="middle" fill="var(--text-secondary)" font-size="11">Tagihan Pendek + Panjang</text>
+                <rect x="228" y="122" width="132" height="44" rx="8" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="2"/>
+                <text x="294" y="149" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">EKUITAS</text>
+              </svg>
 
-              <rect x="268" y="162" width="152" height="50" rx="8" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
-              <text x="344" y="184" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700">EKUITAS (Modal)</text>
-              <text x="344" y="202" text-anchor="middle" fill="var(--text-secondary)" font-size="11">Setoran + Laba Ditahan</text>
-
-              <!-- Right: 3-Cash-Flow Cycle -->
-              <line x1="444" y1="26" x2="444" y2="282" stroke="var(--border-subtle)"/>
-              <text x="468" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">PUTARAN 3 AKTIVITAS ARUS KAS</text>
-
-              <rect x="468" y="60" width="362" height="58" rx="10" fill="var(--bg-surface)" stroke="var(--titanium)"/>
-              <text x="486" y="84" fill="var(--titanium)" font-size="12" font-weight="700">1. KAS PENDANAAN (Sumber Awal)</text>
-              <text x="486" y="104" fill="var(--text-secondary)" font-size="12.5">Modal pemilik masuk atau pinjaman bank ditarik/dicicil.</text>
-
-              <path d="M649 120 V138" stroke="var(--accent)" stroke-width="2"/>
-              <rect x="468" y="140" width="362" height="58" rx="10" fill="var(--bg-surface)" stroke="var(--accent)"/>
-              <text x="486" y="164" fill="var(--accent)" font-size="12" font-weight="700">2. KAS INVESTASI (Belanja Alat Kerja)</text>
-              <text x="486" y="184" fill="var(--text-secondary)" font-size="12.5">Kas keluar membeli mesin kopi, laptop, atau ruko produksi.</text>
-
-              <path d="M649 200 V218" stroke="var(--pos)" stroke-width="2"/>
-              <rect x="468" y="220" width="362" height="62" rx="10" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
-              <text x="486" y="244" fill="var(--pos)" font-size="12" font-weight="700">3. KAS OPERASI (Mesin Utama Pembuktian)</text>
-              <text x="486" y="264" fill="var(--text-primary)" font-size="12.5">Kas masuk bersih dari jualan kopi. Bisnis sehat wajib positif di sini!</text>
-            </svg>
+              <div class="hybrid-flow">
+                <div class="hybrid-node tone-mustard">
+                  <span class="hybrid-node-tag">1. KAS PENDANAAN</span>
+                  <p class="hybrid-node-title">Sumber Modal &amp; Pinjaman</p>
+                  <p>Setoran pemilik masuk atau penarikan serta pelunasan utang usaha ke bank.</p>
+                </div>
+                <div class="hybrid-node tone-info">
+                  <span class="hybrid-node-tag">2. KAS INVESTASI</span>
+                  <p class="hybrid-node-title">Belanja Alat Kerja Jangka Panjang</p>
+                  <p>Uang kas keluar untuk membeli mesin kopi, kulkas, atau aset produksi.</p>
+                </div>
+                <div class="hybrid-node tone-pos">
+                  <span class="hybrid-node-tag">3. KAS OPERASI (MESIN PEMBUKTIAN)</span>
+                  <p class="hybrid-node-title">Uang Tunai Bersih dari Jualan Harian</p>
+                  <p>Bisnis sehat wajib menghasilkan Arus Kas Operasi positif secara konsisten.</p>
+                </div>
+              </div>
+            </div>
             <figcaption>
-              Gambar 6B. Kiri: Timbangan Neraca selalu seimbang karena setiap harta usaha pastilah didanai utang atau modal pemilik. Kanan: dari tiga baris Arus Kas, Arus Kas Operasi yang positif konsisten adalah bukti bisnis benar-benar menghidupi dirinya sendiri.
+              Gambar 6B. Kiri: Timbangan Neraca selalu seimbang karena setiap harta usaha didanai utang atau modal pemilik. Kanan: tiga jalur utama uang tunai di Laporan Arus Kas.
             </figcaption>
           </figure>
         </section>
@@ -221,48 +216,24 @@
           </div>
 
           <figure class="diagram-plate">
-            <svg viewBox="0 0 860 300" width="860" height="300" role="img" aria-labelledby="svg-f4-link-title svg-f4-link-desc">
-              <title id="svg-f4-link-title">Peta Keterkaitan Tiga Laporan Keuangan</title>
-              <desc id="svg-f4-link-desc">Diagram menunjukkan aliran Laba Bersih dari Laba Rugi masuk ke Arus Kas Operasi dan Ekuitas Neraca, serta Saldo Kas Akhir Arus Kas masuk ke Kas di Neraca.</desc>
-              <rect x="0" y="0" width="860" height="300" rx="14" fill="var(--bg-page)"/>
-
-              <text x="28" y="34" fill="var(--text-primary)" font-size="14" font-weight="700">KABEL PENGHUBUNG ANTARA LABA RUGI, ARUS KAS, DAN NERACA</text>
-
-              <!-- Card 1: Laba Rugi -->
-              <rect x="28" y="60" width="236" height="190" rx="12" fill="var(--bg-surface)" stroke="var(--accent)" stroke-width="1.8"/>
-              <text x="46" y="88" fill="var(--accent)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">1. LABA RUGI</text>
-              <text x="46" y="118" fill="var(--text-primary)" font-size="14" font-weight="700">Omzet - HPP - OPEX</text>
-              <line x1="46" y1="136" x2="246" y2="136" stroke="var(--border-subtle)"/>
-              <rect x="46" y="152" width="200" height="44" rx="8" fill="var(--pos-soft)" stroke="var(--pos)"/>
-              <text x="58" y="179" fill="var(--pos)" font-size="13" font-weight="700">Laba Bersih (+)</text>
-              <text x="46" y="224" fill="var(--text-secondary)" font-size="12">Mengalir ke Ekuitas &amp; Arus Kas</text>
-
-              <!-- Arrow 1 to 2 -->
-              <line x1="264" y1="174" x2="306" y2="174" stroke="var(--accent)" stroke-width="2"/>
-              <polygon points="306,168 318,174 306,180" fill="var(--accent)"/>
-
-              <!-- Card 2: Arus Kas -->
-              <rect x="318" y="60" width="236" height="190" rx="12" fill="var(--bg-surface)" stroke="var(--titanium)" stroke-width="1.8"/>
-              <text x="336" y="88" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">2. ARUS KAS</text>
-              <text x="336" y="118" fill="var(--text-primary)" font-size="13.5" font-weight="700">Operasi + Investasi + Pendanaan</text>
-              <line x1="336" y1="136" x2="536" y2="136" stroke="var(--border-subtle)"/>
-              <rect x="336" y="152" width="200" height="44" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
-              <text x="348" y="179" fill="var(--accent)" font-size="13" font-weight="700">Saldo Kas Akhir</text>
-              <text x="336" y="224" fill="var(--text-secondary)" font-size="12">Harus cocok 100% dgn Kas di Neraca</text>
-
-              <!-- Arrow 2 to 3 -->
-              <line x1="554" y1="174" x2="594" y2="174" stroke="var(--accent)" stroke-width="2"/>
-              <polygon points="594,168 606,174 594,180" fill="var(--accent)"/>
-
-              <!-- Card 3: Neraca -->
-              <rect x="606" y="60" width="226" height="190" rx="12" fill="var(--bg-surface)" stroke="var(--pos)" stroke-width="1.8"/>
-              <text x="624" y="88" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">3. NERACA</text>
-              <text x="624" y="118" fill="var(--text-primary)" font-size="13.5" font-weight="700">Kas &amp; Aset Lainnya</text>
-              <text x="624" y="142" fill="var(--text-secondary)" font-size="13">=</text>
-              <text x="624" y="166" fill="var(--text-primary)" font-size="13.5" font-weight="700">Utang + Laba Ditahan</text>
-              <rect x="624" y="186" width="190" height="44" rx="8" fill="var(--titanium-tint)" stroke="var(--titanium)"/>
-              <text x="636" y="213" fill="var(--titanium)" font-size="12.5" font-weight="700">Aset = Liabilitas + Ekuitas</text>
-            </svg>
+            <p class="diagram-plate-kicker">KABEL PENGHUBUNG ANTARA LABA RUGI, ARUS KAS, DAN NERACA</p>
+            <div class="hybrid-flow cols-3">
+              <div class="hybrid-node tone-info">
+                <span class="hybrid-node-tag">1. LAPORAN LABA RUGI</span>
+                <p class="hybrid-node-title">Omzet - HPP - OPEX = Laba Bersih</p>
+                <p>Angka Laba Bersih di baris terakhir tidak berhenti di sini; bagian yang ditahan mengalir menjadi penambah Ekuitas di Neraca.</p>
+              </div>
+              <div class="hybrid-node tone-mustard">
+                <span class="hybrid-node-tag">2. LAPORAN ARUS KAS</span>
+                <p class="hybrid-node-title">Operasi + Investasi + Pendanaan</p>
+                <p>Menyesuaikan Laba Bersih terhadap kasbon (Piutang) &amp; stok sehingga menemukan <strong>Saldo Kas Akhir</strong> nyata.</p>
+              </div>
+              <div class="hybrid-node tone-pos">
+                <span class="hybrid-node-tag">3. NERACA (BALANCE SHEET)</span>
+                <p class="hybrid-node-title">Total Aset = Liabilitas + Ekuitas</p>
+                <p>Baris Kas di Neraca wajib sama persis 100% dengan Saldo Kas Akhir di Laporan Arus Kas.</p>
+              </div>
+            </div>
             <figcaption>
               Gambar 7. Dua titik kontrol saat memeriksa laporan keuangan bisnis atau saham terbuka: pastikan Saldo Kas di Arus Kas sama persis dengan Kas di Neraca, dan Laba Bersih positif tidak dimakan habis oleh pembengkakan Piutang atau Stok mati.
             </figcaption>
@@ -355,6 +326,14 @@
                     <dd id="f4-out-roe" class="num">23.1%</dd>
                   </div>
                 </dl>
+                <div class="live-split-wrap">
+                  <span class="live-split-label">KOMPOSISI PENDANAAN: EKUITAS VS UTANG</span>
+                  <div class="live-split-track" aria-hidden="true">
+                    <div id="f4-seg-eq" class="split-seg-pos" style="inline-size: 81.3%;"></div>
+                    <div id="f4-seg-debt" class="split-seg-neg" style="inline-size: 18.7%;"></div>
+                  </div>
+                  <span id="f4-split-legend" class="live-split-legend">Ekuitas 81% vs Utang 19% terhadap total pendanaan</span>
+                </div>
                 <div id="f4-out-diag" class="status-banner is-positive"></div>
               </div>
             </div>
@@ -386,32 +365,37 @@
           </div>
 
           <figure class="diagram-plate">
-            <svg viewBox="0 0 860 270" width="860" height="270" role="img" aria-labelledby="diag-f4-prob-t diag-f4-prob-d">
-              <title id="diag-f4-prob-t">Grafik Peluang Untung Pasar Saham AS Berdasarkan Rentang Waktu (Bab 11 PDF)</title>
-              <desc id="diag-f4-prob-d">Empat batang horizontal menunjukkan kenaikan probabilitas untung dari 50 persen pada horizon 1 hari menjadi 68 persen pada 1 tahun, 88 persen pada 10 tahun, dan 100 persen pada 20 tahun.</desc>
-              <rect x="8" y="8" width="844" height="254" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
-              <text x="32" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">DATA BAB 11 HAL. 117: PELUANG UNTUNG PASAR SAHAM AS VS LAMA WAKTU MENAHAN</text>
-
-              <!-- Horizontal bars for 1 day, 1 yr, 10 yr, 20 yr (track width 440: x=128..568, labels at x=584) -->
-              <text x="32" y="84" fill="var(--text-primary)" font-size="13" font-weight="700">1 Hari</text>
-              <rect x="128" y="64" width="440" height="28" rx="6" fill="var(--bg-surface)" stroke="var(--border-subtle)"/>
-              <rect x="128" y="64" width="220" height="28" rx="6" fill="var(--neg-soft)" stroke="var(--neg)"/>
-              <text x="584" y="84" fill="var(--neg)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">50% (Mirip Lempar Koin)</text>
-
-              <text x="32" y="130" fill="var(--text-primary)" font-size="13" font-weight="700">1 Tahun</text>
-              <rect x="128" y="110" width="440" height="28" rx="6" fill="var(--bg-surface)" stroke="var(--border-subtle)"/>
-              <rect x="128" y="110" width="299" height="28" rx="6" fill="var(--titanium-tint)" stroke="var(--titanium)"/>
-              <text x="584" y="130" fill="var(--titanium)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">68% Peluang Positif</text>
-
-              <text x="32" y="176" fill="var(--text-primary)" font-size="13" font-weight="700">10 Tahun</text>
-              <rect x="128" y="156" width="440" height="28" rx="6" fill="var(--bg-surface)" stroke="var(--border-subtle)"/>
-              <rect x="128" y="156" width="387" height="28" rx="6" fill="var(--accent-soft)" stroke="var(--accent)"/>
-              <text x="584" y="176" fill="var(--accent)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">88% Peluang Positif</text>
-
-              <text x="32" y="222" fill="var(--text-primary)" font-size="13" font-weight="700">20 Tahun</text>
-              <rect x="128" y="202" width="440" height="28" rx="6" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
-              <text x="584" y="222" fill="var(--pos)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">100% Historis Positif</text>
-            </svg>
+            <p class="diagram-plate-kicker">DATA BAB 11 HAL. 117 | PELUANG POSITIF PASAR SAHAM AS VS RENTANG WAKTU</p>
+            <div class="bar-meter-list">
+              <div class="bar-meter-row">
+                <div class="bar-meter-head">
+                  <span>1 Hari Perdagangan</span>
+                  <span class="num" style="color: var(--neg);">50% (Mirip Lempar Koin)</span>
+                </div>
+                <div class="bar-meter-track"><div class="bar-meter-fill is-neg" style="inline-size: 50%;"></div></div>
+              </div>
+              <div class="bar-meter-row">
+                <div class="bar-meter-head">
+                  <span>1 Tahun Penuh</span>
+                  <span class="num" style="color: var(--titanium);">68% Peluang Positif</span>
+                </div>
+                <div class="bar-meter-track"><div class="bar-meter-fill is-titanium" style="inline-size: 68%;"></div></div>
+              </div>
+              <div class="bar-meter-row">
+                <div class="bar-meter-head">
+                  <span>10 Tahun Menahan</span>
+                  <span class="num" style="color: var(--info);">88% Peluang Positif</span>
+                </div>
+                <div class="bar-meter-track"><div class="bar-meter-fill is-info" style="inline-size: 88%;"></div></div>
+              </div>
+              <div class="bar-meter-row">
+                <div class="bar-meter-head">
+                  <span>20 Tahun Menahan</span>
+                  <span class="num" style="color: var(--pos);">100% Historis Positif</span>
+                </div>
+                <div class="bar-meter-track"><div class="bar-meter-fill" style="inline-size: 100%;"></div></div>
+              </div>
+            </div>
             <figcaption>
               Gambar 7B. Alasan utama mencintai strategimu agar tidak panik di tengah jalan (Bab 11): semakin panjang waktu kamu mampu bertahan tanpa terpaksa menjual, semakin mendekati pasti peluang menangmu secara historis.
             </figcaption>
@@ -436,29 +420,19 @@
           </div>
 
           <figure class="diagram-plate">
-            <svg viewBox="0 0 860 270" width="860" height="270" role="img" aria-labelledby="svg-f4-mos-title svg-f4-mos-desc">
-              <title id="svg-f4-mos-title">Titik Kegagalan Tunggal vs Redundansi Cadangan Kas</title>
-              <desc id="svg-f4-mos-desc">Membandingkan bisnis rapuh berutang penuh yang runtuh saat satu masalah kecil muncul dengan sistem ber redundansi seperti pesawat jet dan aturan kas Bill Gates.</desc>
-              <rect x="0" y="0" width="860" height="270" rx="14" fill="var(--bg-page)"/>
-
-              <text x="28" y="34" fill="var(--text-primary)" font-size="14" font-weight="700">MENGHINDARI SINGLE POINT OF FAILURE (PELAJARAN BAB 13 PDF)</text>
-
-              <!-- Left: Rapuh -->
-              <rect x="28" y="56" width="386" height="186" rx="12" fill="var(--bg-surface)" stroke="var(--neg)" stroke-width="1.6"/>
-              <text x="48" y="84" fill="var(--neg)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">BISNIS TANPA RUANG KESALAHAN (RAPUH)</text>
-              <text x="48" y="114" fill="var(--text-primary)" font-size="14" font-weight="700">100% Uang Diputar + Cicilan Penuh</text>
-              <text x="48" y="142" fill="var(--text-secondary)" font-size="13">1 masalah tak terduga (laptop rusak / penjualan turun 30%)</text>
-              <rect x="48" y="166" width="346" height="54" rx="8" fill="var(--neg-soft)" stroke="var(--neg)"/>
-              <text x="64" y="198" fill="var(--neg)" font-size="13.5" font-weight="700">Efek Domino: Gagal bayar, jual aset murah, tutup.</text>
-
-              <!-- Right: Tangguh -->
-              <rect x="446" y="56" width="386" height="186" rx="12" fill="var(--bg-surface)" stroke="var(--pos)" stroke-width="1.6"/>
-              <text x="466" y="84" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">STRUKTUR REDUNDAN (TAHAN BANTING)</text>
-              <text x="466" y="114" fill="var(--text-primary)" font-size="14" font-weight="700">Cadangan Kas + Utang Rendah + 2 Pemasok</text>
-              <text x="466" y="142" fill="var(--text-secondary)" font-size="13">Seperti pesawat komersial dengan 4 sistem listrik cadangan</text>
-              <rect x="466" y="166" width="346" height="54" rx="8" fill="var(--pos-soft)" stroke="var(--pos)"/>
-              <text x="482" y="198" fill="var(--pos)" font-size="13.5" font-weight="700">Masalah bisa ditanggung dan waktu tetap berlanjut.</text>
-            </svg>
+            <p class="diagram-plate-kicker">MENGHINDARI SINGLE POINT OF FAILURE | PELAJARAN BAB 13 PDF</p>
+            <div class="hybrid-flow cols-2">
+              <div class="hybrid-node tone-neg">
+                <span class="hybrid-node-tag">BISNIS TANPA RUANG KESALAHAN (RAPUH)</span>
+                <p class="hybrid-node-title">100% Uang Diputar + Cicilan Penuh</p>
+                <p>Satu masalah tak terduga (laptop rusak atau omzet turun 30%) langsung memicu gagal bayar cicilan, jual aset murah, dan tutup.</p>
+              </div>
+              <div class="hybrid-node tone-pos">
+                <span class="hybrid-node-tag">STRUKTUR REDUNDAN (TAHAN BANTING)</span>
+                <p class="hybrid-node-title">Cadangan Kas + Utang Rendah + 2 Pemasok</p>
+                <p>Seperti pesawat komersial dengan 4 sistem listrik cadangan: guncangan acak mampu ditanggung sehingga waktu tetap berlanjut.</p>
+              </div>
+            </div>
             <figcaption>
               Gambar 8. Pesan arsitektural dari kasus tank Stalingrad hingga startup milik Morgan Housel yang mengalami pipa air pecah, anjing di dalam kantor, dan penipuan email CEO dalam setahun pertama (hal. 144): hal yang paling menghancurkan rencanamu sering kali adalah kejadian yang bahkan belum pernah terpikirkan sebelumnya.
             </figcaption>

@@ -29,4 +29,4 @@ Lalu buka `http://localhost:8080/`.
 
 ## Desain Sistem & Aksesibilitas
 
-Seluruh aturan tipografi, palet dua tema (*Light Titanium Paper* & *Space Black Titanium*), rasio kontras WCAG AA, komponen, serta panduan perawatan sistem didokumentasikan di [`DESIGN.md`](DESIGN.md) dan [`.impeccable/design.json`](.impeccable/design.json).
+Seluruh aturan tipografi, palet dua tema (*Studio Paper Light* & *Cozy Studio Desk Dark* terinspirasi gaya kertas Pemvis), diagram hibrida HTML+CSS anti-*overflow*, rasio kontras WCAG AA, komponen, serta panduan perawatan sistem didokumentasikan di [`DESIGN.md`](DESIGN.md) dan [`.impeccable/design.json`](.impeccable/design.json).
