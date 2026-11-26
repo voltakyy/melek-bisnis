@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      var t = localStorage.getItem("color-scheme");
+      if (t === "light" || t === "dark") {
+        document.querySelector('meta[name="color-scheme"]').content = t;
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    } catch (e) {}
+  </script>
+  <title>Fase 1: Pola Pikir Bisnis, Masalah &amp; Psikologi Uang | Melek Bisnis</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-phase="fase-1">
+  <a href="#main-content" class="skip-link">Langsung ke materi Fase 1</a>
+  <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M7 16V11M12 16V7M17 16V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Melek Bisnis</span>
+      </a>
+
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="Navigasi kurikulum">
+          <button class="menu-button" type="button" popovertarget="site-menu" popovertargetaction="toggle" aria-controls="site-menu" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <ul id="site-menu" class="site-menu" popover="auto">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="fase-1.html" aria-current="page">Fase 1: Pola Pikir</a></li>
+            <li><a href="fase-2.html">Fase 2: Cash Flow</a></li>
+            <li><a href="fase-3.html">Fase 3: Validasi</a></li>
+            <li><a href="fase-4.html">Fase 4: Laporan</a></li>
+            <li><a href="fase-5.html">Fase 5: Investasi</a></li>
+            <li><a href="kamus-pdf.html">Kamus &amp; 20 Bab</a></li>
+          </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ubah tema tampilan">
+          <svg class="theme-icon icon-to-dark" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <path d="M12.9 10.6A5.5 5.5 0 0 1 5.4 3.1a5.5 5.5 0 1 0 7.5 7.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          <svg class="theme-icon icon-to-light" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <circle cx="8" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M12.6 3.4l-1.1 1.1M4.5 11.5l-1.1 1.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span data-theme-label>Sistem</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <div class="doc-layout">
+      <aside class="doc-rail" aria-label="Daftar isi Fase 1">
+        <p class="rail-title">ISI FASE 1</p>
+        <nav class="toc-nav" aria-label="Bagian dalam Fase 1">
+          <ul class="toc-list">
+            <li><a href="#inti-bisnis">1. Inti Paling Sederhana dari Bisnis</a></li>
+            <li><a href="#empat-peran">2. Empat Peran di Dunia Uang</a></li>
+            <li><a href="#ronald-vs-richard">3. Perilaku Mengalahkan Gelar (PDF Hal. 10)</a></li>
+            <li><a href="#tidak-ada-gila">4. Tidak Ada yang Gila (Bab 1)</a></li>
+            <li><a href="#untung-risiko">5. Keberuntungan &amp; Risiko (Bab 2)</a></li>
+            <li><a href="#tidak-cukup">6. Bahaya Tiang Gawang Bergerak (Bab 3)</a></li>
+            <li><a href="#simulator-ide">7. Alat Audit Ide Usaha Kampus</a></li>
+            <li><a href="#kuis-1">8. Uji Pemahaman Fase 1</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main id="main-content" class="doc-column" tabindex="-1">
+        <header class="hero-frame">
+          <h1>Fase 1: Pola Pikir Bisnis, Masalah Nyata, dan Psikologi Uang</h1>
+          <p class="hero-lead">
+            Sebelum menyentuh angka akuntansi atau saham, kamu perlu memahami mesin paling dasar di balik setiap usaha: mengapa manusia bersedia menukar uangnya dengan produk atau jasa orang lain, dan mengapa orang berpendidikan tinggi pun bisa bangkrut karena gagal mengendalikan perilaku.
+          </p>
+          <div class="phase-meta-bar">
+            <span class="phase-meta-item"><strong>Cakupan PDF:</strong> Pendahuluan (hal. 10 sampai 17) &amp; Bab 1, 2, 3 (hal. 18 sampai 51)</span>
+            <span class="phase-meta-item"><strong>Konsep Bisnis:</strong> Pertukaran Nilai, 4 Kuadran Peran, Deteksi Masalah</span>
+          </div>
+        </header>
+
+        <section id="inti-bisnis" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>1. Inti Paling Sederhana dari Bisnis: Masalah Menjadi Solusi</h2>
+            <p>
+              Banyak mahasiswa yang baru tertarik dengan bisnis langsung bertanya: "Enaknya jualan barang apa yang lagi tren ya?" Pertanyaan itu sering membuat pemula buntu atau rugi, karena mereka memulainya dari <strong>produk</strong>, bukan dari <strong>masalah pembeli</strong>.
+            </p>
+            <p>
+              Di dunia nyata, tidak ada satu orang pun yang bangun pagi sambil berpikir ingin membantu pebisnis kaya. Orang membuka dompet karena dua dorongan saja: mereka ingin menghilangkan masalah yang mengganggu, atau mereka ingin mendapatkan hal yang mereka dambakan dengan cara lebih mudah, lebih cepat, atau lebih murah.
+            </p>
+            <p>
+              Supaya jelas, bandingkan dua cara mahasiswa memulai usaha di sekitar kosan:
+            </p>
+            <ul>
+              <li><strong>Cara berawal dari produk (rawan sepi):</strong> "Aku mau cetak kaus bertema minimalis karena kelihatannya keren." Akibatnya, kamu keluar modal cetak puluhan kaus, lalu bingung menjualnya ke siapa karena semua teman sudah punya banyak kaus di lemari.</li>
+              <li><strong>Cara berawal dari masalah (mudah laku):</strong> "Setiap jam 10 malam saat nugas, anak kos sering lapar berat tetapi malas keluar dan berat di ongkos antar aplikasi ojek online." Solusinya: kamu membuka sistem pesan awal (Pre-Order) nasi ayam atau camilan hangat yang diantar langsung ke pintu kamar kos jam 21.30 dengan ongkos kirim cuma Rp2.000.</li>
+            </ul>
+          </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 840 240" width="840" height="240" role="img" aria-labelledby="diag-f1-value">
+              <title id="diag-f1-value">Diagram mekanisme pertukaran nilai dalam bisnis</title>
+              <rect x="8" y="8" width="824" height="224" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+
+              <rect x="28" y="54" width="210" height="132" rx="12" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
+              <text x="44" y="82" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">1. MASALAH NYATA</text>
+              <text x="44" y="108" fill="var(--text-primary)" font-size="15" font-weight="700">Keluhan atau Keinginan</text>
+              <text x="44" y="132" fill="var(--text-secondary)" font-size="13">Sering terjadi dan bikin repot</text>
+              <text x="44" y="152" fill="var(--text-secondary)" font-size="13">Orang rela bayar biar beres</text>
+
+              <path d="M244 120 H298" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M291 113 L301 120 L291 127" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <rect x="308" y="54" width="224" height="132" rx="12" fill="var(--bg-surface)" stroke="var(--accent)" stroke-width="1.75"/>
+              <text x="324" y="82" fill="var(--accent)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">2. SOLUSI (NILAI)</text>
+              <text x="324" y="108" fill="var(--text-primary)" font-size="15" font-weight="700">Produk atau Jasa</text>
+              <text x="324" y="132" fill="var(--text-secondary)" font-size="13">Nilai dirasakan pembeli (Rp15.000)</text>
+              <text x="324" y="152" fill="var(--text-secondary)" font-size="13">lebih tinggi dari uangnya</text>
+
+              <path d="M538 120 H592" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M585 113 L595 120 L585 127" fill="none" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <rect x="602" y="54" width="210" height="132" rx="12" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
+              <text x="618" y="82" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">3. PROFIT SEHAT</text>
+              <text x="618" y="108" fill="var(--text-primary)" font-size="15" font-weight="700">Harga Jual &gt; Biaya</text>
+              <text x="618" y="132" fill="var(--text-secondary)" font-size="13">Biaya bikin misal Rp9.000</text>
+              <text x="618" y="152" fill="var(--pos)" font-size="13" font-weight="700">Untung Rp6.000 per porsi</text>
+            </svg>
+            <figcaption>
+              Gambar 2. Bisnis hanya bertahan jika kedua pihak sama-sama untung: pembeli merasa masalahnya selesai dengan harga pantas, dan penjual mengeluarkan biaya produksi lebih kecil daripada harga jual.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="empat-peran" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>2. Empat Peran di Dunia Uang (Menyambungkan Dasar Rich Dad Poor Dad)</h2>
+            <p>
+              Kamu tadi sempat menyebut buku <cite>Rich Dad Poor Dad</cite> bagus untuk fondasi pemula. Salah satu konsep dasarnya adalah membedakan posisi seseorang dalam menghasilkan uang, yang jika diterjemahkan ke bahasa mahasiswa paling nyata terlihat dalam empat peran berikut.
+            </p>
+          </div>
+
+          <div class="table-wrapper responsive-table" tabindex="0" role="region" aria-labelledby="tbl-peran-cap">
+            <table>
+              <caption id="tbl-peran-cap">Perbandingan Empat Posisi Cara Menghasilkan Uang</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Peran</th>
+                  <th scope="col">Apa yang Dijual</th>
+                  <th scope="col">Contoh Nyata di Usia Kuliah</th>
+                  <th scope="col">Kelebihan &amp; Batas Utama</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Karyawan</th>
+                  <td data-label="Apa yang Dijual">Waktu dan tenaga ke 1 pemberi kerja</td>
+                  <td data-label="Contoh Nyata">Magang berbayar, asisten lab, barista part-time</td>
+                  <td data-label="Kelebihan &amp; Batas">Penghasilan pasti tiap bulan, tetapi berhenti mengalir jika kamu berhenti bekerja.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Freelancer / Pekerja Lepas</th>
+                  <td data-label="Apa yang Dijual">Keahlian pribadi langsung ke banyak klien</td>
+                  <td data-label="Contoh Nyata">Desainer PPT/poster, editor video, guru les privat, pembuat web UMKM</td>
+                  <td data-label="Kelebihan &amp; Batas">Modal hampir Rp0 dan bebas atur harga, tetapi waktu dirimu sendiri adalah batas maksimal produksi.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Pebisnis (Pemilik Sistem)</th>
+                  <td data-label="Apa yang Dijual">Produk atau jasa lewat tim &amp; sistem yang tertata</td>
+                  <td data-label="Contoh Nyata">Usaha katering PO dengan 2 teman pengantar, agensi kecil, brand produk</td>
+                  <td data-label="Kelebihan &amp; Batas">Bisa melayani ratusan pembeli sekaligus, tetapi menuntut manajemen kas, stok, dan risiko.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Investor</th>
+                  <td data-label="Apa yang Dijual">Modal uang ke bisnis atau aset milik pihak lain</td>
+                  <td data-label="Contoh Nyata">Membeli reksa dana indeks, obligasi, atau saham perusahaan terbuka</td>
+                  <td data-label="Kelebihan &amp; Batas">Uang bekerja 24 jam via compounding, tetapi membutuhkan modal awal dan pemahaman bisnis agar tidak tertipu.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="prose">
+            <p>
+              Selain itu, <cite>Rich Dad Poor Dad</cite> membedakan <strong>aset</strong> (sesuatu yang memasukkan uang ke kantongmu, seperti bisnis yang untung, saham penghasil dividen, atau keterampilan yang menghasilkan jasa) dengan <strong>liabilitas</strong> (sesuatu yang terus menyedot uang keluar dari kantongmu, seperti cicilan kendaraan mewah untuk gaya hidup atau gadget yang nilainya terus turun). Mengerti perbedaan ini membawamu langsung ke inti buku PDF milikmu.
+            </p>
+          </div>
+        </section>
+
+        <section id="ronald-vs-richard" class="section-block" tabindex="-1">
+          <div class="split-reading">
+            <div class="prose">
+              <h2>3. Mengapa Perilaku Mengalahkan Gelar (Pendahuluan PDF, Hal. 10 sampai 17)</h2>
+              <p>
+                Morgan Housel membuka bukunya dengan kisah kontras yang mencengangkan. Saat masih kuliah dan bekerja sebagai pelayan hotel mewah di Los Angeles, ia bertemu seorang eksekutif teknologi jenius yang mematenkan komponen penting router Wi-Fi di usia 20-an dan berhasil menjual beberapa perusahaan. Namun, eksekutif itu memamerkan setumpuk uang seratus dolar saat mabuk, melempar koin emas senilai ribuan dolar ke Samudra Pasifik hanya untuk tertawa bersama teman-temannya, dan mengganti lampu restoran seharga $500 dengan melempar uang $5.000 sambil membentak manajer (PDF hal. 10 sampai 11). Beberapa tahun kemudian, sang jenius itu bangkrut.
+              </p>
+              <p>
+                Kontras berikutnya bahkan lebih tajam (PDF hal. 11 sampai 14):
+              </p>
+              <ul>
+                <li><strong>Ronald James Read:</strong> Lahir di pedesaan Vermont, orang pertama di keluarganya yang lulus SMA. Ia bekerja memperbaiki mobil di pompa bensin selama 25 tahun dan menyapu lantai di toko JCPenney selama 17 tahun. Ia membeli rumah dua kamar tidur seharga $12.000 pada usia 38 tahun dan hidup sangat sederhana sambil menabung dan menginvestasikan sisanya secara sabar di saham <span lang="en">blue chip</span>. Saat meninggal tahun 2014 di usia 92 tahun, mantan petugas kebersihan ini meninggalkan kekayaan lebih dari $8 juta ($2 juta untuk anak tirinya dan lebih dari $6 juta disumbangkan ke rumah sakit serta perpustakaan lokal).</li>
+                <li><strong>Richard Fuscone:</strong> Segala sesuatu yang tidak dimiliki Read. Lulusan Harvard dengan gelar MBA, mantan eksekutif top Merrill Lynch yang pensiun di usia 40-an dan masuk daftar pebisnis sukses "40 di bawah 40". Namun pada pertengahan 2000-an ia berutang besar untuk memperluas rumah mewah seluas 18.000 kaki persegi di Greenwich dengan 11 kamar mandi, dua lift, dua kolam renang, tujuh garasi, dan biaya perawatan lebih dari $90.000 per bulan. Saat krisis 2008 menghantam, utang tinggi dan aset yang sulit dicairkan membuatnya bangkrut total. Rumahnya akhirnya dilelang penyitaan 75% di bawah nilai taksir asuransi (hal. 13).</li>
+              </ul>
+            </div>
+
+            <aside class="pdf-callout">
+              <p class="pdf-callout-head">Pelajaran Bisnis dari Pendahuluan</p>
+              <p>
+                Di bidang kedokteran atau teknik sipil, tidak mungkin petugas kebersihan mengalahkan ahli bedah Harvard. Tetapi dalam uang dan bisnis, <strong>keterampilan perilaku (soft skill)</strong> seperti kesabaran, tidak serakah, dan pengendalian emosi jauh lebih menentukan hasil akhir daripada kecerdasan rumus di kertas (hal. 14).
+              </p>
+            </aside>
+          </div>
+
+          <figure class="pdf-quote">
+            <blockquote>
+              <p>Mengetahui apa yang harus dilakukan tidak memberi tahu Anda apa yang terjadi di kepala Anda ketika Anda mencoba melakukannya.</p>
+            </blockquote>
+            <figcaption>Morgan Housel, <cite>The Psychology of Money</cite> (Pendahuluan, PDF halaman 15)</figcaption>
+          </figure>
+        </section>
+
+        <section id="tidak-ada-gila" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>4. Tidak Ada yang Gila: Memahami Psikologi Pembeli &amp; Diri Sendiri (Bab 1, Hal. 18 sampai 30)</h2>
+            <p>
+              Morgan Housel menulis angka yang sangat kuat di pembuka Bab 1: pengalaman pribadimu dengan uang mungkin hanya membentuk <strong>0,00000001%</strong> dari apa yang terjadi di dunia, tetapi bisa menentukan <strong>80%</strong> dari cara kamu berpikir dunia bekerja (hal. 20).
+            </p>
+            <p>
+              Dua ekonom, Ulrike Malmendier dan Stefan Nagel (2006), meneliti Survei Keuangan Konsumen selama 50 tahun dan menemukan bahwa keberanian seseorang mengambil risiko sangat bergantung pada kondisi ekonomi saat ia baru beranjak dewasa. Orang yang lahir tahun 1970 melihat pasar saham AS (S&amp;P 500) naik hampir 10 kali lipat setelah disesuaikan inflasi selama usia remaja dan 20-an, sehingga mereka lebih percaya pada saham. Sebaliknya, orang yang lahir tahun 1950 melihat pasar stagnan di masa mudanya, sehingga cara pandang mereka berbeda total (hal. 21 sampai 23).
+            </p>
+            <p>
+              Contoh paling menyentuh di Bab 1 adalah tiket lotere (hal. 26 sampai 27). Rumah tangga berpenghasilan terendah di AS rata-rata menghabiskan $412 setahun untuk tiket lotere, empat kali lipat lebih banyak daripada kelompok kaya, padahal 40% warga AS tidak punya uang tunai $400 untuk keadaan darurat. Di atas kertas itu tampak gila. Tetapi dari sudut pandang mereka yang hidup pas-pasan tanpa prospek kenaikan gaji besar, membeli tiket lotere terasa seperti satu-satunya kesempatan membayar "sebuah mimpi" tentang kehidupan yang sudah dianggap biasa oleh kelas menengah.
+            </p>
+            <p>
+              <strong>Apa artinya bagi kamu yang belajar bisnis?</strong> Berhenti menghakimi perilaku pembeli. Kalau sebuah produk yang menurutmu "biasa saja" atau "terlalu mahal" ternyata laku keras, jangan bilang pembelinya bodoh. Tugas pebisnis adalah menggali cerita apa yang ada di kepala pembeli tersebut saat mereka membuat keputusan.
+            </p>
+          </div>
+        </section>
+
+        <section id="untung-risiko" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>5. Keberuntungan dan Risiko adalah Saudara Kandung (Bab 2, Hal. 31 sampai 42)</h2>
+            <p>
+              Pada tahun 1968, di seluruh dunia ada sekitar 303 juta remaja usia SMA. Sekitar 18 juta tinggal di AS, 270.000 di negara bagian Washington, sedikit di atas 100.000 di Seattle, dan hanya sekitar 300 anak bersekolah di Lakeside School. Guru bernama Bill Dougall memohon kepada Mothers' Club agar menyumbangkan $3.000 hasil bazar tahunan untuk menyewa terminal komputer Teletype Model 30 yang terhubung ke mainframe General Electric (hal. 32 sampai 33). Salah satu anak berusia 13 tahun yang mendapat akses komputer langka itu adalah <strong>Bill Gates</strong> bersama <strong>Paul Allen</strong>.
+            </p>
+            <p>
+              Namun di Lakeside ada anak ketiga yang sama briliannya bernama <strong>Kent Evans</strong>. Menurut Gates sendiri, Evans adalah siswa terbaik di kelas, mahir memprogram jadwal sekolah, dan punya ambisi bisnis besar hingga selalu membawa tas kerja ke mana-mana. Jika Bill Gates mengalami keberuntungan satu banding sejuta berada di Lakeside, Kent Evans mengalami risiko satu banding sejuta: ia tewas dalam kecelakaan pendakian gunung sebelum lulus SMA (hal. 34 sampai 35).
+            </p>
+            <p>
+              Begitu pula dalam dunia usaha dan investasi. Garis antara "visioner yang berani" dan "nekat yang ceroboh" sering kali setipis satu milimeter:
+            </p>
+            <ul>
+              <li>Cornelius Vanderbilt dan John D. Rockefeller sering menabrak aturan hukum dan dipuji sejarawan sebagai jenius, sedangkan Enron melakukan kecurangan aturan dan runtuh masuk penjara (hal. 38 sampai 39).</li>
+              <li>Mark Zuckerberg dipuji karena menolak tawaran beli $1 miliar dari Yahoo! pada tahun 2006, tetapi Yahoo! dicaci maki ketika mereka menolak tawaran pembelian besar dari Microsoft (hal. 40).</li>
+              <li>Bahkan Benjamin Graham sendiri mengaku sebagian besar kekayaan investasinya datang dari kepemilikan saham GEICO yang sangat besar, yang sebenarnya melanggar hampir semua aturan diversifikasi yang ia tulis di bukunya sendiri (hal. 39).</li>
+            </ul>
+            <p>
+              <strong>Aturan praktis dari Bab 2 (hal. 41):</strong> Kurangi meniru mentah-mentah satu figur miliuner atau cerita sukses ekstrem di media sosial, karena makin ekstrem hasilnya, makin besar porsi keberuntungan yang tidak bisa kamu salin. Sebaliknya, pelajari <strong>pola yang luas dan berulang</strong> (misalnya: jaga modal kerja, berikan nilai jelas, dan atur risiko agar satu kegagalan tidak langsung menghapus usahamu).
+            </p>
+          </div>
+        </section>
+
+        <section id="tidak-cukup" class="section-block" tabindex="-1">
+          <div class="prose">
+            <h2>6. Bahaya Tiang Gawang yang Terus Bergerak (Bab 3, Hal. 43 sampai 51)</h2>
+            <p>
+              Dalam sebuah pesta di Shelter Island, penulis Kurt Vonnegut memberi tahu sahabatnya Joseph Heller (penulis novel terkenal <cite>Catch-22</cite>) bahwa tuan rumah mereka, seorang manajer hedge fund miliarder, baru saja menghasilkan uang dalam satu hari lebih banyak daripada seluruh royalti buku <cite>Catch-22</cite> sepanjang sejarah. Heller menjawab tenang: <em>"Ya, tetapi saya memiliki sesuatu yang tidak akan pernah dia miliki: cukup."</em> (PDF hal. 44).
+            </p>
+            <p>
+              Ketidakmampuan merasa cukup menjatuhkan dua tokoh super sukses di Bab 3:
+            </p>
+            <ul>
+              <li><strong>Rajat Gupta (hal. 44 sampai 46):</strong> Anak yatim piatu dari daerah kumuh Kolkata yang sukses besar menjadi CEO firma konsultan McKinsey dan memiliki kekayaan sekitar $100 juta pada tahun 2008. Uang itu sudah memberinya penghasilan pasif hampir $600 per jam selama 24 jam sehari dengan asumsi imbal hasil 5%. Namun karena duduk di dewan direksi Goldman Sachs bersama para miliarder, ia ingin naik kasta menjadi miliarder. Enam belas detik setelah mendengar rencana Warren Buffett menyuntikkan $5 miliar ke Goldman Sachs, ia membocorkan rahasia itu lewat telepon ke Raj Rajaratnam. Akhirnya keduanya masuk penjara karena perdagangan orang dalam (<span lang="en">insider trading</span>), kehilangan reputasi dan kebebasan seumur hidup.</li>
+              <li><strong>Bernie Madoff (hal. 46 sampai 47):</strong> Sebelum skema Ponzi terbesar sepanjang sejarah itu terbongkar, bisnis perantara saham Madoff yang legal sebenarnya sudah sangat sukses dan menghasilkan $25 juta hingga $50 juta per tahun secara sah. Namun rasa tidak pernah cukup mendorongnya ke penipuan.</li>
+            </ul>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-eq">Aturan Bab 3: Jangan pernah mempertaruhkan apa yang kamu miliki dan butuhkan (reputasi, kebebasan, ketenangan) demi sesuatu yang tidak kamu miliki dan tidak kamu butuhkan.</div>
+            <p class="formula-note">
+              Sumber: Disarikan dari <cite>The Psychology of Money</cite> Bab 3, halaman 48 sampai 51. Keterampilan finansial tersulit adalah membuat "tiang gawang" target gaya hidup berhenti bergerak setiap kali penghasilan naik.
+            </p>
+          </div>
+        </section>
+
+        <section id="simulator-ide" class="section-block" tabindex="-1">
+          <h2>7. Alat Interaktif: Audit Kelayakan Ide Usaha Mahasiswa</h2>
+          <p class="prose">
+            Sebelum memikirkan modal atau logo, uji dulu ide usaha atau jasa kecilmu dengan 4 parameter kenyataan berikut. Coba isi sendiri atau klik salah satu contoh kasus mahasiswa.
+          </p>
+
+          <form id="sim-fase-1" class="workbench" novalidate>
+            <div class="workbench-header">
+              <h3>Audit Masalah &amp; Kelayakan Ide</h3>
+              <span class="muted">Skor Maksimal: 20 Poin</span>
+            </div>
+
+            <div class="preset-row" aria-label="Contoh skenario ide usaha">
+              <button class="btn btn-subtle" type="button" data-f1-preset data-idea="Jasa rapikan slide PPT &amp; olah data tugas kuliah" data-freq="5" data-pay="4" data-reach="5" data-risk="5">Contoh: Jasa Skill (Modal Rp0)</button>
+              <button class="btn btn-subtle" type="button" data-f1-preset data-idea="Pre-Order nasi ayam malam khusus penghuni kos" data-freq="5" data-pay="5" data-reach="4" data-risk="4">Contoh: PO Makanan Kos</button>
+              <button class="btn btn-subtle" type="button" data-f1-preset data-idea="Cetak stok 100 kaus brand sendiri tanpa pembeli" data-freq="2" data-pay="2" data-reach="2" data-risk="1">Contoh: Produk Berisiko Tinggi</button>
+            </div>
+
+            <div class="workbench-grid">
+              <div>
+                <div class="field-wrap control-group">
+                  <label for="f1-idea">Nama Ide Usaha atau Jasa yang Ingin Diuji</label>
+                  <input id="f1-idea" class="text-input" type="text" value="Pre-Order nasi ayam malam khusus penghuni kos" placeholder="Tulis ide singkat, misal: Jastip print tugas">
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="f1-freq">Seberapa sering masalah ini muncul? (1 = jarang, 5 = hampir tiap hari)</label>
+                    <span id="f1-freq-val" class="control-value-readout num">5 / 5</span>
+                  </div>
+                  <div class="slider-row">
+                    <button class="step-btn" type="button" data-step-target="f1-freq" data-step-delta="-1" aria-label="Kurangi skor frekuensi">-</button>
+                    <input id="f1-freq" type="range" min="1" max="5" step="1" value="5">
+                    <button class="step-btn" type="button" data-step-target="f1-freq" data-step-delta="1" aria-label="Tambah skor frekuensi">+</button>
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="f1-pay">Sudah ada bukti orang rela keluar uang? (1 = cuma ngeluh, 5 = sering bayar)</label>
+                    <span id="f1-pay-val" class="control-value-readout num">5 / 5</span>
+                  </div>
+                  <div class="slider-row">
+                    <button class="step-btn" type="button" data-step-target="f1-pay" data-step-delta="-1" aria-label="Kurangi skor kesediaan bayar">-</button>
+                    <input id="f1-pay" type="range" min="1" max="5" step="1" value="5">
+                    <button class="step-btn" type="button" data-step-target="f1-pay" data-step-delta="1" aria-label="Tambah skor kesediaan bayar">+</button>
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="f1-reach">Mudahkah kamu menjangkau pembelinya langsung? (1 = susah, 5 = teman dekat/kos)</label>
+                    <span id="f1-reach-val" class="control-value-readout num">4 / 5</span>
+                  </div>
+                  <div class="slider-row">
+                    <button class="step-btn" type="button" data-step-target="f1-reach" data-step-delta="-1" aria-label="Kurangi skor jangkauan">-</button>
+                    <input id="f1-reach" type="range" min="1" max="5" step="1" value="4">
+                    <button class="step-btn" type="button" data-step-target="f1-reach" data-step-delta="1" aria-label="Tambah skor jangkauan">+</button>
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <label for="f1-risk">Keamanan modal awal (1 = harus stok barang banyak, 5 = bisa PO/DP/jasa)</label>
+                    <span id="f1-risk-val" class="control-value-readout num">4 / 5</span>
+                  </div>
+                  <div class="slider-row">
+                    <button class="step-btn" type="button" data-step-target="f1-risk" data-step-delta="-1" aria-label="Kurangi skor keamanan modal">-</button>
+                    <input id="f1-risk" type="range" min="1" max="5" step="1" value="4">
+                    <button class="step-btn" type="button" data-step-target="f1-risk" data-step-delta="1" aria-label="Tambah skor keamanan modal">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="readout-panel" aria-live="polite">
+                <dl>
+                  <div class="metric-row">
+                    <dt>Ide yang Diuji</dt>
+                    <dd id="f1-out-title">-</dd>
+                  </div>
+                  <div class="metric-row">
+                    <dt>Total Skor Kelayakan</dt>
+                    <dd id="f1-out-score" class="num">18 / 20</dd>
+                  </div>
+                </dl>
+                <div id="f1-out-verdict" class="status-banner is-positive"></div>
+                <p id="f1-out-next" class="muted"></p>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="kuis-1" class="section-block" tabindex="-1">
+          <h2>8. Uji Pemahaman Fase 1</h2>
+          <div class="quiz-box" data-quiz>
+            <div class="quiz-item" data-answer="b" data-explain="Bisnis selalu dimulai dari masalah nyata atau keinginan pembeli, bukan sekadar karena penjual menyukai produknya.">
+              <p><strong>1. Kesalahan paling umum mahasiswa saat merancang usaha pertama adalah...</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q1-1" value="a"> Mencari keluhan di sekitar kampus sebelum membuat barang.</label>
+                <label class="quiz-option"><input type="radio" name="q1-1" value="b"> Langsung memproduksi stok barang karena merasa idenya keren tanpa mengecek siapa yang butuh.</label>
+                <label class="quiz-option"><input type="radio" name="q1-1" value="c"> Membuka sistem Pre-Order agar modal aman.</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-item" data-answer="c" data-explain="Kisah Ronald Read vs Richard Fuscone di Pendahuluan PDF (hal. 11 sampai 14) menunjukkan perilaku seperti kesabaran dan hidup hemat jauh mengalahkan gelar MBA saat menghadapi krisis.">
+              <p><strong>2. Pelajaran utama dari kisah Ronald Read (petugas pompa bensin) vs Richard Fuscone (eksekutif Harvard) adalah...</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q1-2" value="a"> Kuliah bisnis tidak ada gunanya sama sekali untuk karier.</label>
+                <label class="quiz-option"><input type="radio" name="q1-2" value="b"> Hanya orang yang bekerja di pompa bensin yang bisa kaya di masa tua.</label>
+                <label class="quiz-option"><input type="radio" name="q1-2" value="c"> Perilaku terhadap uang (sabar, rendah hati, tidak berutang berlebih) lebih menentukan ketimbang kecerdasan teknis atau gelar.</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-item" data-answer="a" data-explain="Bab 2 PDF (hal. 34 sampai 41) mengingatkan bahwa kasus ekstrem sangat dipengaruhi keberuntungan atau risiko acak. Cari pola yang luas dan bisa diulang.">
+              <p><strong>3. Mengapa Bab 2 menyarankan kita tidak meniru mentah-mentah satu kisah miliuner ekstrem?</strong></p>
+              <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q1-3" value="a"> Karena hasil ekstrem sering melibatkan faktor keberuntungan langka yang tidak bisa ditiru secara andal, lebih baik cari pola umum yang bisa diterapkan.</label>
+                <label class="quiz-option"><input type="radio" name="q1-3" value="b"> Karena kerja keras tidak berpengaruh sama sekali pada bisnis.</label>
+                <label class="quiz-option"><input type="radio" name="q1-3" value="c"> Karena miliuner selalu melanggar hukum seperti Enron.</label>
+              </div>
+              <p class="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-quiz-check>Periksa Jawaban Fase 1</button>
+            </div>
+            <div class="status-banner is-neutral" data-quiz-summary hidden aria-live="polite"></div>
+          </div>
+
+          <div class="phase-pager">
+            <div>
+              <button id="phase-complete-btn" class="btn btn-secondary" type="button" aria-pressed="false">Tandai Fase Ini Selesai Dipelajari</button>
+              <p id="phase-complete-status" class="muted" aria-live="polite"></p>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-subtle" href="index.html">Kembali ke Beranda</a>
+              <a class="btn btn-primary" href="fase-2.html">Lanjut ke Fase 2: Cash Flow &amp; Rumus Dasar</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Melek Bisnis dari Nol</strong></p>
+        <p class="muted">Fase 1: Pola Pikir Bisnis, Masalah, dan Psikologi Uang.</p>
+      </div>
+      <nav aria-label="Tautan fase footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="fase-2.html">Fase 2</a></li>
+          <li><a href="fase-3.html">Fase 3</a></li>
+          <li><a href="fase-4.html">Fase 4</a></li>
+          <li><a href="fase-5.html">Fase 5</a></li>
+          <li><a href="kamus-pdf.html">Kamus &amp; 20 Bab</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
