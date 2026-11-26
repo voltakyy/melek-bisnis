@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      var t = localStorage.getItem("color-scheme");
+      if (t === "light" || t === "dark") {
+        document.querySelector('meta[name="color-scheme"]').content = t;
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    } catch (e) {}
+  </script>
+  <title>Melek Bisnis dari Nol | Peta Kurikulum &amp; Psikologi Uang</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Langsung ke materi utama</a>
+  <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html" aria-current="page">
+        <svg class="brand-mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M7 16V11M12 16V7M17 16V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Melek Bisnis</span>
+      </a>
+
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="Navigasi kurikulum">
+          <button
+            class="menu-button"
+            type="button"
+            popovertarget="site-menu"
+            popovertargetaction="toggle"
+            aria-controls="site-menu"
+            aria-expanded="false"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <ul id="site-menu" class="site-menu" popover="auto">
+            <li><a href="index.html" aria-current="page">Beranda</a></li>
+            <li><a href="fase-1.html">Fase 1: Pola Pikir</a></li>
+            <li><a href="fase-2.html">Fase 2: Cash Flow</a></li>
+            <li><a href="fase-3.html">Fase 3: Validasi</a></li>
+            <li><a href="fase-4.html">Fase 4: Laporan</a></li>
+            <li><a href="fase-5.html">Fase 5: Investasi</a></li>
+            <li><a href="kamus-pdf.html">Kamus &amp; 20 Bab</a></li>
+          </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ubah tema tampilan">
+          <svg class="theme-icon icon-to-dark" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <path d="M12.9 10.6A5.5 5.5 0 0 1 5.4 3.1a5.5 5.5 0 1 0 7.5 7.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          <svg class="theme-icon icon-to-light" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+            <circle cx="8" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M12.6 3.4l-1.1 1.1M4.5 11.5l-1.1 1.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span data-theme-label>Sistem</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell" tabindex="-1">
+    <section class="hero-frame">
+      <h1>Belajar Bisnis dan Psikologi Uang dari Nol</h1>
+      <p class="hero-lead">
+        Panduan belajar bertahap untuk mahasiswa yang belum pernah menyentuh dunia usaha atau akuntansi. Setiap istilah teknis seperti cash flow, HPP, margin, dan neraca dijelaskan lewat contoh usaha kampus, ilustrasi alur visual, simulasi hitung langsung, serta kisah asli dari buku <cite>The Psychology of Money</cite> karya Morgan Housel.
+      </p>
+      <div class="phase-meta-bar">
+        <span class="phase-meta-item"><strong>Struktur:</strong> 5 Fase Berurutan + 1 Halaman Kamus &amp; Indeks 20 Bab</span>
+        <span class="phase-meta-item"><strong>Rujukan Sumber:</strong> PDF <cite>The Psychology of Money</cite> (Hal. 10 sampai 235)</span>
+        <span class="phase-meta-item"><strong>Alat Praktik:</strong> 6 Simulator Interaktif + 5 Kuis Kasus</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="fase-1.html">Mulai Belajar dari Fase 1</a>
+        <a class="btn btn-secondary" href="kamus-pdf.html">Buka Kamus Istilah &amp; Peta 20 Bab</a>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="peta-alur-title">
+      <div class="split-reading">
+        <div class="prose">
+          <h2 id="peta-alur-title">Mengapa Harus Paham Bisnis Dulu Sebelum Belajar Investasi</h2>
+          <p>
+            Banyak mahasiswa langsung ingin melompat ke buku analisis saham klasik seperti <cite>The Intelligent Investor</cite> atau <cite>Security Analysis</cite> karya Benjamin Graham, padahal istilah sederhana seperti selisih antara laba di catatan dan uang tunai di rekening (cash flow) belum terbayang. Akibatnya, membaca rasio keuangan terasa seperti menghafal rumus mati tanpa tahu apa yang sebenarnya terjadi di toko atau perusahaan.
+          </p>
+          <p>
+            Di Bab 12 PDF <cite>The Psychology of Money</cite> (halaman 131 sampai 133), Morgan Housel menceritakan pengalamannya saat remaja membaca rumus-rumus <cite>The Intelligent Investor</cite>. Ia menemukan bahwa rumus spesifik di atas kertas sering tidak lagi bekerja dengan cara yang sama, karena perilaku pasar terus berubah. Yang bertahan melintasi zaman adalah cara berpikir bisnis yang sehat dan prinsip kehati-hatian seperti <span lang="en">margin of safety</span>.
+          </p>
+          <p>
+            Kurikulum ini menyusun langkah belajarmu dari yang paling dekat dengan keseharian anak kuliah, yaitu melihat masalah di sekitar kampus dan menghitung modal jualan es kopi, lalu naik bertahap ke cara membaca tiga laporan keuangan perusahaan, dan akhirnya siap menapak ke dunia investasi.
+          </p>
+        </div>
+
+        <aside class="pdf-callout" aria-label="Pelacak progres belajar">
+          <p class="pdf-callout-head">Pelacak Progres Belajarmu</p>
+          <p id="progress-summary">Belum ada fase yang ditandai selesai.</p>
+          <div class="hero-actions">
+            <button id="reset-progress-btn" class="btn btn-subtle" type="button">Reset Catatan Progres</button>
+          </div>
+        </aside>
+      </div>
+
+      <figure class="diagram-plate">
+        <svg viewBox="0 0 960 280" width="960" height="280" role="img" aria-labelledby="diag-roadmap-title">
+          <title id="diag-roadmap-title">Diagram alur lima fase belajar dari nol hingga investasi</title>
+          <rect x="8" y="16" width="944" height="248" rx="16" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+          <line x1="95" y1="115" x2="865" y2="115" stroke="var(--titanium)" stroke-width="2" stroke-dasharray="5 5"/>
+
+          <g>
+            <rect x="28" y="64" width="166" height="148" rx="12" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
+            <text x="44" y="90" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">FASE 01</text>
+            <text x="44" y="116" fill="var(--text-primary)" font-size="15" font-weight="700">Masalah &amp; Mindset</text>
+            <text x="44" y="140" fill="var(--text-secondary)" font-size="12.5">Masalah menjadi solusi</text>
+            <text x="44" y="158" fill="var(--text-secondary)" font-size="12.5">Perilaku uang &amp; ego</text>
+            <text x="44" y="192" fill="var(--accent)" font-size="11.5" font-weight="600">PDF: Pend., Bab 1, 2, 3</text>
+          </g>
+
+          <g>
+            <rect x="212" y="64" width="166" height="148" rx="12" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
+            <text x="228" y="90" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">FASE 02</text>
+            <text x="228" y="116" fill="var(--text-primary)" font-size="15" font-weight="700">Bahasa Keuangan</text>
+            <text x="228" y="140" fill="var(--text-secondary)" font-size="12.5">Omzet, HPP, BEP</text>
+            <text x="228" y="158" fill="var(--text-secondary)" font-size="12.5">Profit vs Cash Flow</text>
+            <text x="228" y="192" fill="var(--accent)" font-size="11.5" font-weight="600">PDF: Bab 5, 9, 10</text>
+          </g>
+
+          <g>
+            <rect x="396" y="64" width="166" height="148" rx="12" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
+            <text x="412" y="90" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">FASE 03</text>
+            <text x="412" y="116" fill="var(--text-primary)" font-size="15" font-weight="700">Validasi &amp; Skala</text>
+            <text x="412" y="140" fill="var(--text-secondary)" font-size="12.5">MVP, PO, LTV &amp; CAC</text>
+            <text x="412" y="158" fill="var(--text-secondary)" font-size="12.5">Compounding &amp; Tails</text>
+            <text x="412" y="192" fill="var(--accent)" font-size="11.5" font-weight="600">PDF: Bab 4, 6, 17, 18</text>
+          </g>
+
+          <g>
+            <rect x="580" y="64" width="166" height="148" rx="12" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
+            <text x="596" y="90" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">FASE 04</text>
+            <text x="596" y="116" fill="var(--text-primary)" font-size="15" font-weight="700">3 Laporan Utama</text>
+            <text x="596" y="140" fill="var(--text-secondary)" font-size="12.5">Laba Rugi, Kas, Neraca</text>
+            <text x="596" y="158" fill="var(--text-secondary)" font-size="12.5">Ruang untuk kesalahan</text>
+            <text x="596" y="192" fill="var(--accent)" font-size="11.5" font-weight="600">PDF: Bab 11, 13, 14</text>
+          </g>
+
+          <g>
+            <rect x="764" y="64" width="168" height="148" rx="12" fill="var(--titanium-tint)" stroke="var(--titanium)" stroke-width="1.75"/>
+            <text x="780" y="90" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">FASE 05</text>
+            <text x="780" y="116" fill="var(--text-primary)" font-size="15" font-weight="700">Moat &amp; Investasi</text>
+            <text x="780" y="140" fill="var(--text-secondary)" font-size="12.5">Harga vs Nilai Intrinsik</text>
+            <text x="780" y="158" fill="var(--text-secondary)" font-size="12.5">Peta Intelligent Investor</text>
+            <text x="780" y="192" fill="var(--accent)" font-size="11.5" font-weight="600">PDF: Bab 7-8, 12, 15-20</text>
+          </g>
+        </svg>
+        <figcaption>
+          Gambar 1. Urutan belajar dari pondasi masalah pelanggan dan perilaku manusia (Fase 1), hitungan uang sehari-hari (Fase 2), validasi pasar (Fase 3), pembacaan laporan keuangan (Fase 4), hingga penilaian bisnis untuk investasi (Fase 5).
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section-block" aria-labelledby="kurikulum-index-title">
+      <h2 id="kurikulum-index-title">Daftar Modul Per Fase (Klik untuk Masuk ke Halaman Materi)</h2>
+      <p class="prose">
+        Setiap halaman di bawah ini berdiri sebagai modul baca lengkap dengan ilustrasi, bedah bab PDF terkait, simulator interaktif, serta kuis singkat. Kamu disarankan membaca secara berurutan dari Fase 1 sampai Fase 5.
+      </p>
+
+      <ol class="syllabus-ledger">
+        <li class="syllabus-row">
+          <div class="syllabus-code">FASE 01</div>
+          <div>
+            <h3><a href="fase-1.html">Pola Pikir Bisnis, Masalah, dan Psikologi Uang</a></h3>
+            <p class="syllabus-meta">
+              Belajar mengapa bisnis dimulai dari keluhan orang bukan produk keren, empat peran dalam ekonomi (Karyawan, Freelancer, Pebisnis, Investor), plus bedah lengkap Pendahuluan dan Bab 1, 2, 3 (Ronald Read vs Richard Fuscone, Bill Gates vs Kent Evans, Rajat Gupta &amp; Bernie Madoff).
+            </p>
+          </div>
+          <div class="syllabus-meta">
+            <strong>Alat Interaktif:</strong><br>
+            Audit Kelayakan Ide Usaha Mahasiswa
+          </div>
+          <div class="syllabus-status" data-phase-status="fase-1">Belum selesai</div>
+        </li>
+
+        <li class="syllabus-row">
+          <div class="syllabus-code">FASE 02</div>
+          <div>
+            <h3><a href="fase-2.html">Bahasa Keuangan Dasar: Omzet, HPP, Margin, BEP &amp; Cash Flow</a></h3>
+            <p class="syllabus-meta">
+              Membongkar istilah yang paling sering bikin bingung pemula menggunakan kasus nyata 100 cup Es Kopi Susu: membedakan Biaya Tetap vs Biaya Variabel, Laba Kotor vs Laba Bersih, titik balik modal (BEP), dan mengapa toko laris bisa bangkrut kalau cash flow macet. Disertai bedah Bab 5, 9, dan 10.
+            </p>
+          </div>
+          <div class="syllabus-meta">
+            <strong>Alat Interaktif:</strong><br>
+            Kalkulator HPP &amp; BEP + Simulator Profit vs Cash Flow
+          </div>
+          <div class="syllabus-status" data-phase-status="fase-2">Belum selesai</div>
+        </li>
+
+        <li class="syllabus-row">
+          <div class="syllabus-code">FASE 03</div>
+          <div>
+            <h3><a href="fase-3.html">Validasi Pasar, Jualan Pertama, dan Efek Bola Salju</a></h3>
+            <p class="syllabus-meta">
+              Cara mengetes ide dengan sistem Pre-Order (PO) atau jasa agar tidak menumpuk stok mati, corong Marketing vs Sales, menghitung CAC dan LTV, serta bedah Bab 4 (Compounding Buffett vs Simons), Bab 6 (Tails, You Win pada Disney &amp; Amazon), serta Bab 17 dan 18 tentang narasi dan pesimisme.
+            </p>
+          </div>
+          <div class="syllabus-meta">
+            <strong>Alat Interaktif:</strong><br>
+            Simulator Compounding &amp; Eksperimen 10 Produk (Tails)
+          </div>
+          <div class="syllabus-status" data-phase-status="fase-3">Belum selesai</div>
+        </li>
+
+        <li class="syllabus-row">
+          <div class="syllabus-code">FASE 04</div>
+          <div>
+            <h3><a href="fase-4.html">Membaca 3 Laporan Keuangan &amp; Ruang untuk Kesalahan</a></h3>
+            <p class="syllabus-meta">
+              Jembatan utama menuju analisis bisnis profesional: cara membaca Laporan Laba Rugi, Laporan Arus Kas (Operasi, Investasi, Pendanaan), dan Neraca (Aset = Utang + Ekuitas), lengkap dengan rasio Current Ratio, DER, dan ROE. Disertai bedah Bab 11, 13 (Bill Gates &amp; Tank Jerman), dan 14 (Biaya Hangus / Sunk Cost).
+            </p>
+          </div>
+          <div class="syllabus-meta">
+            <strong>Alat Interaktif:</strong><br>
+            Lab Audit Mini 3 Laporan Keuangan Usaha
+          </div>
+          <div class="syllabus-status" data-phase-status="fase-4">Belum selesai</div>
+        </li>
+
+        <li class="syllabus-row">
+          <div class="syllabus-code">FASE 05</div>
+          <div>
+            <h3><a href="fase-5.html">Jembatan ke Investasi, Kebebasan Waktu &amp; Peta Intelligent Investor</a></h3>
+            <p class="syllabus-meta">
+              Memahami parit pertahanan bisnis (Economic Moat), harga vs nilai intrinsik, cara membaca <cite>The Intelligent Investor</cite> dan <cite>Security Analysis</cite> secara sehat (Bab 12), volatilitas sebagai tiket masuk bukan denda (Bab 15), perbedaan permainan jangka waktu (Bab 16), serta Bab 7, 8, 19, 20, dan Postscript.
+            </p>
+          </div>
+          <div class="syllabus-meta">
+            <strong>Alat Interaktif:</strong><br>
+            Penyusun Misi Keuangan &amp; Cek Margin of Safety
+          </div>
+          <div class="syllabus-status" data-phase-status="fase-5">Belum selesai</div>
+        </li>
+
+        <li class="syllabus-row">
+          <div class="syllabus-code">RUJUKAN</div>
+          <div>
+            <h3><a href="kamus-pdf.html">Kamus Istilah Bisnis + Indeks Lengkap 20 Bab PDF</a></h3>
+            <p class="syllabus-meta">
+              Halaman pencarian cepat berisi 25+ definisi istilah bisnis &amp; keuangan, peta lengkap seluruh bab PDF (halaman, tokoh, intisari), serta perbandingan posisi buku dari <cite>Rich Dad Poor Dad</cite> hingga <cite>Security Analysis</cite>.
+            </p>
+          </div>
+          <div class="syllabus-meta">
+            <strong>Alat Interaktif:</strong><br>
+            Pencarian &amp; Filter Kategori Istilah
+          </div>
+          <div class="syllabus-status">Referensi Terbuka</div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section-block" aria-labelledby="catatan-terjemahan-title">
+      <div class="prose">
+        <h2 id="catatan-terjemahan-title">Panduan Membaca PDF Terjemahan yang Kamu Punya</h2>
+        <p>
+          File PDF <cite>The Psychology of Money</cite> yang kamu lampirkan (diterjemahkan di halaman 8) sangat bermanfaat untuk dipelajari, tetapi beberapa bagian di dalamnya menggunakan terjemahan kata demi kata yang bisa membuat pemula bingung saat membaca sendiri. Seluruh halaman di situs ini sudah merapikan bahasa Indonesianya sekaligus mencantumkan nomor halaman PDF aslinya agar kamu bisa mencocokkan langsung.
+        </p>
+      </div>
+
+      <div class="table-wrapper responsive-table" tabindex="0" role="region" aria-labelledby="tbl-terjemahan-cap">
+        <table>
+          <caption id="tbl-terjemahan-cap">Daftar Istilah PDF yang Sering Membingungkan dan Arti Sebenarnya</caption>
+          <thead>
+            <tr>
+              <th scope="col">Teks di PDF Kamu</th>
+              <th scope="col">Lokasi di PDF</th>
+              <th scope="col">Maksud Asli yang Tepat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">"Baca mobil tetap di pompa bensin"</th>
+              <td data-label="Lokasi di PDF">Pendahuluan, hal. 12</td>
+              <td data-label="Maksud Asli yang Tepat">Nama belakang tokoh <strong>Ronald Read</strong> ikut diterjemahkan menjadi "Baca". Maksudnya: Read memperbaiki mobil di pompa bensin selama 25 tahun.</td>
+            </tr>
+            <tr>
+              <th scope="row">"Jamsostek"</th>
+              <td data-label="Lokasi di PDF">Bab 1 hal. 29 &amp; Bab 14 hal. 151</td>
+              <td data-label="Maksud Asli yang Tepat">Padanan yang dimaksud di konteks AS adalah <strong>Social Security</strong> (jaminan pensiun negara di Amerika Serikat).</td>
+            </tr>
+            <tr>
+              <th scope="row">"Mawar: Benarkah?"</th>
+              <td data-label="Lokasi di PDF">Bab 5, hal. 64</td>
+              <td data-label="Maksud Asli yang Tepat">Nama pewawancara televisi <strong>Charlie Rose</strong> ikut diterjemahkan menjadi "Mawar" saat berdialog dengan Michael Moritz dari Sequoia Capital.</td>
+            </tr>
+            <tr>
+              <th scope="row">"Ekor, Anda Menang" / "peristiwa ekor"</th>
+              <td data-label="Lokasi di PDF">Bab 6, hal. 73 sampai 85</td>
+              <td data-label="Maksud Asli yang Tepat">Dari judul Inggris <cite>Tails, You Win</cite>. Mengacu pada sisi koin serta ujung kanan kurva statistik (segelintir peristiwa raksasa yang menghasilkan sebagian besar keuntungan).</td>
+            </tr>
+            <tr>
+              <th scope="row">"Telepon Api"</th>
+              <td data-label="Lokasi di PDF">Bab 6, hal. 82</td>
+              <td data-label="Maksud Asli yang Tepat">Produk smartphone <strong>Amazon Fire Phone</strong> yang gagal di pasaran sebelum Amazon sukses lewat Prime dan AWS.</td>
+            </tr>
+            <tr>
+              <th scope="row">"Analisis Keamanan"</th>
+              <td data-label="Lokasi di PDF">Bab 12, hal. 132 sampai 133</td>
+              <td data-label="Maksud Asli yang Tepat">Merujuk pada buku dan praktik <strong>Security Analysis</strong> (analisis surat berharga/saham) oleh Benjamin Graham, bukan keamanan siber atau satpam.</td>
+            </tr>
+            <tr>
+              <th scope="row">"Sirip"</th>
+              <td data-label="Lokasi di PDF">Bab 16, hal. 167</td>
+              <td data-label="Maksud Asli yang Tepat">Dari kata <span lang="en">flippers</span>, yaitu orang yang membeli properti untuk dijual kembali dalam hitungan bulan demi selisih harga cepat.</td>
+            </tr>
+            <tr>
+              <th scope="row">"Ruang ibadah untuk kesalahan"</th>
+              <td data-label="Lokasi di PDF">Bab 19, hal. 204</td>
+              <td data-label="Maksud Asli yang Tepat">Salah ketik/terjemahan dari <span lang="en">Room for error</span> (ruang untuk kesalahan atau dana cadangan penyangga risiko, dibahas penuh di Bab 13).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Melek Bisnis dari Nol</strong></p>
+        <p class="muted">Kurikulum mandiri bisnis dan literasi keuangan berbasis PDF <cite>The Psychology of Money</cite>.</p>
+      </div>
+      <nav aria-label="Tautan fase footer">
+        <ul class="footer-links">
+          <li><a href="fase-1.html">Fase 1</a></li>
+          <li><a href="fase-2.html">Fase 2</a></li>
+          <li><a href="fase-3.html">Fase 3</a></li>
+          <li><a href="fase-4.html">Fase 4</a></li>
+          <li><a href="fase-5.html">Fase 5</a></li>
+          <li><a href="kamus-pdf.html">Kamus &amp; 20 Bab</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
