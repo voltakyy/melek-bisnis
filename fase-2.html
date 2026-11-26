@@ -14,7 +14,7 @@
     } catch (e) {}
   </script>
   <title>Fase 2: Bahasa Keuangan Dasar, HPP, BEP &amp; Cash Flow | Melek Bisnis</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23141418'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
   <script type="application/ld+json">
@@ -77,518 +77,458 @@
     </div>
   </header>
 
-  <div class="page-shell">
-    <div class="doc-layout">
-      <aside class="doc-rail" aria-label="Daftar isi Fase 2">
-        <p class="rail-title">ISI FASE 2</p>
-        <nav class="toc-nav" aria-label="Bagian dalam Fase 2">
-          <ul class="toc-list">
-            <li><a href="#anatomi-laba">1. Bedah Omzet hingga Laba Bersih</a></li>
-            <li><a href="#biaya-tetap-bep">2. Biaya Tetap, Variabel &amp; BEP</a></li>
-            <li><a href="#misteri-cashflow">3. Profit vs Cash Flow (Arus Kas)</a></li>
-            <li><a href="#kalkulator-bep">4. Kalkulator HPP, Margin &amp; BEP</a></li>
-            <li><a href="#simulator-cf">5. Simulator Profit vs Cash Flow</a></li>
-            <li><a href="#pdf-kekayaan">6. Kekayaan Tak Terlihat &amp; Hemat (Bab 9 &amp; 10)</a></li>
-            <li><a href="#pdf-bertahan">7. Menjadi Kaya vs Tetap Kaya (Bab 5)</a></li>
-            <li><a href="#kuis-2">8. Uji Pemahaman Fase 2</a></li>
-          </ul>
-        </nav>
-      </aside>
+  <main id="main-content" class="page-shell" tabindex="-1">
+    <header class="hero-frame">
+      <h1>Fase 2: Bahasa Keuangan Dasar, <span class="title-accent">HPP, BEP &amp; Cash Flow</span></h1>
+      <p class="hero-lead">
+        Seluruh istilah keuangan dasar bisa dikuasai lewat satu contoh 100 gelas Es Kopi Susu Rp15.000: membedakan uang masuk kotor dari keuntungan sejati, titik impas modal (BEP), hingga misteri bisnis ramai yang kehabisan kas tunai.
+      </p>
+      <div class="phase-meta-bar">
+        <span class="phase-meta-item"><strong>Cakupan PDF:</strong> Bab 5 (hal. 60 sampai 72), Bab 9 (hal. 98 sampai 102), Bab 10 (hal. 103 sampai 111)</span>
+        <span class="phase-meta-item"><strong>Istilah Inti:</strong> Omzet, HPP, Laba Kotor, OPEX, Laba Bersih, Margin, BEP, Piutang, Cash Flow</span>
+      </div>
+      <nav class="section-jumps" aria-label="Lompat cepat materi Fase 2">
+        <a href="#anatomi-laba">1. Anatomi Omzet ke Laba</a>
+        <a href="#biaya-tetap-bep">2. Rumus &amp; Grafik BEP</a>
+        <a href="#misteri-cashflow">3. Profit vs Cash Flow</a>
+        <a href="#kalkulator-bep">4. Kalkulator BEP</a>
+        <a href="#simulator-cf">5. Simulator Arus Kas</a>
+        <a href="#pdf-kekayaan">6. Bab 5, 9 &amp; 10 PDF</a>
+        <a href="#kuis-2">7. Kuis Fase 2</a>
+      </nav>
+    </header>
 
-      <main id="main-content" class="doc-column" tabindex="-1">
-        <header class="hero-frame">
-          <h1>Fase 2: Bahasa Keuangan Dasar, HPP, BEP, dan Misteri Cash Flow</h1>
-          <p class="hero-lead">
-            Inilah fase yang paling sering ditakuti pemula, padahal seluruh logikanya bisa dipahami dalam satu studi kasus sederhana: berjualan 100 gelas Es Kopi Susu. Setelah selesai membaca fase ini, kamu tidak akan pernah lagi tertipu oleh istilah "omzet besar" atau bingung mengapa bisnis yang laris bisa kehabisan uang tunai.
-          </p>
-          <div class="phase-meta-bar">
-            <span class="phase-meta-item"><strong>Cakupan PDF:</strong> Bab 5 (hal. 60 sampai 72), Bab 9 (hal. 98 sampai 102), Bab 10 (hal. 103 sampai 111)</span>
-            <span class="phase-meta-item"><strong>Istilah Inti:</strong> Omzet, HPP, Laba Kotor, OPEX, Laba Bersih, Margin, BEP, Piutang, Cash Flow</span>
+    <section id="anatomi-laba" class="section-block" tabindex="-1">
+      <div class="prose">
+        <h2>1. Dari Omzet Rp1.500.000 ke Laba Bersih Rp600.000 (100 Cup Kopi)</h2>
+        <p>
+          Misalkan sebulan kamu menjual 100 cup Es Kopi Susu @Rp15.000. <strong>Omzet</strong> Rp1.500.000 bukanlah keuntungan pribadi. Uang itu harus dipotong <strong>HPP Bahan</strong> (kopi, susu, gelas = Rp6.000 x 100 = Rp600.000) menjadi <strong>Laba Kotor Rp900.000 (Margin 60%)</strong>, lalu dipotong <strong>OPEX Tetap</strong> (kuota, listrik, meja = Rp300.000) barulah tersisa <strong>Laba Bersih Rp600.000 (Net Margin 40%)</strong>.
+        </p>
+      </div>
+
+      <div class="capsule-grid" aria-label="Aliran 4 tahap omzet menjadi laba bersih">
+        <div class="capsule-col">
+          <div class="capsule-pill tone-info">
+            <span class="capsule-badge">01</span>
+            <span class="capsule-title">Omzet Rp1,5jt</span>
           </div>
-        </header>
-
-        <section id="anatomi-laba" class="section-block" tabindex="-1">
-          <div class="prose">
-            <h2>1. Bedah Uang Masuk hingga Untung Asli (Kasus 100 Cup Es Kopi)</h2>
-            <p>
-              Bayangkan selama satu bulan kamu berjualan <strong>Es Kopi Susu</strong> ke teman kampus dan anak kos seharga <strong>Rp15.000 per cup</strong>, dan kamu berhasil menjual tepat <strong>100 cup</strong>. Mari kita lacak ke mana perginya setiap rupiah dari penjualan itu, langkah demi langkah.
-            </p>
-            <ol>
-              <li>
-                <strong>Omzet / Pendapatan Kotor (<span lang="en">Revenue</span>):</strong> Total seluruh uang yang masuk dari pembeli sebelum dipotong biaya apa pun. Hitungannya: <code class="num">100 cup x Rp15.000 = Rp1.500.000</code>. Jebakan pemula nomor satu adalah menganggap angka Rp1.500.000 ini sebagai penghasilan bersih lalu langsung memakainya untuk jajan atau beli barang konsumtif.
-              </li>
-              <li>
-                <strong>HPP / Modal Produk (<span lang="en">Cost of Goods Sold / COGS</span>):</strong> Total biaya bahan yang benar-benar habis setiap kali kamu membuat 1 unit produk. Untuk 1 cup kopi, kamu butuh biji kopi, susu segar, gula aren, es batu, gelas plastik, tutup, sedotan, dan stiker label. Misal seluruh bahan itu habis <strong>Rp6.000 per cup</strong>. Untuk 100 cup, total HPP-nya adalah <code class="num">100 x Rp6.000 = Rp600.000</code>.
-              </li>
-              <li>
-                <strong>Laba Kotor (<span lang="en">Gross Profit</span>):</strong> Sisa uang setelah omzet dikurangi modal bahan. <code class="num">Rp1.500.000 - Rp600.000 = Rp900.000</code>. Persentasenya disebut <strong>Gross Margin</strong>: <code class="num">(Rp900.000 / Rp1.500.000) x 100% = 60%</code>.
-              </li>
-              <li>
-                <strong>Biaya Operasional (<span lang="en">OPEX / Operating Expenses</span>):</strong> Biaya agar usaha tetap berjalan setiap bulan, yang tidak langsung menempel pada bahan gelas kopimu. Contohnya: kuota internet untuk promosi, listrik kulkas, bensin antar, biaya iklan, atau sewa lapak meja kecil. Misal sebulan total OPEX adalah <strong>Rp300.000</strong>.
-              </li>
-              <li>
-                <strong>Laba Bersih (<span lang="en">Net Profit</span>):</strong> Inilah keuntungan sejati hasil keringat usahamu setelah semua biaya dibayar. <code class="num">Rp900.000 - Rp300.000 = Rp600.000</code>. Persentasenya disebut <strong>Net Profit Margin</strong>: <code class="num">(Rp600.000 / Rp1.500.000) x 100% = 40%</code>. Artinya dari setiap Rp10.000 uang yang masuk dari pembeli, Rp4.000 adalah untung bersih milik usaha.
-              </li>
-            </ol>
+          <p class="capsule-desc">100 cup x Rp15.000 masuk kotor dari pembeli.</p>
+        </div>
+        <div class="capsule-col">
+          <div class="capsule-pill tone-neg">
+            <span class="capsule-badge">02</span>
+            <span class="capsule-title">- HPP Rp600rb</span>
           </div>
+          <p class="capsule-desc">Modal bahan kopi, susu, &amp; cup Rp6.000 per gelas.</p>
+        </div>
+        <div class="capsule-col">
+          <div class="capsule-pill tone-gold">
+            <span class="capsule-badge">03</span>
+            <span class="capsule-title">- OPEX Rp300rb</span>
+          </div>
+          <p class="capsule-desc">Kuota promosi, listrik kulkas, &amp; sewa meja.</p>
+        </div>
+        <div class="capsule-col">
+          <div class="capsule-pill tone-pos">
+            <span class="capsule-badge">04</span>
+            <span class="capsule-title">Laba Rp600rb</span>
+          </div>
+          <p class="capsule-desc">Keuntungan bersih 40% sah menjadi hak usaha.</p>
+        </div>
+      </div>
 
-          <figure class="diagram-plate">
-            <svg viewBox="0 0 860 290" width="860" height="290" role="img" aria-labelledby="diag-f2-waterfall">
-              <title id="diag-f2-waterfall">Diagram air terjun dari omzet Rp1.500.000 menjadi laba bersih Rp600.000</title>
-              <rect x="8" y="8" width="844" height="274" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
-              <line x1="56" y1="230" x2="820" y2="230" stroke="var(--border-control)" stroke-width="1.5"/>
+      <figure class="diagram-plate">
+        <p class="diagram-plate-kicker">ALIRAN PENYUSUTAN UANG | 100 CUP ES KOPI SUSU</p>
+        <svg viewBox="0 0 860 270" width="860" height="270" role="img" aria-labelledby="diag-f2-waterfall">
+          <title id="diag-f2-waterfall">Diagram air terjun dari omzet Rp1.500.000 menjadi laba bersih Rp600.000</title>
+          <line x1="56" y1="214" x2="820" y2="214" stroke="var(--ink-frame)" stroke-width="1.5"/>
+          <rect x="86" y="64" width="110" height="150" rx="6" fill="var(--accent)"/>
+          <text x="141" y="52" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700" font-family="ui-monospace, monospace">Rp1.500.000</text>
+          <text x="141" y="236" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">Omzet</text>
 
-              <!-- Bar 1: Revenue 1.5M (height 150 -> y=80 to 230) -->
-              <rect x="86" y="80" width="110" height="150" rx="6" fill="var(--accent)"/>
-              <text x="141" y="68" text-anchor="middle" fill="var(--text-primary)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">Rp1.500.000</text>
-              <text x="141" y="252" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">Omzet</text>
+          <line x1="196" y1="64" x2="246" y2="64" stroke="var(--border-control)" stroke-dasharray="3 3"/>
+          <rect x="246" y="64" width="110" height="60" rx="6" fill="var(--neg)"/>
+          <text x="301" y="52" text-anchor="middle" fill="var(--neg)" font-size="12.5" font-weight="700" font-family="ui-monospace, monospace">-Rp600.000</text>
+          <text x="301" y="236" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">HPP Bahan</text>
 
-              <!-- Bar 2: -HPP 600k (y=80 to 140, height 60) -->
-              <line x1="196" y1="80" x2="246" y2="80" stroke="var(--border-control)" stroke-dasharray="3 3"/>
-              <rect x="246" y="80" width="110" height="60" rx="6" fill="var(--neg)"/>
-              <text x="301" y="68" text-anchor="middle" fill="var(--neg)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">-Rp600.000</text>
-              <text x="301" y="252" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">HPP Bahan</text>
+          <line x1="356" y1="124" x2="406" y2="124" stroke="var(--border-control)" stroke-dasharray="3 3"/>
+          <rect x="406" y="124" width="110" height="90" rx="6" fill="var(--cta-bg)"/>
+          <text x="461" y="112" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700" font-family="ui-monospace, monospace">Rp900.000</text>
+          <text x="461" y="236" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">Laba Kotor</text>
 
-              <!-- Bar 3: Gross Profit 900k (y=140 to 230, height 90) -->
-              <line x1="356" y1="140" x2="406" y2="140" stroke="var(--border-control)" stroke-dasharray="3 3"/>
-              <rect x="406" y="140" width="110" height="90" rx="6" fill="var(--titanium)"/>
-              <text x="461" y="128" text-anchor="middle" fill="var(--text-primary)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">Rp900.000</text>
-              <text x="461" y="252" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">Laba Kotor</text>
+          <line x1="516" y1="124" x2="566" y2="124" stroke="var(--border-control)" stroke-dasharray="3 3"/>
+          <rect x="566" y="124" width="110" height="30" rx="6" fill="var(--neg)"/>
+          <text x="621" y="112" text-anchor="middle" fill="var(--neg)" font-size="12.5" font-weight="700" font-family="ui-monospace, monospace">-Rp300.000</text>
+          <text x="621" y="236" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">OPEX</text>
 
-              <!-- Bar 4: -OPEX 300k (y=140 to 170, height 30) -->
-              <line x1="516" y1="140" x2="566" y2="140" stroke="var(--border-control)" stroke-dasharray="3 3"/>
-              <rect x="566" y="140" width="110" height="30" rx="6" fill="var(--neg)"/>
-              <text x="621" y="128" text-anchor="middle" fill="var(--neg)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">-Rp300.000</text>
-              <text x="621" y="252" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">OPEX</text>
+          <line x1="676" y1="154" x2="726" y2="154" stroke="var(--border-control)" stroke-dasharray="3 3"/>
+          <rect x="726" y="154" width="110" height="60" rx="6" fill="var(--pos)"/>
+          <text x="781" y="142" text-anchor="middle" fill="var(--pos)" font-size="12.5" font-weight="700" font-family="ui-monospace, monospace">Rp600.000</text>
+          <text x="781" y="236" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">Laba Bersih</text>
+        </svg>
+        <figcaption>
+          Gambar 3. Aliran penyusutan uang dari Omzet (Rp1.500.000) dipotong HPP (Rp600.000) dan OPEX tetap (Rp300.000) hingga menyisakan Laba Bersih Rp600.000.
+        </figcaption>
+      </figure>
 
-              <!-- Bar 5: Net Profit 600k (y=170 to 230, height 60) -->
-              <line x1="676" y1="170" x2="726" y2="170" stroke="var(--border-control)" stroke-dasharray="3 3"/>
-              <rect x="726" y="170" width="110" height="60" rx="6" fill="var(--pos)"/>
-              <text x="781" y="158" text-anchor="middle" fill="var(--pos)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">Rp600.000</text>
-              <text x="781" y="252" text-anchor="middle" fill="var(--text-primary)" font-size="12.5" font-weight="700">Laba Bersih</text>
-            </svg>
-            <figcaption>
-              Gambar 3. Aliran penyusutan uang dari Omzet (Rp1.500.000) setelah dipotong HPP bahan (Rp600.000) dan biaya operasional tetap (Rp300.000) menjadi Laba Bersih (Rp600.000).
-            </figcaption>
-          </figure>
+      <figure class="diagram-plate">
+        <p class="diagram-plate-kicker">ANATOMI PER UNIT | MEMBEDAH 1 GELAS ES KOPI SUSU (RP15.000)</p>
+        <div class="split-reading">
+          <svg viewBox="0 0 320 260" width="320" height="260" role="img" aria-labelledby="diag-f2-cup-t diag-f2-cup-d">
+            <title id="diag-f2-cup-t">Ilustrasi penampang gelas Es Kopi Susu Rp15.000</title>
+            <desc id="diag-f2-cup-d">Gelas kopi dibagi tiga lapisan: Laba 40 persen di atas, OPEX 20 persen di tengah, dan HPP bahan 40 persen di bawah.</desc>
+            <rect width="320" height="260" fill="var(--bg-page)"/>
+            <rect x="64" y="34" width="192" height="16" rx="5" fill="var(--bg-subtle)" stroke="var(--ink-frame)" stroke-width="1.8"/>
+            <path d="M180 14 L166 34" stroke="var(--titanium)" stroke-width="5" stroke-linecap="round"/>
+            <polygon points="74,50 246,50 236,122 84,122" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.8"/>
+            <text x="160" y="92" text-anchor="middle" fill="var(--pos)" font-size="14" font-weight="700" font-family="ui-monospace, monospace">LABA 40%</text>
+            <polygon points="84,122 236,122 230,158 90,158" fill="var(--titanium-tint)" stroke="var(--titanium)" stroke-width="1.8"/>
+            <text x="160" y="145" text-anchor="middle" fill="var(--titanium)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">OPEX 20%</text>
+            <polygon points="90,158 230,158 220,232 100,232" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.8"/>
+            <text x="160" y="200" text-anchor="middle" fill="var(--neg)" font-size="14" font-weight="700" font-family="ui-monospace, monospace">HPP 40%</text>
+          </svg>
 
-          <figure class="diagram-plate">
-            <p class="diagram-plate-kicker">ANATOMI PER UNIT | MEMBEDAH 1 GELAS ES KOPI SUSU (RP15.000)</p>
-            <div class="split-reading">
-              <svg viewBox="0 0 320 260" width="320" height="260" role="img" aria-labelledby="diag-f2-cup-t diag-f2-cup-d">
-                <title id="diag-f2-cup-t">Ilustrasi penampang gelas Es Kopi Susu Rp15.000</title>
-                <desc id="diag-f2-cup-d">Gelas kopi dibagi menjadi tiga lapisan: Laba 40 persen di atas, OPEX 20 persen di tengah, dan HPP bahan 40 persen di bawah.</desc>
-                <rect width="320" height="260" fill="var(--bg-page)"/>
-                <rect x="64" y="34" width="192" height="16" rx="5" fill="var(--bg-subtle)" stroke="var(--border-control)" stroke-width="2"/>
-                <path d="M180 14 L166 34" stroke="var(--titanium)" stroke-width="5" stroke-linecap="round"/>
+          <div class="hybrid-flow">
+            <div class="hybrid-node tone-pos">
+              <span class="hybrid-node-tag">40% · RP6.000 PER CUP</span>
+              <p class="hybrid-node-title">Laba Bersih (Hak Usaha)</p>
+              <p>Uang inilah yang boleh ditabung sebagai kas aman atau diputar ekspansi.</p>
+            </div>
+            <div class="hybrid-node tone-mustard">
+              <span class="hybrid-node-tag">20% · RP3.000 PER CUP</span>
+              <p class="hybrid-node-title">Porsi Biaya Tetap &amp; OPEX</p>
+              <p>Pembagian rata biaya kuota, listrik kulkas, &amp; sewa meja Rp300rb ke 100 cup.</p>
+            </div>
+            <div class="hybrid-node tone-neg">
+              <span class="hybrid-node-tag">40% · RP6.000 PER CUP</span>
+              <p class="hybrid-node-title">Modal Bahan (HPP Langsung)</p>
+              <p>Kopi, susu, gula, es batu, &amp; gelas; harus disisihkan untuk belanja bahan ulang.</p>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          Gambar 3B. Satu cup kopi seharga Rp15.000 dipecah menjadi tiga porsi terpisah agar uang modal tidak ikut termakan untuk jajan pribadi.
+        </figcaption>
+      </figure>
+    </section>
 
-                <polygon points="74,50 246,50 236,122 84,122" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="2"/>
-                <text x="160" y="92" text-anchor="middle" fill="var(--pos)" font-size="14" font-weight="700" font-family="ui-monospace, monospace">LABA 40%</text>
+    <section id="biaya-tetap-bep" class="section-block" tabindex="-1">
+      <div class="prose">
+        <h2>2. Biaya Tetap vs Variabel &amp; Titik Impas (BEP)</h2>
+        <p>
+          <strong>Biaya Variabel</strong> naik turun mengikuti jumlah barang laku (bahan per cup), sedangkan <strong>Biaya Tetap</strong> selalu harus dibayar tiap bulan berapapun pembelimu. Titik ketika pemasukan pas menutup seluruh biaya tetap dan variabel disebut <strong>BEP (Break Even Point)</strong>.
+        </p>
+      </div>
 
-                <polygon points="84,122 236,122 230,158 90,158" fill="var(--titanium-tint)" stroke="var(--titanium)" stroke-width="2"/>
-                <text x="160" y="145" text-anchor="middle" fill="var(--titanium)" font-size="13" font-weight="700" font-family="ui-monospace, monospace">OPEX 20%</text>
+      <div class="formula-box">
+        <div class="formula-eq">BEP (Unit) = Total Biaya Tetap &divide; (Harga Jual per Unit - Biaya Variabel per Unit)</div>
+        <p class="formula-note">
+          Tiap 1 cup kopi memberi kontribusi <code class="num">Rp15.000 - Rp6.000 = Rp9.000</code>. Maka <code class="num">Rp300.000 &divide; Rp9.000 = 33,33</code> (di cup ke-34 usaha mulai impas).
+        </p>
+      </div>
 
-                <polygon points="90,158 230,158 220,232 100,232" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="2"/>
-                <text x="160" y="200" text-anchor="middle" fill="var(--neg)" font-size="14" font-weight="700" font-family="ui-monospace, monospace">HPP 40%</text>
+      <figure class="diagram-plate">
+        <p class="diagram-plate-kicker">GRAFIK TITIK IMPAS (BEP) | 0 SAMPAI 100 CUP</p>
+        <svg viewBox="0 0 860 300" width="860" height="300" role="img" aria-labelledby="diag-f2-bep-t diag-f2-bep-d">
+          <title id="diag-f2-bep-t">Grafik Perpotongan Kurva Pendapatan vs Biaya pada Titik Impas (BEP)</title>
+          <desc id="diag-f2-bep-d">Koordinat dari 0 sampai 100 cup menunjukkan garis pendapatan memotong garis total biaya tepat di 34 cup senilai Rp510.000, memisahkan zona rugi di kiri dan zona untung di kanan.</desc>
+          <rect width="860" height="300" fill="var(--bg-page)"/>
+          <polygon points="100,240 320,180 100,204" fill="var(--neg-soft)"/>
+          <polygon points="320,180 760,60 760,132" fill="var(--pos-soft)"/>
+          <line x1="100" y1="60" x2="100" y2="240" stroke="var(--ink-frame)" stroke-width="1.5"/>
+          <line x1="100" y1="240" x2="780" y2="240" stroke="var(--ink-frame)" stroke-width="1.5"/>
+          <line x1="100" y1="204" x2="760" y2="204" stroke="var(--border-control)" stroke-dasharray="5 5" stroke-width="1.5"/>
+          <text x="92" y="208" text-anchor="end" fill="var(--text-secondary)" font-size="11.5" font-family="ui-monospace, monospace">Rp300rb</text>
+          <text x="92" y="184" text-anchor="end" fill="var(--accent)" font-size="11.5" font-weight="700" font-family="ui-monospace, monospace">Rp510rb</text>
+          <text x="92" y="66" text-anchor="end" fill="var(--pos)" font-size="11.5" font-weight="700" font-family="ui-monospace, monospace">Rp1,5jt</text>
+          <line x1="100" y1="204" x2="760" y2="132" stroke="var(--neg)" stroke-width="2.5"/>
+          <line x1="100" y1="240" x2="760" y2="60" stroke="var(--pos)" stroke-width="3"/>
+          <line x1="320" y1="180" x2="320" y2="240" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5"/>
+          <circle cx="320" cy="180" r="6" fill="var(--cta-bg)" stroke="var(--ink-frame)" stroke-width="1.8"/>
+          <text x="175" y="218" text-anchor="middle" fill="var(--neg)" font-size="12" font-weight="700">ZONA RUGI</text>
+          <text x="615" y="114" text-anchor="middle" fill="var(--pos)" font-size="13" font-weight="700">ZONA UNTUNG (+Rp600rb)</text>
+          <rect x="256" y="116" width="176" height="44" rx="8" fill="var(--bg-surface)" stroke="var(--accent)"/>
+          <text x="344" y="136" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">TITIK IMPAS (BEP)</text>
+          <text x="344" y="152" text-anchor="middle" fill="var(--text-primary)" font-size="11.5">34 Cup = Rp510rb</text>
+          <text x="100" y="264" text-anchor="middle" fill="var(--text-secondary)" font-size="11.5">0 cup</text>
+          <text x="320" y="264" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">34 cup</text>
+          <text x="760" y="264" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700">100 cup</text>
+          <text x="772" y="136" fill="var(--neg)" font-size="12" font-weight="700">Biaya Total</text>
+          <text x="772" y="64" fill="var(--pos)" font-size="12" font-weight="700">Omzet</text>
+        </svg>
+        <figcaption>
+          Gambar 3C. Di kiri titik BEP (kurang dari 34 cup) usahamu masih rugi. Melewati titik BEP ke kanan, tiap cup tambahan langsung menyumbang laba Rp9.000.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="misteri-cashflow" class="section-block" tabindex="-1">
+      <div class="prose">
+        <h2>3. Mengapa Bisnis yang Laris Bisa Kehabisan Uang Tunai (Profit vs Cash Flow)</h2>
+        <p>
+          Laba di catatan (Profit) berbeda dari uang tunai nyata di rekening (<strong>Cash Flow</strong>). Tiga jebakan yang membuat kas habis meski catatan untung: pembeli kasbon (<strong>Piutang</strong>), memborong <strong>Stok</strong> berlebih di awal, serta menghabiskan uang kas untuk gaya hidup pribadi.
+        </p>
+      </div>
+
+      <section class="do-dont-board" aria-label="Kebiasaan sehat Cash Flow dan Kekayaan">
+        <div class="do-dont-header">
+          <span class="do-dont-kicker">INFOGRAFIK FASE 2 | KEUANGAN SEHAT VS KEBOCORAN KAS</span>
+          <div class="do-dont-legend">
+            <span class="legend-do">&#10003; DO</span>
+            <span class="legend-dont">&times; DON'T</span>
+          </div>
+        </div>
+        <div class="do-dont-rows">
+          <div class="do-dont-pair">
+            <div class="do-dont-side">
+              <svg class="mini-vignette" viewBox="0 0 72 52" width="72" height="52" aria-hidden="true">
+                <rect x="14" y="16" width="44" height="22" rx="4" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.6"/>
+                <circle cx="36" cy="27" r="5" fill="var(--pos)"/>
               </svg>
-
-              <div class="hybrid-flow">
-                <div class="hybrid-node tone-pos">
-                  <span class="hybrid-node-tag">40% · RP6.000 PER CUP</span>
-                  <p class="hybrid-node-title">Laba Bersih (Hak Usaha)</p>
-                  <p>Uang inilah yang boleh disimpan sebagai tabungan kas atau diputar ekspansi.</p>
-                </div>
-                <div class="hybrid-node tone-mustard">
-                  <span class="hybrid-node-tag">20% · RP3.000 PER CUP</span>
-                  <p class="hybrid-node-title">Porsi Biaya Tetap &amp; OPEX</p>
-                  <p>Membagi rata beban kuota, listrik kulkas, &amp; sewa meja Rp300rb ke 100 cup.</p>
-                </div>
-                <div class="hybrid-node tone-neg">
-                  <span class="hybrid-node-tag">40% · RP6.000 PER CUP</span>
-                  <p class="hybrid-node-title">Modal Bahan (HPP Langsung)</p>
-                  <p>Kopi, susu, gula, es batu, dan gelas; haram dianggap sebagai keuntungan.</p>
-                </div>
-              </div>
-            </div>
-            <figcaption>
-              Gambar 3B. Gelas visual disandingkan dengan tiga rincian HTML agar tetap tajam terbaca baik di ponsel maupun monitor lebar.
-            </figcaption>
-          </figure>
-        </section>
-
-        <section id="biaya-tetap-bep" class="section-block" tabindex="-1">
-          <div class="prose">
-            <h2>2. Biaya Tetap vs Biaya Variabel &amp; Cara Hitung Balik Modal (BEP)</h2>
-            <p>
-              Agar bisa menghitung target jualan minimal supaya tidak rugi, kamu harus membagi seluruh pengeluaran bisnis ke dalam dua keranjang:
-            </p>
-            <ul>
-              <li><strong>Biaya Variabel (<span lang="en">Variable Cost</span>):</strong> Biaya yang jumlahnya ikut naik turun persis mengikuti banyaknya barang yang terjual. Jika laku 0 cup, biayanya Rp0. Jika laku 100 cup, biayanya 100 kali lipat (HPP bahan kopi, susu, gelas, kemasan).</li>
-              <li><strong>Biaya Tetap (<span lang="en">Fixed Cost</span>):</strong> Biaya yang tetap harus dibayar tiap bulan berapapun jumlah pembelimu, entah laku 5 cup atau 500 cup (sewa tempat, langganan internet, gaji karyawan tetap).</li>
-            </ul>
-            <p>
-              Sekarang, berapa gelas yang harus laku agar kamu tepat <strong>impas (tidak rugi dan tidak untung)</strong>? Titik impas inilah yang disebut <strong>BEP (<span lang="en">Break Even Point</span>)</strong>.
-            </p>
-          </div>
-
-          <div class="formula-box">
-            <div class="formula-eq">BEP (Unit) = Total Biaya Tetap ÷ (Harga Jual per Unit - Biaya Variabel per Unit)</div>
-            <p class="formula-note">
-              Dari contoh kopi tadi: tiap 1 cup terjual memberikan selisih kontribusi sebesar <code class="num">Rp15.000 - Rp6.000 = Rp9.000</code> untuk mencicil biaya tetap Rp300.000. Maka <code class="num">Rp300.000 ÷ Rp9.000 = 33,33</code>. Artinya pada penjualan cup ke-34 kamu baru menutup seluruh biaya tetap, dan baru mulai untung bersih di cup ke-35!
-            </p>
-          </div>
-
-          <figure class="diagram-plate">
-            <svg viewBox="0 0 860 300" width="860" height="300" role="img" aria-labelledby="diag-f2-bep-t diag-f2-bep-d">
-              <title id="diag-f2-bep-t">Grafik Perpotongan Kurva Pendapatan vs Biaya pada Titik Impas (BEP)</title>
-              <desc id="diag-f2-bep-d">Koordinat dari 0 sampai 100 cup menunjukkan garis pendapatan memotong garis total biaya tepat di 34 cup senilai Rp510.000, memisahkan zona rugi di kiri dan zona untung di kanan.</desc>
-              <rect x="8" y="8" width="844" height="284" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
-              <text x="32" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">GRAFIK TITIK IMPAS (BEP): RP300RB BIAYA TETAP + RP6RB VARIABEL VS HARGA RP15RB</text>
-
-              <!-- Axes: origin (100, 240), max X (760, 240) = 100 cups, max Y (100, 60) = Rp1.5M (180px) -->
-              <!-- Scale: X(u) = 100 + u*6.6 ; Y(rupiah_k) = 240 - (rupiah_k / 1500)*180 -->
-              <!-- u=0: Rev=0(y=240), TotalCost=300k(y=204) -->
-              <!-- u=33.3: Rev=500k(x=320, y=180), TotalCost=500k(x=320, y=180) -->
-              <!-- u=100: Rev=1500k(x=760, y=60), TotalCost=900k(x=760, y=132) -->
-              <polygon points="100,240 320,180 100,204" fill="var(--neg-soft)"/>
-              <polygon points="320,180 760,60 760,132" fill="var(--pos-soft)"/>
-
-              <line x1="100" y1="60" x2="100" y2="240" stroke="var(--border-control)" stroke-width="1.5"/>
-              <line x1="100" y1="240" x2="780" y2="240" stroke="var(--border-control)" stroke-width="1.5"/>
-
-              <!-- Fixed cost guide y=204 -->
-              <line x1="100" y1="204" x2="760" y2="204" stroke="var(--border-subtle)" stroke-dasharray="5 5" stroke-width="1.5"/>
-              <text x="92" y="208" text-anchor="end" fill="var(--text-secondary)" font-size="11.5" font-family="ui-monospace, monospace">Rp300rb</text>
-              <text x="92" y="184" text-anchor="end" fill="var(--accent)" font-size="11.5" font-weight="700" font-family="ui-monospace, monospace">Rp510rb</text>
-              <text x="92" y="66" text-anchor="end" fill="var(--pos)" font-size="11.5" font-weight="700" font-family="ui-monospace, monospace">Rp1,5jt</text>
-
-              <!-- Lines -->
-              <line x1="100" y1="204" x2="760" y2="132" stroke="var(--neg)" stroke-width="2.5"/>
-              <line x1="100" y1="240" x2="760" y2="60" stroke="var(--pos)" stroke-width="3"/>
-
-              <!-- BEP vertical marker -->
-              <line x1="320" y1="180" x2="320" y2="240" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5"/>
-              <circle cx="320" cy="180" r="7" fill="var(--accent)" stroke="var(--bg-surface)" stroke-width="2"/>
-
-              <!-- Labels -->
-              <text x="175" y="218" text-anchor="middle" fill="var(--neg)" font-size="12" font-weight="700">ZONA RUGI</text>
-              <text x="615" y="114" text-anchor="middle" fill="var(--pos)" font-size="13" font-weight="700">ZONA UNTUNG (+Rp600rb di 100 cup)</text>
-              <rect x="256" y="116" width="176" height="44" rx="8" fill="var(--bg-surface)" stroke="var(--accent)"/>
-              <text x="344" y="136" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">TITIK IMPAS (BEP)</text>
-              <text x="344" y="152" text-anchor="middle" fill="var(--text-primary)" font-size="11.5">34 Cup = Omzet Rp510rb</text>
-
-              <text x="100" y="264" text-anchor="middle" fill="var(--text-secondary)" font-size="11.5">0 cup</text>
-              <text x="320" y="264" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">34 cup (BEP)</text>
-              <text x="760" y="264" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700">100 cup</text>
-              <text x="772" y="136" fill="var(--neg)" font-size="12" font-weight="700">Biaya Total</text>
-              <text x="772" y="64" fill="var(--pos)" font-size="12" font-weight="700">Omzet</text>
-            </svg>
-            <figcaption>
-              Gambar 3C. Di bawah 34 cup, garis Total Biaya berada di atas Omzet sehingga usahamu merugi. Begitu menembus titik BEP ke kanan, setiap gelas tambahan menyumbang laba Rp9.000 secara bersih karena biaya tetap sudah lunas.
-            </figcaption>
-          </figure>
-        </section>
-
-        <section id="misteri-cashflow" class="section-block" tabindex="-1">
-          <div class="prose">
-            <h2>3. Misteri Terbesar Pemula: Mengapa Profit Tinggi Bisa Tetap Mati Karena Cash Flow?</h2>
-            <p>
-              <strong>Cash Flow (Arus Kas)</strong> secara harfiah berarti pergerakan uang tunai yang benar-benar masuk dan keluar dari dompet atau rekening bank usahamu pada hari ini. Banyak sekali mahasiswa mengira "kalau di catatan sudah untung, berarti duit di rekening pasti bertambah." Padahal tidak selalu begitu!
-            </p>
-            <p>
-              Perbedaan antara <strong>Laba di Catatan (Profit)</strong> dan <strong>Uang Tunai Nyata (Cash Flow)</strong> terjadi karena tiga hal yang sering menjebak bisnis yang sedang ramai:
-            </p>
-            <ol>
-              <li><strong>Piutang Usaha (<span lang="en">Accounts Receivable</span>):</strong> Barang sudah terjual (masuk omzet dan profit di catatan), tetapi pembeli membayar belakangan alias kasbon atau tempo 30 hari. Barangnya sudah keluar, uang tunainya belum masuk rekening.</li>
-              <li><strong>Persediaan / Stok (<span lang="en">Inventory</span>):</strong> Kamu memakai uang kas hari ini untuk memborong stok gelas atau bahan untuk 3 bulan ke depan demi mendapat harga grosir murah. Di neraca itu tetap asetmu, tetapi uang tunai di bank mendadak tersedot habis.</li>
-              <li><strong>Utang Usaha (<span lang="en">Accounts Payable</span>):</strong> Kebalikannya, jika pemasok membolehkan kamu mengambil bahan dulu dan membayar 2 minggu setelah barang laku, arus kasmu jauh lebih lega.</li>
-            </ol>
-            <p>
-              Bayangkan skenario nyata ini: dari 100 cup kopi tadi (catatan profit Rp600.000), ternyata 60 temanmu membayar bulan depan saat uang kiriman turun (Piutang Rp900.000), lalu kamu terlanjur belanja stok botol untuk bulan depan sebesar Rp500.000. Di buku catatan kamu tampak untung Rp600.000, tetapi di rekening bank uangmu minus sehingga besok pagi tidak bisa beli es batu. Itulah artinya <strong>"profit bagus, tapi cash flow macet."</strong>
-            </p>
-          </div>
-
-          <figure class="diagram-plate">
-            <p class="diagram-plate-kicker">SKEMA 2B | LABA AKRUAL DI KERTAS VS ALIRAN UANG TUNAI (CASH FLOW)</p>
-            <div class="hybrid-flow cols-2">
-              <div class="hybrid-node tone-pos">
-                <span class="hybrid-node-tag">CATATAN LABA RUGI (AKRUAL)</span>
-                <p class="hybrid-node-title">Laku 100 Cup = Omzet Rp1.500.000</p>
-                <p>Dikurangi HPP bahan terpakai Rp600.000 dan OPEX Rp300.000.</p>
-                <p><strong>Tercatat Untung: +Rp600.000</strong></p>
-              </div>
-              <div class="hybrid-node tone-neg">
-                <span class="hybrid-node-tag">ALIRAN UANG TUNAI (CASH FLOW)</span>
-                <p class="hybrid-node-title">Kas Masuk Tunai Cuma Rp600.000</p>
-                <p>Rp900.000 nyangkut di Piutang pembeli; kas keluar Rp1.400.000 (HPP + OPEX + Borong Stok).</p>
-                <p><strong>Saldo Kas Berubah: -Rp800.000 (Defisit)</strong></p>
-              </div>
-            </div>
-            <figcaption>
-              Gambar 4. Alasan mengapa usaha mahasiswa yang "laris" bisa tutup mendadak: laba di buku tulis (+Rp600.000) tidak sama dengan uang tunai yang tersedia di tangan jika penjualan masih berupa piutang atau tertahan di stok barang.
-            </figcaption>
-          </figure>
-        </section>
-
-        <section id="kalkulator-bep" class="section-block" tabindex="-1">
-          <h2>4. Kalkulator HPP, Margin, dan Titik Impas (BEP)</h2>
-          <p class="prose">
-            Ubah angka harga jual, HPP bahan, biaya tetap, atau jumlah unit terjual untuk melihat langsung bagaimana setiap angka memengaruhi margin dan kapan usahamu balik modal.
-          </p>
-
-          <form id="sim-unit-economics" class="workbench" novalidate>
-            <div class="workbench-header">
-              <h3>Simulasi Hitung Unit Usaha</h3>
-              <span class="muted">Angka dalam Rupiah (IDR)</span>
-            </div>
-
-            <div class="preset-row" aria-label="Pilih contoh skenario produk">
-              <button class="btn btn-subtle" type="button" data-f2-preset data-price="15000" data-hpp="6000" data-fixed="300000" data-units="100">Es Kopi Susu (100 cup)</button>
-              <button class="btn btn-subtle" type="button" data-f2-preset data-price="5000" data-hpp="3200" data-fixed="200000" data-units="150">Risoles Mayo (150 pcs)</button>
-              <button class="btn btn-subtle" type="button" data-f2-preset data-price="150000" data-hpp="15000" data-fixed="150000" data-units="8">Jasa Desain PPT (8 proyek)</button>
-            </div>
-
-            <div class="workbench-grid">
               <div>
-                <div class="field-wrap control-group">
-                  <label for="f2-price">Harga Jual per Unit (Rp)</label>
-                  <input id="f2-price" class="number-input num" type="number" min="0" step="500" value="15000">
-                </div>
-
-                <div class="field-wrap control-group">
-                  <label for="f2-hpp">HPP / Modal Bahan per Unit (Rp)</label>
-                  <input id="f2-hpp" class="number-input num" type="number" min="0" step="500" value="6000">
-                </div>
-
-                <div class="field-wrap control-group">
-                  <label for="f2-fixed">Biaya Tetap + OPEX per Bulan (Rp)</label>
-                  <input id="f2-fixed" class="number-input num" type="number" min="0" step="25000" value="300000">
-                </div>
-
-                <div class="control-group">
-                  <div class="control-label-row">
-                    <label for="f2-units">Target Unit Terjual Bulan Ini</label>
-                    <span id="f2-units-val" class="control-value-readout num">100 unit</span>
-                  </div>
-                  <div class="slider-row">
-                    <button class="step-btn" type="button" data-step-target="f2-units" data-step-delta="-10" aria-label="Kurangi 10 unit">-</button>
-                    <input id="f2-units" type="range" min="0" max="500" step="5" value="100">
-                    <button class="step-btn" type="button" data-step-target="f2-units" data-step-delta="10" aria-label="Tambah 10 unit">+</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="readout-panel" aria-live="polite">
-                <dl>
-                  <div class="metric-row">
-                    <dt>Omzet (<span lang="en">Revenue</span>)</dt>
-                    <dd id="f2-out-rev" class="num">Rp1.500.000</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Total HPP Bahan</dt>
-                    <dd id="f2-out-cogs" class="num">Rp600.000</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Laba Kotor (<span lang="en">Gross Profit</span>)</dt>
-                    <dd id="f2-out-gross" class="num">Rp900.000</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Laba Bersih (<span lang="en">Net Profit</span>)</dt>
-                    <dd id="f2-out-net" class="num">Rp600.000</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Margin Laba Bersih</dt>
-                    <dd id="f2-out-margin" class="num">40.0%</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Titik Impas (BEP)</dt>
-                    <dd id="f2-out-bep" class="num">34 unit</dd>
-                  </div>
-                </dl>
-                <div class="live-split-wrap">
-                  <span class="live-split-label">KOMPOSISI OMZET SECARA VISUAL</span>
-                  <div class="live-split-track" aria-hidden="true">
-                    <div id="f2-seg-hpp" class="split-seg-neg" style="inline-size: 40%;"></div>
-                    <div id="f2-seg-opex" class="split-seg-mid" style="inline-size: 20%;"></div>
-                    <div id="f2-seg-net" class="split-seg-pos" style="inline-size: 40%;"></div>
-                  </div>
-                  <span id="f2-split-legend" class="live-split-legend">HPP 40% | OPEX/Tetap 20% | Sisa Laba 40%</span>
-                </div>
-                <div id="f2-out-status" class="status-banner is-positive"></div>
+                <span class="do-dont-tag is-do">&#10003; Prioritaskan Bayar Tunai / DP</span>
+                <p class="do-dont-title">Cash Flow Masuk Hari Ini</p>
+                <p class="do-dont-desc">Pastikan piutang terkendali dan belanja stok secukupnya agar rekening tidak kehabisan napas.</p>
               </div>
             </div>
-          </form>
-        </section>
-
-        <section id="simulator-cf" class="section-block" tabindex="-1">
-          <h2>5. Simulator Profit vs Cash Flow (30 Hari Usaha)</h2>
-          <p class="prose">
-            Di simulasi ini, penjualanmu tetap sama persis (100 cup Es Kopi, Laba Bersih tercatat <strong>Rp600.000</strong>). Coba geser persentase pembeli yang bayar belakangan (kasbon/piutang) atau nominal belanja stok di depan untuk melihat apa yang terjadi pada uang tunai di rekeningmu.
-          </p>
-
-          <form id="sim-cashflow" class="workbench" novalidate>
-            <div class="workbench-header">
-              <h3>Simulasi Kebocoran Arus Kas</h3>
-              <span class="muted">Asumsi Laba Tercatat Tetap Rp600.000</span>
-            </div>
-
-            <div class="workbench-grid">
+            <div class="do-dont-side">
+              <svg class="mini-vignette" viewBox="0 0 72 52" width="72" height="52" aria-hidden="true">
+                <rect x="14" y="16" width="44" height="22" rx="4" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.6"/>
+                <path d="M26 27 h20" stroke="var(--neg)" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
               <div>
-                <div class="field-wrap control-group">
-                  <label for="f2-cf-start">Saldo Kas Awal di Rekening (Rp)</label>
-                  <input id="f2-cf-start" class="number-input num" type="number" min="0" step="100000" value="500000">
-                </div>
-
-                <div class="control-group">
-                  <div class="control-label-row">
-                    <label for="f2-cf-arpct">Persentase Pembeli Bayar Bulan Depan (Piutang)</label>
-                    <span id="f2-cf-arpct-val" class="control-value-readout num">60% bayar nanti (kasbon)</span>
-                  </div>
-                  <div class="slider-row">
-                    <button class="step-btn" type="button" data-step-target="f2-cf-arpct" data-step-delta="-10" aria-label="Kurangi piutang 10 persen">-</button>
-                    <input id="f2-cf-arpct" type="range" min="0" max="100" step="10" value="60">
-                    <button class="step-btn" type="button" data-step-target="f2-cf-arpct" data-step-delta="10" aria-label="Tambah piutang 10 persen">+</button>
-                  </div>
-                </div>
-
-                <div class="field-wrap control-group">
-                  <label for="f2-cf-stock">Belanja Stok Tambahan di Awal untuk Bulan Depan (Rp)</label>
-                  <input id="f2-cf-stock" class="number-input num" type="number" min="0" step="100000" value="500000">
-                </div>
-              </div>
-
-              <div class="readout-panel" aria-live="polite">
-                <dl>
-                  <div class="metric-row">
-                    <dt>Laba di Catatan Pembukuan</dt>
-                    <dd id="f2-cf-profit" class="num">Rp600.000</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Uang Tunai Masuk (<span lang="en">Cash In</span>)</dt>
-                    <dd id="f2-cf-in" class="num">Rp600.000</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Uang Tunai Keluar (<span lang="en">Cash Out</span>)</dt>
-                    <dd id="f2-cf-out" class="num">Rp1.400.000</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Uang Nyangkut di Piutang Pembeli</dt>
-                    <dd id="f2-cf-ar" class="num">Rp900.000</dd>
-                  </div>
-                  <div class="metric-row">
-                    <dt>Saldo Kas Akhir di Rekening</dt>
-                    <dd id="f2-cf-end" class="num">-Rp300.000</dd>
-                  </div>
-                </dl>
-                <div id="f2-cf-diag" class="status-banner is-negative"></div>
+                <span class="do-dont-tag is-dont">&times; Terlena Laba Kertas Tinggi</span>
+                <p class="do-dont-title">Kasbon Tinggi &amp; Borong Stok</p>
+                <p class="do-dont-desc">Catatan untung +Rp600rb, tapi Rp900rb nyangkut di piutang pembeli hingga besok gagal beli bahan.</p>
               </div>
             </div>
-          </form>
-        </section>
-
-        <section id="pdf-kekayaan" class="section-block" tabindex="-1">
-          <div class="prose">
-            <h2>6. Kekayaan adalah Apa yang Tidak Anda Lihat (Bab 9 &amp; Bab 10 PDF, Hal. 98 sampai 111)</h2>
-            <p>
-              Ketika seorang pebisnis pemula mulai merasakan laba bersih Rp600.000 atau Rp6.000.000 pertama, godaan terbesarnya langsung datang: mengganti ponsel, membeli motor baru, atau menyewa tempat mewah agar terlihat "sukses". Bab 9 dan Bab 10 di PDF kamu membongkar ilusi ini secara tuntas.
-            </p>
-            <p>
-              Morgan Housel menceritakan pengalamannya saat menjadi petugas parkir valet di Los Angeles pada pertengahan 2000-an. Ia mengenal seorang pemuda sebayanya bernama Roger yang selalu datang mengendarai mobil sport Porsche, membuat semua orang berasumsi Roger kaya raya. Suatu hari Roger tiba dengan Honda tua, dan begitu terus minggu-minggu berikutnya. Ketika ditanya ke mana Porsche-nya, Roger menjawab tanpa malu bahwa mobil itu ditarik leasing karena gagal bayar cicilan (PDF hal. 99).
-            </p>
-            <p>
-              Di halaman 100 sampai 101, Morgan menegaskan perbedaan krusial antara <strong>Kaya Tampilan (<span lang="en">Rich</span>)</strong> dengan <strong>Kekayaan Sejati (<span lang="en">Wealth</span>)</strong>:
-            </p>
-            <ul>
-              <li><strong>Kaya (<span lang="en">Rich</span>)</strong> adalah penghasilan saat ini yang terlihat dari barang yang dibeli: mobil mewah, jam tangan, atau foto liburan. Jika seseorang mengendarai mobil $100.000, satu-satunya fakta pasti adalah ia memiliki uang $100.000 lebih sedikit (atau utang $100.000 lebih banyak) daripada sebelum membelinya.</li>
-              <li><strong>Kekayaan (<span lang="en">Wealth</span>)</strong> adalah aset keuangan atau kas yang <strong>belum dibelanjakan</strong>. Nilainya justru terletak pada pilihan dan fleksibilitas di masa depan. Analoginya persis seperti olahraga dan diet dari buku <cite>The Body</cite> karya Bill Bryson (hal. 101): menghabiskan uang setelah mendapat omzet itu sama seperti langsung makan dua kali lipat kalori setelah selesai berlari.</li>
-            </ul>
-            <p>
-              Di Bab 10 (hal. 103 sampai 111), Morgan melanjutkan bahwa membangun kekayaan dan kas usaha jauh lebih bergantung pada <strong>tingkat tabungan dan efisiensi</strong> ketimbang seberapa spektakuler pendapatanmu. Sama seperti krisis minyak dunia pada tahun 1970-an yang berhasil diatasi bukan hanya karena menemukan sumur baru, melainkan karena dunia menjadi jauh lebih hemat energi (AS memangkas kebutuhan energi per dolar PDB sebesar 60% dibanding 1950; hal. 105). Tabungan usaha yang tidak diberi label belanja tertentu adalah oksigen yang memberimu kendali atas waktu dan pilihan saat peluang atau krisis datang (hal. 108 sampai 110).
-            </p>
-          </div>
-        </section>
-
-        <section id="pdf-bertahan" class="section-block" tabindex="-1">
-          <div class="prose">
-            <h2>7. Menjadi Kaya vs. Tetap Kaya: Seni Bertahan Hidup (Bab 5 PDF, Hal. 60 sampai 72)</h2>
-            <p>
-              Ada sejuta cara untuk meraih omzet cepat, tetapi hanya ada satu cara untuk bertahan hidup di bisnis dan investasi: <strong>kombinasi antara berhemat dan rasa waspada (paranoia sehat)</strong> (hal. 61).
-            </p>
-            <p>
-              Bab 5 menyajikan kisah dramatis dua spekulan pada kehancuran pasar saham Oktober 1929. Pengembang real estat sukses <strong>Abraham Germansky</strong> mempertaruhkan kekayaannya pada pasar yang sedang naik dan kehilangan segalanya dalam hitungan hari. Di sisi lain, trader legendaris <strong>Jesse Livermore</strong> berhasil menebak kejatuhan pasar dan meraup lebih dari $3 miliar (nilai sekarang) hanya dalam satu hari pada 29 Oktober 1929. Namun, empat tahun kemudian, rasa percaya diri berlebih membuat Livermore memasang taruhan jauh lebih besar dengan utang. Ia bangkrut total pada tahun 1933 dan mengakhiri hidupnya sendiri (hal. 61 sampai 63).
-            </p>
-            <p>
-              Kisah yang sama terulang pada <strong>Rick Guerin</strong> (hal. 66 sampai 67). Empat puluh tahun lalu, duo terkenal Warren Buffett dan Charlie Munger sebenarnya bertiga bersama Rick Guerin. Rick sama pintarnya, tetapi seperti kata Buffett: <em>"Charlie dan saya tahu kami akan kaya dan kami tidak terburu-buru. Rick sedang terburu-buru."</em> Saat krisis 1973 sampai 1974 menjatuhkan pasar hampir 70%, Rick yang memakai pinjaman margin (<span lang="en">leverage</span>) terkena tagihan paksa (<span lang="en">margin call</span>) dan terpaksa menjual saham Berkshire Hathaway miliknya kepada Warren di bawah $40 per lembar.
-            </p>
           </div>
 
-          <div class="accordion-group">
-            <details>
-              <summary>Ringkasan 3 Prinsip Bertahan Hidup dari Bab 5 (Hal. 67 sampai 72)</summary>
-              <div class="details-body">
-                <ol>
-                  <li><strong>Tidak boleh hancur secara finansial:</strong> Lebih penting menjaga agar usahamu tidak gulung tikar daripada mengejar untung tertinggi sesaat. Uang tunai di bank memang terlihat lambat saat pasar naik, tetapi mencegahmu terpaksa menjual aset di harga murah saat krisis (hal. 67).</li>
-                  <li><strong>Rencana paling penting adalah rencana saat segalanya melenceng:</strong> Sediakan ruang untuk kesalahan (<span lang="en">margin of safety</span>) dalam anggaran dan waktu (hal. 68).</li>
-                  <li><strong>Optimis untuk jangka panjang, paranoid untuk jangka pendek:</strong> Dalam sejarah 170 tahun ekonomi AS, standar hidup naik 20 kali lipat meski melewati 33 resesi dan 99,9% perusahaan gulung tikar. Kamu harus cukup paranoid agar selamat melewati ranjau darat jangka pendek demi menikmati hasil jangka panjang (hal. 69 sampai 72).</li>
-                </ol>
+          <div class="do-dont-pair">
+            <div class="do-dont-side">
+              <svg class="mini-vignette" viewBox="0 0 72 52" width="72" height="52" aria-hidden="true">
+                <rect x="18" y="12" width="36" height="28" rx="5" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.6"/>
+                <circle cx="36" cy="26" r="4" fill="var(--pos)"/>
+              </svg>
+              <div>
+                <span class="do-dont-tag is-do">&#10003; Simpan Kas Tak Terlihat (Wealth)</span>
+                <p class="do-dont-title">Sabar &amp; Paranoia Sehat (Bab 5 &amp; 9)</p>
+                <p class="do-dont-desc">Kekayaan sejati adalah uang tunai yang belum dibelanjakan, menjaga usahamu selamat saat krisis.</p>
               </div>
-            </details>
-          </div>
-        </section>
-
-        <section id="kuis-2" class="section-block" tabindex="-1">
-          <h2>8. Uji Pemahaman Fase 2</h2>
-          <div class="quiz-box" data-quiz>
-            <div class="quiz-item" data-answer="b" data-explain="Laba Kotor (Gross Profit) = Omzet (Rp2.000.000) - HPP (Rp800.000) = Rp1.200.000. Laba Bersih baru dihitung setelah dikurangi OPEX Rp400.000, yaitu Rp800.000.">
-              <p><strong>1. Kamu menjual barang dengan total Omzet Rp2.000.000. Total HPP bahan Rp800.000, dan biaya operasional (OPEX) Rp400.000. Berapa Laba Bersihmu?</strong></p>
-              <div class="quiz-options">
-                <label class="quiz-option"><input type="radio" name="q2-1" value="a"> Rp1.200.000</label>
-                <label class="quiz-option"><input type="radio" name="q2-1" value="b"> Rp800.000</label>
-                <label class="quiz-option"><input type="radio" name="q2-1" value="c"> Rp1.600.000</label>
+            </div>
+            <div class="do-dont-side">
+              <svg class="mini-vignette" viewBox="0 0 72 52" width="72" height="52" aria-hidden="true">
+                <polygon points="36,10 60,40 12,40" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.6"/>
+                <line x1="36" y1="20" x2="36" y2="31" stroke="var(--neg)" stroke-width="2"/>
+              </svg>
+              <div>
+                <span class="do-dont-tag is-dont">&times; Tampak Kaya dengan Utang (Rich)</span>
+                <p class="do-dont-title">Terburu-buru &amp; Pakai Margin</p>
+                <p class="do-dont-desc">Memakai utang tinggi atau pamer aset cicilan; satu guncangan pasar langsung menyita segalanya.</p>
               </div>
-              <p class="quiz-feedback" aria-live="polite"></p>
-            </div>
-
-            <div class="quiz-item" data-answer="a" data-explain="Piutang berarti penjualan sudah tercatat di Laba Rugi, tetapi uang tunainya belum masuk ke kas sehingga Cash Flow bisa negatif.">
-              <p><strong>2. Mengapa sebuah usaha mahasiswa bisa tercatat untung di kertas, tetapi uang di rekeningnya habis?</strong></p>
-              <div class="quiz-options">
-                <label class="quiz-option"><input type="radio" name="q2-2" value="a"> Karena mayoritas pembeli belum membayar tunai (piutang) atau uang kas habis dipakai menimbun stok barang.</label>
-                <label class="quiz-option"><input type="radio" name="q2-2" value="b"> Karena harga jualnya lebih besar daripada HPP bahan.</label>
-                <label class="quiz-option"><input type="radio" name="q2-2" value="c"> Karena biaya tetap lebih rendah dari laba kotor.</label>
-              </div>
-              <p class="quiz-feedback" aria-live="polite"></p>
-            </div>
-
-            <div class="quiz-item" data-answer="c" data-explain="Menurut Bab 5 PDF (hal. 66 sampai 67), Rick Guerin terburu-buru memakai utang margin sehingga terpaksa menjual sahamnya saat krisis 1973 sampai 1974.">
-              <p><strong>3. Apa penyebab utama Rick Guerin kalah jauh dari Warren Buffett dan Charlie Munger menurut Bab 5?</strong></p>
-              <div class="quiz-options">
-                <label class="quiz-option"><input type="radio" name="q2-3" value="a"> Karena Rick Guerin tidak memahami matematika saham.</label>
-                <label class="quiz-option"><input type="radio" name="q2-3" value="b"> Karena ia tidak mau berinvestasi di perusahaan publik.</label>
-                <label class="quiz-option"><input type="radio" name="q2-3" value="c"> Karena ia terburu-buru menggunakan utang margin (leverage) sehingga terkena jual paksa saat pasar anjlok.</label>
-              </div>
-              <p class="quiz-feedback" aria-live="polite"></p>
-            </div>
-
-            <div class="hero-actions">
-              <button class="btn btn-primary" type="button" data-quiz-check>Periksa Jawaban Fase 2</button>
-            </div>
-            <div class="status-banner is-neutral" data-quiz-summary hidden aria-live="polite"></div>
-          </div>
-
-          <div class="phase-pager">
-            <div>
-              <button id="phase-complete-btn" class="btn btn-secondary" type="button" aria-pressed="false">Tandai Fase Ini Selesai Dipelajari</button>
-              <p id="phase-complete-status" class="muted" aria-live="polite"></p>
-            </div>
-            <div class="hero-actions">
-              <a class="btn btn-subtle" href="fase-1.html">Kembali ke Fase 1</a>
-              <a class="btn btn-primary" href="fase-3.html">Lanjut ke Fase 3: Validasi &amp; Compounding</a>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
-  </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="kalkulator-bep" class="section-block" tabindex="-1">
+      <h2>4. Kalkulator HPP, Margin, dan Titik Impas (BEP)</h2>
+      <p class="prose">
+        Ubah harga jual, HPP bahan, biaya tetap, atau jumlah unit terjual untuk melihat komposisi hasil bersih dan kapan usahamu mencapai BEP.
+      </p>
+
+      <form id="sim-unit-economics" class="workbench" novalidate>
+        <div class="workbench-header">
+          <h3>Simulasi Hitung Unit Usaha</h3>
+          <span class="muted">Angka dalam Rupiah (IDR)</span>
+        </div>
+
+        <div class="preset-row" aria-label="Pilih contoh skenario produk">
+          <button class="btn btn-subtle" type="button" data-f2-preset data-price="15000" data-hpp="6000" data-fixed="300000" data-units="100">Es Kopi Susu (100 cup)</button>
+          <button class="btn btn-subtle" type="button" data-f2-preset data-price="5000" data-hpp="3200" data-fixed="200000" data-units="150">Risoles Mayo (150 pcs)</button>
+          <button class="btn btn-subtle" type="button" data-f2-preset data-price="150000" data-hpp="15000" data-fixed="150000" data-units="8">Jasa Desain PPT (8 proyek)</button>
+        </div>
+
+        <div class="workbench-grid">
+          <div>
+            <div class="field-wrap control-group">
+              <label for="f2-price">Harga Jual per Unit (Rp)</label>
+              <input id="f2-price" class="number-input num" type="number" min="0" step="500" value="15000">
+            </div>
+
+            <div class="field-wrap control-group">
+              <label for="f2-hpp">HPP / Modal Bahan per Unit (Rp)</label>
+              <input id="f2-hpp" class="number-input num" type="number" min="0" step="500" value="6000">
+            </div>
+
+            <div class="field-wrap control-group">
+              <label for="f2-fixed">Biaya Tetap + OPEX per Bulan (Rp)</label>
+              <input id="f2-fixed" class="number-input num" type="number" min="0" step="25000" value="300000">
+            </div>
+
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="f2-units">Target Unit Terjual Bulan Ini</label>
+                <span id="f2-units-val" class="control-value-readout num">100 unit</span>
+              </div>
+              <div class="slider-row">
+                <button class="step-btn" type="button" data-step-target="f2-units" data-step-delta="-10" aria-label="Kurangi 10 unit">-</button>
+                <input id="f2-units" type="range" min="0" max="500" step="5" value="100">
+                <button class="step-btn" type="button" data-step-target="f2-units" data-step-delta="10" aria-label="Tambah 10 unit">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="readout-panel" aria-live="polite">
+            <dl>
+              <div class="metric-row"><dt>Omzet (<span lang="en">Revenue</span>)</dt><dd id="f2-out-rev" class="num">Rp1.500.000</dd></div>
+              <div class="metric-row"><dt>Total HPP Bahan</dt><dd id="f2-out-cogs" class="num">Rp600.000</dd></div>
+              <div class="metric-row"><dt>Laba Kotor (<span lang="en">Gross Profit</span>)</dt><dd id="f2-out-gross" class="num">Rp900.000</dd></div>
+              <div class="metric-row"><dt>Laba Bersih (<span lang="en">Net Profit</span>)</dt><dd id="f2-out-net" class="num">Rp600.000</dd></div>
+              <div class="metric-row"><dt>Margin Laba Bersih</dt><dd id="f2-out-margin" class="num">40.0%</dd></div>
+              <div class="metric-row"><dt>Titik Impas (BEP)</dt><dd id="f2-out-bep" class="num">34 unit</dd></div>
+            </dl>
+            <div class="live-split-wrap">
+              <span class="live-split-label">KOMPOSISI OMZET SECARA VISUAL</span>
+              <div class="live-split-track" aria-hidden="true">
+                <div id="f2-seg-hpp" class="split-seg-neg" style="inline-size: 40%;"></div>
+                <div id="f2-seg-opex" class="split-seg-mid" style="inline-size: 20%;"></div>
+                <div id="f2-seg-net" class="split-seg-pos" style="inline-size: 40%;"></div>
+              </div>
+              <span id="f2-split-legend" class="live-split-legend">HPP 40% | OPEX/Tetap 20% | Sisa Laba 40%</span>
+            </div>
+            <div id="f2-out-status" class="status-banner is-positive"></div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section id="simulator-cf" class="section-block" tabindex="-1">
+      <h2>5. Simulator Profit vs Cash Flow (30 Hari Usaha)</h2>
+      <p class="prose">
+        Dengan asumsi penjualan tetap 100 cup dan laba tercatat <strong>Rp600.000</strong>, ubah persentase kasbon atau belanja stok untuk melihat dampaknya pada saldo tunai bank.
+      </p>
+
+      <form id="sim-cashflow" class="workbench" novalidate>
+        <div class="workbench-header">
+          <h3>Simulasi Kebocoran Arus Kas</h3>
+          <span class="muted">Asumsi Laba Tercatat Tetap Rp600.000</span>
+        </div>
+
+        <div class="workbench-grid">
+          <div>
+            <div class="field-wrap control-group">
+              <label for="f2-cf-start">Saldo Kas Awal di Rekening (Rp)</label>
+              <input id="f2-cf-start" class="number-input num" type="number" min="0" step="100000" value="500000">
+            </div>
+
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="f2-cf-arpct">Persentase Pembeli Bayar Bulan Depan (Piutang)</label>
+                <span id="f2-cf-arpct-val" class="control-value-readout num">60% bayar nanti (kasbon)</span>
+              </div>
+              <div class="slider-row">
+                <button class="step-btn" type="button" data-step-target="f2-cf-arpct" data-step-delta="-10" aria-label="Kurangi piutang 10 persen">-</button>
+                <input id="f2-cf-arpct" type="range" min="0" max="100" step="10" value="60">
+                <button class="step-btn" type="button" data-step-target="f2-cf-arpct" data-step-delta="10" aria-label="Tambah piutang 10 persen">+</button>
+              </div>
+            </div>
+
+            <div class="field-wrap control-group">
+              <label for="f2-cf-stock">Belanja Stok Tambahan di Awal untuk Bulan Depan (Rp)</label>
+              <input id="f2-cf-stock" class="number-input num" type="number" min="0" step="100000" value="500000">
+            </div>
+          </div>
+
+          <div class="readout-panel" aria-live="polite">
+            <dl>
+              <div class="metric-row"><dt>Laba di Catatan Pembukuan</dt><dd id="f2-cf-profit" class="num">Rp600.000</dd></div>
+              <div class="metric-row"><dt>Uang Tunai Masuk (<span lang="en">Cash In</span>)</dt><dd id="f2-cf-in" class="num">Rp600.000</dd></div>
+              <div class="metric-row"><dt>Uang Tunai Keluar (<span lang="en">Cash Out</span>)</dt><dd id="f2-cf-out" class="num">Rp1.400.000</dd></div>
+              <div class="metric-row"><dt>Uang Nyangkut di Piutang Pembeli</dt><dd id="f2-cf-ar" class="num">Rp900.000</dd></div>
+              <div class="metric-row"><dt>Saldo Kas Akhir di Rekening</dt><dd id="f2-cf-end" class="num">-Rp300.000</dd></div>
+            </dl>
+            <div id="f2-cf-diag" class="status-banner is-negative"></div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section id="pdf-kekayaan" class="section-block" tabindex="-1">
+      <div class="prose">
+        <h2>6. Kekayaan Tak Terlihat, Efisiensi &amp; Seni Bertahan Hidup (Bab 5, 9 &amp; 10 PDF)</h2>
+        <p>
+          Meraih omzet cepat memiliki sejuta cara, tetapi bertahan hidup dalam jangka panjang cuma punya satu kunci: gabungan berhemat (menyimpan kas tak terlihat) dan kewaspadaan agar tak pernah bangkrut saat krisis menghantam.
+        </p>
+      </div>
+
+      <div class="accordion-group">
+        <details>
+          <summary>Baca Kisah Lengkap PDF: Roger Si Porsche, Jesse Livermore, &amp; Rick Guerin (Bab 5, 9, 10, Hal. 60 sampai 111)</summary>
+          <div class="details-body">
+            <p>
+              Di <strong>Bab 9 (hal. 98 sampai 102)</strong>, Morgan menceritakan pemuda bernama Roger saat ia bertugas sebagai valet parkir di Los Angeles. Roger datang memakai Porsche mewah, namun beberapa minggu kemudian beralih ke Honda tua karena Porsche-nya ditarik leasing. Pelajaran kuncinya: mobil $100.000 hanya membuktikan pemiliknya berkurang $100.000 uang tunainya (atau bertambah utang), sementara <strong>Kekayaan (Wealth)</strong> adalah uang yang <em>belum dibelanjakan</em> (ibarat diet Bill Bryson di hal. 101: langsung belanja mewah usai laba sama seperti makan dua kali lipat kalori setelah berlari).
+            </p>
+            <p>
+              Di <strong>Bab 10 (hal. 103 sampai 111)</strong>, krisis minyak 1970-an teratasi berkat efisiensi energi AS (turun 60% per dolar PDB dibanding 1950): efisiensi tabungan lebih menentukan dibanding sekadar mengejar omzet tinggi. Sedangkan di <strong>Bab 5 (hal. 60 sampai 72)</strong>, <strong>Jesse Livermore</strong> sempat mencetak $3 miliar (nilai sekarang) dalam sehari pada 29 Oktober 1929 sementara pengembang Abraham Germansky bangkrut seketika, namun rasa percaya diri berlebih dan utang membuat Livermore ikut bangkrut pada 1933. Hal serupa terjadi pada <strong>Rick Guerin</strong> yang dulunya bertiga bersama Warren Buffett dan Charlie Munger: saat kejatuhan pasar 1973 sampai 1974 (-70%), Rick yang berutang margin terpaksa menjual murah saham Berkshire-nya ke Buffett di bawah $40/lembar.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="kuis-2" class="section-block" tabindex="-1">
+      <h2>7. Uji Pemahaman Fase 2</h2>
+      <div class="quiz-box" data-quiz>
+        <div class="quiz-item" data-answer="b" data-explain="Laba Kotor (Gross Profit) = Omzet (Rp2.000.000) - HPP (Rp800.000) = Rp1.200.000. Laba Bersih baru dihitung setelah dikurangi OPEX Rp400.000, yaitu Rp800.000.">
+          <p><strong>1. Kamu menjual barang dengan total Omzet Rp2.000.000. Total HPP bahan Rp800.000, dan biaya operasional (OPEX) Rp400.000. Berapa Laba Bersihmu?</strong></p>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q2-1" value="a"> Rp1.200.000</label>
+            <label class="quiz-option"><input type="radio" name="q2-1" value="b"> Rp800.000</label>
+            <label class="quiz-option"><input type="radio" name="q2-1" value="c"> Rp1.600.000</label>
+          </div>
+          <p class="quiz-feedback" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-item" data-answer="a" data-explain="Piutang berarti penjualan sudah tercatat di Laba Rugi, tetapi uang tunainya belum masuk ke kas sehingga Cash Flow bisa negatif.">
+          <p><strong>2. Mengapa sebuah usaha mahasiswa bisa tercatat untung di kertas, tetapi uang di rekeningnya habis?</strong></p>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q2-2" value="a"> Karena mayoritas pembeli belum membayar tunai (piutang) atau uang kas habis dipakai menimbun stok barang.</label>
+            <label class="quiz-option"><input type="radio" name="q2-2" value="b"> Karena harga jualnya lebih besar daripada HPP bahan.</label>
+            <label class="quiz-option"><input type="radio" name="q2-2" value="c"> Karena biaya tetap lebih rendah dari laba kotor.</label>
+          </div>
+          <p class="quiz-feedback" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-item" data-answer="c" data-explain="Menurut Bab 5 PDF (hal. 66 sampai 67), Rick Guerin terburu-buru memakai utang margin sehingga terpaksa menjual sahamnya saat krisis 1973 sampai 1974.">
+          <p><strong>3. Apa penyebab utama Rick Guerin kalah jauh dari Warren Buffett dan Charlie Munger menurut Bab 5?</strong></p>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q2-3" value="a"> Karena Rick Guerin tidak memahami matematika saham.</label>
+            <label class="quiz-option"><input type="radio" name="q2-3" value="b"> Karena ia tidak mau berinvestasi di perusahaan publik.</label>
+            <label class="quiz-option"><input type="radio" name="q2-3" value="c"> Karena ia terburu-buru menggunakan utang margin (leverage) sehingga terkena jual paksa saat pasar anjlok.</label>
+          </div>
+          <p class="quiz-feedback" aria-live="polite"></p>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button" data-quiz-check>Periksa Jawaban Fase 2</button>
+        </div>
+        <div class="status-banner is-neutral" data-quiz-summary hidden aria-live="polite"></div>
+      </div>
+
+      <div class="phase-pager">
+        <div>
+          <button id="phase-complete-btn" class="btn btn-secondary" type="button" aria-pressed="false">Tandai Fase Ini Selesai Dipelajari</button>
+          <p id="phase-complete-status" class="muted" aria-live="polite"></p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-subtle" href="fase-1.html">Kembali ke Fase 1</a>
+          <a class="btn btn-primary" href="fase-3.html">Lanjut ke Fase 3: Validasi &amp; Compounding</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
