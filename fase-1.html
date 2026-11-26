@@ -17,6 +17,17 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Fase 1: Pola Pikir Bisnis, Masalah, dan Psikologi Uang",
+    "description": "Pengenalan inti bisnis dari keluhan pembeli, 4 kuadran peran uang (Rich Dad Poor Dad), serta bedah Pendahuluan dan Bab 1-3 The Psychology of Money.",
+    "inLanguage": "id",
+    "isPartOf": {"@type": "Course", "name": "Melek Bisnis dari Nol", "url": "https://voltakyy.github.io/melek-bisnis/"},
+    "teaches": ["Validasi Masalah Pembeli", "Aset vs Liabilitas", "Keberuntungan dan Risiko", "Batas Cukup Finansial"]
+  }
+  </script>
 </head>
 <body data-phase="fase-1">
   <a href="#main-content" class="skip-link">Langsung ke materi Fase 1</a>
@@ -115,33 +126,49 @@
           </div>
 
           <figure class="diagram-plate">
-            <svg viewBox="0 0 840 240" width="840" height="240" role="img" aria-labelledby="diag-f1-value">
-              <title id="diag-f1-value">Diagram mekanisme pertukaran nilai dalam bisnis</title>
-              <rect x="8" y="8" width="824" height="224" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+            <svg viewBox="0 0 860 250" width="860" height="250" role="img" aria-labelledby="diag-f1-value diag-f1-value-desc">
+              <title id="diag-f1-value">Skema mekanisme pertukaran nilai dan profit dalam bisnis</title>
+              <desc id="diag-f1-value-desc">Tiga tahap dari masalah nyata pembeli, solusi produk atau jasa yang memberi nilai lebih, hingga profit bersih saat harga jual melebihi biaya produksi.</desc>
+              <defs>
+                <pattern id="grid-f1a" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <circle cx="2" cy="2" r="1" fill="var(--border-subtle)"/>
+                </pattern>
+              </defs>
+              <rect x="8" y="8" width="844" height="234" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+              <rect x="8" y="8" width="844" height="234" rx="14" fill="url(#grid-f1a)" opacity="0.55"/>
 
-              <rect x="28" y="54" width="210" height="132" rx="12" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
-              <text x="44" y="82" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">1. MASALAH NYATA</text>
-              <text x="44" y="108" fill="var(--text-primary)" font-size="15" font-weight="700">Keluhan atau Keinginan</text>
-              <text x="44" y="132" fill="var(--text-secondary)" font-size="13">Sering terjadi dan bikin repot</text>
-              <text x="44" y="152" fill="var(--text-secondary)" font-size="13">Orang rela bayar biar beres</text>
+              <rect x="28" y="48" width="218" height="154" rx="12" fill="var(--bg-surface)" stroke="var(--border-control)" stroke-width="1.5"/>
+              <circle cx="52" cy="76" r="11" fill="var(--titanium-tint)" stroke="var(--titanium)"/>
+              <text x="52" y="80" text-anchor="middle" fill="var(--titanium)" font-size="11" font-weight="700">1</text>
+              <text x="72" y="80" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">MASALAH NYATA</text>
+              <text x="44" y="114" fill="var(--text-primary)" font-size="15" font-weight="700">Keluhan / Kebutuhan</text>
+              <text x="44" y="138" fill="var(--text-secondary)" font-size="13">Terjadi berulang kali</text>
+              <text x="44" y="160" fill="var(--text-secondary)" font-size="13">Orang rela bayar biar beres</text>
+              <text x="44" y="186" fill="var(--titanium)" font-size="11.5" font-weight="700">Contoh: lapar jam 22.00 kos</text>
 
-              <path d="M244 120 H298" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M291 113 L301 120 L291 127" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M252 125 H304" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M297 118 L307 125 L297 132" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-              <rect x="308" y="54" width="224" height="132" rx="12" fill="var(--bg-surface)" stroke="var(--accent)" stroke-width="1.75"/>
-              <text x="324" y="82" fill="var(--accent)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">2. SOLUSI (NILAI)</text>
-              <text x="324" y="108" fill="var(--text-primary)" font-size="15" font-weight="700">Produk atau Jasa</text>
-              <text x="324" y="132" fill="var(--text-secondary)" font-size="13">Nilai dirasakan pembeli (Rp15.000)</text>
-              <text x="324" y="152" fill="var(--text-secondary)" font-size="13">lebih tinggi dari uangnya</text>
+              <rect x="314" y="48" width="232" height="154" rx="12" fill="var(--bg-surface)" stroke="var(--accent)" stroke-width="1.75"/>
+              <circle cx="338" cy="76" r="11" fill="var(--accent-soft)" stroke="var(--accent)"/>
+              <text x="338" y="80" text-anchor="middle" fill="var(--accent)" font-size="11" font-weight="700">2</text>
+              <text x="358" y="80" fill="var(--accent)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">SOLUSI BERNILAI</text>
+              <text x="330" y="114" fill="var(--text-primary)" font-size="15" font-weight="700">Produk atau Jasa Tepat</text>
+              <text x="330" y="138" fill="var(--text-secondary)" font-size="13">Nilai dirasakan (Rp15.000)</text>
+              <text x="330" y="160" fill="var(--text-secondary)" font-size="13">lebih berharga dari uangnya</text>
+              <text x="330" y="186" fill="var(--accent)" font-size="11.5" font-weight="700">Antar ke kamar, ongkir Rp2rb</text>
 
-              <path d="M538 120 H592" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M585 113 L595 120 L585 127" fill="none" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M552 125 H604" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M597 118 L607 125 L597 132" fill="none" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-              <rect x="602" y="54" width="210" height="132" rx="12" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
-              <text x="618" y="82" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">3. PROFIT SEHAT</text>
-              <text x="618" y="108" fill="var(--text-primary)" font-size="15" font-weight="700">Harga Jual &gt; Biaya</text>
-              <text x="618" y="132" fill="var(--text-secondary)" font-size="13">Biaya bikin misal Rp9.000</text>
-              <text x="618" y="152" fill="var(--pos)" font-size="13" font-weight="700">Untung Rp6.000 per porsi</text>
+              <rect x="614" y="48" width="218" height="154" rx="12" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
+              <circle cx="638" cy="76" r="11" fill="var(--bg-surface)" stroke="var(--pos)"/>
+              <text x="638" y="80" text-anchor="middle" fill="var(--pos)" font-size="11" font-weight="700">3</text>
+              <text x="658" y="80" fill="var(--pos)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">PROFIT SEHAT</text>
+              <text x="630" y="114" fill="var(--text-primary)" font-size="15" font-weight="700">Harga Jual &gt; Biaya</text>
+              <text x="630" y="138" fill="var(--text-secondary)" font-size="13">Biaya modal misal Rp9.000</text>
+              <text x="630" y="160" fill="var(--pos)" font-size="13" font-weight="700">Surplus Rp6.000 per porsi</text>
+              <text x="630" y="186" fill="var(--text-secondary)" font-size="11.5">Pembeli senang, kas tumbuh</text>
             </svg>
             <figcaption>
               Gambar 2. Bisnis hanya bertahan jika kedua pihak sama-sama untung: pembeli merasa masalahnya selesai dengan harga pantas, dan penjual mengeluarkan biaya produksi lebih kecil daripada harga jual.
@@ -202,6 +229,59 @@
               Selain itu, <cite>Rich Dad Poor Dad</cite> membedakan <strong>aset</strong> (sesuatu yang memasukkan uang ke kantongmu, seperti bisnis yang untung, saham penghasil dividen, atau keterampilan yang menghasilkan jasa) dengan <strong>liabilitas</strong> (sesuatu yang terus menyedot uang keluar dari kantongmu, seperti cicilan kendaraan mewah untuk gaya hidup atau gadget yang nilainya terus turun). Mengerti perbedaan ini membawamu langsung ke inti buku PDF milikmu.
             </p>
           </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 320" width="860" height="320" role="img" aria-labelledby="diag-f1-quad-t diag-f1-quad-d">
+              <title id="diag-f1-quad-t">Skema Kuadran Peran Uang dan Aliran Kas Aset vs Liabilitas</title>
+              <desc id="diag-f1-quad-d">Diagram membandingkan empat kuadran penghasilan di sisi kiri dengan arah arus kas Aset masuk dan Liabilitas keluar di sisi kanan.</desc>
+              <rect x="8" y="8" width="844" height="304" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+
+              <!-- Left: 4 Quadrant Cashflow Grid -->
+              <text x="28" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">SKEMA 4 KUADRAN PERAN EKONOMI</text>
+              <line x1="230" y1="54" x2="230" y2="294" stroke="var(--border-control)" stroke-dasharray="4 4"/>
+              <line x1="28" y1="174" x2="432" y2="174" stroke="var(--border-control)" stroke-dasharray="4 4"/>
+
+              <rect x="28" y="54" width="188" height="106" rx="10" fill="var(--bg-surface)" stroke="var(--border-control)"/>
+              <text x="44" y="80" fill="var(--text-secondary)" font-size="11.5" font-weight="700">E : KARYAWAN</text>
+              <text x="44" y="106" fill="var(--text-primary)" font-size="14" font-weight="700">Jual Waktu ke 1 Bos</text>
+              <text x="44" y="130" fill="var(--text-secondary)" font-size="12">Gaji rutin, batas jam kerja</text>
+
+              <rect x="244" y="54" width="188" height="106" rx="10" fill="var(--accent-soft)" stroke="var(--accent)"/>
+              <text x="260" y="80" fill="var(--accent)" font-size="11.5" font-weight="700">B : PEMILIK SISTEM</text>
+              <text x="260" y="106" fill="var(--text-primary)" font-size="14" font-weight="700">Tim &amp; Proses Kerja</text>
+              <text x="260" y="130" fill="var(--text-secondary)" font-size="12">Melayani skala besar</text>
+
+              <rect x="28" y="188" width="188" height="106" rx="10" fill="var(--bg-surface)" stroke="var(--border-control)"/>
+              <text x="44" y="214" fill="var(--text-secondary)" font-size="11.5" font-weight="700">S : FREELANCER</text>
+              <text x="44" y="240" fill="var(--text-primary)" font-size="14" font-weight="700">Jual Skill Sendiri</text>
+              <text x="44" y="264" fill="var(--text-secondary)" font-size="12">Bebas, batas tenaga sendiri</text>
+
+              <rect x="244" y="188" width="188" height="106" rx="10" fill="var(--pos-soft)" stroke="var(--pos)"/>
+              <text x="260" y="214" fill="var(--pos)" font-size="11.5" font-weight="700">I : INVESTOR</text>
+              <text x="260" y="240" fill="var(--text-primary)" font-size="14" font-weight="700">Uang Bekerja 24 Jam</text>
+              <text x="260" y="264" fill="var(--pos)" font-size="12" font-weight="700">Compounding jangka panjang</text>
+
+              <!-- Right: Aset vs Liabilitas directional cash pipes -->
+              <text x="468" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">ARUS KAS: ASET VS LIABILITAS</text>
+
+              <rect x="468" y="54" width="364" height="112" rx="12" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
+              <text x="488" y="82" fill="var(--pos)" font-size="13" font-weight="700">ASET (Memasukkan Uang ke Dompetmu)</text>
+              <text x="488" y="108" fill="var(--text-primary)" font-size="13.5" font-weight="700">Bisnis Profit + Saham Dividen + Skill Jasa</text>
+              <path d="M488 134 H790" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M783 128 L793 134 L783 140" fill="none" stroke="var(--pos)" stroke-width="2.5"/>
+              <text x="488" y="154" fill="var(--text-secondary)" font-size="12">Menghasilkan Arus Kas Masuk berulang</text>
+
+              <rect x="468" y="182" width="364" height="112" rx="12" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.5"/>
+              <text x="488" y="210" fill="var(--neg)" font-size="13" font-weight="700">LIABILITAS (Menyedot Uang Keluar)</text>
+              <text x="488" y="236" fill="var(--text-primary)" font-size="13.5" font-weight="700">Cicilan Gengsi + Gadget Konsumtif + Kredit</text>
+              <path d="M793 262 H491" stroke="var(--neg)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M498 256 L488 262 L498 268" fill="none" stroke="var(--neg)" stroke-width="2.5"/>
+              <text x="488" y="282" fill="var(--text-secondary)" font-size="12">Menimbulkan biaya rutin keluar tiap bulan</text>
+            </svg>
+            <figcaption>
+              Gambar 2B. Peta empat peran ekonomi di sisi kiri dan arah aliran kas sesungguhnya di sisi kanan. Pebisnis dan investor fokus mengumpulkan komponen di kotak hijau (aset produktif).
+            </figcaption>
+          </figure>
         </section>
 
         <section id="ronald-vs-richard" class="section-block" tabindex="-1">
@@ -275,6 +355,41 @@
               <strong>Aturan praktis dari Bab 2 (hal. 41):</strong> Kurangi meniru mentah-mentah satu figur miliuner atau cerita sukses ekstrem di media sosial, karena makin ekstrem hasilnya, makin besar porsi keberuntungan yang tidak bisa kamu salin. Sebaliknya, pelajari <strong>pola yang luas dan berulang</strong> (misalnya: jaga modal kerja, berikan nilai jelas, dan atur risiko agar satu kegagalan tidak langsung menghapus usahamu).
             </p>
           </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 260" width="860" height="260" role="img" aria-labelledby="diag-f1-luck-t diag-f1-luck-d">
+              <title id="diag-f1-luck-t">Spektrum Keberuntungan dan Risiko Bill Gates vs Kent Evans (Bab 2 PDF)</title>
+              <desc id="diag-f1-luck-d">Garis spektrum memposisikan keberuntungan ekstrem Bill Gates di SMA Lakeside, wilayah pola luas yang bisa dipelajari di tengah, dan risiko ekstrem Kent Evans.</desc>
+              <rect x="8" y="8" width="844" height="244" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+
+              <text x="32" y="42" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">SPEKTRUM KEBERUNTUNGAN VS RISIKO (BAB 2, HAL. 32 SAMPAI 41)</text>
+
+              <!-- Spectrum track -->
+              <line x1="60" y1="112" x2="800" y2="112" stroke="var(--border-control)" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="140" cy="112" r="10" fill="var(--pos)"/>
+              <circle cx="430" cy="112" r="11" fill="var(--accent)"/>
+              <circle cx="720" cy="112" r="10" fill="var(--neg)"/>
+
+              <!-- Callout cards under points -->
+              <rect x="28" y="138" width="234" height="96" rx="10" fill="var(--pos-soft)" stroke="var(--pos)"/>
+              <text x="44" y="164" fill="var(--pos)" font-size="12" font-weight="700">KEBERUNTUNGAN LANGKA</text>
+              <text x="44" y="188" fill="var(--text-primary)" font-size="13.5" font-weight="700">Bill Gates (Lakeside 1968)</text>
+              <text x="44" y="210" fill="var(--text-secondary)" font-size="12">1 dari 300 jt remaja dgn akses komputer</text>
+
+              <rect x="290" y="138" width="280" height="96" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="308" y="164" fill="var(--accent)" font-size="12" font-weight="700">ZONA POLA YANG BISA DITIRU</text>
+              <text x="308" y="188" fill="var(--text-primary)" font-size="13.5" font-weight="700">Fokus Prinsip Luas &amp; Berulang</text>
+              <text x="308" y="210" fill="var(--text-secondary)" font-size="12">Jaga kas, hemat, margin of safety, sabar</text>
+
+              <rect x="598" y="138" width="234" height="96" rx="10" fill="var(--neg-soft)" stroke="var(--neg)"/>
+              <text x="614" y="164" fill="var(--neg)" font-size="12" font-weight="700">RISIKO EKSTREM ACAK</text>
+              <text x="614" y="188" fill="var(--text-primary)" font-size="13.5" font-weight="700">Kent Evans (Siswa Terbaik)</text>
+              <text x="614" y="210" fill="var(--text-secondary)" font-size="12">Sama jenius, gugur kecelakaan gunung</text>
+            </svg>
+            <figcaption>
+              Gambar 2C. Jangan meniru kisah sukses tunggal paling ujung kanan atau kiri; fokuslah mempelajari pola di zona tengah yang tidak bergantung pada satu kejadian kebetulan.
+            </figcaption>
+          </figure>
         </section>
 
         <section id="tidak-cukup" class="section-block" tabindex="-1">

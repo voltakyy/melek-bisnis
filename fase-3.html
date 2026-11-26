@@ -17,6 +17,17 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Fase 3: Validasi Pasar, Corong Penjualan, CAC/LTV, dan Hukum Compounding",
+    "description": "Validasi MVP dan Pre-Order, Funnel Penjualan, CAC vs LTV, Kurva Compounding Buffett vs Simons (Bab 4), Tails You Win (Bab 6), serta Bab 17 dan 18 PDF.",
+    "inLanguage": "id",
+    "isPartOf": {"@type": "Course", "name": "Melek Bisnis dari Nol", "url": "https://voltakyy.github.io/melek-bisnis/"},
+    "teaches": ["Validasi MVP", "Sales Funnel", "CAC dan LTV", "Compounding", "Tail Events"]
+  }
+  </script>
 </head>
 <body data-phase="fase-3">
   <a href="#main-content" class="skip-link">Langsung ke materi Fase 3</a>
@@ -123,6 +134,56 @@
               </aside>
             </div>
           </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 270" width="860" height="270" role="img" aria-labelledby="diag-f3-mvp-t diag-f3-mvp-d">
+              <title id="diag-f3-mvp-t">Skema Perbandingan Jalur Stok Besar vs Jalur Validasi Pre-Order (MVP)</title>
+              <desc id="diag-f3-mvp-d">Dua jalur alur kerja membandingkan risiko produksi besar sebelum ada pembeli dengan validasi DP Pre-Order yang dibiayai pelanggan.</desc>
+              <rect x="8" y="8" width="844" height="254" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+              <text x="32" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">PERBANDINGAN JALUR EKSEKUSI: STOK DULUAN VS VALIDASI PRE-ORDER</text>
+
+              <!-- Track 1: Stok Duluan (Risky) -->
+              <rect x="28" y="58" width="184" height="74" rx="10" fill="var(--bg-surface)" stroke="var(--neg)"/>
+              <text x="44" y="86" fill="var(--neg)" font-size="11.5" font-weight="700">1. KELUAR MODAL BESAR</text>
+              <text x="44" y="110" fill="var(--text-primary)" font-size="13">Cetak 200 unit dulu</text>
+
+              <path d="M218 95 H264" stroke="var(--neg)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M258 89 L268 95 L258 101" fill="none" stroke="var(--neg)" stroke-width="2.5"/>
+
+              <rect x="274" y="58" width="194" height="74" rx="10" fill="var(--bg-surface)" stroke="var(--neg)"/>
+              <text x="290" y="86" fill="var(--neg)" font-size="11.5" font-weight="700">2. BARU CARI PEMBELI</text>
+              <text x="290" y="110" fill="var(--text-primary)" font-size="13">Pasar ternyata sepi minat</text>
+
+              <path d="M474 95 H520" stroke="var(--neg)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M514 89 L524 95 L514 101" fill="none" stroke="var(--neg)" stroke-width="2.5"/>
+
+              <rect x="530" y="58" width="302" height="74" rx="10" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.5"/>
+              <text x="546" y="86" fill="var(--neg)" font-size="12" font-weight="700">HASIL: STOK MATI &amp; UANG TERTAHAN</text>
+              <text x="546" y="110" fill="var(--text-primary)" font-size="13">Modal tabungan habis, kapok bisnis</text>
+
+              <!-- Track 2: Pre-Order MVP (Safe) -->
+              <rect x="28" y="158" width="184" height="74" rx="10" fill="var(--bg-surface)" stroke="var(--pos)"/>
+              <text x="44" y="186" fill="var(--pos)" font-size="11.5" font-weight="700">1. UJI CONTOH / KONTEN</text>
+              <text x="44" y="210" fill="var(--text-primary)" font-size="13">Tawarkan konsep &amp; buka PO</text>
+
+              <path d="M218 195 H264" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M258 189 L268 195 L258 201" fill="none" stroke="var(--pos)" stroke-width="2.5"/>
+
+              <rect x="274" y="158" width="194" height="74" rx="10" fill="var(--bg-surface)" stroke="var(--pos)"/>
+              <text x="290" y="186" fill="var(--pos)" font-size="11.5" font-weight="700">2. TERIMA DP PEMBELI</text>
+              <text x="290" y="210" fill="var(--text-primary)" font-size="13">Produksi pakai uang DP</text>
+
+              <path d="M474 195 H520" stroke="var(--pos)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M514 189 L524 195 L514 201" fill="none" stroke="var(--pos)" stroke-width="2.5"/>
+
+              <rect x="530" y="158" width="302" height="74" rx="10" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
+              <text x="546" y="186" fill="var(--pos)" font-size="12" font-weight="700">HASIL: RISIKO NOL &amp; TERVALIDASI</text>
+              <text x="546" y="210" fill="var(--text-primary)" font-size="13">Jika ditolak, ubah ide tanpa rugi</text>
+            </svg>
+            <figcaption>
+              Gambar 4B. Jangan memproduksi ratusan barang berdasarkan angan-angan. Jalur MVP dan Pre-Order memastikan uang pembeli masuk lebih dulu sebelum uang bahan keluar.
+            </figcaption>
+          </figure>
         </section>
 
         <section id="unit-marketing" class="section-block" tabindex="-1">
@@ -257,6 +318,51 @@
               </aside>
             </div>
           </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 320" width="860" height="320" role="img" aria-labelledby="diag-f3-comp-t diag-f3-comp-d">
+              <title id="diag-f3-comp-t">Kurva Eksponensial Warren Buffett vs Jim Simons (Bab 4 PDF)</title>
+              <desc id="diag-f3-comp-d">Grafik menunjukkan kurva kekayaan Buffett tumbuh pelan sejak usia 10 hingga 50 tahun, lalu meledak setelah usia 65 hingga 84,5 miliar dolar dibandingkan Jim Simons yang mulai usia 50 tahun.</desc>
+              <rect x="8" y="8" width="844" height="304" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+              <text x="32" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">KURVA WAKTU VS IMBAL HASIL: BUFFETT (MULAI USIA 10) VS SIMONS (USIA 50)</text>
+
+              <!-- Axes: origin (90, 250), X max (780, 250) = Age 10 to 85 -->
+              <line x1="90" y1="60" x2="90" y2="250" stroke="var(--border-control)" stroke-width="1.5"/>
+              <line x1="90" y1="250" x2="790" y2="250" stroke="var(--border-control)" stroke-width="1.5"/>
+
+              <!-- Age 65 shaded zone (x=550 to 760) -->
+              <rect x="550" y="60" width="210" height="190" fill="var(--pos-soft)" opacity="0.65"/>
+              <line x1="550" y1="60" x2="550" y2="250" stroke="var(--pos)" stroke-dasharray="4 3" stroke-width="1.5"/>
+
+              <!-- Exponential curve: Buffett (10 -> 85) -->
+              <path d="M90 248 C 280 246, 460 236, 550 218 C 635 198, 705 140, 760 66" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="550" cy="218" r="6" fill="var(--titanium)"/>
+              <circle cx="760" cy="66" r="7" fill="var(--accent)" stroke="var(--bg-surface)" stroke-width="2"/>
+
+              <!-- Jim Simons curve (starts at Age 50 x=430 -> ends around y=195 = $21B) -->
+              <path d="M430 249 C 520 246, 620 226, 760 198" fill="none" stroke="var(--titanium)" stroke-width="2.75" stroke-dasharray="6 4"/>
+              <circle cx="430" cy="249" r="5" fill="var(--titanium)"/>
+              <circle cx="760" cy="198" r="6" fill="var(--titanium)"/>
+
+              <!-- Annotations -->
+              <rect x="570" y="72" width="176" height="58" rx="8" fill="var(--bg-surface)" stroke="var(--accent)"/>
+              <text x="582" y="96" fill="var(--accent)" font-size="12" font-weight="700">Buffett: $84,5 Miliar</text>
+              <text x="582" y="116" fill="var(--pos)" font-size="11.5" font-weight="700">$81,5M lahir pasca 65 thn</text>
+
+              <rect x="506" y="144" width="234" height="44" rx="8" fill="var(--bg-surface)" stroke="var(--titanium)"/>
+              <text x="520" y="164" fill="var(--titanium)" font-size="11.5" font-weight="700">Jim Simons (66%/thn): ~$21M</text>
+              <text x="520" y="180" fill="var(--text-secondary)" font-size="11">Kalah waktu (baru mulai usia 50)</text>
+
+              <text x="90" y="274" text-anchor="middle" fill="var(--text-secondary)" font-size="11.5">Usia 10</text>
+              <text x="275" y="274" text-anchor="middle" fill="var(--text-secondary)" font-size="11.5">Usia 30 ($1jt)</text>
+              <text x="430" y="274" text-anchor="middle" fill="var(--titanium)" font-size="11.5" font-weight="700">Usia 50</text>
+              <text x="550" y="274" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700">Usia 65</text>
+              <text x="760" y="274" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">Usia 85+</text>
+            </svg>
+            <figcaption>
+              Gambar 5B. Otak manusia terbiasa berpikir secara garis lurus, bukan eksponensial. Di paruh pertama usia kerja, peracikan terlihat lamban; kunci sebenarnya adalah tetap bertahan selama puluhan tahun agar lonjakan akhir sempat terjadi.
+            </figcaption>
+          </figure>
         </section>
 
         <section id="simulator-compounding" class="section-block" tabindex="-1">
