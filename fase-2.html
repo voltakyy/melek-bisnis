@@ -17,6 +17,17 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231D1D1F'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Fase 2: Bahasa Keuangan Dasar, HPP, BEP & Cash Flow",
+    "description": "Bedah struktur pendapatan dari Omzet hingga Laba Bersih lewat studi kasus Es Kopi Susu, kurva BEP, Cash Flow vs Profit, serta Bab 5, 9, dan 10 PDF.",
+    "inLanguage": "id",
+    "isPartOf": {"@type": "Course", "name": "Melek Bisnis dari Nol", "url": "https://voltakyy.github.io/melek-bisnis/"},
+    "teaches": ["Omzet dan HPP", "Biaya Tetap dan Variabel", "Break-Even Point (BEP)", "Profit vs Cash Flow", "Rich vs Wealth"]
+  }
+  </script>
 </head>
 <body data-phase="fase-2">
   <a href="#main-content" class="skip-link">Langsung ke materi Fase 2</a>
@@ -160,6 +171,51 @@
               Gambar 3. Aliran penyusutan uang dari Omzet (Rp1.500.000) setelah dipotong HPP bahan (Rp600.000) dan biaya operasional tetap (Rp300.000) menjadi Laba Bersih (Rp600.000).
             </figcaption>
           </figure>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 310" width="860" height="310" role="img" aria-labelledby="diag-f2-cup-t diag-f2-cup-d">
+              <title id="diag-f2-cup-t">Ilustrasi Anatomi Harga 1 Cup Es Kopi Susu Rp15.000</title>
+              <desc id="diag-f2-cup-d">Siluet gelas kopi dibagi menjadi tiga lapisan: 40 persen HPP bahan Rp6.000 di dasar, 20 persen porsi OPEX Rp3.000 di tengah, dan 40 persen laba bersih Rp6.000 di puncak.</desc>
+              <rect x="8" y="8" width="844" height="294" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+              <text x="32" y="40" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">ANATOMI PER UNIT: MEMBEDAH 1 GELAS ES KOPI SUSU (RP15.000)</text>
+
+              <!-- Coffee cup trapezoid layered silhouette on left -->
+              <!-- Lid -->
+              <rect x="80" y="64" width="180" height="16" rx="5" fill="var(--bg-subtle)" stroke="var(--border-control)" stroke-width="1.5"/>
+              <path d="M188 46 L176 64" stroke="var(--titanium)" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- Layer 1 (Top): Laba Bersih Rp6.000 (40% of 180 = 72px: y=80 to 152) -->
+              <polygon points="88,80 252,80 242,152 98,152" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="1.5"/>
+              <text x="170" y="120" text-anchor="middle" fill="var(--pos)" font-size="12.5" font-weight="700">Laba 40% (Rp6rb)</text>
+
+              <!-- Layer 2 (Mid): OPEX Rp3.000 (20% of 180 = 36px: y=152 to 188) -->
+              <polygon points="98,152 242,152 237,188 103,188" fill="var(--titanium-tint)" stroke="var(--titanium)" stroke-width="1.5"/>
+              <text x="170" y="175" text-anchor="middle" fill="var(--titanium)" font-size="11.5" font-weight="700">OPEX 20% (Rp3rb)</text>
+
+              <!-- Layer 3 (Bottom): HPP Bahan Rp6.000 (40% of 180 = 72px: y=188 to 260) -->
+              <polygon points="103,188 237,188 227,260 113,260" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.5"/>
+              <text x="170" y="228" text-anchor="middle" fill="var(--neg)" font-size="12" font-weight="700">HPP 40% (Rp6rb)</text>
+
+              <!-- Callout connector lines and explanation boxes -->
+              <line x1="247" y1="114" x2="326" y2="100" stroke="var(--pos)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <rect x="326" y="72" width="496" height="58" rx="10" fill="var(--bg-surface)" stroke="var(--pos)"/>
+              <text x="344" y="96" fill="var(--pos)" font-size="13" font-weight="700">Laba Bersih (Rp6.000 per cup) = Bagian Nyata Milik Usaha</text>
+              <text x="344" y="116" fill="var(--text-secondary)" font-size="12.5">Uang inilah yang boleh disimpan menjadi tabungan kas atau diputar ekspansi.</text>
+
+              <line x1="240" y1="170" x2="326" y2="170" stroke="var(--titanium)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <rect x="326" y="142" width="496" height="58" rx="10" fill="var(--bg-surface)" stroke="var(--titanium)"/>
+              <text x="344" y="166" fill="var(--titanium)" font-size="13" font-weight="700">Porsi Biaya Operasional / OPEX (Rp3.000 per cup)</text>
+              <text x="344" y="186" fill="var(--text-secondary)" font-size="12.5">Membagi rata beban kuota, listrik kulkas, &amp; sewa meja Rp300rb ke 100 cup.</text>
+
+              <line x1="232" y1="224" x2="326" y2="240" stroke="var(--neg)" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <rect x="326" y="212" width="496" height="58" rx="10" fill="var(--bg-surface)" stroke="var(--neg)"/>
+              <text x="344" y="236" fill="var(--neg)" font-size="13" font-weight="700">Modal Bahan / HPP Langsung (Rp6.000 per cup)</text>
+              <text x="344" y="256" fill="var(--text-secondary)" font-size="12.5">Kopi, susu, gula, es batu, dan gelas plastik; haram dianggap sebagai keuntungan.</text>
+            </svg>
+            <figcaption>
+              Gambar 3B. Membayangkan satu gelas jualan sebagai tiga lapisan terpisah mencegah jebakan pemula: dari uang Rp15.000 yang masuk tanganmu, Rp9.000 sesungguhnya milik biaya bahan dan operasional.
+            </figcaption>
+          </figure>
         </section>
 
         <section id="biaya-tetap-bep" class="section-block" tabindex="-1">
@@ -183,6 +239,56 @@
               Dari contoh kopi tadi: tiap 1 cup terjual memberikan selisih kontribusi sebesar <code class="num">Rp15.000 - Rp6.000 = Rp9.000</code> untuk mencicil biaya tetap Rp300.000. Maka <code class="num">Rp300.000 ÷ Rp9.000 = 33,33</code>. Artinya pada penjualan cup ke-34 kamu baru menutup seluruh biaya tetap, dan baru mulai untung bersih di cup ke-35!
             </p>
           </div>
+
+          <figure class="diagram-plate">
+            <svg viewBox="0 0 860 300" width="860" height="300" role="img" aria-labelledby="diag-f2-bep-t diag-f2-bep-d">
+              <title id="diag-f2-bep-t">Grafik Perpotongan Kurva Pendapatan vs Biaya pada Titik Impas (BEP)</title>
+              <desc id="diag-f2-bep-d">Koordinat dari 0 sampai 100 cup menunjukkan garis pendapatan memotong garis total biaya tepat di 34 cup senilai Rp510.000, memisahkan zona rugi di kiri dan zona untung di kanan.</desc>
+              <rect x="8" y="8" width="844" height="284" rx="14" fill="var(--bg-page)" stroke="var(--border-subtle)"/>
+              <text x="32" y="38" fill="var(--titanium)" font-size="12" font-weight="700" font-family="ui-monospace, monospace">GRAFIK TITIK IMPAS (BEP): RP300RB BIAYA TETAP + RP6RB VARIABEL VS HARGA RP15RB</text>
+
+              <!-- Axes: origin (100, 240), max X (760, 240) = 100 cups, max Y (100, 60) = Rp1.5M (180px) -->
+              <!-- Scale: X(u) = 100 + u*6.6 ; Y(rupiah_k) = 240 - (rupiah_k / 1500)*180 -->
+              <!-- u=0: Rev=0(y=240), TotalCost=300k(y=204) -->
+              <!-- u=33.3: Rev=500k(x=320, y=180), TotalCost=500k(x=320, y=180) -->
+              <!-- u=100: Rev=1500k(x=760, y=60), TotalCost=900k(x=760, y=132) -->
+              <polygon points="100,240 320,180 100,204" fill="var(--neg-soft)"/>
+              <polygon points="320,180 760,60 760,132" fill="var(--pos-soft)"/>
+
+              <line x1="100" y1="60" x2="100" y2="240" stroke="var(--border-control)" stroke-width="1.5"/>
+              <line x1="100" y1="240" x2="780" y2="240" stroke="var(--border-control)" stroke-width="1.5"/>
+
+              <!-- Fixed cost guide y=204 -->
+              <line x1="100" y1="204" x2="760" y2="204" stroke="var(--border-subtle)" stroke-dasharray="5 5" stroke-width="1.5"/>
+              <text x="92" y="208" text-anchor="end" fill="var(--text-secondary)" font-size="11.5" font-family="ui-monospace, monospace">Rp300rb</text>
+              <text x="92" y="184" text-anchor="end" fill="var(--accent)" font-size="11.5" font-weight="700" font-family="ui-monospace, monospace">Rp510rb</text>
+              <text x="92" y="66" text-anchor="end" fill="var(--pos)" font-size="11.5" font-weight="700" font-family="ui-monospace, monospace">Rp1,5jt</text>
+
+              <!-- Lines -->
+              <line x1="100" y1="204" x2="760" y2="132" stroke="var(--neg)" stroke-width="2.5"/>
+              <line x1="100" y1="240" x2="760" y2="60" stroke="var(--pos)" stroke-width="3"/>
+
+              <!-- BEP vertical marker -->
+              <line x1="320" y1="180" x2="320" y2="240" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5"/>
+              <circle cx="320" cy="180" r="7" fill="var(--accent)" stroke="var(--bg-surface)" stroke-width="2"/>
+
+              <!-- Labels -->
+              <text x="175" y="218" text-anchor="middle" fill="var(--neg)" font-size="12" font-weight="700">ZONA RUGI</text>
+              <text x="615" y="114" text-anchor="middle" fill="var(--pos)" font-size="13" font-weight="700">ZONA UNTUNG (+Rp600rb di 100 cup)</text>
+              <rect x="256" y="116" width="176" height="44" rx="8" fill="var(--bg-surface)" stroke="var(--accent)"/>
+              <text x="344" y="136" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">TITIK IMPAS (BEP)</text>
+              <text x="344" y="152" text-anchor="middle" fill="var(--text-primary)" font-size="11.5">34 Cup = Omzet Rp510rb</text>
+
+              <text x="100" y="264" text-anchor="middle" fill="var(--text-secondary)" font-size="11.5">0 cup</text>
+              <text x="320" y="264" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">34 cup (BEP)</text>
+              <text x="760" y="264" text-anchor="middle" fill="var(--pos)" font-size="12" font-weight="700">100 cup</text>
+              <text x="772" y="136" fill="var(--neg)" font-size="12" font-weight="700">Biaya Total</text>
+              <text x="772" y="64" fill="var(--pos)" font-size="12" font-weight="700">Omzet</text>
+            </svg>
+            <figcaption>
+              Gambar 3C. Di bawah 34 cup, garis Total Biaya berada di atas Omzet sehingga usahamu merugi. Begitu menembus titik BEP ke kanan, setiap gelas tambahan menyumbang laba Rp9.000 secara bersih karena biaya tetap sudah lunas.
+            </figcaption>
+          </figure>
         </section>
 
         <section id="misteri-cashflow" class="section-block" tabindex="-1">
