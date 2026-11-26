@@ -1,18 +1,17 @@
 {
   "schemaVersion": 2,
-  "name": "Melek Bisnis: Studio Paper & Hybrid Diagrams",
+  "name": "Melek Bisnis: Crisp Bento & DO/DON'T Infographic System",
   "generatedFrom": "scan",
-  "direction": "Pemvis Studio Paper aesthetic with interactive financial workbenches and HTML+CSS Hybrid Diagrams",
+  "direction": "Single-column uncluttered gallery layout with alternating bands, stadium capsules, staggered bento blocks, DO/DON'T boards, and collapsible PDF story drawers",
   "narrative": {
-    "thesis": "Render foundational business literacy and Morgan Housel's behavioral finance on warm Studio Paper surfaces with crisp ink ledger geometry and responsive HTML+CSS diagrams so text never overflows SVG containers.",
+    "thesis": "Deliver zero-to-investor business literacy cleanly on high-whitespace layouts where visual comparisons and interactive workbenches lead while full Morgan Housel PDF narratives tuck neatly inside accessible disclosure drawers.",
     "densityProfile": {
       "energy": 2,
-      "rhythm": 2,
+      "rhythm": 1,
       "motion": 1
     },
     "fonts": {
       "sans": "\"Segoe UI\", system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-      "display": "\"Segoe UI\", system-ui, -apple-system, sans-serif",
       "serif": "Georgia, \"Iowan Old Style\", Cambria, serif",
       "mono": "ui-monospace, \"Cascadia Code\", Consolas, monospace"
     }
@@ -20,84 +19,55 @@
   "tokens": {
     "ramps": {
       "light": {
-        "ground": "#F6F0E4",
-        "surface": "#FFFDF7",
-        "subtle": "#EFE5D1",
-        "borderSubtle": "#D4C8B4",
-        "borderControl": "#24221F",
-        "textPrimary": "#24221F",
-        "textSecondary": "#575148",
-        "textMuted": "#575148",
-        "titanium": "#7A540E",
-        "titaniumTint": "#FDF2D4",
-        "mustard": "#F2B544",
-        "accent": "#1B6356",
-        "accentHover": "#134A40",
-        "accentInk": "#FFFDF7",
-        "accentSoft": "#E5F2EE",
-        "positive": "#1B6356",
-        "positiveSoft": "#E5F2EE",
-        "negative": "#B43A1C",
-        "negativeSoft": "#FBE8E1",
-        "info": "#1A567A",
-        "infoSoft": "#E8F1F5"
+        "ground": "#FFFFFF",
+        "surface": "#F4F5F7",
+        "subtle": "#EAECEF",
+        "borderSubtle": "#DCDFE6",
+        "borderControl": "#8C929F",
+        "textPrimary": "#141418",
+        "textSecondary": "#4B4E57",
+        "ctaBg": "#F5B82E",
+        "ctaInk": "#141418",
+        "accent": "#184FC4",
+        "accentSoft": "#EDF3FE",
+        "positive": "#136D3E",
+        "positiveSoft": "#ECF8F1",
+        "negative": "#C8281E",
+        "negativeSoft": "#FDF0EF",
+        "titanium": "#7D5200",
+        "titaniumTint": "#FEF7E6"
       },
       "dark": {
-        "ground": "#161412",
-        "surface": "#211E1A",
-        "subtle": "#2B2621",
-        "borderSubtle": "#423C34",
-        "borderControl": "#9E9484",
-        "textPrimary": "#F4EDE0",
-        "textSecondary": "#C5BEB2",
-        "textMuted": "#C5BEB2",
-        "titanium": "#F2C464",
-        "titaniumTint": "#2C2517",
-        "mustard": "#F2C464",
-        "accent": "#5ED0BA",
-        "accentHover": "#7EE0CD",
-        "accentInk": "#161412",
-        "accentSoft": "#182D29",
-        "positive": "#5ED0BA",
-        "positiveSoft": "#182D29",
-        "negative": "#FF8A6B",
-        "negativeSoft": "#2E1A15",
-        "info": "#7DC2E8",
-        "infoSoft": "#172834"
+        "ground": "#101114",
+        "surface": "#181A1F",
+        "subtle": "#22252C",
+        "borderSubtle": "#2D313B",
+        "borderControl": "#6F7685",
+        "textPrimary": "#F3F4F6",
+        "textSecondary": "#B4B8C4",
+        "ctaBg": "#F5B82E",
+        "ctaInk": "#101114",
+        "accent": "#7AAFFF",
+        "accentSoft": "#15253E",
+        "positive": "#4ADE80",
+        "positiveSoft": "#10291B",
+        "negative": "#FF7A70",
+        "negativeSoft": "#2B1414",
+        "titanium": "#F6C453",
+        "titaniumTint": "#292111"
       }
     },
     "typography": {
-      "measure": "68ch",
-      "containerMax": "74rem",
+      "measure": "64ch",
+      "containerMax": "60rem",
       "tabularNumericSelectors": [".num", "output", "table"]
     },
     "radii": {
-      "sm": "0.55rem",
-      "md": "0.9rem",
-      "lg": "1.2rem",
+      "sm": "0.5rem",
+      "md": "0.875rem",
+      "lg": "1.125rem",
+      "bento": "1.35rem",
       "pill": "999px"
-    },
-    "shadows": {
-      "light": {
-        "btn": "2px 2px 0 rgba(36, 34, 31, 0.92)",
-        "panel": "3px 3px 0 rgba(36, 34, 31, 0.92)",
-        "elevated": "3px 3px 0 rgba(36, 34, 31, 0.92)"
-      },
-      "dark": {
-        "btn": "2px 2px 0 rgba(0, 0, 0, 0.72)",
-        "panel": "3px 3px 0 rgba(0, 0, 0, 0.72)",
-        "elevated": "3px 3px 0 rgba(0, 0, 0, 0.72)"
-      }
-    },
-    "breakpoints": {
-      "schemaTwoCol": "42rem",
-      "syllabusLedger": "48rem",
-      "workbenchGrid": "50rem",
-      "splitReading": "54rem",
-      "heroSplit": "56rem",
-      "docRail": "66rem",
-      "desktopNav": "68rem",
-      "tableContainer": "580px"
     }
   }
 }
