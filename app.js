@@ -802,6 +802,229 @@
     render();
   }
 
+  /* 12. Reusable Interactive Quiz Evaluator */
+  function initQuizzes() {
+    document.querySelectorAll('[data-quiz]').forEach((quiz) => {
+      const checkBtn = quiz.querySelector('[data-quiz-check]');
+      const summaryEl = quiz.querySelector('[data-quiz-summary]');
+      const items = [...quiz.querySelectorAll('.quiz-item')];
+      if (!checkBtn) return;
+
+      checkBtn.addEventListener('click', () => {
+        let answered = 0;
+        let correct = 0;
+
+        items.forEach((item) => {
+          const expected = item.getAttribute('data-answer');
+          const explanation = item.getAttribute('data-explain') || '';
+          const selected = item.querySelector('input[type="radio"]:checked');
+          const fb = item.querySelector('.quiz-feedback');
+          if (!fb) return;
+
+          if (!selected) {
+            fb.className = 'quiz-feedback is-wrong';
+            fb.textContent = 'Belum dijawab: pilih salah satu opsi di atas.';
+            return;
+          }
+
+          answered++;
+          if (selected.value === expected) {
+            correct++;
+            fb.className = 'quiz-feedback is-right';
+            fb.textContent = `Benar. ${explanation}`;
+          } else {
+            fb.className = 'quiz-feedback is-wrong';
+            fb.textContent = `Kurang tepat. ${explanation}`;
+          }
+        });
+
+        if (summaryEl) {
+          summaryEl.hidden = false;
+          if (answered < items.length) {
+            summaryEl.className = 'status-banner is-neutral';
+            summaryEl.textContent = `Baru ${answered} dari ${items.length} soal dijawab. Lengkapi semua soal lalu cek lagi.`;
+          } else if (correct === items.length) {
+            summaryEl.className = 'status-banner is-positive';
+            summaryEl.textContent = `Skor sempurna: ${correct} dari ${items.length} benar. Kamu siap lanjut ke fase berikutnya.`;
+          } else {
+            summaryEl.className = 'status-banner is-neutral';
+            summaryEl.textContent = `Skor sementara: ${correct} dari ${items.length} benar. Baca penjelasan pada nomor yang keliru lalu coba lagi.`;
+          }
+        }
+      });
+    });
+  }
+
+  /* 13. Kamus & 20-Chapter Explorer (Tabs + hidden="until-found" + Search/Filter) */
+  function initTabsAndSearch() {
+    const tablist = document.querySelector('[role="tablist"]');
+    let tabs = [];
+    let panels = [];
+    let selectTabFn = null;
+
+    if (tablist) {
+      tabs = [...tablist.querySelectorAll('[role="tab"]')];
+      panels = tabs.map((t) =>
+        document.querySelector(`[role="tabpanel"][aria-labelledby="${t.id}"]`)
+      );
+      const supportsUntilFound = 'onbeforematch' in HTMLElement.prototype;
+
+      selectTabFn = function selectTab(targetTab, moveFocus = false) {
+        tabs.forEach((tab, idx) => {
+          const isSelected = tab === targetTab;
+          tab.setAttribute('aria-selected', String(isSelected));
+          tab.setAttribute('tabindex', isSelected ? '0' : '-1');
+          const panel = panels[idx];
+          if (panel) {
+            if (isSelected) {
+              panel.removeAttribute('hidden');
+            } else {
+              panel.setAttribute('hidden', supportsUntilFound ? 'until-found' : '');
+            }
+          }
+        });
+        if (moveFocus) targetTab.focus();
+      };
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+          selectTabFn(tab, false);
+          if (typeof applyFilterFn === 'function') applyFilterFn();
+        });
+        tab.addEventListener('keydown', (e) => {
+          let nextIdx = null;
+          if (e.key === 'ArrowRight') nextIdx = (index + 1) % tabs.length;
+          if (e.key === 'ArrowLeft') nextIdx = (index - 1 + tabs.length) % tabs.length;
+          if (e.key === 'Home') nextIdx = 0;
+          if (e.key === 'End') nextIdx = tabs.length - 1;
+          if (nextIdx !== null) {
+            e.preventDefault();
+            selectTabFn(tabs[nextIdx], true);
+            if (typeof applyFilterFn === 'function') applyFilterFn();
+          }
+        });
+      });
+
+      document.addEventListener('beforematch', (e) => {
+        const matchedPanel = e.target.closest('[role="tabpanel"]');
+        if (!matchedPanel) return;
+        const tabId = matchedPanel.getAttribute('aria-labelledby');
+        const tab = tabId ? document.getElementById(tabId) : null;
+        if (tab && selectTabFn) selectTabFn(tab, false);
+      });
+    }
+
+    const searchInput = document.getElementById('glossary-search');
+    const filterSelect = document.getElementById('glossary-category');
+    const resetFilterBtn = document.getElementById('glossary-reset');
+    const countStatus = document.getElementById('glossary-count');
+    const emptyBox = document.getElementById('glossary-empty');
+    const tabNotice = document.getElementById('glossary-tab-notice');
+    const entries = [...document.querySelectorAll('[data-filter-item]')];
+    let applyFilterFn = null;
+
+    if (searchInput && entries.length > 0) {
+      applyFilterFn = () => {
+        const q = searchInput.value.trim().toLowerCase();
+        const cat = filterSelect ? filterSelect.value : 'all';
+        let visibleTotal = 0;
+        let visibleActive = 0;
+        let firstNonEmptyPanelTab = null;
+
+        entries.forEach((item) => {
+          const text = (item.textContent || '').toLowerCase();
+          const itemCat = item.getAttribute('data-category') || 'all';
+          const matchesQuery = !q || text.includes(q);
+          const matchesCat = cat === 'all' || itemCat === cat;
+          const show = matchesQuery && matchesCat;
+          item.hidden = !show;
+          if (show) {
+            visibleTotal++;
+            const ownerPanel = item.closest('[role="tabpanel"]');
+            if (ownerPanel) {
+              const isHiddenPanel = ownerPanel.hasAttribute('hidden');
+              if (!isHiddenPanel) {
+                visibleActive++;
+              } else if (!firstNonEmptyPanelTab) {
+                const tId = ownerPanel.getAttribute('aria-labelledby');
+                if (tId) firstNonEmptyPanelTab = document.getElementById(tId);
+              }
+            }
+          }
+        });
+
+        const isFiltering = q !== '' || cat !== 'all';
+        const visibleOther = visibleTotal - visibleActive;
+        if (countStatus) {
+          if (panels.length > 0) {
+            countStatus.textContent = isFiltering
+              ? `Ditemukan ${visibleTotal} dari ${entries.length} entri (${visibleActive} di tab aktif, ${visibleOther} di tab lainnya).`
+              : `Total ${entries.length} entri tersedia untuk disaring (27 istilah di Tab 1, 22 bagian PDF di Tab 2).`;
+          } else {
+            countStatus.textContent = `Menampilkan ${visibleTotal} dari ${entries.length} entri.`;
+          }
+        }
+        if (emptyBox) {
+          emptyBox.hidden = visibleTotal > 0;
+        }
+        if (tabNotice) {
+          if (isFiltering && visibleTotal > 0 && visibleActive === 0 && firstNonEmptyPanelTab && selectTabFn) {
+            tabNotice.hidden = false;
+            tabNotice.replaceChildren();
+            const msg = document.createTextNode(
+              `Semua ${visibleTotal} hasil yang cocok ada di tab "${firstNonEmptyPanelTab.textContent.trim()}". `
+            );
+            const jumpBtn = document.createElement('button');
+            jumpBtn.type = 'button';
+            jumpBtn.className = 'btn btn-subtle';
+            jumpBtn.textContent = 'Pindah ke Tab Tersebut';
+            jumpBtn.addEventListener('click', () => {
+              selectTabFn(firstNonEmptyPanelTab, true);
+              applyFilterFn();
+            });
+            tabNotice.append(msg, jumpBtn);
+          } else {
+            tabNotice.hidden = true;
+          }
+        }
+      };
+
+      searchInput.addEventListener('input', applyFilterFn);
+      if (filterSelect) {
+        filterSelect.addEventListener('change', () => {
+          if (selectTabFn) {
+            if (filterSelect.value === 'bab-pdf') {
+              const pdfTab = document.getElementById('tab-pdf');
+              if (pdfTab) selectTabFn(pdfTab, false);
+            } else if (filterSelect.value !== 'all') {
+              const kamusTab = document.getElementById('tab-kamus');
+              if (kamusTab) selectTabFn(kamusTab, false);
+            }
+          }
+          applyFilterFn();
+        });
+      }
+      if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          if (filterSelect) filterSelect.value = 'all';
+          applyFilterFn();
+          searchInput.focus();
+        });
+      }
+      const emptyReset = document.getElementById('glossary-empty-reset');
+      if (emptyReset) {
+        emptyReset.addEventListener('click', () => {
+          searchInput.value = '';
+          if (filterSelect) filterSelect.value = 'all';
+          applyFilterFn();
+          searchInput.focus();
+        });
+      }
+
+      applyFilterFn();
+    }
+  }
 
   document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
@@ -815,5 +1038,7 @@
     initPhase3Simulators();
     initPhase4Simulator();
     initPhase5Simulator();
+    initQuizzes();
+    initTabsAndSearch();
   });
 })();
