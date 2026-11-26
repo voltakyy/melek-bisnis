@@ -1,0 +1,8 @@
+# Temporary design scratch & OS metadata
+.DS_Store
+Thumbs.db
+*.log
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/review/
+_site/
