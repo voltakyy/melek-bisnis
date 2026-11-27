@@ -1,7 +1,7 @@
 ---
 name: melek-bisnis
-version: 4.1.0
-description: Crisp White Gallery & Deep Slate (#162133) Modular Editorial design system (asymmetric hero triad, quick finder bar, dark contrast slabs, journey dual split, high-contrast white/amber/slate trio cards, L-bracket corner cards, 3-column oval spotlight, dark elevated tiles & straddling 4-card bridges, ring/orbit schematics, underline filter tabs, DO/DON'T infographics, and collapsible PDF story drawers) for Melek Bisnis.
+version: 4.2.0
+description: Crisp White Gallery, Deep Slate (#162133), & Emerald Consulting Infographic System (7 modular green infographic boards: stepped 4-pillar watermarks, timeline spine rail, curved 4-leaf petal clusters, serpentine 6-step roadmaps, orbital stadium medallions, horizontal action strips, and 3-tier stepped pyramids) for Melek Bisnis.
 generatedBy: impeccable-document
 source: scan
 ---
@@ -46,3 +46,4 @@ Dua polaritas penuh (`color-scheme: light dark`) dengan deteksi `prefers-color-s
   - `.oval-spotlight`: Tata letak 3 kolom (langkah bernomor + bingkai SVG oval tengah + statistik bertumpuk).
   - `.dark-card-band` + `.dark-tile` & `.dark-bridge-wrap` + `.bridge-cards-4`: Kartu gelap elevasi `#1E2C44` di atas latar `#162133` serta jembatan 4 kartu menyembul.
   - `.process-chain`, `.worked-pair`, & `.check-matrix`: Alur siklus berurutan, contoh perhitungan berdampingan, dan checklist audit bernomor.
+  - `.info-sheet` (Sistem Infografik Zamrud 7 Pola): `.pillar-4` (*4-Pillar Stepped Watermark Cards*), `.spine-grid` (*Left KPI Rail + Horizontal Chevron Timeline*), `.petal-grid` (*4-Leaf Asymmetrical Quadrant Cluster*), `.serp-grid` (*Serpentine 6-Step Roadmap + KPI Rail*), `.medallion-board` (*Orbital Stadium Ring + 4 Circular Medallions*), `.strip-grid` (*Horizontal Tonal Strips + Pill Tags*), dan `.pyramid-grid` (*Stepped 3-Tier Pyramid SVG + Core Badges*).
