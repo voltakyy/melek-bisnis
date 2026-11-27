@@ -15,8 +15,8 @@
   </script>
   <title>Fase 4: Tiga Laporan Keuangan &amp; Ruang untuk Kesalahan | Melek Bisnis</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23141418'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20261127f">
-  <script defer src="app.js?v=20261127f"></script>
+  <link rel="stylesheet" href="styles.css?v=20261127g">
+  <script defer src="app.js?v=20261127g"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -228,6 +228,36 @@
           Gambar 6B. Neraca selalu seimbang karena setiap aset usaha didanai dari utang (Liabilitas) atau modal pemilik + laba ditahan (Ekuitas).
         </figcaption>
       </figure>
+
+      <div class="table-wrapper responsive-table" tabindex="0" role="region" aria-labelledby="tbl-kasus-f4-cap">
+        <table>
+          <caption id="tbl-kasus-f4-cap">Studi Kasus Angka Nyata 1 Tahun: "Kedai Kopi Kampus" (3 Laporan Saling Tersambung)</caption>
+          <thead>
+            <tr>
+              <th scope="col">Laporan Keuangan</th>
+              <th scope="col">Rincian Angka 1 Tahun Berjalan</th>
+              <th scope="col">Hasil Akhir &amp; Sambungan Kabel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1. Laba Rugi</th>
+              <td data-label="Rincian">Omzet Rp120.000.000 - HPP Rp60.000.000 - OPEX &amp; Penyusutan Rp42.000.000.</td>
+              <td data-label="Hasil Akhir"><strong>Laba Bersih Rp18.000.000</strong> -&gt; sebagian dibagi, sisanya menambah Ekuitas di Neraca.</td>
+            </tr>
+            <tr>
+              <th scope="row">2. Arus Kas Tunai</th>
+              <td data-label="Rincian">Kas Masuk Operasi +Rp16.000.000 - Beli Grinder Kas Investasi Rp4.000.000 + Saldo Awal Rp2.000.000.</td>
+              <td data-label="Hasil Akhir"><strong>Kas Tunai Akhir Rp14.000.000</strong> -&gt; wajib sama persis dengan baris Kas di Neraca.</td>
+            </tr>
+            <tr>
+              <th scope="row">3. Neraca Seimbang</th>
+              <td data-label="Rincian">Aset: Kas Rp14.000.000 + Stok Biji Rp1.500.000 + Mesin (Nilai Buku) Rp2.500.000 = <strong>Rp18.000.000</strong>.</td>
+              <td data-label="Hasil Akhir">Sisi Kanan: Utang Pemasok Rp3.000.000 + Ekuitas Pemilik Rp15.000.000 = <strong>Rp18.000.000 (Cocok!)</strong>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section id="keterkaitan-neraca" class="section-block" tabindex="-1">
@@ -295,6 +325,49 @@
         <p class="formula-note">
           Alat penyaring utama di buku <cite>The Intelligent Investor</cite> untuk memilah perusahaan berpondasi kokoh vs rapuh utang.
         </p>
+      </div>
+
+      <div class="worked-pair" aria-label="Membedah ROE asli vs utang dan contoh hitungan penyusutan">
+        <article class="worked-card">
+          <span class="worked-kicker">PERBANDINGAN ROE · EFISIENSI vs UTANG</span>
+          <p class="worked-title">ROE 30% Tidak Selalu Hebat Jika Penuh Utang</p>
+          <p class="worked-math">Toko A: Ekuitas Rp100jt, Utang Rp0, Laba Rp25jt -&gt; ROE 25% | DER 0,0x</p>
+          <p class="worked-math">Toko B: Ekuitas Rp20jt, Utang Rp80jt, Laba Rp8jt -&gt; ROE 40% | DER 4,0x!</p>
+          <p>Toko B tampak lebih tinggi ROE-nya hanya karena modal sendiri sangat tipis dan ditopang pinjaman berisiko tinggi (DER 4x).</p>
+        </article>
+        <article class="worked-card">
+          <span class="worked-kicker">PENYUSUTAN (DEPRESIASI) · KENAPA LABA != KAS</span>
+          <p class="worked-title">Beban Non-Tunai di Laba Rugi</p>
+          <p class="worked-math">Mesin Kopi Rp6.000.000 dipakai 3 tahun -&gt; Penyusutan = Rp2.000.000/tahun</p>
+          <p>Uang kas keluar penuh Rp6jt saat beli mesin di Arus Kas Investasi tahun pertama, sedangkan di Laba Rugi dicicil Rp2jt/tahun sebagai beban penyusutan tanpa uang keluar ulang.</p>
+        </article>
+      </div>
+
+      <div class="bracket-grid" aria-label="Tiga sinyal bahaya merah saat membaca laporan keuangan">
+        <article class="bracket-card">
+          <div>
+            <div class="bracket-icon">01</div>
+            <h3>Laba Kertas Naik, Kas Operasi Minus</h3>
+            <p>Penjualan hanya menjadi piutang yang sulit ditagih pembeli atau menumpuk di gudang tanpa uang tunai masuk.</p>
+          </div>
+          <span class="bracket-meta">RED FLAG · ARUS KAS OPERASI</span>
+        </article>
+        <article class="bracket-card">
+          <div>
+            <div class="bracket-icon">02</div>
+            <h3>Current Ratio &lt; 1x &amp; DER &gt; 1,5x</h3>
+            <p>Tagihan jangka pendek melebihi kas lancar. Ketika penjualan seret sebentar saja, usaha rentan gagal bayar.</p>
+          </div>
+          <span class="bracket-meta">RED FLAG · LIKUIDITAS &amp; UTANG</span>
+        </article>
+        <article class="bracket-card">
+          <div>
+            <div class="bracket-icon">03</div>
+            <h3>Margin Terus Terkikis Demi Omzet</h3>
+            <p>Omzet naik berkat promo diskon habis-habisan sementara margin laba bersih makin tipis mendekati nol.</p>
+          </div>
+          <span class="bracket-meta">RED FLAG · KUALITAS LABA</span>
+        </article>
       </div>
     </section>
 
@@ -364,10 +437,10 @@
           <p>Disarikan dari pelajaran Harry Markowitz, ketahanan kas Bill Gates, dan Tank Stalingrad di Bab 11, 13, dan 14.</p>
         </div>
         <div class="slab-grid-4">
-          <div class="slab-card"><div class="slab-card-icon">11</div><h4>Wajar &gt; Rasional</h4><p>Pilih strategi yang membuatmu tenang tidur agar bertahan lewat badai pasar 20 tahun.</p></div>
-          <div class="slab-card"><div class="slab-card-icon">13</div><h4>Kas Cadangan Bebas</h4><p>Bill Gates menjaga kas cukup untuk membayar gaji 1 tahun penuh saat startup masih muda.</p></div>
-          <div class="slab-card"><div class="slab-card-icon">!!</div><h4>Tanpa Titik Gagal Tunggal</h4><p>Hindari bergantung pada 1 mesin atau leverage 2:1 yang langsung hancur saat turun -50%.</p></div>
-          <div class="slab-card"><div class="slab-card-icon">14</div><h4>Lepas Biaya Hangus</h4><p>Jangan memaksa meneruskan model usaha buntu hanya karena dulu terlanjur keluar modal.</p></div>
+          <div class="slab-card"><div class="slab-card-icon">11</div><p class="slab-card-title">Wajar &gt; Rasional</p><p>Pilih strategi yang membuatmu tenang tidur agar bertahan lewat badai pasar 20 tahun.</p></div>
+          <div class="slab-card"><div class="slab-card-icon">13</div><p class="slab-card-title">Kas Cadangan Bebas</p><p>Bill Gates menjaga kas cukup untuk membayar gaji 1 tahun penuh saat startup masih muda.</p></div>
+          <div class="slab-card"><div class="slab-card-icon">!!</div><p class="slab-card-title">Tanpa Titik Gagal Tunggal</p><p>Hindari bergantung pada 1 mesin atau leverage 2:1 yang langsung hancur saat turun -50%.</p></div>
+          <div class="slab-card"><div class="slab-card-icon">14</div><p class="slab-card-title">Lepas Biaya Hangus</p><p>Jangan memaksa meneruskan model usaha buntu hanya karena dulu terlanjur keluar modal.</p></div>
         </div>
       </div>
 

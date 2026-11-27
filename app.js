@@ -1008,10 +1008,14 @@
         const isFiltering = q !== '' || cat !== 'all';
         const visibleOther = visibleTotal - visibleActive;
         if (countStatus) {
+          const kamusPanel = document.getElementById('panel-kamus');
+          const pdfPanel = document.getElementById('panel-pdf');
+          const kamusCount = kamusPanel ? kamusPanel.querySelectorAll('[data-filter-item]').length : entries.length;
+          const pdfCount = pdfPanel ? pdfPanel.querySelectorAll('[data-filter-item]').length : 0;
           if (panels.length > 0) {
             countStatus.textContent = isFiltering
               ? `Ditemukan ${visibleTotal} dari ${entries.length} entri (${visibleActive} di tab aktif, ${visibleOther} di tab lainnya).`
-              : `Total ${entries.length} entri tersedia untuk disaring (27 istilah di Tab 1, 22 bagian PDF di Tab 2).`;
+              : `Total ${entries.length} entri tersedia untuk disaring (${kamusCount} istilah di Tab 1, ${pdfCount} bagian PDF di Tab 2).`;
           } else {
             countStatus.textContent = `Menampilkan ${visibleTotal} dari ${entries.length} entri.`;
           }
