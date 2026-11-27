@@ -15,8 +15,8 @@
   </script>
   <title>Kamus Istilah Bisnis, Indeks 20 Bab PDF &amp; Peta 4 Buku | Melek Bisnis</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23141418'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="styles.css?v=20261127e">
+  <script defer src="app.js?v=20261127e"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -128,25 +128,31 @@
     <section aria-labelledby="search-heading">
       <h2 id="search-heading" class="visually-hidden">Pencarian Kamus dan Bab PDF</h2>
       <search>
-        <div class="search-bar">
-          <div class="field-wrap">
-            <label for="glossary-search">Cari Istilah Bisnis, Nama Tokoh, atau Bab PDF</label>
-            <input id="glossary-search" class="text-input" type="search" placeholder="Contoh: Cash Flow, HPP, BEP, Stalingrad, Graham, atau hal. 55...">
+        <div class="finder-strip" aria-label="Panel pencari istilah dan bab PDF">
+          <div class="finder-strip-head">
+            <span class="dark-pill-bar-sub">FILTER LANGSUNG · 27 ISTILAH + 22 BAGIAN PDF</span>
+            <span class="finder-strip-sub">Ketik konsep bisnis, tokoh PDF, atau halaman untuk menyaring seketika.</span>
           </div>
+          <div class="finder-form">
+            <div>
+              <label for="glossary-search">Cari Istilah Bisnis, Nama Tokoh, atau Bab PDF</label>
+              <input id="glossary-search" class="text-input" type="search" placeholder="Contoh: Cash Flow, HPP, BEP, Stalingrad, Graham, atau hal. 55...">
+            </div>
 
-          <div class="field-wrap">
-            <label for="glossary-category">Saring Kelompok Materi</label>
-            <select id="glossary-category" class="select-input">
-              <option value="all">Semua Kelompok (Istilah + 20 Bab PDF)</option>
-              <option value="keuangan">Keuangan Dasar &amp; Arus Kas</option>
-              <option value="pemasaran">Validasi Pasar &amp; Unit Ekonomi</option>
-              <option value="laporan">Tiga Laporan &amp; Rasio Neraca</option>
-              <option value="investasi">Nilai, Moat &amp; Investasi</option>
-              <option value="bab-pdf">Indeks 20 Bab + Postscript PDF</option>
-            </select>
+            <div>
+              <label for="glossary-category">Saring Kelompok Materi</label>
+              <select id="glossary-category" class="select-input">
+                <option value="all">Semua Kelompok (Istilah + 20 Bab PDF)</option>
+                <option value="keuangan">Keuangan Dasar &amp; Arus Kas</option>
+                <option value="pemasaran">Validasi Pasar &amp; Unit Ekonomi</option>
+                <option value="laporan">Tiga Laporan &amp; Rasio Neraca</option>
+                <option value="investasi">Nilai, Moat &amp; Investasi</option>
+                <option value="bab-pdf">Indeks 20 Bab + Postscript PDF</option>
+              </select>
+            </div>
+
+            <button id="glossary-reset" class="btn btn-primary" type="button">Reset Filter</button>
           </div>
-
-          <button id="glossary-reset" class="btn btn-secondary" type="button">Reset Filter</button>
         </div>
       </search>
       <p id="glossary-count" class="muted" aria-live="polite"></p>

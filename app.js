@@ -336,7 +336,7 @@
         if (indexSummary) {
           if (doneCount === 0) {
             indexSummary.textContent =
-              'Belum ada fase yang ditandai selesai. Mulai dari Fase 1 dan gunakan tombol "Tandai Fase Ini Selesai" di akhir halaman.';
+              'Belum ada fase selesai. Mulai Fase 1 dan tandai selesai di akhir halaman.';
           } else {
             indexSummary.textContent = `${doneCount} dari ${phases.length} fase telah kamu selesaikan.`;
           }
@@ -1074,7 +1074,78 @@
         });
       }
 
+      const params = new URLSearchParams(window.location.search);
+      const qParam = params.get('q');
+      if (qParam) {
+        searchInput.value = qParam;
+      }
+
       applyFilterFn();
+
+      if (qParam && selectTabFn) {
+        const activeTab = tabs.find((t) => t.getAttribute('aria-selected') === 'true');
+        const activePanel = activeTab ? document.getElementById(activeTab.getAttribute('aria-labelledby') || '') : null;
+        const activeVisible = activePanel ? activePanel.querySelectorAll('[data-filter-item]:not([hidden])').length : 0;
+        if (activeVisible === 0) {
+          const fallbackBtn = tabNotice?.querySelector('button');
+          if (fallbackBtn) fallbackBtn.click();
+        }
+      }
+    }
+  }
+
+  /* 14. Quick Finder strip & Department Filter Tabs across pages */
+  function initStructureEnhancements() {
+    document.querySelectorAll('[data-quick-finder]').forEach((form) => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = form.querySelector('[data-qf-query]');
+        const targetSelect = form.querySelector('[data-qf-target]');
+        const q = (input?.value || '').trim();
+        const target = targetSelect?.value || 'kamus-pdf.html';
+
+        if (target !== 'kamus-pdf.html' && !q) {
+          window.location.href = target;
+          return;
+        }
+        const url = q ? `kamus-pdf.html?q=${encodeURIComponent(q)}` : target;
+        window.location.href = url;
+      });
+    });
+
+    const deptTablist = document.querySelector('[data-dept-tablist]');
+    const trackCards = [...document.querySelectorAll('[data-track-card]')];
+    if (deptTablist && trackCards.length > 0) {
+      const deptTabs = [...deptTablist.querySelectorAll('[role="tab"]')];
+      const selectDeptTab = (tab, moveFocus) => {
+        const track = tab.getAttribute('data-track-filter') || 'all';
+        deptTabs.forEach((t) => {
+          const active = t === tab;
+          t.setAttribute('aria-selected', String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        trackCards.forEach((card) => {
+          const cardTrack = card.getAttribute('data-track-card') || 'all';
+          card.hidden = track !== 'all' && cardTrack !== track;
+        });
+        tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        if (moveFocus) tab.focus();
+      };
+
+      deptTabs.forEach((tab, idx) => {
+        tab.addEventListener('click', () => selectDeptTab(tab, false));
+        tab.addEventListener('keydown', (e) => {
+          let next = null;
+          if (e.key === 'ArrowRight') next = (idx + 1) % deptTabs.length;
+          if (e.key === 'ArrowLeft') next = (idx - 1 + deptTabs.length) % deptTabs.length;
+          if (e.key === 'Home') next = 0;
+          if (e.key === 'End') next = deptTabs.length - 1;
+          if (next !== null) {
+            e.preventDefault();
+            selectDeptTab(deptTabs[next], true);
+          }
+        });
+      });
     }
   }
 
@@ -1092,5 +1163,6 @@
     initPhase5Simulator();
     initQuizzes();
     initTabsAndSearch();
+    initStructureEnhancements();
   });
 })();

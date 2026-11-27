@@ -15,8 +15,8 @@
   </script>
   <title>Melek Bisnis dari Nol | Peta Kurikulum &amp; Psikologi Uang</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23141418'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="styles.css?v=20261127e">
+  <script defer src="app.js?v=20261127e"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,11 +81,22 @@
   </header>
 
   <main id="main-content" tabindex="-1">
-    <!-- BAND 1: CLEAN HERO + PROOF BAR (Surface Band) -->
+    <!-- BAND 1: ASYMMETRIC TRIAD HERO + KPI STACK + DARK QUICK FINDER (Surface Band) -->
     <section class="band band-surface" aria-label="Pembuka kurikulum">
       <div class="container">
-        <div class="hero-split">
-          <figure class="hero-visual">
+        <div class="hero-triad">
+          <div>
+            <h1>Belajar <span class="title-accent">Bisnis &amp; Psikologi Uang</span> dari Nol</h1>
+            <p class="hero-lead">
+              Kurikulum sistematis untuk mahasiswa yang belum menyentuh cash flow, HPP, atau neraca. Lengkap dengan perbandingan visual <strong>DO vs DON'T</strong>, simulator hitung langsung, dan seluruh 20 Bab <cite>The Psychology of Money</cite>.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="fase-1.html">Mulai Belajar dari Fase 1</a>
+              <a class="btn btn-secondary" href="kamus-pdf.html">Buka Kamus</a>
+            </div>
+          </div>
+
+          <figure class="framed-showcase">
             <svg viewBox="0 0 480 340" width="480" height="340" role="img" aria-labelledby="hero-wire-t hero-wire-d">
               <title id="hero-wire-t">Diagram perjalanan belajar bisnis dari masalah nyata ke investasi</title>
               <desc id="hero-wire-d">Kerangka bersih memperlihatkan lima langkah naik dari Fase 1 Pola Pikir, Fase 2 Cash Flow, Fase 3 Validasi, Fase 4 Laporan, hingga Fase 5 Investasi dengan grafik pertumbuhan hijau.</desc>
@@ -110,18 +121,26 @@
               <text x="295" y="254" text-anchor="middle" fill="var(--pos)" font-size="11" font-weight="700" font-family="ui-monospace, monospace">F4</text>
               <text x="374" y="254" text-anchor="middle" fill="var(--cta-ink)" font-size="11.5" font-weight="800" font-family="ui-monospace, monospace">F5</text>
             </svg>
+            <a class="dark-pill-bar" href="fase-1.html">
+              <span>Alur 5 Fase Bisnis ke Saham</span>
+              <span class="dark-pill-bar-sub">FASE 01-05</span>
+            </a>
           </figure>
 
-          <div>
-            <h1>Belajar <span class="title-accent">Bisnis &amp; Psikologi Uang</span> dari Nol</h1>
-            <p class="hero-lead">
-              Alur belajar sistematis untuk mahasiswa yang belum menyentuh cash flow, HPP, atau neraca. Lengkap dengan perbandingan visual <strong>DO vs DON'T</strong>, simulator hitung langsung, dan seluruh 20 Bab buku <cite>The Psychology of Money</cite>.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="fase-1.html">Mulai Belajar dari Fase 1</a>
-              <a class="btn btn-secondary" href="kamus-pdf.html">Buka Kamus &amp; 20 Bab</a>
+          <aside class="metric-stack" aria-label="Ringkasan cakupan kurikulum">
+            <div class="metric-stack-card">
+              <span class="metric-stack-val">5 Fase</span>
+              <span class="metric-stack-label">Urutan Belajar Terstruktur</span>
             </div>
-          </div>
+            <div class="metric-stack-card">
+              <span class="metric-stack-val">22 Bagian</span>
+              <span class="metric-stack-label">PDF Hal. 10 sampai 235</span>
+            </div>
+            <div class="metric-stack-card">
+              <span class="metric-stack-val">6 + 5</span>
+              <span class="metric-stack-label">Simulator &amp; Kuis Interaktif</span>
+            </div>
+          </aside>
         </div>
 
         <div class="bead-rail" aria-label="Lompat cepat 5 fase">
@@ -132,49 +151,123 @@
           <a class="bead-step" href="fase-5.html"><span class="bead-dot">05</span><span>Investasi</span></a>
         </div>
 
-        <div class="proof-strip" style="margin-block: 1.25rem 0;" aria-label="Ringkasan materi dan progres belajar">
+        <div class="finder-strip" aria-label="Pencari cepat istilah bisnis dan fase">
+          <div class="finder-strip-head">
+            <p class="finder-strip-title">Cari Istilah Bisnis atau Lompat ke Fase</p>
+            <span class="finder-strip-sub">Ketik kata kunci (mis. HPP, BEP, Stalingrad, MoS) atau buka halaman fase langsung.</span>
+          </div>
+          <form id="quick-finder-form" class="finder-form" data-quick-finder>
+            <div>
+              <label for="qf-query">Kata Kunci Konsep / Tokoh PDF</label>
+              <input id="qf-query" data-qf-query class="text-input" type="search" placeholder="Misal: HPP, Piutang, Buffett, Stalingrad...">
+            </div>
+            <div>
+              <label for="qf-target">Tujuan Belajar</label>
+              <select id="qf-target" data-qf-target class="select-input">
+                <option value="kamus-pdf.html">Kamus &amp; Indeks 20 Bab PDF</option>
+                <option value="fase-1.html">Fase 1: Pola Pikir &amp; Bab 1 s.d. 3</option>
+                <option value="fase-2.html">Fase 2: HPP, BEP &amp; Cash Flow</option>
+                <option value="fase-3.html">Fase 3: MVP, CAC/LTV &amp; Compounding</option>
+                <option value="fase-4.html">Fase 4: 3 Laporan &amp; Ruang Kesalahan</option>
+                <option value="fase-5.html">Fase 5: Economic Moat &amp; Graham</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Cari &amp; Buka</button>
+          </form>
+        </div>
+
+        <div class="proof-strip" style="margin-block: 1.15rem 0;" aria-label="Ringkasan materi dan progres belajar">
           <div class="proof-stats">
-            <span><strong>5 Fase</strong> Terstruktur</span>
-            <span><strong>PDF Hal. 10 sampai 235</strong> Tercakup Penuh</span>
-            <span><strong>6 Simulator</strong> + <strong>5 Kuis</strong></span>
+            <span><strong>Status Progres:</strong> Tersimpan otomatis di browser lokal</span>
           </div>
           <div class="proof-progress">
-            <p id="progress-summary">Belum ada fase yang ditandai selesai.</p>
+            <p id="progress-summary">Belum ada fase selesai. Mulai Fase 1 dan tandai selesai di akhir halaman.</p>
             <button id="reset-progress-btn" class="btn btn-subtle" type="button">Reset Progres</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- BAND 2: CENTERED WHY-FIRST TRIO (Muted Band matching Prototype) -->
+    <!-- BAND 2: ASYMMETRIC MOSAIC + DARK CONTRAST SLAB ("Why Choose" Pattern) -->
     <section class="band band-muted" aria-labelledby="trio-why-title">
       <div class="container">
         <div class="section-head-centered">
-          <h2 id="trio-why-title">Tiga Pelajaran Paling Penting Saat Baru Mulai</h2>
-          <p class="muted">Fondasi pola pikir sebelum menyentuh rumus akuntansi dan analisis saham.</p>
+          <h2 id="trio-why-title">Sorotan Empat Pilar Kurikulum &amp; Pelajaran Inti</h2>
+          <p class="muted">Komposisi kartu terstruktur dari pola pikir usaha kampus sampai cara kerja investasi jangka panjang.</p>
         </div>
 
-        <div class="icon-trio">
-          <div class="icon-trio-item">
-            <div class="trio-icon-badge" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="var(--neg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Omzet Bukan Profit</h3>
-            <p>Uang masuk kotor harus dikurangi HPP bahan dan OPEX lebih dulu sebelum dianggap keuntungan pribadi.</p>
+        <div class="asymmetric-mosaic" aria-label="Peta asimetris empat pilar utama">
+          <div class="mosaic-portraits">
+            <article class="mosaic-portrait-card">
+              <div>
+                <span class="schema-card-code">FASE 01 · POLA PIKIR</span>
+                <h3>Masalah ke Profit</h3>
+                <p>Berhenti menebak produk keren; validasi keluhan nyata pembeli dan 4 peran ekonomi.</p>
+              </div>
+              <a class="dark-pill-bar" href="fase-1.html"><span>Fase 1</span><span class="dark-pill-bar-sub">Bab 1-3</span></a>
+            </article>
+            <article class="mosaic-portrait-card">
+              <div>
+                <span class="schema-card-code">FASE 02 · KAS TUNAI</span>
+                <h3>HPP Kopi &amp; BEP</h3>
+                <p>Pecah omzet Rp1,5jt jadi laba bersih nyata dan cegah bocor karena kasbon piutang.</p>
+              </div>
+              <a class="dark-pill-bar" href="fase-2.html"><span>Fase 2</span><span class="dark-pill-bar-sub">Bab 5, 9, 10</span></a>
+            </article>
           </div>
-          <div class="icon-trio-item">
-            <div class="trio-icon-badge" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8" fill="none" stroke="var(--pos)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Laris Belum Tentu Aman</h3>
-            <p>Penjualan besar lewat kasbon piutang atau stok numpuk bisa bikin kas tunai habis walau catatan untung.</p>
+
+          <div class="mosaic-landscapes">
+            <article class="mosaic-wide-card">
+              <div>
+                <span class="schema-card-code">FASE 03 · PERTUMBUHAN</span>
+                <h3>MVP Pre-Order, Rasio LTV &gt;= 3x CAC &amp; Compounding Waktu</h3>
+                <p>Uji jual sebelum produksi massal dan pahami mengapa durasi bertahan mengalahkan persen imbal hasil sesaat.</p>
+              </div>
+              <a class="dark-pill-bar" href="fase-3.html"><span>Buka Fase 3: Validasi &amp; Bola Salju</span><span class="dark-pill-bar-sub">Bab 4, 6, 17, 18</span></a>
+            </article>
+            <article class="mosaic-wide-card">
+              <div>
+                <span class="schema-card-code">FASE 04 &amp; 05 · KETAHANAN NERACA</span>
+                <h3>3 Laporan Keuangan, Ruang Kesalahan &amp; Economic Moat</h3>
+                <p>Baca sambungan Laba Rugi, Arus Kas, Neraca lalu ukur Diskon Margin of Safety sebelum membeli saham.</p>
+              </div>
+              <a class="dark-pill-bar" href="fase-4.html"><span>Buka Fase 4 &amp; Fase 5</span><span class="dark-pill-bar-sub">Bab 7-20</span></a>
+            </article>
           </div>
-          <div class="icon-trio-item">
-            <div class="trio-icon-badge" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="var(--accent)" stroke-width="2"/><path d="M9 12l2 2 4-4" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+
+        <div class="mosaic-stat-banner">
+          <span class="mosaic-stat-lead">235 HALAMAN PDF TERCAKUP PENUH</span>
+          <span>Seluruh Pendahuluan, Bab 1 sampai 20, dan Postscript terintegrasi ke studi kasus usaha mahasiswa.</span>
+          <a class="btn btn-primary" href="kamus-pdf.html">Lihat Indeks 20 Bab</a>
+        </div>
+
+        <div class="contrast-slab" aria-label="Empat prinsip kunci agar pemula tidak bangkrut">
+          <div class="contrast-slab-head">
+            <h2>Empat Prinsip Anti-Bangkrut Sebelum Mulai</h2>
+            <p>Ringkasan pelajaran inti sebelum menyentuh rumus akuntansi dan valuasi perusahaan.</p>
+          </div>
+          <div class="slab-grid-4">
+            <div class="slab-card">
+              <div class="slab-card-icon">01</div>
+              <p class="slab-card-title">Omzet Bukan Profit</p>
+              <p>Uang masuk kotor harus dikurangi HPP bahan dan OPEX tetap lebih dulu sebelum dianggap hasil bersih.</p>
             </div>
-            <h3>Perilaku Mengalahkan Gelar</h3>
-            <p>Dari Pendahuluan sampai Bab 20 PDF, kesabaran dan cadangan kas menentukan hasil lebih besar daripada rumus rumit.</p>
+            <div class="slab-card">
+              <div class="slab-card-icon">02</div>
+              <p class="slab-card-title">Laris Bisa Kehabisan Kas</p>
+              <p>Penjualan besar lewat piutang kasbon atau stok berlebih membuat rekening kosong walau catatan untung.</p>
+            </div>
+            <div class="slab-card">
+              <div class="slab-card-icon">03</div>
+              <p class="slab-card-title">Wajar Kalahkan Rasional</p>
+              <p>Strategi yang membuatmu bisa tidur tenang bertahan lebih lama daripada hitungan Excel paling agresif.</p>
+            </div>
+            <div class="slab-card">
+              <div class="slab-card-icon">04</div>
+              <p class="slab-card-title">Waktu Menyalip Persen</p>
+              <p>Compounding 22%/tahun selama puluhan tahun mengalahkan 66%/tahun yang dimulai terlambat.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -263,8 +356,15 @@
           </div>
         </div>
 
+        <div class="dept-tabs" role="tablist" data-dept-tablist aria-label="Saring modul berdasarkan kelompok topik">
+          <button type="button" role="tab" aria-selected="true" tabindex="0" data-track-filter="all">Semua Modul (6)</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" data-track-filter="fondasi">Mindset &amp; Kas (F1-F2)</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" data-track-filter="operasi">Validasi &amp; Laporan (F3-F4)</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" data-track-filter="nilai">Investasi &amp; Kamus (F5)</button>
+        </div>
+
         <div class="schema-gallery">
-          <article class="schema-card">
+          <article class="schema-card" data-track-card="fondasi">
             <svg viewBox="0 0 320 120" width="320" height="120" role="img" aria-labelledby="thumb-f1-t thumb-f1-d">
               <title id="thumb-f1-t">Skema Fase 1: 4 Kuadran Peran Ekonomi</title>
               <desc id="thumb-f1-d">Empat kotak berpasangan menunjukkan transisi ke pemilik sistem dan investor.</desc>
@@ -282,7 +382,7 @@
             <p>Menemukan masalah nyata pembeli, 4 kuadran aset vs liabilitas, serta Ronald Read vs Richard Fuscone.</p>
           </article>
 
-          <article class="schema-card">
+          <article class="schema-card" data-track-card="fondasi">
             <svg viewBox="0 0 320 120" width="320" height="120" role="img" aria-labelledby="thumb-f2-t thumb-f2-d">
               <title id="thumb-f2-t">Skema Fase 2: Titik Impas BEP</title>
               <desc id="thumb-f2-d">Garis pendapatan memotong garis total biaya di titik BEP.</desc>
@@ -298,7 +398,7 @@
             <p>Bedah 100 cup Es Kopi Susu, hitung balik modal BEP, dan mengapa toko ramai bisa kehabisan kas tunai.</p>
           </article>
 
-          <article class="schema-card">
+          <article class="schema-card" data-track-card="operasi">
             <svg viewBox="0 0 320 120" width="320" height="120" role="img" aria-labelledby="thumb-f3-t thumb-f3-d">
               <title id="thumb-f3-t">Skema Fase 3: Kurva Eksponensial Compounding</title>
               <desc id="thumb-f3-d">Kurva pertumbuhan menanjak tajam pada paruh waktu akhir.</desc>
@@ -312,7 +412,7 @@
             <p>Uji jual lewat Pre-Order, rasio LTV vs CAC, efek bola salju Warren Buffett, dan Ekor Panjang.</p>
           </article>
 
-          <article class="schema-card">
+          <article class="schema-card" data-track-card="operasi">
             <svg viewBox="0 0 320 120" width="320" height="120" role="img" aria-labelledby="thumb-f4-t thumb-f4-d">
               <title id="thumb-f4-t">Skema Fase 4: Timbangan Neraca Seimbang</title>
               <desc id="thumb-f4-d">Piringan kiri Total Aset seimbang dengan piringan kanan Utang dan Ekuitas.</desc>
@@ -329,7 +429,7 @@
             <p>Membaca Laba Rugi, Arus Kas, dan Neraca beserta rasio Current Ratio, DER, ROE, serta Tank Stalingrad.</p>
           </article>
 
-          <article class="schema-card">
+          <article class="schema-card" data-track-card="nilai">
             <svg viewBox="0 0 320 120" width="320" height="120" role="img" aria-labelledby="thumb-f5-t thumb-f5-d">
               <title id="thumb-f5-t">Skema Fase 5: Benteng Economic Moat</title>
               <desc id="thumb-f5-d">Bisnis inti di tengah dikelilingi parit moat biru dan diskon keamanan.</desc>
@@ -344,7 +444,7 @@
             <p>Harga vs Nilai Intrinsik, Margin of Safety, volatilitas sebagai tiket masuk, serta jembatan ke Graham.</p>
           </article>
 
-          <article class="schema-card">
+          <article class="schema-card" data-track-card="nilai">
             <svg viewBox="0 0 320 120" width="320" height="120" role="img" aria-labelledby="thumb-kam-t thumb-kam-d">
               <title id="thumb-kam-t">Skema Kamus: Tangga 4 Buku</title>
               <desc id="thumb-kam-d">Empat tangga urutan membaca mulai dari Rich Dad sampai Security Analysis.</desc>
@@ -373,38 +473,59 @@
       </div>
     </section>
 
-    <!-- BAND 4: SPOTLIGHT CTA + COLLAPSIBLE PDF TRANSLATION DECODER (Surface Band) -->
+    <!-- BAND 4: JOURNEY BOOK BRIDGE + DARK CTA BANNER + COLLAPSIBLE PDF DECODER (Surface Band) -->
     <section class="band band-surface" aria-labelledby="spotlight-title">
       <div class="container">
-        <div class="zigzag-row is-reversed">
-          <figure class="zigzag-visual">
-            <svg viewBox="0 0 320 200" width="320" height="200" role="img" aria-labelledby="spot-wire-t spot-wire-d">
-              <title id="spot-wire-t">Pratinjau halaman Kamus Bisnis dan Indeks 20 Bab PDF</title>
-              <desc id="spot-wire-d">Kerangka browser dengan kotak pencarian di atas, tiga tab kategori, dan tiga baris hasil istilah rapi.</desc>
-              <rect x="14" y="14" width="292" height="172" rx="10" fill="var(--bg-page)" stroke="var(--ink-frame)" stroke-width="1.5"/>
-              <rect x="30" y="32" width="204" height="24" rx="5" fill="var(--bg-surface)" stroke="var(--border-control)"/>
-              <rect x="242" y="32" width="48" height="24" rx="5" fill="var(--cta-bg)" stroke="var(--ink-frame)"/>
-              <line x1="30" y1="72" x2="96" y2="72" stroke="var(--neg)" stroke-width="2.5"/>
-              <line x1="110" y1="72" x2="176" y2="72" stroke="var(--border-subtle)" stroke-width="2"/>
-              <line x1="190" y1="72" x2="260" y2="72" stroke="var(--border-subtle)" stroke-width="2"/>
-              <rect x="30" y="90" width="260" height="22" rx="4" fill="var(--bg-surface)"/>
-              <rect x="30" y="120" width="260" height="22" rx="4" fill="var(--bg-surface)"/>
-              <rect x="30" y="150" width="210" height="22" rx="4" fill="var(--bg-surface)"/>
-            </svg>
-          </figure>
+        <div class="journey-split" aria-label="Urutan tangga baca empat buku dan kamus PDF">
+          <article class="journey-card is-pos">
+            <div>
+              <span class="schema-card-code">JALUR MEMBACA BUKU</span>
+              <h3>Dari Kehidupan Kos ke Valuasi Saham</h3>
+              <p>Mulai dari <cite>Rich Dad Poor Dad</cite> dan <cite>The Psychology of Money</cite>, baru melangkah ke <cite>The Intelligent Investor</cite> serta <cite>Security Analysis</cite>.</p>
+            </div>
+            <a class="dark-pill-bar" href="fase-5.html"><span>Lihat Peta 4 Buku</span><span class="dark-pill-bar-sub">FASE 05</span></a>
+          </article>
 
-          <div class="prose">
-            <h2 id="spotlight-title">Bingung dengan Terjemahan PDF yang Terasa Aneh?</h2>
+          <div class="journey-center-stats">
+            <div class="journey-stat-box">
+              <span class="journey-stat-num">27 Istilah</span>
+              <span class="journey-stat-cap">Kamus Bisnis &amp; Rasio A sampai Z</span>
+            </div>
+            <div class="journey-stat-box">
+              <span class="journey-stat-num">8 Istilah</span>
+              <span class="journey-stat-cap">Dekoder Terjemahan Unik PDF</span>
+            </div>
+          </div>
+
+          <article class="journey-card">
+            <div>
+              <span class="schema-card-code">DEKODER TERJEMAHAN PDF</span>
+              <h3>Menjawab Istilah Aneh seperti "Baca Mobil"</h3>
+              <p>Di PDF terjemahan muncul frasa membingungkan seperti <em>"Telepon Api"</em> atau <em>"Jamsostek"</em>. Kamus kami memetakan maksud aslinya beserta halaman tepatnya.</p>
+            </div>
+            <a class="dark-pill-bar" href="kamus-pdf.html"><span>Buka Dekoder PDF</span><span class="dark-pill-bar-sub">KAMUS</span></a>
+          </article>
+        </div>
+
+        <div class="cta-dark-banner" aria-labelledby="spotlight-title">
+          <div>
+            <h2 id="spotlight-title">Siap Memulai dari Masalah Nyata Pembeli?</h2>
             <p>
-              Di PDF terjemahan yang kamu punya muncul istilah unik seperti <em>"Baca mobil"</em>, <em>"Jamsostek"</em>, <em>"Telepon Api"</em>, dan <em>"Ruang ibadah untuk kesalahan"</em>. Kamus interaktif merapikan seluruhnya lengkap dengan nomor halaman aslinya.
+              Bangun fondasi usaha dari 100 cup kopi, uji dengan Pre-Order tanpa rugi stok, lalu amankan masa depanmu lewat batas wajar dan Margin of Safety.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="kamus-pdf.html">Buka Kamus &amp; Dekoder PDF</a>
+              <a class="btn btn-primary" href="fase-1.html">Mulai Fase 1 Sekarang</a>
+              <a class="btn btn-secondary" href="kamus-pdf.html">Buka Kamus &amp; Dekoder PDF</a>
             </div>
+          </div>
+          <div class="cta-dark-preview">
+            <span class="cta-dark-preview-tag">LANGKAH PERTAMA · FASE 01</span>
+            <strong>Pola Pikir, Masalah ke Profit &amp; Bab 1-3</strong>
+            <p>Dilengkapi Simulator Audit Ide 20 Poin &amp; kontras Ronald Read ($8 Juta) vs Richard Fuscone.</p>
           </div>
         </div>
 
-        <div class="accordion-group" style="margin-block-start: 2.25rem;">
+        <div class="accordion-group" style="margin-block-start: 2rem;">
           <details>
             <summary>Lihat Daftar Lengkap 8 Terjemahan Unik di PDF Kamu (Hal. 12 sampai 204)</summary>
             <div class="details-body" style="max-inline-size: none;">
