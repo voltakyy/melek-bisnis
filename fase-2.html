@@ -15,8 +15,8 @@
   </script>
   <title>Fase 2: Bahasa Keuangan Dasar, HPP, BEP &amp; Cash Flow | Melek Bisnis</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23141418'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20261127e">
-  <script defer src="app.js?v=20261127e"></script>
+  <link rel="stylesheet" href="styles.css?v=20261127f">
+  <script defer src="app.js?v=20261127f"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -126,13 +126,15 @@
       </div>
 
       <div class="ring-split" aria-label="Cincin lapisan porsi satu cup kopi Rp15.000">
-        <div class="concentric-rings" role="img" aria-label="Cincin konsentris menampilkan porsi terluar HPP 40 persen, tengah OPEX 20 persen, dan inti Laba Bersih 40 persen">
-          <div class="ring-mid">
-            <div class="ring-core">
-              <strong>Inti Laba 40%<br>Rp6.000/cup</strong>
-            </div>
-          </div>
-        </div>
+        <svg class="concentric-rings-svg" viewBox="0 0 260 260" width="260" height="260" role="img" aria-labelledby="ring-f2-t ring-f2-d">
+          <title id="ring-f2-t">Cincin konsentris komposisi satu cup kopi Rp15.000</title>
+          <desc id="ring-f2-d">Tiga lapisan lingkaran terpusat: HPP bahan 40 persen di luar, OPEX 20 persen di tengah, dan inti Laba Bersih 40 persen atau Rp6.000 per cup di pusat.</desc>
+          <circle cx="130" cy="130" r="118" fill="var(--neg-soft)" stroke="var(--neg)" stroke-width="1.5"/>
+          <circle cx="130" cy="130" r="90" fill="var(--titanium-tint)" stroke="var(--titanium)" stroke-width="1.5"/>
+          <circle cx="130" cy="130" r="62" fill="var(--pos-soft)" stroke="var(--pos)" stroke-width="2"/>
+          <text x="130" y="126" text-anchor="middle" fill="var(--pos)" font-size="13.5" font-weight="800">Inti Laba 40%</text>
+          <text x="130" y="145" text-anchor="middle" fill="var(--pos)" font-size="12.5" font-weight="700" font-family="ui-monospace, monospace">Rp6.000/cup</text>
+        </svg>
         <div>
           <h3>Lindungi Inti Laba dari Kebocoran Uang Modal</h3>
           <p class="muted" style="margin-block-end: 0.9rem;">Lapisan luar harga Rp15.000 bukan milikmu pribadi. Pisahkan porsinya setiap hari:</p>
@@ -284,7 +286,7 @@
           <line x1="320" y1="180" x2="320" y2="240" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5"/>
           <circle cx="320" cy="180" r="6" fill="var(--cta-bg)" stroke="var(--ink-frame)" stroke-width="1.8"/>
           <text x="175" y="218" text-anchor="middle" fill="var(--neg)" font-size="12" font-weight="700">ZONA RUGI</text>
-          <text x="615" y="114" text-anchor="middle" fill="var(--pos)" font-size="13" font-weight="700">ZONA UNTUNG (+Rp600rb)</text>
+          <text x="615" y="114" text-anchor="middle" fill="var(--pos)" font-size="16" font-weight="700">ZONA UNTUNG</text>
           <rect x="256" y="116" width="176" height="44" rx="8" fill="var(--bg-surface)" stroke="var(--accent)"/>
           <text x="344" y="136" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">TITIK IMPAS (BEP)</text>
           <text x="344" y="152" text-anchor="middle" fill="var(--text-primary)" font-size="11.5">34 Cup = Rp510rb</text>

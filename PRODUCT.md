@@ -34,11 +34,11 @@ Dibuka langsung sebagai dokumen web statis multi-halaman di browser desktop maup
 - Arsitektur multi-halaman statis murni (HTML5 semantik, CSS modern, vanilla JS) agar ringan dan bebas ketergantungan jaringan eksternal.
 - Materi mendalam per fase dengan ilustrasi diagram SVG konseptual (dibuat khusus untuk menjelaskan mekanisme bisnis, bukan dekorasi).
 - Simulator interaktif per fase: Kalkulator HPP/Margin/BEP, Simulator Profit vs Cash Flow, Kalkulator Compounding (Buffett vs Simons), Simulator Ekor Panjang (Tails You Win), serta Latihan Refleksi/Kuis dengan umpan balik instan.
-- Mode tampilan Terang (Titanium Light) dan Gelap (Space Black Titanium) yang mengikuti preferensi sistem dan dapat diubah manual tanpa FOUC.
+- Mode tampilan Terang (Crisp White Gallery dengan blok kontras Slate-Navy `#162133`) dan Gelap (Cozy Obsidian Dark) yang mengikuti preferensi sistem dan dapat diubah manual tanpa FOUC.
 
 ## Brand Commitments
 
-- Estetika minimalis presisi terinspirasi bahasa produk Apple Pro Max (Titanium Slate, Space Black, kertas terang bersih, hierarki tipografi tajam, bebas dekorasi AI slop).
+- Estetika editorial modular berfokus keterbacaan (*Crisp White Gallery*, blok kontras Slate-Navy `#162133`, aksen CTA Amber `#F5B82E`, penekanan merah crimson `#C8281E`, perbandingan visual DO/DON'T, bebas dekorasi AI slop).
 - Bahasa Indonesia lugas, mengalir, tanpa istilah terjemahan literal yang membingungkan dari PDF sumber (menjelaskan padanan aslinya seperti "Tails, You Win", "Sunk Cost", "Margin of Safety", "Flippers").
 
 ## Evidence on Hand
