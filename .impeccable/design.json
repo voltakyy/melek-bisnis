@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
-  "name": "Melek Bisnis: Crisp Bento & DO/DON'T Infographic System",
+  "name": "Melek Bisnis: Crisp Gallery & Dark Slate Modular Editorial System",
   "generatedFrom": "scan",
-  "direction": "Single-column uncluttered gallery layout with alternating bands, stadium capsules, staggered bento blocks, DO/DON'T boards, and collapsible PDF story drawers",
+  "direction": "Single-column uncluttered gallery layout integrating asymmetrical hero triad, dark slate quick-finder bars (#162133), asymmetric mosaics, dark contrast slabs holding crisp cards, journey comparisons, concentric/orbit diagrams, underline filter tabs, DO/DON'T boards, and collapsible PDF story drawers across all phases",
   "narrative": {
-    "thesis": "Deliver zero-to-investor business literacy cleanly on high-whitespace layouts where visual comparisons and interactive workbenches lead while full Morgan Housel PDF narratives tuck neatly inside accessible disclosure drawers.",
+    "thesis": "Deliver zero-to-investor business literacy cleanly on high-contrast, varied-rhythm layouts where visual comparisons and interactive workbenches lead while full Morgan Housel PDF narratives tuck neatly inside accessible disclosure drawers.",
     "densityProfile": {
       "energy": 2,
-      "rhythm": 1,
+      "rhythm": 3,
       "motion": 1
     },
     "fonts": {
@@ -26,6 +26,11 @@
         "borderControl": "#8C929F",
         "textPrimary": "#141418",
         "textSecondary": "#4B4E57",
+        "slabBg": "#162133",
+        "slabInk": "#FFFFFF",
+        "slabMuted": "#CBD5E1",
+        "slabCardBg": "#FFFFFF",
+        "slabCardInk": "#141418",
         "ctaBg": "#F5B82E",
         "ctaInk": "#141418",
         "accent": "#184FC4",
@@ -45,6 +50,11 @@
         "borderControl": "#6F7685",
         "textPrimary": "#F3F4F6",
         "textSecondary": "#B4B8C4",
+        "slabBg": "#1A2333",
+        "slabInk": "#F3F4F6",
+        "slabMuted": "#C2CAD8",
+        "slabCardBg": "#11151E",
+        "slabCardInk": "#F3F4F6",
         "ctaBg": "#F5B82E",
         "ctaInk": "#101114",
         "accent": "#7AAFFF",
