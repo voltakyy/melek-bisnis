@@ -15,8 +15,8 @@
   </script>
   <title>Fase 5: Economic Moat, Margin of Safety &amp; Peta Investasi | Melek Bisnis</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23141418'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="styles.css?v=20261127e">
+  <script defer src="app.js?v=20261127e"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -95,6 +95,23 @@
         <a href="#simulator-investasi">5. Simulator Nilai &amp; Misi</a>
         <a href="#kuis-5">6. Kuis Fase 5</a>
       </nav>
+      <div class="finder-strip" style="margin-block-end: 0;" aria-label="Cari cepat istilah di Fase 5">
+        <form class="finder-form" data-quick-finder>
+          <div>
+            <label for="qf-f5-q">Cari Istilah Moat, MoS, Benjamin Graham, atau Bab PDF</label>
+            <input id="qf-f5-q" data-qf-query class="text-input" type="search" placeholder="Misal: Moat, Margin of Safety, Graham, Disneyland...">
+          </div>
+          <div>
+            <label for="qf-f5-t">Lompat Halaman</label>
+            <select id="qf-f5-t" data-qf-target class="select-input">
+              <option value="kamus-pdf.html">Buka Kamus &amp; 20 Bab</option>
+              <option value="fase-4.html">Fase 4: Laporan Keuangan</option>
+              <option value="index.html">Beranda Kurikulum</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit">Cari</button>
+        </form>
+      </div>
     </header>
 
     <section id="moat-nilai" class="section-block" tabindex="-1">
@@ -103,6 +120,48 @@
         <p>
           Cari perusahaan berbenteng kokoh dengan <strong>Economic Moat</strong> (merek kuat, biaya pindah tinggi, efek jaringan, atau skala termurah), lalu beli jauh di bawah taksiran nilai wajarnya agar tersedia bantalan aman (<strong>Margin of Safety</strong>).
         </p>
+      </div>
+
+      <div class="journey-split" aria-label="Perbedaan harga pasar Mr. Market melawan nilai intrinsik bisnis">
+        <article class="journey-card">
+          <div>
+            <span class="schema-card-code">KUTIPAN LAYAR · MR. MARKET</span>
+            <h3>Harga Pasar Harian (Mood Fluktuatif)</h3>
+            <p>Angka harga di bursa berubah naik-turun tiap detik mengikuti optimisme atau kepanikan sesaat para pelaku pasar.</p>
+          </div>
+          <div class="dark-pill-bar"><span>Tunggu Diskon</span><span class="dark-pill-bar-sub">Fee</span></div>
+        </article>
+        <div class="journey-center-stats">
+          <div class="journey-stat-box">
+            <span class="journey-stat-num">MoS &gt;= 30%</span>
+            <span class="journey-stat-cap">Jembatan Bantalan Aman</span>
+          </div>
+          <div class="journey-stat-box">
+            <span class="journey-stat-num">Beli @ Diskon</span>
+            <span class="journey-stat-cap">Selisih Harga vs Nilai</span>
+          </div>
+        </div>
+        <article class="journey-card is-pos">
+          <div>
+            <span class="schema-card-code">NILAI BISNIS NYATA · INTRINSIK</span>
+            <h3>Kastil Laba + Kas Operasi Jangka Panjang</h3>
+            <p>Nilai fundamental perusahaan yang ditopang parit keunggulan bisnis (Moat), neraca sehat (Fase 4), dan daya cetak kas berkelanjutan.</p>
+          </div>
+          <div class="dark-pill-bar"><span>Nilai Wajar</span><span class="dark-pill-bar-sub">Graham</span></div>
+        </article>
+      </div>
+
+      <div class="contrast-slab" aria-label="Empat pilar parit keunggulan Economic Moat">
+        <div class="contrast-slab-head">
+          <h3>Empat Pilar Pelindung Kastil Bisnis (Economic Moat)</h3>
+          <p>Benteng kompetitif yang melindungi margin laba dari serangan pesaing selama bertahun-tahun.</p>
+        </div>
+        <div class="slab-grid-4">
+          <div class="slab-card"><div class="slab-card-icon">01</div><h4>Kekuatan Merek</h4><p>Dipercaya penuh konsumen sehingga mampu menjual dengan margin sehat tanpa perang diskon.</p></div>
+          <div class="slab-card"><div class="slab-card-icon">02</div><h4>Biaya Pindah Tinggi</h4><p>Pelanggan enggan beralih ke pesaing karena data atau sistemnya sudah terintegrasi erat.</p></div>
+          <div class="slab-card"><div class="slab-card-icon">03</div><h4>Efek Jaringan</h4><p>Semakin banyak pengguna bergabung, semakin besar nilai ekosistem bagi seluruh peserta.</p></div>
+          <div class="slab-card"><div class="slab-card-icon">04</div><h4>Skala Termurah</h4><p>Volume distribusi raksasa menekan biaya per unit di bawah semua pemain baru.</p></div>
+        </div>
       </div>
 
       <figure class="diagram-plate">
@@ -355,14 +414,21 @@
         <div class="status-banner is-neutral" data-quiz-summary hidden aria-live="polite"></div>
       </div>
 
-      <div class="phase-pager">
+      <div class="phase-pager cta-dark-banner">
         <div>
-          <button id="phase-complete-btn" class="btn btn-secondary" type="button" aria-pressed="false">Tandai Fase Ini Selesai Dipelajari</button>
-          <p id="phase-complete-status" class="muted" aria-live="polite"></p>
+          <h3>Seluruh 5 Fase Selesai! Jelajahi Kamus &amp; Indeks PDF</h3>
+          <p>Simpan status selesaimu, lalu manfaatkan Kamus A sampai Z dan Peta 22 Bagian PDF kapan saja saat belajar.</p>
+          <div class="hero-actions">
+            <button id="phase-complete-btn" class="btn btn-secondary" type="button" aria-pressed="false">Tandai Fase Ini Selesai Dipelajari</button>
+            <a class="btn btn-primary" href="kamus-pdf.html">Buka Kamus &amp; Indeks Lengkap 20 Bab PDF</a>
+          </div>
+          <p id="phase-complete-status" aria-live="polite" style="margin-block-start: 0.6rem;"></p>
         </div>
-        <div class="hero-actions">
-          <a class="btn btn-subtle" href="fase-4.html">Kembali ke Fase 4</a>
-          <a class="btn btn-primary" href="kamus-pdf.html">Buka Kamus &amp; Indeks Lengkap 20 Bab PDF</a>
+        <div class="cta-dark-preview">
+          <span class="cta-dark-preview-tag">REFERENSI TERPADU</span>
+          <strong>27 Istilah Bisnis + 22 Bagian PDF + 4 Buku</strong>
+          <p>Dilengkapi dekoder terjemahan unik dan pencarian cepat antar-tab.</p>
+          <a class="dark-pill-bar" href="fase-4.html"><span>Kembali ke Fase 4</span><span class="dark-pill-bar-sub">FASE 04</span></a>
         </div>
       </div>
     </section>
