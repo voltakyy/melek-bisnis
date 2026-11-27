@@ -1,7 +1,7 @@
 ---
 name: melek-bisnis
-version: 4.0.0
-description: Crisp White Gallery & Deep Slate (#162133) Modular Editorial design system (asymmetric hero triad, quick finder bar, dark contrast slabs, journey dual split, ring/orbit schematics, underline filter tabs, DO/DON'T infographics, and collapsible PDF story drawers) for Melek Bisnis.
+version: 4.1.0
+description: Crisp White Gallery & Deep Slate (#162133) Modular Editorial design system (asymmetric hero triad, quick finder bar, dark contrast slabs, journey dual split, high-contrast white/amber/slate trio cards, L-bracket corner cards, 3-column oval spotlight, dark elevated tiles & straddling 4-card bridges, ring/orbit schematics, underline filter tabs, DO/DON'T infographics, and collapsible PDF story drawers) for Melek Bisnis.
 generatedBy: impeccable-document
 source: scan
 ---
@@ -41,3 +41,8 @@ Dua polaritas penuh (`color-scheme: light dark`) dengan deteksi `prefers-color-s
   - `.dept-tabs`: Filter kategori garis bawah satu baris pada `index.html` dengan navigasi keyboard panah.
   - `.cta-dark-banner`: Penutup halaman dan pengontrol `#phase-complete-btn` di seluruh fase.
   - `.do-dont-board` & `.capsule-grid`: Perbandingan visual dan kapsul tahapan per fase.
+  - `.trio-contrast` (`.tone-white`, `.tone-amber`, `.tone-slate`): Grid tiga kartu kontras putih, emas `#F5B82E`, dan slate `#162133`.
+  - `.bracket-grid` + `.bracket-card`: Kartu sudut L-bracket asimetris untuk poin alasan dan sinyal bahaya.
+  - `.oval-spotlight`: Tata letak 3 kolom (langkah bernomor + bingkai SVG oval tengah + statistik bertumpuk).
+  - `.dark-card-band` + `.dark-tile` & `.dark-bridge-wrap` + `.bridge-cards-4`: Kartu gelap elevasi `#1E2C44` di atas latar `#162133` serta jembatan 4 kartu menyembul.
+  - `.process-chain`, `.worked-pair`, & `.check-matrix`: Alur siklus berurutan, contoh perhitungan berdampingan, dan checklist audit bernomor.

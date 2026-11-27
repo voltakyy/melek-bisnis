@@ -14,7 +14,7 @@ Panduan belajar bisnis, keuangan dasar, membaca laporan keuangan, hingga pengant
 | Fase 3 | `fase-3.html` | Validasi MVP & Pre-Order, *Sales Funnel*, CAC vs LTV, *Compounding*, *Tails You Win*, 2 simulator | Bab 4, Bab 6, Bab 17, Bab 18 |
 | Fase 4 | `fase-4.html` | Laba Rugi, Arus Kas, Neraca, Current Ratio, DER, ROE, meja audit neraca (3 skenario) | Bab 11, Bab 13, Bab 14 |
 | Fase 5 | `fase-5.html` | *Economic Moat*, Harga vs Nilai Intrinsik, *Margin of Safety*, jembatan ke *The Intelligent Investor* & *Security Analysis* | Bab 7, 8, 12, 15, 16, 19, 20, & Postscript |
-| Referensi | `kamus-pdf.html` | Pencarian lintas tab: 27 istilah bisnis dasar, indeks lengkap 22 bagian PDF, perbandingan 4 buku, & dekoder terjemahan PDF | Keseluruhan PDF (hal. 11 sampai 235) |
+| Referensi | `kamus-pdf.html` | Pencarian lintas tab: 35 istilah bisnis dasar, indeks lengkap 22 bagian PDF, perbandingan 4 buku, & dekoder terjemahan PDF | Keseluruhan PDF (hal. 11 sampai 235) |
 
 ## Menjalankan Secara Lokal
 

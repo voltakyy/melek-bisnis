@@ -15,8 +15,8 @@
   </script>
   <title>Fase 2: Bahasa Keuangan Dasar, HPP, BEP &amp; Cash Flow | Melek Bisnis</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23141418'/%3E%3Cpath d='M7 17v-5M12 17V7M17 17v-3' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20261127f">
-  <script defer src="app.js?v=20261127f"></script>
+  <link rel="stylesheet" href="styles.css?v=20261127g">
+  <script defer src="app.js?v=20261127g"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -250,6 +250,45 @@
           Gambar 3B. Satu cup kopi seharga Rp15.000 dipecah menjadi tiga porsi terpisah agar uang modal tidak ikut termakan untuk jajan pribadi.
         </figcaption>
       </figure>
+
+      <h3>Cara Menghitung HPP yang Jujur (Termasuk Biaya Tersembunyi)</h3>
+      <p class="prose">
+        Kesalahan tersering mahasiswa saat jualan adalah menghitung modal hanya dari bahan utama ("kopinya cuma Rp3.500 kok!"), lalu lupa memasukkan es batu, tutup cup, plastik, biaya QRIS 0,7%, dan barang rusak atau gagal masak (<em>waste</em> ~5%). Berikut rincian biaya jujur per 1 gelas kopi serta perbandingannya dengan usaha makanan &amp; jasa:
+      </p>
+
+      <div class="table-wrapper responsive-table" tabindex="0" role="region" aria-labelledby="tbl-hpp-rinci">
+        <table>
+          <caption id="tbl-hpp-rinci">Rincian HPP Jujur Es Kopi Susu &amp; Perbandingan Margin 3 Usaha Mahasiswa</caption>
+          <thead>
+            <tr>
+              <th scope="col">Model Usaha</th>
+              <th scope="col">Komponen HPP Langsung</th>
+              <th scope="col">Total HPP / Unit</th>
+              <th scope="col">Harga Jual &amp; Laba Kotor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Es Kopi Susu (Produk Minuman)</th>
+              <td data-label="Komponen">Espresso &amp; gula (Rp2.500) + susu (Rp2.000) + cup/tutup/es (Rp1.200) + cadangan gagal/QRIS (Rp300).</td>
+              <td data-label="Total HPP">Rp6.000 / cup</td>
+              <td data-label="Harga &amp; Laba">Jual Rp15.000 -> Laba Kotor Rp9.000 (Margin 60%).</td>
+            </tr>
+            <tr>
+              <th scope="row">Risoles Mayo PO (Produk Makanan)</th>
+              <td data-label="Komponen">Kulit/roti (Rp1.500) + isian mayo/telur/sosis (Rp1.800) + minyak goreng/mika kemasan/saos (Rp700).</td>
+              <td data-label="Total HPP">Rp4.000 / pcs</td>
+              <td data-label="Harga &amp; Laba">Jual Rp7.000 -> Laba Kotor Rp3.000 (Margin 42,8%).</td>
+            </tr>
+            <tr>
+              <th scope="row">Jasa Desain Slide PPT (Usaha Jasa)</th>
+              <td data-label="Komponen">Tidak ada biaya fisik bahan baku; hanya biaya variabel kecil berupa langganan font/aset &amp; kuota per proyek.</td>
+              <td data-label="Total HPP">~Rp5.000 / paket</td>
+              <td data-label="Harga &amp; Laba">Jual Rp150.000 -> Laba Kotor Rp145.000 (Margin 96,7%).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section id="biaya-tetap-bep" class="section-block" tabindex="-1">
@@ -300,6 +339,26 @@
           Gambar 3C. Di kiri titik BEP (kurang dari 34 cup) usahamu masih rugi. Melewati titik BEP ke kanan, tiap cup tambahan langsung menyumbang laba Rp9.000.
         </figcaption>
       </figure>
+
+      <h3>Awas Jebakan Klasik: Markup Bukan Margin!</h3>
+      <p class="prose">
+        Banyak pemula yakin marginnya 100% padahal sebenarnya cuma 50%. Kesalahan menukar dua istilah ini sering bikin jualan langsung tekor saat ikut program diskon 40%.
+      </p>
+
+      <div class="worked-pair" aria-label="Perbedaan perhitungan Markup vs Margin">
+        <div class="worked-card is-gold">
+          <span class="check-num" style="color: var(--titanium);">MARKUP (BERBASIS MODAL HPP)</span>
+          <h3>Naikkan Harga 100% dari Modal</h3>
+          <p class="worked-eq">Markup = (Laba Kotor / HPP) x 100%</p>
+          <p>Beli bahan <strong>Rp6.000</strong> lalu ditambah Rp6.000 sehingga dijual <strong>Rp12.000</strong>. Kenaikannya dari modal awal adalah 100%.</p>
+        </div>
+        <div class="worked-card is-pos">
+          <span class="check-num">MARGIN (BERBASIS HARGA JUAL)</span>
+          <h3>Porsi Laba dari Harga yang Dibayar Pembeli</h3>
+          <p class="worked-eq">Margin = (Laba Kotor / Harga Jual) x 100%</p>
+          <p>Dari harga jual Rp12.000, untungnya Rp6.000 = cuma <strong>50% Margin</strong>. Kalau kamu kasih diskon promo 50% atas harga jual, labamu langsung Rp0 (bahkan rugi ongkos)!</p>
+        </div>
+      </div>
     </section>
 
     <section id="misteri-cashflow" class="section-block" tabindex="-1">
@@ -399,6 +458,34 @@
           </div>
         </div>
       </section>
+
+      <h3>Mengatur Siklus Putaran Kas 7 Hari Agar Uang Tidak Tersumbat</h3>
+      <p class="prose">
+        Usaha kecil bertahan bukan karena besarnya omzet bulanan, melainkan seberapa cepat uang kas yang keluar membeli bahan berubah kembali menjadi uang tunai di rekening (<em>Cash Conversion Cycle</em>).
+      </p>
+
+      <ol class="process-chain" aria-label="Empat tahap siklus perputaran uang kas usaha kecil">
+        <li class="process-step is-neg">
+          <span class="process-step-num">HARI 01 · KAS KELUAR</span>
+          <p class="process-step-title">Belanja Bahan Secukupnya</p>
+          <p>Keluarkan kas untuk bahan maksimal porsi 3 hari agar uang tidak membeku di stok.</p>
+        </li>
+        <li class="process-step is-gold">
+          <span class="process-step-num">HARI 02 · PROSES</span>
+          <p class="process-step-title">Produksi Sesuai Pesanan</p>
+          <p>Pakai sistem batch/PO sehingga nyaris nol barang terbuang sia-sia di akhir hari.</p>
+        </li>
+        <li class="process-step">
+          <span class="process-step-num">HARI 03 · PENJUALAN</span>
+          <p class="process-step-title">Kirim &amp; Tagih Pembayaran</p>
+          <p>Pembeli langsung transfer QRIS saat barang diterima; batasi keras transaksi kasbon.</p>
+        </li>
+        <li class="process-step is-pos">
+          <span class="process-step-num">HARI 03+ · KAS MASUK</span>
+          <p class="process-step-title">Pisahkan Modal &amp; Laba</p>
+          <p>Kembalikan 40% ke amplop bahan baku, 20% tutup biaya, 40% masuk tabungan aman.</p>
+        </li>
+      </ol>
     </section>
 
     <section id="kalkulator-bep" class="section-block" tabindex="-1">
