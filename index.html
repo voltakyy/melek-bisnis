@@ -18,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Outfit:wght@600;700;800&display=optional">
-  <link rel="stylesheet" href="styles.css?v=20261128d">
-  <script defer src="app.js?v=20261128d"></script>
+  <link rel="stylesheet" href="styles.css?v=20261128e">
+  <script defer src="app.js?v=20261128e"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -155,11 +155,11 @@
         </div>
 
         <div class="bead-rail" aria-label="Lompat cepat 5 fase">
-          <a class="bead-step" href="fase-1.html"><span class="bead-dot">01</span><span>Pola Pikir</span></a>
-          <a class="bead-step" href="fase-2.html"><span class="bead-dot">02</span><span>Cash Flow</span></a>
-          <a class="bead-step" href="fase-3.html"><span class="bead-dot">03</span><span>Validasi</span></a>
-          <a class="bead-step" href="fase-4.html"><span class="bead-dot">04</span><span>Laporan</span></a>
-          <a class="bead-step" href="fase-5.html"><span class="bead-dot">05</span><span>Investasi</span></a>
+          <a class="bead-step" href="fase-1.html" data-phase-bead="fase-1"><span class="bead-dot">01</span><span>Pola Pikir</span></a>
+          <a class="bead-step" href="fase-2.html" data-phase-bead="fase-2"><span class="bead-dot">02</span><span>Cash Flow</span></a>
+          <a class="bead-step" href="fase-3.html" data-phase-bead="fase-3"><span class="bead-dot">03</span><span>Validasi</span></a>
+          <a class="bead-step" href="fase-4.html" data-phase-bead="fase-4"><span class="bead-dot">04</span><span>Laporan</span></a>
+          <a class="bead-step" href="fase-5.html" data-phase-bead="fase-5"><span class="bead-dot">05</span><span>Investasi</span></a>
         </div>
 
         <div class="finder-strip" aria-label="Pencari cepat istilah bisnis dan fase">
@@ -190,6 +190,10 @@
         <div class="proof-strip" style="margin-block: 1.15rem 0;" aria-label="Ringkasan materi dan progres belajar">
           <div class="proof-stats">
             <span><strong>Status Progres:</strong> Tersimpan otomatis di browser lokal</span>
+            <span class="proof-percent-pill" id="progress-percent">0% Selesai</span>
+          </div>
+          <div class="progress-meter" role="progressbar" aria-label="Progres penyelesaian 5 fase" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
+            <div class="progress-meter-fill" id="progress-meter-fill"></div>
           </div>
           <div class="proof-progress">
             <p id="progress-summary">Belum ada fase selesai. Mulai Fase 1 dan tandai selesai di akhir halaman.</p>
