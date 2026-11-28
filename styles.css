@@ -316,9 +316,9 @@
     text-wrap: balance;
   }
 
-  h1 { font-size: clamp(2.3rem, 1.7rem + 2.2vw, 3.2rem); letter-spacing: -0.03em; line-height: 1.08; }
-  h2 { font-size: clamp(1.65rem, 1.38rem + 1vw, 2.1rem); margin-block-end: 0.85rem; }
-  h3 { font-size: clamp(1.18rem, 1.12rem + 0.35vw, 1.38rem); margin-block-start: 1.75rem; margin-block-end: 0.55rem; }
+  h1 { font-size: clamp(1.75rem, 1.35rem + 2vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; }
+  h2 { font-size: clamp(1.38rem, 1.18rem + 0.9vw, 1.98rem); margin-block-end: 0.85rem; }
+  h3 { font-size: clamp(1.12rem, 1.04rem + 0.35vw, 1.36rem); margin-block-start: 1.75rem; margin-block-end: 0.55rem; }
   h4 { font-size: 1rem; margin-block-start: 1.25rem; margin-block-end: 0.35rem; }
 
   :where(p, blockquote, li) {
@@ -1889,7 +1889,7 @@
   .medallion-circle.tone-3 { background: var(--g-leaf); }
   .medallion-circle.tone-4 { background: var(--g-bright); color: var(--g-bright-ink); }
 
-  .medallion-num { font-family: var(--font-mono); font-size: 1.35rem; font-weight: 900; line-height: 1.1; }
+  .medallion-num { font-family: var(--font-mono); font-size: clamp(1.1rem, 1rem + 0.45vw, 1.35rem); font-weight: 900; line-height: 1.1; }
   .medallion-label { font-size: 0.84rem; font-weight: 800; line-height: 1.25; }
   .medallion-sub { font-size: 0.78rem; opacity: 0.94; line-height: 1.28; }
 
@@ -1979,6 +1979,30 @@
   .pyramid-tier p { font-size: 0.85rem; line-height: 1.48; color: var(--text-secondary); max-inline-size: var(--measure); margin: 0; }
 
   .pyramid-figure { margin: 0; justify-self: center; inline-size: min(100%, 19rem); }
+
+  /* Stepped Stair Stack (Replaces cramped triangle apex with clean widening stair bars) */
+  .stair-stack {
+    display: grid;
+    gap: 0.6rem;
+    justify-items: center;
+    inline-size: 100%;
+  }
+
+  .stair-bar {
+    border-radius: var(--radius-md);
+    padding: 0.78rem 0.95rem;
+    text-align: center;
+    display: grid;
+    gap: 0.15rem;
+    min-inline-size: 0;
+  }
+
+  .stair-bar.tier-top { inline-size: min(100%, 12.75rem); background: var(--g-bright); color: var(--g-bright-ink); }
+  .stair-bar.tier-mid { inline-size: min(100%, 15.75rem); background: var(--g-leaf); color: #FFFFFF; }
+  .stair-bar.tier-base { inline-size: 100%; background: var(--g-deep); color: #FFFFFF; }
+
+  .stair-code { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 800; opacity: 0.9; letter-spacing: 0.03em; }
+  .stair-label { font-size: clamp(0.86rem, 0.82rem + 0.25vw, 0.98rem); font-weight: 900; line-height: 1.25; }
 
   .pyramid-badges {
     display: grid;
