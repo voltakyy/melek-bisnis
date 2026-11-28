@@ -318,13 +318,18 @@
 
     const indexSummary = document.getElementById('progress-summary');
     const resetBtn = document.getElementById('reset-progress-btn');
+    const meterFill = document.getElementById('progress-meter-fill');
+    const meterBar = document.querySelector('.progress-meter[role="progressbar"]');
+    const percentPill = document.getElementById('progress-percent');
+    const phaseBeads = [...document.querySelectorAll('[data-phase-bead]')];
     const phaseBadges = [...document.querySelectorAll('[data-phase-status]')];
 
-    if (indexSummary || phaseBadges.length > 0) {
+    if (indexSummary || phaseBadges.length > 0 || phaseBeads.length > 0) {
       const renderHubProgress = () => {
         const map = getProgressMap();
         const phases = ['fase-1', 'fase-2', 'fase-3', 'fase-4', 'fase-5'];
         const doneCount = phases.filter((p) => Boolean(map[p])).length;
+        const pct = Math.round((doneCount / phases.length) * 100);
 
         phaseBadges.forEach((el) => {
           const p = el.getAttribute('data-phase-status');
@@ -332,6 +337,22 @@
           el.classList.toggle('is-done', isDone);
           el.textContent = isDone ? 'Selesai dipelajari' : 'Belum selesai';
         });
+
+        phaseBeads.forEach((el) => {
+          const p = el.getAttribute('data-phase-bead');
+          el.classList.toggle('is-done', Boolean(map[p]));
+        });
+
+        if (meterFill) {
+          meterFill.style.inlineSize = `${pct}%`;
+        }
+        if (meterBar) {
+          meterBar.setAttribute('aria-valuenow', String(doneCount));
+        }
+        if (percentPill) {
+          percentPill.textContent = `${pct}% Selesai`;
+          percentPill.classList.toggle('is-active', doneCount > 0);
+        }
 
         if (indexSummary) {
           if (doneCount === 0) {
@@ -862,15 +883,29 @@
       const items = [...quiz.querySelectorAll('.quiz-item')];
       if (!checkBtn) return;
 
+      items.forEach((item) => {
+        item.querySelectorAll('input[type="radio"]').forEach((radio) => {
+          radio.addEventListener('change', () => {
+            item.querySelectorAll('.quiz-option').forEach((opt) => {
+              opt.classList.remove('is-correct', 'is-wrong');
+            });
+          });
+        });
+      });
+
       checkBtn.addEventListener('click', () => {
         let answered = 0;
         let correct = 0;
+        const completeBtn = document.getElementById('phase-complete-btn');
 
         items.forEach((item) => {
           const expected = item.getAttribute('data-answer');
           const explanation = item.getAttribute('data-explain') || '';
           const selected = item.querySelector('input[type="radio"]:checked');
           const fb = item.querySelector('.quiz-feedback');
+          item.querySelectorAll('.quiz-option').forEach((opt) => {
+            opt.classList.remove('is-correct', 'is-wrong');
+          });
           if (!fb) return;
 
           if (!selected) {
@@ -880,11 +915,14 @@
           }
 
           answered++;
+          const chosenOpt = selected.closest('.quiz-option');
           if (selected.value === expected) {
             correct++;
+            if (chosenOpt) chosenOpt.classList.add('is-correct');
             fb.className = 'quiz-feedback is-right';
             fb.textContent = `Benar. ${explanation}`;
           } else {
+            if (chosenOpt) chosenOpt.classList.add('is-wrong');
             fb.className = 'quiz-feedback is-wrong';
             fb.textContent = `Kurang tepat. ${explanation}`;
           }
@@ -896,11 +934,13 @@
             summaryEl.className = 'status-banner is-neutral';
             summaryEl.textContent = `Baru ${answered} dari ${items.length} soal dijawab. Lengkapi semua soal lalu cek lagi.`;
           } else if (correct === items.length) {
-            summaryEl.className = 'status-banner is-positive';
+            summaryEl.className = 'status-banner is-positive is-celebrate';
             summaryEl.textContent = `Skor sempurna: ${correct} dari ${items.length} benar. Kamu siap lanjut ke fase berikutnya.`;
+            if (completeBtn) completeBtn.classList.add('is-pulse-ready');
           } else {
             summaryEl.className = 'status-banner is-neutral';
             summaryEl.textContent = `Skor sementara: ${correct} dari ${items.length} benar. Baca penjelasan pada nomor yang keliru lalu coba lagi.`;
+            if (completeBtn) completeBtn.classList.remove('is-pulse-ready');
           }
         }
       });
