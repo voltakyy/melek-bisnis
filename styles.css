@@ -146,9 +146,10 @@
     --shadow-sm: var(--raw-shadow-sm-l);
     --shadow-md: var(--raw-shadow-md-l);
 
-    --font-sans: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: "Outfit", "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --font-serif: Georgia, "Iowan Old Style", Cambria, serif;
-    --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+    --font-mono: "Outfit", "DM Sans", system-ui, -apple-system, sans-serif;
 
     --radius-sm: 0.5rem;
     --radius-md: 0.875rem;
@@ -309,14 +310,15 @@
   }
 
   h1, h2, h3, h4 {
+    font-family: var(--font-display);
     color: var(--text-primary);
-    font-weight: 800;
-    line-height: 1.16;
-    letter-spacing: -0.025em;
+    font-weight: 700;
+    line-height: 1.22;
+    letter-spacing: -0.015em;
     text-wrap: balance;
   }
 
-  h1 { font-size: clamp(1.75rem, 1.35rem + 2vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; }
+  h1 { font-size: clamp(1.75rem, 1.35rem + 2vw, 3rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.14; }
   h2 { font-size: clamp(1.38rem, 1.18rem + 0.9vw, 1.98rem); margin-block-end: 0.85rem; }
   h3 { font-size: clamp(1.12rem, 1.04rem + 0.35vw, 1.36rem); margin-block-start: 1.75rem; margin-block-end: 0.55rem; }
   h4 { font-size: 1rem; margin-block-start: 1.25rem; margin-block-end: 0.35rem; }
@@ -1162,7 +1164,7 @@
   .worked-card.is-pos .worked-kicker { color: var(--pos); }
   .worked-card p.worked-title { margin: 0; font-size: 1.02rem; font-weight: 800; color: var(--text-primary); line-height: 1.3; }
   .worked-card p.worked-math,
-  .worked-eq { font-family: var(--font-mono); font-size: 0.88rem; font-weight: 800; color: var(--text-primary); overflow-wrap: break-word; background: var(--bg-page); border: 1px solid var(--border-subtle); padding: 0.45rem 0.7rem; border-radius: 0.4rem; margin: 0; }
+  .worked-eq { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 0.92rem; font-weight: 800; color: var(--text-primary); overflow-wrap: break-word; padding: 0.25rem 0 0.5rem; border-block-end: 1px dashed var(--border-control); margin: 0; }
 
   .check-matrix {
     display: grid;
@@ -1689,7 +1691,7 @@
     display: grid;
     gap: 0.15rem;
   }
-  .spine-kpi-num { font-family: var(--font-mono); font-size: 1.25rem; font-weight: 900; color: #0D4428; line-height: 1.15; }
+  .spine-kpi-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: clamp(1.05rem, 1rem + 0.35vw, 1.25rem); font-weight: 800; color: #0D4428; line-height: 1.15; }
   .spine-kpi-label { font-size: 0.78rem; font-weight: 700; color: #102318; }
 
   .spine-main { display: grid; gap: 0.95rem; min-inline-size: 0; }
@@ -1833,7 +1835,7 @@
   @media (min-width: 54rem) { .serp-kpis { grid-template-columns: minmax(0, 1fr); gap: 1rem; } }
 
   .serp-kpi { text-align: center; display: grid; gap: 0.15rem; }
-  .serp-kpi-num { font-family: var(--font-mono); font-size: 1.3rem; font-weight: 900; color: #86DC6A; }
+  .serp-kpi-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 1.3rem; font-weight: 800; color: #86DC6A; }
   .serp-kpi-label { font-size: 0.78rem; color: #E9F6EC; line-height: 1.3; }
 
   /* 5. Orbital Stadium Ring with 4 Circular Medallions ("Work Indicators") */
@@ -1889,7 +1891,7 @@
   .medallion-circle.tone-3 { background: var(--g-leaf); }
   .medallion-circle.tone-4 { background: var(--g-bright); color: var(--g-bright-ink); }
 
-  .medallion-num { font-family: var(--font-mono); font-size: clamp(1.1rem, 1rem + 0.45vw, 1.35rem); font-weight: 900; line-height: 1.1; }
+  .medallion-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: clamp(1.1rem, 1rem + 0.45vw, 1.35rem); font-weight: 800; line-height: 1.1; }
   .medallion-label { font-size: 0.84rem; font-weight: 800; line-height: 1.25; }
   .medallion-sub { font-size: 0.78rem; opacity: 0.94; line-height: 1.28; }
 
@@ -2069,7 +2071,7 @@
     gap: 0.2rem;
   }
 
-  .journey-stat-num { font-family: var(--font-mono); font-size: 1.15rem; font-weight: 800; color: var(--text-primary); }
+  .journey-stat-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 1.2rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.01em; }
   .journey-stat-cap { font-size: 0.78rem; color: var(--text-secondary); font-weight: 600; line-height: 1.3; }
 
   /* Concentric Rings & Orbit Ring Layouts (Mental Health Wireframe Patterns) */
